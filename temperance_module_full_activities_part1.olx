@@ -310,13 +310,18 @@ all: Right — the object is the whole phrase "class, ethnic, and religious tens
 </CapaProblem> <!-- tmf_grammar_svo_object_problem -->
 </Vertical> <!-- tmf_grammar_svo -->
 
-<!-- p.26 — inside the subject NP. Three sequential highlights, matching the
-     SVO screen's one-question-at-a-time pattern: asking for premodifier, head
-     noun, and postmodifier all at once in a single selection gave a student no
-     way to be partly right and no feedback until all three landed.
+<!-- p.26 — inside the subject NP. ONE matching item, where three sequential
+     highlights used to be. The parts on the right are the constituents of the
+     phrase the student has just finished analyzing as a whole; naming them is
+     recognition, and recognition of three related labels is one question, not
+     three. Three separate one-attempt highlights would also mean three Check
+     buttons and three chances to be told nothing useful.
 
-     The text shown is ONLY the noun phrase, not the whole sentence: the rest
-     of the sentence is nothing but a place to make mistakes here.
+     Matching also carries partial credit, so a student who has the head noun
+     and the postmodifier but not the determiner is scored as such.
+
+     The phrase is shown WITHOUT the rest of the sentence: the rest of the
+     sentence is nothing but a place to make mistakes here.
 
      "Determiner," not "premodifier" — it is the word the course actually uses
      for "Such," and it names a category rather than a position. -->
@@ -325,35 +330,27 @@ all: Right — the object is the whole phrase "class, ethnic, and religious tens
 ## Inside the Noun Phrase
 
 The subject of that sentence is a noun phrase all by itself. Here it is on its
-own — take it apart in three steps.
+own — take it apart.
 </Markdown>
 
-<SimpleTextSelection id="tmf_grammar_np_head" mode="graded" title="Highlight the head noun">
-Highlight the head noun — the one word the whole phrase is built around.
----
-Such [intrusions] by the Protestant middle class
----
-all: Right — "intrusions" is the head noun. Everything else in the phrase is there to tell you which intrusions.
-: It is a single word, and it is the thing the phrase is naming. Which one word could stand in for the whole phrase?
-</SimpleTextSelection>
+<CapaProblem id="tmf_grammar_np_problem" title="Inside the Noun Phrase" maxAttempts="1">
+<MatchingGrader id="tmf_grammar_np_grader">
+<Markdown id="tmf_grammar_np_prompt">
+Match each part of a noun phrase to the part that plays it in **Such intrusions
+by the Protestant middle class**.
+</Markdown>
+<MatchingInput id="tmf_grammar_np_match">
+  <Markdown id="tmf_grammar_np_role_head"> **Head noun** — the one word the whole phrase is built around                     </Markdown>
+  <Markdown id="tmf_grammar_np_part_head"> intrusions                                                                       </Markdown>
 
-<SimpleTextSelection id="tmf_grammar_np_det" mode="graded" title="Highlight the determiner">
-Highlight the determiner — the word in front of the head noun that points at which ones.
----
-[Such] intrusions by the Protestant middle class
----
-all: Right — "Such" is the determiner. It points back at intrusions already described, which is why the next task is finding them.
-: It comes before the head noun, and words like "the," "these," "his," and "such" do this job.
-</SimpleTextSelection>
+  <Markdown id="tmf_grammar_np_role_det" > **Determiner** — the word before the head noun that helps identify or specify it </Markdown>
+  <Markdown id="tmf_grammar_np_part_det" > Such                                                                             </Markdown>
 
-<SimpleTextSelection id="tmf_grammar_np_post" mode="graded" title="Highlight the postmodifier">
-Highlight the postmodifier — the part after the head noun that tells you more about it.
----
-Such intrusions [by the Protestant middle class]
----
-all: Right — "by the Protestant middle class" is the postmodifier. It tells you whose intrusions they were.
-: It follows the head noun, and here it is a whole phrase rather than a single word.
-</SimpleTextSelection>
+  <Markdown id="tmf_grammar_np_role_post"> **Postmodifier** — the part after the head noun that tells you more about it     </Markdown>
+  <Markdown id="tmf_grammar_np_part_post"> by the Protestant middle class                                                   </Markdown>
+</MatchingInput>
+</MatchingGrader>
+</CapaProblem> <!-- tmf_grammar_np_problem -->
 </Vertical> <!-- tmf_grammar_np -->
 
 <!-- p.27 — the structure, laid out (info screen) -->
