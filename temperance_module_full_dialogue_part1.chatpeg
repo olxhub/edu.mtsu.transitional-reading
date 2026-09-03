@@ -114,15 +114,22 @@ Professor Booker: Let's build some vocabulary from this part. Look at the highli
 
 Danielle: First one — what does "commerce" mean here?
 
+// Every gate on a graded item waits for a SUBMISSION, never for a correct
+// value. The items allow one attempt, so a wait-until-correct gate would
+// strand a student who answers wrong once — no second try to open it with,
+// and the conversation stops there forever. The gates that already read
+// `.submitCount` (the grammar highlights, the comprehension questions) are
+// the pattern; the rest now match it.
+
 ::tmf_q_commerce_screen
 
---- wait @tmf_q_commerce.value === 'buying_selling' ---
+--- wait @tmf_q_commerce_problem.submitCount > 0 ---
 
 Joe: Next: antidote. I looked it up, and here are the definitions I found.
 
 ::tmf_q_antidote_screen
 
---- wait @tmf_q_antidote.value === 'counteracts_harm' ---
+--- wait @tmf_q_antidote_problem.submitCount > 0 ---
 
 Danielle: I think you pasted in a couple of definitions for "anecdote," not "antidote."
 
@@ -136,7 +143,7 @@ Danielle: One more from this part — "proliferated."
 
 ::tmf_q_proliferated_screen
 
---- wait @tmf_q_proliferated.value === 'increased_rapidly' ---
+--- wait @tmf_q_proliferated_problem.submitCount > 0 ---
 
 ::tmf_tb_a2 [display=target:tmf_main label="The excerpt — part 2"]
 
@@ -160,19 +167,19 @@ Professor Booker: The chapter's title points to it. Using the passage, which phr
 
 ::tmf_be_term_screen
 
---- wait @tmf_be_term.value === 'powerful_network' ---
+--- wait @tmf_be_term_problem.submitCount > 0 ---
 
 Professor Booker: The phrase that captures it is "a powerful network." What else in the chapter connects to it? Select all that apply.
 
 ::tmf_be_connect_screen
 
---- wait @tmf_be_connect.value.length === 3 && @tmf_be_connect.value.includes('societies_movements') && @tmf_be_connect.value.includes('middle_class') && @tmf_be_connect.value.includes('religion_and_reform') ---
+--- wait @tmf_be_connect_problem.submitCount > 0 ---
 
 Professor Booker: Now put it together. Each of you wrote a one-sentence definition — read them and pick the best.
 
 ::tmf_be_bestdef_screen
 
---- wait @tmf_be_bestdef.value === 'joe_network_religion_reform' ---
+--- wait @tmf_be_bestdef_problem.submitCount > 0 ---
 
 ::tmf_tb_b [display=target:tmf_main label="The excerpt — part 3"]
 
@@ -190,7 +197,7 @@ Danielle: There's a word here — "galvanized." I looked it up, and there are a 
 
 ::tmf_q_galvanized_screen
 
---- wait @tmf_q_galvanized.value === 'spurred_into_action' ---
+--- wait @tmf_q_galvanized_problem.submitCount > 0 ---
 
 Karis: I picked "to spur into action."
 
@@ -222,19 +229,19 @@ Karis: I'll start — what could replace "eradicating"?
 
 ::tmf_q_eradicating_screen
 
---- wait @tmf_q_eradicating.value === 'completely_removing' ---
+--- wait @tmf_q_eradicating_problem.submitCount > 0 ---
 
 Joe: How about "exacerbated"?
 
 ::tmf_q_exacerbated_screen
 
---- wait @tmf_q_exacerbated.value === 'made_worse' ---
+--- wait @tmf_q_exacerbated_problem.submitCount > 0 ---
 
 Professor Booker: One more — "per capita."
 
 ::tmf_q_per_capita_screen
 
---- wait @tmf_q_per_capita.value === 'per_person' ---
+--- wait @tmf_q_per_capita_problem.submitCount > 0 ---
 
 ::tmf_grammar_svo [display=target:tmf_main label="Verb, subject, object"]
 
@@ -268,7 +275,7 @@ Professor Booker: So, using that, why did those intrusions "exacerbate" tensions
 
 ::tmf_why_exacerbated_screen
 
---- wait @tmf_why_exacerbated.value === 'middle_class_intrusion' ---
+--- wait @tmf_why_exacerbated_problem.submitCount > 0 ---
 
 // The comprehension questions are embedded HERE, in the conversation, so the
 // activity pane is free to hold the text they are about (tmf_comp_reading — all
@@ -321,13 +328,13 @@ Professor Booker: Look closely at the nine steps, then answer.
 
 ::tmf_litho_observe_screen
 
---- wait @tmf_litho_observe.value === 'one_mans_decline' ---
+--- wait @tmf_litho_observe_problem.submitCount > 0 ---
 
 Joe: Grim. Why would the temperance folks make something like this?
 
 ::tmf_litho_purpose_screen
 
---- wait @tmf_litho_purpose.value === 'warn_and_persuade' ---
+--- wait @tmf_litho_purpose_problem.submitCount > 0 ---
 
 ::tmf_article_read [display=target:tmf_main label="The magazine article"]
 
@@ -343,13 +350,13 @@ Danielle: Ha — she'd have fit right into the temperance movement. Dr. Booker w
 
 ::tmf_q_teetotaling_screen
 
---- wait @tmf_q_teetotaling.value === 'no_alcohol_at_all' ---
+--- wait @tmf_q_teetotaling_problem.submitCount > 0 ---
 
 Joe: So, teetotaling — not drinking at all. Where does "self-optimization" come in? Let's each find a sentence that gives it context, then pick the best.
 
 ::tmf_selfoptim
 
---- wait @tmf_selfoptim_pick.value === 'joe_authenticity_selfcare' && @tmf_selfoptim_explain.value ---
+--- wait @tmf_selfoptim_pick_problem.submitCount > 0 && @tmf_selfoptim_explain.value ---
 
 Karis: The line that really pins down self-optimization is the one about not drinking being an act of authenticity or self-care. Put it with the bit about posting on Instagram about inflammation, jawlines, and sleep scores, and you can see it's about focusing on your own health.
 
@@ -357,19 +364,19 @@ Professor Booker: Now, to see how it all fits, let's summarize. Which is the bes
 
 ::tmf_summary_pick_screen
 
---- wait @tmf_summary_pick.value === 'what_and_why' ---
+--- wait @tmf_summary_pick_problem.submitCount > 0 ---
 
 Professor Booker: One more term the article flags — "authenticity."
 
 ::tmf_q_authenticity_screen
 
---- wait @tmf_q_authenticity.value === 'true_to_self' ---
+--- wait @tmf_q_authenticity_problem.submitCount > 0 ---
 
 Professor Booker: Now step back from the details. What is the article's main point overall?
 
 ::tmf_article_thesis_screen
 
---- wait @tmf_article_thesis.value === 'new_temperance_new_morality' ---
+--- wait @tmf_article_thesis_problem.submitCount > 0 ---
 
 Danielle: So underneath, the old movement and today's movement are actually pretty different.
 
@@ -386,7 +393,7 @@ Danielle: Each of us also tried to sum up the big difference in one sentence. Wh
 
 ::tmf_synth_peereval_screen
 
---- wait @tmf_synth_peereval.value === 'danielle_moral_vs_health' ---
+--- wait @tmf_synth_peereval_problem.submitCount > 0 ---
 
 Part 5: Conclusion [id=part5]
 -----------------------------
