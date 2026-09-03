@@ -646,9 +646,18 @@ Here is the finished work — the comparison you built from all three texts.
 <!-- Each chat-embedded question is wrapped in a Vertical that TAKES OVER the
      embed id (`::tmf_q_commerce_screen`), so the correctness feedback under
      the choices renders inside the chat bubble with them. The ChoiceInput
-     keeps its own id — every wait, and every readback, still names it. -->
+     keeps its own id — every wait, and every readback, still names it.
+
+     Inside that Vertical the question is a one-attempt CapaProblem
+     (`<id>_problem`, maxAttempts="1") around a KeyGrader around the
+     ChoiceInput: this is an assessment, and each item is answered once. The
+     Check button is the CapaProblem's own footer. The ChoiceInput id and every
+     option value are unchanged — the chatpeg gates and the analytics read
+     them. maxAttempts is spelled out because "0" means unlimited, not none. -->
 
 <Vertical id="tmf_q_commerce_screen">
+<CapaProblem id="tmf_q_commerce_problem" title="Vocabulary: commerce" maxAttempts="1">
+<KeyGrader id="tmf_q_commerce_grader">
 <ChoiceInput id="tmf_q_commerce">
 <Markdown>
 Look at the highlighted sentence and choose the best definition for **commerce**:
@@ -661,6 +670,7 @@ Look at the highlighted sentence and choose the best definition for **commerce**
          <Key value="buying_selling"  > The activities of buying and selling products. </Key>
   <Distractor value="social_laws"     > The laws people make to limit social problems. </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_q_commerce.value === 'church_formation'">
 *Not quite — that's the religious half of the paragraph. "Large-scale commerce" sits next to "urban growth" — both are economic changes the Industrial Revolution brought.*
@@ -674,9 +684,12 @@ Look at the highlighted sentence and choose the best definition for **commerce**
 <Markdown when="@tmf_q_commerce.value === 'buying_selling'">
 *Yes — commerce is buying and selling. "Large-scale commerce" means trade grown big enough to reshape whole cities.*
 </Markdown>
+</CapaProblem> <!-- tmf_q_commerce_problem -->
 </Vertical> <!-- tmf_q_commerce_screen -->
 
 <Vertical id="tmf_q_antidote_screen">
+<CapaProblem id="tmf_q_antidote_problem" title="Vocabulary: antidote" maxAttempts="1">
+<KeyGrader id="tmf_q_antidote_grader">
 <ChoiceInput id="tmf_q_antidote">
 <Markdown>
 Choose the best definition for **antidote**:
@@ -690,6 +703,7 @@ Choose the best definition for **antidote**:
   <Distractor value="unpublished_writing"> An unpublished writing.                         </Distractor>
          <Key value="counteracts_harm"   > Something that counteracts a harmful situation. </Key>
 </ChoiceInput>
+</KeyGrader>
 
 <!-- The peers unpack the two "anecdote" definitions and the medicine reading in
    the dialogue right after this, so the feedback here stays short. -->
@@ -705,9 +719,12 @@ Choose the best definition for **antidote**:
 <Markdown when="@tmf_q_antidote.value === 'counteracts_harm'">
 *Right — the figurative sense: something that works against a harm. Here, against the insecurities of a changing world.*
 </Markdown>
+</CapaProblem> <!-- tmf_q_antidote_problem -->
 </Vertical> <!-- tmf_q_antidote_screen -->
 
 <Vertical id="tmf_q_proliferated_screen">
+<CapaProblem id="tmf_q_proliferated_problem" title="Vocabulary: proliferated" maxAttempts="1">
+<KeyGrader id="tmf_q_proliferated_grader">
 <ChoiceInput id="tmf_q_proliferated">
 <Markdown>
 Choose the best definition for **proliferated**:
@@ -720,6 +737,7 @@ Choose the best definition for **proliferated**:
   <Distractor value="decreased_influence"> Decreased rapidly in influence.              </Distractor>
   <Distractor value="moved_to_cities"    > Moved from farms to major cities.            </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_q_proliferated.value === 'merged_into_one'">
 *Not quite — nearly the opposite: these societies multiplied and spread rather than folding into one body.*
@@ -733,11 +751,14 @@ Choose the best definition for **proliferated**:
 <Markdown when="@tmf_q_proliferated.value === 'increased_rapidly'">
 *Yes — to proliferate is to multiply fast. The societies didn't just appear; they kept appearing.*
 </Markdown>
+</CapaProblem> <!-- tmf_q_proliferated_problem -->
 </Vertical> <!-- tmf_q_proliferated_screen -->
 
 <!-- CHAT-EMBEDDED — vocabulary, chunk B / para 3 (PDF p.18) -->
 
 <Vertical id="tmf_q_galvanized_screen">
+<CapaProblem id="tmf_q_galvanized_problem" title="Vocabulary: galvanized" maxAttempts="1">
+<KeyGrader id="tmf_q_galvanized_grader">
 <ChoiceInput id="tmf_q_galvanized">
 <Markdown>
 What is the best definition of **galvanized**?
@@ -750,6 +771,7 @@ What is the best definition of **galvanized**?
   <Distractor value="zinc_coating"       > To coat iron or steel with zinc.        </Distractor>
   <Distractor value="wore_down"          > To discourage or wear down.             </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <!-- Karis and Danielle name the figurative definition in the dialogue that
    follows, so these lines only have to get a student there. The old options
@@ -767,11 +789,14 @@ What is the best definition of **galvanized**?
 <Markdown when="@tmf_q_galvanized.value === 'spurred_into_action'">
 *Right — the effort spurred the middle class into action and energized their support.*
 </Markdown>
+</CapaProblem> <!-- tmf_q_galvanized_problem -->
 </Vertical> <!-- tmf_q_galvanized_screen -->
 
 <!-- CHAT-EMBEDDED — vocabulary, chunk C / para 4 (PDF p.19-21) -->
 
 <Vertical id="tmf_q_eradicating_screen">
+<CapaProblem id="tmf_q_eradicating_problem" title="Vocabulary: eradicating" maxAttempts="1">
+<KeyGrader id="tmf_q_eradicating_grader">
 <ChoiceInput id="tmf_q_eradicating">
 <Markdown>
 What words could take the place of **eradicating** — but keep the meaning the same?
@@ -784,6 +809,7 @@ What words could take the place of **eradicating** — but keep the meaning the 
          <Key value="completely_removing"> completely removing  </Key>
   <Distractor value="keeping_safe"       > keeping safe from    </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_q_eradicating.value === 'making_rules'">
 *Not quite — regulating liquor is a milder goal than the one the sentence describes. These societies wanted it gone, not managed.*
@@ -797,9 +823,12 @@ What words could take the place of **eradicating** — but keep the meaning the 
 <Markdown when="@tmf_q_eradicating.value === 'completely_removing'">
 *Yes — to eradicate is to root out entirely. That's why it goes with "full abstinence" rather than "moderation."*
 </Markdown>
+</CapaProblem> <!-- tmf_q_eradicating_problem -->
 </Vertical> <!-- tmf_q_eradicating_screen -->
 
 <Vertical id="tmf_q_exacerbated_screen">
+<CapaProblem id="tmf_q_exacerbated_problem" title="Vocabulary: exacerbated" maxAttempts="1">
+<KeyGrader id="tmf_q_exacerbated_grader">
 <ChoiceInput id="tmf_q_exacerbated">
 <Markdown>
 What words could take the place of **exacerbated** — but keep the meaning the same?
@@ -812,6 +841,7 @@ What words could take the place of **exacerbated** — but keep the meaning the 
   <Distractor value="fixed"       > fixed right up         </Distractor>
   <Distractor value="started_over"> started over           </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_q_exacerbated.value === 'calmed_down'">
 *Not quite — backwards. Read it into the sentence: if the intrusions had calmed things, the paragraph wouldn't be about tensions at all.*
@@ -825,9 +855,12 @@ What words could take the place of **exacerbated** — but keep the meaning the 
 <Markdown when="@tmf_q_exacerbated.value === 'made_worse'">
 *Right — to exacerbate is to make something bad that already exists worse.*
 </Markdown>
+</CapaProblem> <!-- tmf_q_exacerbated_problem -->
 </Vertical> <!-- tmf_q_exacerbated_screen -->
 
 <Vertical id="tmf_q_per_capita_screen">
+<CapaProblem id="tmf_q_per_capita_problem" title="Vocabulary: per capita" maxAttempts="1">
+<KeyGrader id="tmf_q_per_capita_grader">
 <ChoiceInput id="tmf_q_per_capita">
 <Markdown>
 What words could take the place of **per capita consumption** — but keep the meaning the same?
@@ -840,6 +873,7 @@ What words could take the place of **per capita consumption** — but keep the m
   <Distractor value="per_ethnic_group"> the amount of drinking by each ethnic group     </Distractor>
          <Key value="per_person"      > the average amount of drinking per person       </Key>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_q_per_capita.value === 'per_saloon'">
 *Not quite — "Capita" is Latin for heads — people, not places.*
@@ -853,6 +887,7 @@ What words could take the place of **per capita consumption** — but keep the m
 <Markdown when="@tmf_q_per_capita.value === 'per_person'">
 *Yes — the average per person. Take all the alcohol drunk in the country and divide it by everyone in it: the average American in the 1840s drank half of what the average American drank in the 1820s.*
 </Markdown>
+</CapaProblem> <!-- tmf_q_per_capita_problem -->
 </Vertical> <!-- tmf_q_per_capita_screen -->
 
 
@@ -861,6 +896,8 @@ What words could take the place of **per capita consumption** — but keep the m
      ============================================================ -->
 
 <Vertical id="tmf_be_term_screen">
+<CapaProblem id="tmf_be_term_problem" title="Benevolent Empire: the term" maxAttempts="1">
+<KeyGrader id="tmf_be_term_grader">
 <ChoiceInput id="tmf_be_term">
 <Markdown>
 **Benevolent Empire** is a discipline-specific term. Using clues in the passage,
@@ -871,6 +908,7 @@ which word or phrase most directly helps us understand what it was?
   <Distractor value="industrial_revolution"> Industrial Revolution </Distractor>
   <Distractor value="spiritual_response"   > spiritual response    </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_be_term.value === 'traditional_religion'">
 *Not quite — the passage says traditional Protestantism was "at low tide." The Benevolent Empire is the new thing, not the old one.*
@@ -884,6 +922,7 @@ which word or phrase most directly helps us understand what it was?
 <Markdown when="@tmf_be_term.value === 'powerful_network'">
 *Yes — the passage hands you the phrase: "a powerful network." Many societies, linked together, melding religion and reform.*
 </Markdown>
+</CapaProblem> <!-- tmf_be_term_problem -->
 </Vertical> <!-- tmf_be_term_screen -->
 
 <Vertical id="tmf_be_connect_screen">
@@ -922,6 +961,8 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
 </Vertical> <!-- tmf_be_connect_screen -->
 
 <Vertical id="tmf_be_bestdef_screen">
+<CapaProblem id="tmf_be_bestdef_problem" title="Benevolent Empire: the best definition" maxAttempts="1">
+<KeyGrader id="tmf_be_bestdef_grader">
 <ChoiceInput id="tmf_be_bestdef">
 <Markdown>
 Each member of your group wrote a one-sentence description of the Benevolent
@@ -931,6 +972,7 @@ Empire. Read them and choose the **best** one.
          <Key value="joe_network_religion_reform"   > **Joe:** A strong network of religious societies that brought together religion and reform among middle-class Evangelicals. </Key>
   <Distractor value="karis_reforms_promote_religion"> **Karis:** The set of reforms designed to promote religious ideas that had decreased after the Industrial Revolution.       </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_be_bestdef.value === 'danielle_evangelicals_name'">
 *Not quite — Danielle names who was in it, but not what it **was** — and the Benevolent Empire was much wider than temperance alone.*
@@ -941,11 +983,14 @@ Empire. Read them and choose the **best** one.
 <Markdown when="@tmf_be_bestdef.value === 'joe_network_religion_reform'">
 *Yes — Joe's has all three pieces: a network, made of societies, joining religion and reform among the middle class.*
 </Markdown>
+</CapaProblem> <!-- tmf_be_bestdef_problem -->
 </Vertical> <!-- tmf_be_bestdef_screen -->
 
 <!-- CHAT-EMBEDDED — why did the intrusions exacerbate tensions? (PDF p.29) -->
 
 <Vertical id="tmf_why_exacerbated_screen">
+<CapaProblem id="tmf_why_exacerbated_problem" title="Why the intrusions exacerbated tensions" maxAttempts="1">
+<KeyGrader id="tmf_why_exacerbated_grader">
 <ChoiceInput id="tmf_why_exacerbated">
 <Markdown>
 So why did those intrusions — like the temperance campaigns — *exacerbate*
@@ -956,6 +1001,7 @@ class, ethnic, and religious tensions?
   <Distractor value="irish_led_movement"    > Because Irish Catholic immigrants led the temperance movement themselves.                                     </Distractor>
          <Key value="middle_class_intrusion"> Because middle-class Protestant reformers intruded on the customs of immigrant and working-class communities. </Key>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_why_exacerbated.value === 'money_to_saloons'">
 *Not quite — no money changes hands in this passage, and money isn't what the tension is about.*
@@ -969,6 +1015,7 @@ class, ethnic, and religious tensions?
 <Markdown when="@tmf_why_exacerbated.value === 'middle_class_intrusion'">
 *Yes — one group reaching into another group's private life is exactly what makes class, ethnic, and religious tensions worse.*
 </Markdown>
+</CapaProblem> <!-- tmf_why_exacerbated_problem -->
 </Vertical> <!-- tmf_why_exacerbated_screen -->
 
 
@@ -977,6 +1024,8 @@ class, ethnic, and religious tensions?
      ============================================================ -->
 
 <Vertical id="tmf_q_teetotaling_screen">
+<CapaProblem id="tmf_q_teetotaling_problem" title="Vocabulary: teetotaling" maxAttempts="1">
+<KeyGrader id="tmf_q_teetotaling_grader">
 <ChoiceInput id="tmf_q_teetotaling">
 <Markdown>
 Dr. Booker asked us to think about **self-optimization**. It's in this sentence:
@@ -991,6 +1040,7 @@ First — what does **teetotaling** mean?
   <Distractor value="drinking_tea"     > replacing alcohol with tea or coffee             </Distractor>
          <Key value="no_alcohol_at_all"> not drinking alcohol at all                      </Key>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_q_teetotaling.value === 'heavy_drinking'">
 *Not quite — the opposite. Teetotaling is on the abstaining side of the question.*
@@ -1004,9 +1054,12 @@ First — what does **teetotaling** mean?
 <Markdown when="@tmf_q_teetotaling.value === 'no_alcohol_at_all'">
 *Right — total abstinence, none at all. That's the "total" hiding inside teetotal.*
 </Markdown>
+</CapaProblem> <!-- tmf_q_teetotaling_problem -->
 </Vertical> <!-- tmf_q_teetotaling_screen -->
 
 <Vertical id="tmf_selfoptim">
+<CapaProblem id="tmf_selfoptim_pick_problem" title="Self-optimization: the best sentence" maxAttempts="1">
+<KeyGrader id="tmf_selfoptim_pick_grader">
 <ChoiceInput id="tmf_selfoptim_pick">
 <Markdown>
 To pin down what **self-optimization** means, each of us found a sentence from
@@ -1016,6 +1069,7 @@ the article that gives it context. Who picked the **best** one?
   <Distractor value="karis_freedom_to_choose"  > **Karis:** "Sober-curiosity, she said, was about a person's 'freedom to choose.'"                                                                                                        </Distractor>
          <Key value="joe_authenticity_selfcare"> **Joe:** "…choosing not to drink in an alcohol-soaked culture is seen as an act of authenticity or self-care…"                                                                           </Key>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_selfoptim_pick.value === 'danielle_health_research'">
 *Not quite — Danielle's sentence says why health is on people's minds. Self-**optimization** needs a sentence about making yourself better, not about the research behind it.*
@@ -1026,6 +1080,7 @@ the article that gives it context. Who picked the **best** one?
 <Markdown when="@tmf_selfoptim_pick.value === 'joe_authenticity_selfcare'">
 *Yes — "an act of authenticity or self-care" turns not drinking into working on yourself. That's the self-optimization the writer means.*
 </Markdown>
+</CapaProblem> <!-- tmf_selfoptim_pick_problem -->
 
 <Markdown>**Explain why you chose that sentence.**</Markdown>
 <TextArea id="tmf_selfoptim_explain" rows="3" placeholder="I chose that sentence because…" />
@@ -1034,6 +1089,8 @@ the article that gives it context. Who picked the **best** one?
 <!-- CHAT-EMBEDDED — summarize the first paragraph (PDF p.41) -->
 
 <Vertical id="tmf_summary_pick_screen">
+<CapaProblem id="tmf_summary_pick_problem" title="The best summary of the first paragraph" maxAttempts="1">
+<KeyGrader id="tmf_summary_pick_grader">
 <ChoiceInput id="tmf_summary_pick">
 <Markdown>
 Which is the **best summary** of the article's first paragraph (about Carrie
@@ -1044,6 +1101,7 @@ Nation)?
   <Distractor value="vague_smashers"     > Starting in 1900, Carrie Nation invaded saloons and destroyed everything with "smashers."                                                                                      </Distractor>
   <Distractor value="opinion_interesting"> Carrie Nation is one of the most interesting figures of the early 1900s, mostly because she focused on getting physically (and violently) involved in the temperance movement. </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_summary_pick.value === 'hatchet_detail_only'">
 *Not quite — true, but only half the paragraph. A summary has to carry **why** she did it, not just what she swung.*
@@ -1057,11 +1115,14 @@ Nation)?
 <Markdown when="@tmf_summary_pick.value === 'what_and_why'">
 *Yes — what she did, how she did it, and the reason the paragraph gives: she blamed liquor for "society's moral failings."*
 </Markdown>
+</CapaProblem> <!-- tmf_summary_pick_problem -->
 </Vertical> <!-- tmf_summary_pick_screen -->
 
 <!-- CHAT-EMBEDDED — article: "authenticity" vocab + overall thesis -->
 
 <Vertical id="tmf_q_authenticity_screen">
+<CapaProblem id="tmf_q_authenticity_problem" title="Vocabulary: authenticity" maxAttempts="1">
+<KeyGrader id="tmf_q_authenticity_grader">
 <ChoiceInput id="tmf_q_authenticity">
 <Markdown>
 The article says choosing not to drink is seen as "an act of **authenticity**
@@ -1072,6 +1133,7 @@ or self-care." What does **authenticity** mean here?
   <Distractor value="group_approval"     > Getting approval from a group before you act. </Distractor>
   <Distractor value="doing_whats_popular"> Doing whatever happens to be popular.         </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_q_authenticity.value === 'following_rules'">
 *Not quite — rules arrive from outside you. The article pairs authenticity with self-care — something that comes from inside.*
@@ -1085,9 +1147,12 @@ or self-care." What does **authenticity** mean here?
 <Markdown when="@tmf_q_authenticity.value === 'true_to_self'">
 *Right — being genuinely yourself. That's how turning down a drink becomes a statement about who you are.*
 </Markdown>
+</CapaProblem> <!-- tmf_q_authenticity_problem -->
 </Vertical> <!-- tmf_q_authenticity_screen -->
 
 <Vertical id="tmf_article_thesis_screen">
+<CapaProblem id="tmf_article_thesis_problem" title="The article's main point" maxAttempts="1">
+<KeyGrader id="tmf_article_thesis_grader">
 <ChoiceInput id="tmf_article_thesis">
 <Markdown>
 Step back from the details — what is the article's **main point** overall?
@@ -1097,6 +1162,7 @@ Step back from the details — what is the article's **main point** overall?
   <Distractor value="more_dangerous_today"       > Drinking alcohol is far more dangerous today than it was in the 1800s because today's alcohol causes heart disease and cancer.                         </Distractor>
   <Distractor value="surgeon_general_prohibition"> The Surgeon General's goal in suggesting a warning label on alcohol is to bring back Prohibition.                                                      </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_article_thesis.value === 'nation_most_important'">
 *Not quite — she's the article's opening image, not its point. Ask what the writer is **using** her for.*
@@ -1110,11 +1176,14 @@ Step back from the details — what is the article's **main point** overall?
 <Markdown when="@tmf_article_thesis.value === 'new_temperance_new_morality'">
 *Yes — same behavior, different reason. The 1800s movement set out to protect society; today's sets out to improve the self.*
 </Markdown>
+</CapaProblem> <!-- tmf_article_thesis_problem -->
 </Vertical> <!-- tmf_article_thesis_screen -->
 
 <!-- CHAT-EMBEDDED — lithograph comprehension (Part 4) -->
 
 <Vertical id="tmf_litho_observe_screen">
+<CapaProblem id="tmf_litho_observe_problem" title="The lithograph: what it shows" maxAttempts="1">
+<KeyGrader id="tmf_litho_observe_grader">
 <ChoiceInput id="tmf_litho_observe">
 <Markdown>
 What does the image show across its nine numbered steps?
@@ -1124,6 +1193,7 @@ What does the image show across its nine numbered steps?
   <Distractor value="good_and_bad_sides"> The good and bad sides of drinking alcohol for working class people.                                      </Distractor>
          <Key value="one_mans_decline"  > One man's life of drinking, from a first drink, to the summit, to falling into poverty, crime, and death. </Key>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_litho_observe.value === 'top_is_moderate'">
 *Not quite — read step 5's caption again: "the summit attained" is "a confirmed drunkard" — and it's where the fall starts.*
@@ -1137,9 +1207,12 @@ What does the image show across its nine numbered steps?
 <Markdown when="@tmf_litho_observe.value === 'one_mans_decline'">
 *Yes — one life, climbing to the summit and then dropping step by step to the grave.*
 </Markdown>
+</CapaProblem> <!-- tmf_litho_observe_problem -->
 </Vertical> <!-- tmf_litho_observe_screen -->
 
 <Vertical id="tmf_litho_purpose_screen">
+<CapaProblem id="tmf_litho_purpose_problem" title="The lithograph: why it was made" maxAttempts="1">
+<KeyGrader id="tmf_litho_purpose_grader">
 <ChoiceInput id="tmf_litho_purpose">
 <Markdown>
 Why would the temperance movement create and share an image like this?
@@ -1149,6 +1222,7 @@ Why would the temperance movement create and share an image like this?
          <Key value="warn_and_persuade" > To warn people that even a first drink can lead step by step to ruin — to persuade them to stop drinking. </Key>
   <Distractor value="no_consequences"   > To show that drinking has no lasting consequences as long as you drink moderately.                        </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_litho_purpose.value === 'advertise_saloons'">
 *Not quite — an advertisement wouldn't run all the way to step 9. Everything past the summit is a warning.*
@@ -1162,11 +1236,14 @@ Why would the temperance movement create and share an image like this?
 <Markdown when="@tmf_litho_purpose.value === 'warn_and_persuade'">
 *Yes — this is persuasion. Take one friendly glass, the picture argues, and the other eight steps follow.*
 </Markdown>
+</CapaProblem> <!-- tmf_litho_purpose_problem -->
 </Vertical> <!-- tmf_litho_purpose_screen -->
 
 <!-- CHAT-EMBEDDED — synthesis: evaluate peer comparisons (Part 4) -->
 
 <Vertical id="tmf_synth_peereval_screen">
+<CapaProblem id="tmf_synth_peereval_problem" title="Then and now: the best comparison" maxAttempts="1">
+<KeyGrader id="tmf_synth_peereval_grader">
 <ChoiceInput id="tmf_synth_peereval">
 <Markdown>
 Your group each summed up the biggest difference between the two movements.
@@ -1176,6 +1253,7 @@ Which comparison is **best**?
          <Key value="danielle_moral_vs_health"> **Danielle:** Both discourage drinking, but the 1800s movement was a moral and social crusade, while today's movement is about personal health and self-improvement. </Key>
   <Distractor value="karis_price_of_alcohol"  > **Karis:** The main difference is that people in the 1800s drank more expensive alcohol than people do today, which caused harm to a lot of families.                </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <Markdown when="@tmf_synth_peereval.value === 'joe_not_different'">
 *Not quite — Joe has the likeness right — but a comparison owes us the difference too, and these two movements give very different reasons for the same behavior.*
@@ -1186,6 +1264,7 @@ Which comparison is **best**?
 <Markdown when="@tmf_synth_peereval.value === 'danielle_moral_vs_health'">
 *Yes — both discourage drinking; what changed is the reason. Society and family then, the self now. That's the comparison your final paragraph needs.*
 </Markdown>
+</CapaProblem> <!-- tmf_synth_peereval_problem -->
 </Vertical> <!-- tmf_synth_peereval_screen -->
 
 </Vertical> <!-- temperance_module_full_activities_part1 -->
