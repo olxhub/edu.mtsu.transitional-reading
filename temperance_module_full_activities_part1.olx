@@ -233,15 +233,24 @@ rows:
 
 <!-- ============================================================
      Part 3 — Academic language / close reading (PDF p.25-29)
-     Graded text-highlighting on the key sentence, via
-     SimpleTextSelection (mode=graded → Check button; the
-     generated problem is <id>_problem, gated on submitCount).
+     Graded text-highlighting on the key sentence: a one-attempt
+     CapaProblem (`<id>_problem`, maxAttempts="1") around a
+     TextSelectionGrader around the TextSelectionInput, gated on
+     submitCount — the same shape every other assessed item here has.
+
+     Spelled out rather than written as <SimpleTextSelection
+     mode="graded">: the terse tag drops maxAttempts on the floor, and
+     an assessment item that quietly allows unlimited attempts is worse
+     than three extra lines of XML.
      ============================================================ -->
 
-<!-- p.25 — three highlight questions on the key sentence: the head noun /
-     verb / object head MUST be selected; the rest of its phrase MAY be
-     ({optional} brackets), so a student who highlights the whole NP is just
-     as right as one who picks the single head word.
+<!-- p.25 — three highlight questions on the key sentence. The verb is a single
+     word; the subject and the object are graded as WHOLE PHRASES — every word
+     of the phrase and nothing outside it.
+
+     Grading the phrase as a phrase is the lesson. The next two screens ask
+     students to hold a noun phrase together as one unit; accepting the head
+     word by itself here would teach the opposite on the screen before.
 
      Order is VERB → SUBJECT → OBJECT, not S-V-O. The verb is the one part
      you can find without having identified anything else; once you have it,
@@ -254,37 +263,51 @@ rows:
 Three quick highlights on the key sentence — the verb first, then the subject,
 then the object.
 
-A part may be a **single word or a whole phrase**. For each one you **must**
-include the essential word; beyond that, highlight as much or as little of the
-rest of its phrase as you see fit.
+The verb is a **single word**. The subject and the object are **whole phrases**:
+highlight every word of the phrase, and nothing outside it.
 </Markdown>
 
-<SimpleTextSelection id="tmf_grammar_svo_verb" mode="graded" title="Highlight the verb">
-Highlight the verb.
+<CapaProblem id="tmf_grammar_svo_verb_problem" title="Highlight the verb" maxAttempts="1">
+<TextSelectionGrader id="tmf_grammar_svo_verb_grader">
+<TextSelectionInput id="tmf_grammar_svo_verb">
+Highlight the verb — a single word.
 ---
 Such intrusions by the Protestant middle class [exacerbated] class, ethnic, and religious tensions.
 ---
 all: Right — "exacerbated" is the verb: it's what the intrusions did.
 : The verb is the action word — what happened in this sentence?
-</SimpleTextSelection>
+</TextSelectionInput>
+</TextSelectionGrader>
+</CapaProblem> <!-- tmf_grammar_svo_verb_problem -->
 
-<SimpleTextSelection id="tmf_grammar_svo_subject" mode="graded" title="Highlight the subject">
-Highlight the subject of the sentence.
+<CapaProblem id="tmf_grammar_svo_subject_problem" title="Highlight the subject" maxAttempts="1">
+<TextSelectionGrader id="tmf_grammar_svo_subject_grader">
+<TextSelectionInput id="tmf_grammar_svo_subject">
+Highlight the subject — the entire subject phrase, every word of it.
 ---
-{Such} [intrusions] {by the Protestant middle class} exacerbated class, ethnic, and religious tensions.
+[Such intrusions by the Protestant middle class] exacerbated class, ethnic, and religious tensions.
 ---
-all: Right — "intrusions" is the heart of the subject, and the whole phrase "Such intrusions by the Protestant middle class" works too.
-: The subject is who or what does the action. What did the exacerbating?
-</SimpleTextSelection>
+all: Right — the subject is the whole phrase "Such intrusions by the Protestant middle class." Its head noun is "intrusions"; the rest of the phrase tells you which intrusions.
+: The subject is who or what does the action. Find the noun that did the exacerbating, then take the whole phrase built around it.
+</TextSelectionInput>
+</TextSelectionGrader>
+</CapaProblem> <!-- tmf_grammar_svo_subject_problem -->
 
-<SimpleTextSelection id="tmf_grammar_svo_object" mode="graded" title="Highlight the object">
-Highlight the direct object — what received the action.
+<!-- The trailing period is {optional}: a student sweeping to the end of the
+     sentence catches it, and stopping a highlight one character short of a
+     period is not a grammar mistake. -->
+<CapaProblem id="tmf_grammar_svo_object_problem" title="Highlight the object" maxAttempts="1">
+<TextSelectionGrader id="tmf_grammar_svo_object_grader">
+<TextSelectionInput id="tmf_grammar_svo_object">
+Highlight the direct object — the entire object phrase, every word of it.
 ---
-Such intrusions by the Protestant middle class exacerbated {class, ethnic, and religious} [tensions]{.}
+Such intrusions by the Protestant middle class exacerbated [class, ethnic, and religious tensions]{.}
 ---
-all: Right — "tensions" is what got exacerbated, and the full phrase "class, ethnic, and religious tensions" works too.
-: What did the intrusions exacerbate? Find that noun.
-</SimpleTextSelection>
+all: Right — the object is the whole phrase "class, ethnic, and religious tensions." Its head noun is "tensions"; the words in front of it say which tensions.
+: What did the intrusions exacerbate? Find that noun, then take the whole phrase built around it.
+</TextSelectionInput>
+</TextSelectionGrader>
+</CapaProblem> <!-- tmf_grammar_svo_object_problem -->
 </Vertical> <!-- tmf_grammar_svo -->
 
 <!-- p.26 — inside the subject NP. Three sequential highlights, matching the
