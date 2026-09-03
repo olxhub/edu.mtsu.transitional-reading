@@ -926,6 +926,8 @@ which word or phrase most directly helps us understand what it was?
 </Vertical> <!-- tmf_be_term_screen -->
 
 <Vertical id="tmf_be_connect_screen">
+<CapaProblem id="tmf_be_connect_problem" title="Benevolent Empire: what connects to it" maxAttempts="1">
+<CheckboxGrader id="tmf_be_connect_grader">
 <CheckboxInput id="tmf_be_connect">
 <Markdown>
 The Benevolent Empire was, indeed, a **powerful network.** What other words or
@@ -938,11 +940,16 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
          <Key value="religion_and_reform"    > religion and reform     </Key>
   <Distractor value="irish_catholics"        > Irish Catholics         </Distractor>
 </CheckboxInput>
+</CheckboxGrader>
 
 <!-- Multi-select, so the feedback has to cover three cases: a wrong pick, a
-   right-but-incomplete set, and the whole set. The gate below (in the
-   chatpeg) asks for all three Keys and nothing else, which is only fair
-   because the "keep looking" line says so. -->
+   right-but-incomplete set, and the whole set.
+
+   SCORING RULE: exact match. CheckboxGrader with no partialCredit marks the
+   response correct only when all three Keys and no Distractor are selected;
+   anything else is simply wrong. That is a strict rule for a six-option
+   select-all, and it is declared here as the rule this form scores by, not
+   as the only defensible one — partial credit is the obvious next question. -->
 <Markdown when="@tmf_be_connect.value.includes('american_independence')">
 *Not that one — American independence is the era the chapter opens in. The backdrop, not a piece of the network.*
 </Markdown>
@@ -958,6 +965,7 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
 <Markdown when="@tmf_be_connect.value.length === 3 &amp;&amp; @tmf_be_connect.value.includes('societies_movements') &amp;&amp; @tmf_be_connect.value.includes('middle_class') &amp;&amp; @tmf_be_connect.value.includes('religion_and_reform')">
 *That's the set: middle-class people, organized into societies and movements, melding religion and reform.*
 </Markdown>
+</CapaProblem> <!-- tmf_be_connect_problem -->
 </Vertical> <!-- tmf_be_connect_screen -->
 
 <Vertical id="tmf_be_bestdef_screen">
