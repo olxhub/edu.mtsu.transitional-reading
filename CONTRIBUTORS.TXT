@@ -8,6 +8,11 @@ The course content was developed by Timothy Nelson, Rebecca McIntyre,
 Allison Brown, and Michele Abernathy of Middle Tennessee State University,
 with review and feedback from the READ 1000 course team.
 
+Ben Pierce and Piotr Mitros did substantial work adapting and revising this
+course content for the platform, working with Anthropic's Claude models
+(Fable and Opus), which drafted much of the revision under their direction
+and review.
+
 Textbook excerpts are adapted from The American Yawp
 (https://www.americanyawp.com/), copyright the American Yawp contributors,
 licensed CC BY-SA 4.0.
@@ -19,11 +24,6 @@ This module is built with lo-blocks, part of the Learning Observer project,
 originally conceived of and created by Piotr Mitros. See the lo-blocks
 repository (https://github.com/olxhub/lo-blocks/) for full platform
 contributor history.
-
-Ben Pierce and Piotr Mitros did substantial work adapting and revising this
-course content for the platform, working with Anthropic's Claude models
-(Fable and Opus), which drafted much of the revision under their direction
-and review.
 
 Copyright
 =========
