@@ -180,6 +180,11 @@ rows:
      Part 3 — Check Joe's notes ON THE TEXTBOOK.
      3-way scale: correct and central / correct but less important /
      not correct. Answers keyed to the textbook excerpt.
+
+     One attempt, and no showanswer="always": that puts a Show Answer
+     button on screen BEFORE the one submission the key is meant to
+     follow. The default reveal-after-attempt is the policy for every
+     scored item here.
      ============================================================ -->
 
 <Vertical id="tmb_notecheck">
@@ -191,7 +196,7 @@ Yawp* excerpt. For **each statement**, decide whether it is **correct and centra
 to the text**, **correct but less important**, or **not correct**. Then press
 **Check**.
 </Markdown>
-<CapaProblem id="tmb_notecheck_problem" title="Joe's Notes on the Textbook" showanswer="always">
+<CapaProblem id="tmb_notecheck_problem" title="Joe's Notes on the Textbook" maxAttempts="1">
 <TabularMCQGrader id="tmb_notecheck_grader">
 <TabularMCQ id="tmb_notecheck_grid">
 cols:
@@ -410,6 +415,7 @@ all: Yes — that earlier sentence is where the text names the ideology: the "cu
 
      Each is a single-question MarkupProblem, so it carries its own Check
      button and per-item feedback and the chat can wait on .submitCount.
+     One attempt each, like every other scored item.
      ============================================================ -->
 
 <!-- The pane for the comprehension stretch: all four Yawp parts end to end in
@@ -433,7 +439,7 @@ Scroll through it as you answer the questions in the conversation.
 
 <!-- CHAT-EMBEDDED — the five comprehension questions -->
 
-<MarkupProblem id="tmb_comp_q1" title="Question 1"><![CDATA[
+<MarkupProblem id="tmb_comp_q1" title="Question 1" maxAttempts="1"><![CDATA[
 >>What happened to family life as the industrial economy of the 1830s and 1840s emerged?<<
 
 ( ) Families grew wealthier, and most women stopped working entirely.
@@ -446,7 +452,7 @@ Scroll through it as you answer the questions in the conversation.
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmb_comp_q2" title="Question 2"><![CDATA[
+<MarkupProblem id="tmb_comp_q2" title="Question 2" maxAttempts="1"><![CDATA[
 >>What was the "cult of domesticity" (or "cult of true womanhood"), and to whom did it mainly apply?<<
 
 (x) The idea that femininity was tied to the domestic sphere — one that applied mainly to upper- and middle-class women.
@@ -459,7 +465,7 @@ Scroll through it as you answer the questions in the conversation.
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmb_comp_q3" title="Question 3"><![CDATA[
+<MarkupProblem id="tmb_comp_q3" title="Question 3" maxAttempts="1"><![CDATA[
 >>According to the dominant understanding of gender, what were women expected to be?<<
 
 ( ) The main wage-earners who supported their families financially.
@@ -472,7 +478,7 @@ Scroll through it as you answer the questions in the conversation.
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmb_comp_q4" title="Question 4"><![CDATA[
+<MarkupProblem id="tmb_comp_q4" title="Question 4" maxAttempts="1"><![CDATA[
 >>How did women turn the ideology of domesticity into something new?<<
 
 ( ) They rejected the ideology and demanded to be treated exactly like men.
@@ -485,7 +491,7 @@ Scroll through it as you answer the questions in the conversation.
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmb_comp_q5" title="Question 5"><![CDATA[
+<MarkupProblem id="tmb_comp_q5" title="Question 5" maxAttempts="1"><![CDATA[
 >>How did the experience of many Southern women differ from that of some Northern women?<<
 
 ( ) Southern women were the first to form antislavery societies in large numbers.
@@ -566,7 +572,9 @@ place: the home, at the center of family and children.
 
 <!-- ============================================================
      Part 4 — Synthesis: sort each description as "then" (the 1800s
-     ideal) vs "now" (the tradwife trend), drawing on all three texts. Graded.
+     ideal) vs "now" (the tradwife trend), drawing on all three texts. Graded:
+     one attempt, key revealed after submission, not before (see the
+     note-check grid).
      ============================================================ -->
 
 <Vertical id="tmb_synth_sort">
@@ -576,7 +584,7 @@ place: the home, at the center of family and children.
 Using the textbook, the printed article, and the engraving, sort each description
 under the movement it best fits. Then press **Check.**
 </Markdown>
-<CapaProblem id="tmb_synth_sort_problem" title="Then vs. Now" showanswer="always">
+<CapaProblem id="tmb_synth_sort_problem" title="Then vs. Now" maxAttempts="1">
 <TabularMCQGrader id="tmb_synth_sort_grader">
 <TabularMCQ id="tmb_synth_sort_grid">
 cols:
