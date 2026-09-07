@@ -20,14 +20,14 @@ level; its first tab, "Main Content," is the session itself:
   * Left  pane : the scripted small-group conversation
                  (temperance_module_full_dialogue_part1.chatpeg). Peers Danielle,
                  Joe, and Karis and the reading instructor Professor Booker.
-  * Right pane : a UseHistory (tmf_main) the conversation drives with
-                 target embeds — `::screen [display=target:tmf_main ...]`,
+  * Right pane : a UseHistory (temperance_pane) the conversation drives with
+                 target embeds — `::screen [display=target:temperance_pane ...]`,
                  explained in the chatpeg's header comment.
 Each READING screen below — the lecture, the four textbook parts, the
 lithograph — also gets its own tab, via <Use ref="..."> of the same block, so a
 student can reopen it (with their own highlights) at any point.
 
-The textbook is CHUNKED across four Main Content readings (tmf_tb_a/a2/b/c),
+The textbook is CHUNKED across four Main Content readings (temperance_read_1/a2/b/c),
 one per paragraph, so peer dialogue can mediate each passage before the next
 appears and before the items that depend on it.
 This FULL build carries the module through all five parts: textbook, lithograph,
@@ -35,15 +35,15 @@ article, a then/now synthesis, and Pulling It Together — the culminating
 four-or-five-sentence synthesis.
      -->
 
-<Vertical id="temperance_module_full_activities_part1" title="Temperance (Activities)" launchable="true">
+<Vertical id="temperance_activities" title="Temperance (Activities)" launchable="true">
 
 
 <!-- ============================================================
      Part 1 — Introduction (PDF p.1)
      ============================================================ -->
 
-<Vertical id="tmf_intro">
-<Markdown id="tmf_intro_md">
+<Vertical id="temperance_intro">
+<Markdown id="temperance_intro_md">
 # READ 1000
 
 ## Introduction
@@ -82,7 +82,7 @@ All right, now imagine that you are in your classroom, but class has not started
 yet. You are talking to Danielle, Joe, and Karis. Click **Continue** in the
 conversation on the left to begin.
 </Markdown>
-</Vertical> <!-- tmf_intro -->
+</Vertical> <!-- temperance_intro -->
 
 
 <!-- ============================================================
@@ -90,8 +90,8 @@ conversation on the left to begin.
      Ungraded: "there is no right or wrong answer."
      ============================================================ -->
 
-<Vertical id="tmf_vks">
-<Markdown id="tmf_vks_prompt">
+<Vertical id="temperance_vks">
+<Markdown id="temperance_vks_prompt">
 ## Before We Read: How Familiar Are These Words?
 
 Take a look at some words that you will see in the texts. This is **not graded**
@@ -99,7 +99,7 @@ Take a look at some words that you will see in the texts. This is **not graded**
 instructor. For each word, choose the option that best describes how well you
 know it.
 </Markdown>
-<TabularMCQ id="tmf_vks_grid">
+<TabularMCQ id="temperance_vks_grid">
 cols:
   - I have never seen this word.
   - "I have seen it, but I'm not sure what it means."
@@ -115,7 +115,7 @@ rows:
   - prohibit|w_prohibit
   - proliferated|w_proliferated
 </TabularMCQ>
-</Vertical> <!-- tmf_vks -->
+</Vertical> <!-- temperance_vks -->
 
 
 <!-- ============================================================
@@ -131,13 +131,13 @@ rows:
 
 <!-- Parked wherever the chat has moved past the pane's last activity —
      an intentionally quiet screen, same pattern as the writing journals. -->
-<Markdown id="tmf_blank">
+<Markdown id="temperance_pane_blank">
 *(nothing here right now — the discussion continues on the left)*
 </Markdown>
 
-<Vertical id="tmf_lecture_read">
-<Annotate id="tmf_lecture_annotate" title="Professor Hale's Lecture">
-<Markdown id="tmf_lecture_md" src="readings/lecture_hale.md" />
+<Vertical id="temperance_lecture">
+<Annotate id="temperance_lecture_annotate" title="Professor Hale's Lecture">
+<Markdown id="temperance_lecture_md" src="readings/lecture_hale.md" />
 </Annotate>
 </Vertical>
 
@@ -147,11 +147,11 @@ rows:
      The Benevolent Empire network. Highlightable.
      ============================================================ -->
 
-<Vertical id="tmf_tb_a">
-<Annotate id="tmf_tb_a_annotate" title="American Yawp — The Benevolent Empire (part 1)">
-<Markdown id="tmf_tb_a_md" src="readings/american-yawp/benevolent_empire_1.md" />
+<Vertical id="temperance_read_1">
+<Annotate id="temperance_read_1_annotate" title="American Yawp — The Benevolent Empire (part 1)">
+<Markdown id="temperance_read_1_md" src="readings/american-yawp/benevolent_empire_1.md" />
 </Annotate>
-<Done id="tmf_tb_a_done" label="Mark as read" />
+<Done id="temperance_read_1_done" label="Mark as read" />
 </Vertical>
 
 
@@ -160,11 +160,11 @@ rows:
      Middle-class evangelicals + women reformers. Highlightable.
      ============================================================ -->
 
-<Vertical id="tmf_tb_a2">
-<Annotate id="tmf_tb_a2_annotate" title="American Yawp — The Benevolent Empire (part 2)">
-<Markdown id="tmf_tb_a2_md" src="readings/american-yawp/benevolent_empire_2.md" />
+<Vertical id="temperance_read_2">
+<Annotate id="temperance_read_2_annotate" title="American Yawp — The Benevolent Empire (part 2)">
+<Markdown id="temperance_read_2_md" src="readings/american-yawp/benevolent_empire_2.md" />
 </Annotate>
-<Done id="tmf_tb_a2_done" label="Mark as read" />
+<Done id="temperance_read_2_done" label="Mark as read" />
 </Vertical>
 
 
@@ -180,8 +180,8 @@ rows:
      scored item here.
      ============================================================ -->
 
-<Vertical id="tmf_notecheck">
-<Markdown id="tmf_notecheck_prompt">
+<Vertical id="temperance_notes">
+<Markdown id="temperance_notes_prompt">
 ## Checking Joe's Notes on the Textbook
 
 Joe made a list of what he thought were the important points from the *American
@@ -189,9 +189,9 @@ Yawp* excerpt. For **each statement**, decide whether it is **correct and centra
 to the text**, **correct but less important**, or **not correct**. Then press
 **Check**.
 </Markdown>
-<CapaProblem id="tmf_notecheck_problem" title="Joe's Notes on the Textbook" maxAttempts="1">
-<TabularMCQGrader id="tmf_notecheck_grader">
-<TabularMCQ id="tmf_notecheck_grid">
+<CapaProblem id="temperance_notes_problem" title="Joe's Notes on the Textbook" maxAttempts="1">
+<TabularMCQGrader id="temperance_notes_grader">
+<TabularMCQ id="temperance_notes_grid">
 cols:
   - Correct and central to the text
   - Correct but less important
@@ -205,8 +205,8 @@ rows:
   - "Social reform societies grew significantly between 1815 and 1861.|n_societies[Correct but less important]"
 </TabularMCQ>
 </TabularMCQGrader>
-</CapaProblem> <!-- tmf_notecheck_problem -->
-</Vertical> <!-- tmf_notecheck -->
+</CapaProblem> <!-- temperance_notes_problem -->
+</Vertical> <!-- temperance_notes -->
 
 
 <!-- ============================================================
@@ -214,11 +214,11 @@ rows:
      The temperance crusade (galvanized / endemic / distilleries).
      ============================================================ -->
 
-<Vertical id="tmf_tb_b">
-<Annotate id="tmf_tb_b_annotate" title="American Yawp — The Benevolent Empire (part 3)">
-<Markdown id="tmf_tb_b_md" src="readings/american-yawp/benevolent_empire_3.md" />
+<Vertical id="temperance_read_3">
+<Annotate id="temperance_read_3_annotate" title="American Yawp — The Benevolent Empire (part 3)">
+<Markdown id="temperance_read_3_md" src="readings/american-yawp/benevolent_empire_3.md" />
 </Annotate>
-<Done id="tmf_tb_b_done" label="Mark as read" />
+<Done id="temperance_read_3_done" label="Mark as read" />
 </Vertical>
 
 
@@ -228,11 +228,11 @@ rows:
      exacerbated / per capita). Used for the grammar tasks too.
      ============================================================ -->
 
-<Vertical id="tmf_tb_c">
-<Annotate id="tmf_tb_c_annotate" title="American Yawp — The Benevolent Empire (part 4)">
-<Markdown id="tmf_tb_c_md" src="readings/american-yawp/benevolent_empire_4.md" />
+<Vertical id="temperance_read_4">
+<Annotate id="temperance_read_4_annotate" title="American Yawp — The Benevolent Empire (part 4)">
+<Markdown id="temperance_read_4_md" src="readings/american-yawp/benevolent_empire_4.md" />
 </Annotate>
-<Done id="tmf_tb_c_done" label="Mark as read" />
+<Done id="temperance_read_4_done" label="Mark as read" />
 </Vertical>
 
 
@@ -261,8 +261,8 @@ rows:
      you can find without having identified anything else; once you have it,
      "who did it" and "what got done to" are questions about the verb. Asking
      for the subject first asks students to find it out of nowhere. -->
-<Vertical id="tmf_grammar_svo">
-<Markdown id="tmf_grammar_svo_md">
+<Vertical id="temperance_gram_svo">
+<Markdown id="temperance_gram_svo_md">
 ## Verb, Subject, Object
 
 Three quick highlights on the key sentence — the verb first, then the subject,
@@ -272,9 +272,9 @@ The verb is a **single word**. The subject and the object are **whole phrases**:
 highlight every word of the phrase, and nothing outside it.
 </Markdown>
 
-<CapaProblem id="tmf_grammar_svo_verb_problem" title="Highlight the verb" maxAttempts="1">
-<TextSelectionGrader id="tmf_grammar_svo_verb_grader">
-<TextSelectionInput id="tmf_grammar_svo_verb">
+<CapaProblem id="temperance_gram_verb_problem" title="Highlight the verb" maxAttempts="1">
+<TextSelectionGrader id="temperance_gram_verb_grader">
+<TextSelectionInput id="temperance_gram_verb">
 Highlight the verb — a single word.
 ---
 Such intrusions by the Protestant middle class [exacerbated] class, ethnic, and religious tensions.
@@ -283,11 +283,11 @@ all: Right — "exacerbated" is the verb: it's what the intrusions did.
 : The verb is the action word — here "exacerbated," what the intrusions did.
 </TextSelectionInput>
 </TextSelectionGrader>
-</CapaProblem> <!-- tmf_grammar_svo_verb_problem -->
+</CapaProblem> <!-- temperance_gram_verb_problem -->
 
-<CapaProblem id="tmf_grammar_svo_subject_problem" title="Highlight the subject" maxAttempts="1">
-<TextSelectionGrader id="tmf_grammar_svo_subject_grader">
-<TextSelectionInput id="tmf_grammar_svo_subject">
+<CapaProblem id="temperance_gram_subject_problem" title="Highlight the subject" maxAttempts="1">
+<TextSelectionGrader id="temperance_gram_subject_grader">
+<TextSelectionInput id="temperance_gram_subject">
 Highlight the subject — the entire subject phrase, every word of it.
 ---
 [Such intrusions by the Protestant middle class] exacerbated class, ethnic, and religious tensions.
@@ -296,14 +296,14 @@ all: Right — the subject is the whole phrase "Such intrusions by the Protestan
 : The subject is who or what does the action — the whole phrase "Such intrusions by the Protestant middle class," built around the noun "intrusions."
 </TextSelectionInput>
 </TextSelectionGrader>
-</CapaProblem> <!-- tmf_grammar_svo_subject_problem -->
+</CapaProblem> <!-- temperance_gram_subject_problem -->
 
 <!-- The trailing period is {optional}: a student sweeping to the end of the
      sentence catches it, and stopping a highlight one character short of a
      period is not a grammar mistake. -->
-<CapaProblem id="tmf_grammar_svo_object_problem" title="Highlight the object" maxAttempts="1">
-<TextSelectionGrader id="tmf_grammar_svo_object_grader">
-<TextSelectionInput id="tmf_grammar_svo_object">
+<CapaProblem id="temperance_gram_object_problem" title="Highlight the object" maxAttempts="1">
+<TextSelectionGrader id="temperance_gram_object_grader">
+<TextSelectionInput id="temperance_gram_object">
 Highlight the direct object — the entire object phrase, every word of it.
 ---
 Such intrusions by the Protestant middle class exacerbated [class, ethnic, and religious tensions]{.}
@@ -312,8 +312,8 @@ all: Right — the object is the whole phrase "class, ethnic, and religious tens
 : The object is what the intrusions exacerbated — the whole phrase "class, ethnic, and religious tensions," built around the noun "tensions."
 </TextSelectionInput>
 </TextSelectionGrader>
-</CapaProblem> <!-- tmf_grammar_svo_object_problem -->
-</Vertical> <!-- tmf_grammar_svo -->
+</CapaProblem> <!-- temperance_gram_object_problem -->
+</Vertical> <!-- temperance_gram_svo -->
 
 <!-- p.26 — inside the subject NP. ONE matching item, where three sequential
      highlights used to be. The parts on the right are the constituents of the
@@ -330,37 +330,37 @@ all: Right — the object is the whole phrase "class, ethnic, and religious tens
 
      "Determiner," not "premodifier" — it is the word the course actually uses
      for "Such," and it names a category rather than a position. -->
-<Vertical id="tmf_grammar_np">
-<Markdown id="tmf_grammar_np_md">
+<Vertical id="temperance_gram_np">
+<Markdown id="temperance_gram_np_md">
 ## Inside the Noun Phrase
 
 The subject of that sentence is a noun phrase all by itself. Here it is on its
 own — take it apart.
 </Markdown>
 
-<CapaProblem id="tmf_grammar_np_problem" title="Inside the Noun Phrase" maxAttempts="1">
-<MatchingGrader id="tmf_grammar_np_grader">
-<Markdown id="tmf_grammar_np_prompt">
+<CapaProblem id="temperance_gram_np_problem" title="Inside the Noun Phrase" maxAttempts="1">
+<MatchingGrader id="temperance_gram_np_grader">
+<Markdown id="temperance_gram_np_prompt">
 Match each part of a noun phrase to the part that plays it in **Such intrusions
 by the Protestant middle class**.
 </Markdown>
-<MatchingInput id="tmf_grammar_np_match">
-  <Markdown id="tmf_grammar_np_role_head"> **Head noun** — the one word the whole phrase is built around                     </Markdown>
-  <Markdown id="tmf_grammar_np_part_head"> intrusions                                                                       </Markdown>
+<MatchingInput id="temperance_gram_np_match">
+  <Markdown id="temperance_gram_np_role_head"> **Head noun** — the one word the whole phrase is built around                     </Markdown>
+  <Markdown id="temperance_gram_np_part_head"> intrusions                                                                       </Markdown>
 
-  <Markdown id="tmf_grammar_np_role_det" > **Determiner** — the word before the head noun that helps identify or specify it </Markdown>
-  <Markdown id="tmf_grammar_np_part_det" > Such                                                                             </Markdown>
+  <Markdown id="temperance_gram_np_role_det" > **Determiner** — the word before the head noun that helps identify or specify it </Markdown>
+  <Markdown id="temperance_gram_np_part_det" > Such                                                                             </Markdown>
 
-  <Markdown id="tmf_grammar_np_role_post"> **Postmodifier** — the part after the head noun that tells you more about it     </Markdown>
-  <Markdown id="tmf_grammar_np_part_post"> by the Protestant middle class                                                   </Markdown>
+  <Markdown id="temperance_gram_np_role_post"> **Postmodifier** — the part after the head noun that tells you more about it     </Markdown>
+  <Markdown id="temperance_gram_np_part_post"> by the Protestant middle class                                                   </Markdown>
 </MatchingInput>
 </MatchingGrader>
-</CapaProblem> <!-- tmf_grammar_np_problem -->
-</Vertical> <!-- tmf_grammar_np -->
+</CapaProblem> <!-- temperance_gram_np_problem -->
+</Vertical> <!-- temperance_gram_np -->
 
 <!-- p.27 — the structure, laid out (info screen) -->
-<Vertical id="tmf_grammar_structure">
-<Markdown id="tmf_grammar_structure_md">
+<Vertical id="temperance_gram_structure">
+<Markdown id="temperance_gram_structure_md">
 ## The Grammatical Structure
 
 Here is the sentence laid out:
@@ -372,11 +372,11 @@ Here is the sentence laid out:
 Both the subject and the object are **noun phrases** — to understand the
 sentence, you hold each whole phrase together.
 </Markdown>
-<Done id="tmf_grammar_structure_done" label="I understand" />
+<Done id="temperance_gram_structure_done" label="I understand" />
 </Vertical>
 
 <!-- p.28 — highlight the antecedent of "Such intrusions" -->
-<SimpleTextSelection id="tmf_grammar_antecedent" mode="graded" title="Find the Antecedent">
+<SimpleTextSelection id="temperance_gram_antecedent" mode="graded" title="Find the Antecedent">
 "Such intrusions" points back to an earlier sentence. Find the sentence that describes those intrusions — its antecedent — and highlight the entire sentence, from its first word through its final period.
 ---
 In response to the perception that heavy drinking was associated with men who abused, abandoned, or neglected their family obligations, women formed a significant presence in societies dedicated to eradicating liquor. Temperance became a hallmark of middle-class respectability among both men and women and developed into a crusade with a visible class character. [Temperance, like many other reform efforts, was championed by the middle class and threatened to intrude on the private lives of lower-class workers, many of whom were Irish Catholics.] Such intrusions by the Protestant middle class exacerbated class, ethnic, and religious tensions. Still, while the temperance movement made less substantial inroads into lower-class workers' drinking culture, the movement was still a great success for reformers.
@@ -393,7 +393,7 @@ all: Yes — that earlier sentence describes the intrusion (the middle class thr
      on the same pattern as the vocabulary questions — deliberately not a pane
      screen, which would put the questions exactly where the text should be:
      a comprehension check with the passage nowhere in sight is a memory test.
-     The pane holds the text (tmf_comp_reading, below) for the whole stretch,
+     The pane holds the text (temperance_comp_reading, below) for the whole stretch,
      so a student answers with the excerpt open beside them.
 
      Each is a single-question MarkupProblem, so it carries its own Check
@@ -405,24 +405,24 @@ all: Yes — that earlier sentence describes the intrusion (the middle class thr
      one scrollable view. <Use> of the same four Annotate blocks the reading
      walked through and the Textbook 1-4 tabs show — one block, one state — so
      a student's highlights are here waiting for them. The <Done> buttons are
-     deliberately not included: those live on the tmf_tb_* screens, and this
+     deliberately not included: those live on the temperance_read_* screens, and this
      is a place to read from, not another thing to finish. -->
-<Vertical id="tmf_comp_reading">
-<Markdown id="tmf_comp_reading_intro">
+<Vertical id="temperance_comp_reading">
+<Markdown id="temperance_comp_reading_intro">
 ## The Excerpt — All Four Parts
 
 The whole *American Yawp* excerpt, end to end, with your highlights still on it.
 Scroll through it as you answer the questions in the conversation.
 </Markdown>
-<Use ref="tmf_tb_a_annotate" />
-<Use ref="tmf_tb_a2_annotate" />
-<Use ref="tmf_tb_b_annotate" />
-<Use ref="tmf_tb_c_annotate" />
+<Use ref="temperance_read_1_annotate" />
+<Use ref="temperance_read_2_annotate" />
+<Use ref="temperance_read_3_annotate" />
+<Use ref="temperance_read_4_annotate" />
 </Vertical>
 
 <!-- CHAT-EMBEDDED — the five comprehension questions -->
 
-<MarkupProblem id="tmf_comp_q1" title="Question 1" maxAttempts="1"><![CDATA[
+<MarkupProblem id="temperance_comp_1" title="Question 1" maxAttempts="1"><![CDATA[
 >>How did the Second Great Awakening address the rapid social and economic changes of the post-independence era?<<
 
 ( ) By advocating for the prohibition of commercial distilleries.
@@ -435,7 +435,7 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmf_comp_q2" title="Question 2" maxAttempts="1"><![CDATA[
+<MarkupProblem id="temperance_comp_2" title="Question 2" maxAttempts="1"><![CDATA[
 >>Why were middle-class evangelicals able to devote significant time and resources to reform campaigns?<<
 
 (x) The Industrial Revolution left them with time and resources to spare.
@@ -448,7 +448,7 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmf_comp_q3" title="Question 3" maxAttempts="1"><![CDATA[
+<MarkupProblem id="temperance_comp_3" title="Question 3" maxAttempts="1"><![CDATA[
 >>How did temperance reformers shift their approach as alcoholism became an increasingly visible issue in towns and cities?<<
 
 ( ) They shifted from demanding total prohibition to encouraging moderate consumption.
@@ -461,7 +461,7 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmf_comp_q4" title="Question 4" maxAttempts="1"><![CDATA[
+<MarkupProblem id="temperance_comp_4" title="Question 4" maxAttempts="1"><![CDATA[
 >>What primary concern prompted many women to join societies dedicated to stopping drinking alcohol?<<
 
 ( ) They could no longer afford to pay the high taxes imposed on household dairy products like milk.
@@ -474,7 +474,7 @@ Women formed a presence in these societies "in response to the perception that h
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmf_comp_q5" title="Question 5" maxAttempts="1"><![CDATA[
+<MarkupProblem id="temperance_comp_5" title="Question 5" maxAttempts="1"><![CDATA[
 >>What evidence from the text demonstrates the ultimate success of the temperance movement by the 1840s?<<
 
 ( ) Alcohol consumption ended in most towns and cities by the 1840s.
@@ -496,8 +496,8 @@ Women formed a presence in these societies "in response to the perception that h
      article questions that follow are unchanged.
      ============================================================ -->
 
-<Vertical id="tmf_article_read">
-<Markdown id="tmf_article_md">
+<Vertical id="temperance_article_read">
+<Markdown id="temperance_article_md">
 ## The Magazine Article — On Paper
 
 Your instructor handed out a printed copy of the magazine article about the
@@ -521,8 +521,8 @@ together at the end.
 </Markdown>
 <!-- The reading happens off-screen, so the chat has nothing to watch except
        this: the student tells us when the paper article has been read. -->
-<Done id="tmf_article_read_done" label="I've read the handout" />
-</Vertical> <!-- tmf_article_read -->
+<Done id="temperance_article_read_done" label="I've read the handout" />
+</Vertical> <!-- temperance_article_read -->
 
 
 <!-- ============================================================
@@ -531,17 +531,17 @@ together at the end.
      Materials 3.24.docx": N. Currier's 1846 "The Drunkard's Progress."
      ============================================================ -->
 
-<Vertical id="tmf_litho_read">
-<Markdown id="tmf_litho_intro">
+<Vertical id="temperance_litho">
+<Markdown id="temperance_litho_intro">
 ## A Temperance-Era Image
 
 Study this 19th-century lithograph. Notice the **arch** shape, the **nine
 numbered steps**, and the scene **beneath the arch.**
 </Markdown>
-<Image id="tmf_litho_img" src="images/drunkards_progress.jpg" width="820"
+<Image id="temperance_litho_img" src="images/drunkards_progress.jpg" width="820"
   alt="'The Drunkard's Progress' (N. Currier, 1846): nine captioned figures form an arch rising on the left and falling on the right, tracing a man from a first friendly drink to death; beneath the arch a woman and child leave a ruined home."
   authors="N. Currier, 1846" license="Public domain" />
-<Markdown id="tmf_litho_caption">
+<Markdown id="temperance_litho_caption">
 **"The Drunkard's Progress, from the first glass to the grave"** — N. Currier, 1846.
 
 The nine steps, in order:
@@ -558,7 +558,7 @@ The nine steps, in order:
 
 *Beneath the arch, a woman and child leave a ruined home.*
 </Markdown>
-</Vertical> <!-- tmf_litho_read -->
+</Vertical> <!-- temperance_litho -->
 
 
 <!-- ============================================================
@@ -568,16 +568,16 @@ The nine steps, in order:
      note-check grid).
      ============================================================ -->
 
-<Vertical id="tmf_synth_sort">
-<Markdown id="tmf_synth_sort_prompt">
+<Vertical id="temperance_synth_sort">
+<Markdown id="temperance_synth_sort_prompt">
 ## Then and Now
 
 Using the textbook, the printed article, and the lithograph, sort each description under
 the movement it best fits. Then press **Check.**
 </Markdown>
-<CapaProblem id="tmf_synth_sort_problem" title="Then vs. Now" maxAttempts="1">
-<TabularMCQGrader id="tmf_synth_sort_grader">
-<TabularMCQ id="tmf_synth_sort_grid">
+<CapaProblem id="temperance_synth_sort_problem" title="Then vs. Now" maxAttempts="1">
+<TabularMCQGrader id="temperance_synth_sort_grader">
+<TabularMCQ id="temperance_synth_sort_grid">
 cols:
   - "19th-century temperance movement"
   - "Today's sober-curious movement"
@@ -590,15 +590,15 @@ rows:
 </TabularMCQ>
 </TabularMCQGrader>
 </CapaProblem>
-</Vertical> <!-- tmf_synth_sort -->
+</Vertical> <!-- temperance_synth_sort -->
 
 
 <!-- ============================================================
      Part 5 — Culminating writing task (Pulling It Together).
      ============================================================ -->
 
-<Vertical id="tmf_final_write_screen">
-<Markdown id="tmf_final_write_prompt">
+<Vertical id="temperance_final">
+<Markdown id="temperance_final_prompt">
 ## Pulling It Together
 
 This is the goal the whole module has been building toward.
@@ -610,7 +610,7 @@ what ways are the two movements alike, and how do they differ?**
 Draw on all three texts — the *American Yawp* excerpt, the lithograph, and the
 article your instructor handed out.
 </Markdown>
-<TextArea id="tmf_final_write" rows="8"
+<TextArea id="temperance_final_write" rows="8"
   placeholder="Both movements discouraged drinking, but…" />
 
 <!-- Progress affordance, two tiers. There is no longer a word minimum to
@@ -622,21 +622,21 @@ article your instructor handed out.
        quality is handed back to the student as a read-it-back checklist. A
        former third tier said "✓ That's a full comparison" at 80 words, which
        was dishonest — length isn't a comparison. -->
-<Markdown when="wordcount(@tmf_final_write.value) &lt; 40">
+<Markdown when="wordcount(@temperance_final_write.value) &lt; 40">
 *A solid comparison usually takes four or five sentences — keep going.*
 </Markdown>
-<Markdown when="wordcount(@tmf_final_write.value) &gt;= 40">
+<Markdown when="wordcount(@temperance_final_write.value) &gt;= 40">
 *✓ You can continue. Before you do, read it back: does it name **one way the movements are alike** and **one way they differ**? Does it draw on **all three texts** — the textbook, the lithograph, and the article?*
 </Markdown>
-</Vertical> <!-- tmf_final_write_screen -->
+</Vertical> <!-- temperance_final -->
 
 
 <!-- ============================================================
      Part 5 — Conclusion / wrap-up (replaces the old in-progress note).
      ============================================================ -->
 
-<Vertical id="tmf_conclusion">
-<Markdown id="tmf_conclusion_md">
+<Vertical id="temperance_conclusion">
+<Markdown id="temperance_conclusion_md">
 ## You're Done
 
 Nice work — you've finished the module. Along the way you practiced the full
@@ -654,15 +654,15 @@ Here is the finished work — the comparison you built from all three texts.
 <!-- The writing screen is behind us in the pane by now, so the conclusion
        shows the comparison rather than pointing at a screen that has moved
        on. <Use>, not a copy: same block, same state, still editable. -->
-<Use ref="tmf_final_write" />
-</Vertical> <!-- tmf_conclusion -->
+<Use ref="temperance_final_write" />
+</Vertical> <!-- temperance_conclusion -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — what do you think temperance means? (PDF p.3)
      ============================================================ -->
 
-<TextArea id="tmf_temp_guess" rows="3"
+<TextArea id="temperance_intro_guess" rows="3"
   placeholder="Temperance means…  /  Temperance is about…  /  Temperance has to do with…" />
 
 
@@ -671,7 +671,7 @@ Here is the finished work — the comparison you built from all three texts.
      ============================================================ -->
 
 <!-- Each chat-embedded question is wrapped in a Vertical that TAKES OVER the
-     embed id (`::tmf_q_commerce_screen`), so the correctness feedback under
+     embed id (`::temperance_vocab_commerce_screen`), so the correctness feedback under
      the choices renders inside the chat bubble with them. The ChoiceInput
      keeps its own id — every wait, and every readback, still names it.
 
@@ -693,10 +693,10 @@ Here is the finished work — the comparison you built from all three texts.
      that option misses and what the key is; nothing tells the student to
      look again. -->
 
-<Vertical id="tmf_q_commerce_screen">
-<CapaProblem id="tmf_q_commerce_problem" title="Vocabulary: commerce" maxAttempts="1">
-<KeyGrader id="tmf_q_commerce_grader">
-<ChoiceInput id="tmf_q_commerce">
+<Vertical id="temperance_vocab_commerce_screen">
+<CapaProblem id="temperance_vocab_commerce_problem" title="Vocabulary: commerce" maxAttempts="1">
+<KeyGrader id="temperance_vocab_commerce_grader">
+<ChoiceInput id="temperance_vocab_commerce">
 <Markdown>
 Look at the highlighted sentence and choose the best definition for **commerce**:
 
@@ -710,25 +710,25 @@ Look at the highlighted sentence and choose the best definition for **commerce**
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_q_commerce.value === 'church_formation' &amp;&amp; @tmf_q_commerce_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_commerce.value === 'church_formation' &amp;&amp; @temperance_vocab_commerce_problem.submitCount &gt; 0">
 *That's the religious half of the paragraph. "Large-scale commerce" sits next to "urban growth" — both are economic changes the Industrial Revolution brought, and commerce is the trade: buying and selling.*
 </Markdown>
-<Markdown when="@tmf_q_commerce.value === 'population_study' &amp;&amp; @tmf_q_commerce_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_commerce.value === 'population_study' &amp;&amp; @temperance_vocab_commerce_problem.submitCount &gt; 0">
 *That's the "urban growth" half of the sentence. "Commerce" is the other half — buying and selling, not counting people.*
 </Markdown>
-<Markdown when="@tmf_q_commerce.value === 'social_laws' &amp;&amp; @tmf_q_commerce_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_commerce.value === 'social_laws' &amp;&amp; @temperance_vocab_commerce_problem.submitCount &gt; 0">
 *Laws come later in the chapter, with prohibition. "Commerce" names the economic activity itself — buying and selling — not the rules made about it.*
 </Markdown>
-<Markdown when="@tmf_q_commerce.value === 'buying_selling' &amp;&amp; @tmf_q_commerce_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_commerce.value === 'buying_selling' &amp;&amp; @temperance_vocab_commerce_problem.submitCount &gt; 0">
 *Yes — commerce is buying and selling. "Large-scale commerce" means trade grown big enough to reshape whole cities.*
 </Markdown>
-</CapaProblem> <!-- tmf_q_commerce_problem -->
-</Vertical> <!-- tmf_q_commerce_screen -->
+</CapaProblem> <!-- temperance_vocab_commerce_problem -->
+</Vertical> <!-- temperance_vocab_commerce_screen -->
 
-<Vertical id="tmf_q_antidote_screen">
-<CapaProblem id="tmf_q_antidote_problem" title="Vocabulary: antidote" maxAttempts="1">
-<KeyGrader id="tmf_q_antidote_grader">
-<ChoiceInput id="tmf_q_antidote">
+<Vertical id="temperance_vocab_antidote_screen">
+<CapaProblem id="temperance_vocab_antidote_problem" title="Vocabulary: antidote" maxAttempts="1">
+<KeyGrader id="temperance_vocab_antidote_grader">
+<ChoiceInput id="temperance_vocab_antidote">
 <Markdown>
 Choose the best definition for **antidote**:
 
@@ -745,25 +745,25 @@ Choose the best definition for **antidote**:
 
 <!-- The peers unpack the two "anecdote" definitions and the medicine reading in
    the dialogue right after this, so the feedback here stays short. -->
-<Markdown when="@tmf_q_antidote.value === 'anecdote_story' &amp;&amp; @tmf_q_antidote_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_antidote.value === 'anecdote_story' &amp;&amp; @temperance_vocab_antidote_problem.submitCount &gt; 0">
 *That's an **anecdote** — one letter off, an entirely different word. An antidote works against a harm; here, against the insecurities of a changing world.*
 </Markdown>
-<Markdown when="@tmf_q_antidote.value === 'unpublished_writing' &amp;&amp; @tmf_q_antidote_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_antidote.value === 'unpublished_writing' &amp;&amp; @temperance_vocab_antidote_problem.submitCount &gt; 0">
 *A definition of some other word — nothing in "antidote" is about writing. An antidote works against a harm; here, against the insecurities of a changing world.*
 </Markdown>
-<Markdown when="@tmf_q_antidote.value === 'poison_medicine' &amp;&amp; @tmf_q_antidote_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_antidote.value === 'poison_medicine' &amp;&amp; @temperance_vocab_antidote_problem.submitCount &gt; 0">
 *A real meaning of the word, but the literal one: the Awakening was no medicine. Here the sense is figurative — something that works against a harm, the insecurities of a changing world.*
 </Markdown>
-<Markdown when="@tmf_q_antidote.value === 'counteracts_harm' &amp;&amp; @tmf_q_antidote_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_antidote.value === 'counteracts_harm' &amp;&amp; @temperance_vocab_antidote_problem.submitCount &gt; 0">
 *Right — the figurative sense: something that works against a harm. Here, against the insecurities of a changing world.*
 </Markdown>
-</CapaProblem> <!-- tmf_q_antidote_problem -->
-</Vertical> <!-- tmf_q_antidote_screen -->
+</CapaProblem> <!-- temperance_vocab_antidote_problem -->
+</Vertical> <!-- temperance_vocab_antidote_screen -->
 
-<Vertical id="tmf_q_proliferated_screen">
-<CapaProblem id="tmf_q_proliferated_problem" title="Vocabulary: proliferated" maxAttempts="1">
-<KeyGrader id="tmf_q_proliferated_grader">
-<ChoiceInput id="tmf_q_proliferated">
+<Vertical id="temperance_vocab_proliferated_screen">
+<CapaProblem id="temperance_vocab_proliferated_problem" title="Vocabulary: proliferated" maxAttempts="1">
+<KeyGrader id="temperance_vocab_proliferated_grader">
+<ChoiceInput id="temperance_vocab_proliferated">
 <Markdown>
 Choose the best definition for **proliferated**:
 
@@ -777,27 +777,27 @@ Choose the best definition for **proliferated**:
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_q_proliferated.value === 'merged_into_one' &amp;&amp; @tmf_q_proliferated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_proliferated.value === 'merged_into_one' &amp;&amp; @temperance_vocab_proliferated_problem.submitCount &gt; 0">
 *Nearly the opposite: to proliferate is to multiply. These societies spread rather than folding into one body.*
 </Markdown>
-<Markdown when="@tmf_q_proliferated.value === 'decreased_influence' &amp;&amp; @tmf_q_proliferated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_proliferated.value === 'decreased_influence' &amp;&amp; @temperance_vocab_proliferated_problem.submitCount &gt; 0">
 *"Rapidly" is right; the direction isn't. To proliferate is to increase fast — between 1815 and 1861 the societies were multiplying, not fading.*
 </Markdown>
-<Markdown when="@tmf_q_proliferated.value === 'moved_to_cities' &amp;&amp; @tmf_q_proliferated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_proliferated.value === 'moved_to_cities' &amp;&amp; @temperance_vocab_proliferated_problem.submitCount &gt; 0">
 *That's the urban growth from the paragraph before. "Proliferated" is about number, not location: the societies increased rapidly.*
 </Markdown>
-<Markdown when="@tmf_q_proliferated.value === 'increased_rapidly' &amp;&amp; @tmf_q_proliferated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_proliferated.value === 'increased_rapidly' &amp;&amp; @temperance_vocab_proliferated_problem.submitCount &gt; 0">
 *Yes — to proliferate is to multiply fast. The societies didn't just appear; they kept appearing.*
 </Markdown>
-</CapaProblem> <!-- tmf_q_proliferated_problem -->
-</Vertical> <!-- tmf_q_proliferated_screen -->
+</CapaProblem> <!-- temperance_vocab_proliferated_problem -->
+</Vertical> <!-- temperance_vocab_proliferated_screen -->
 
 <!-- CHAT-EMBEDDED — vocabulary, chunk B / para 3 (PDF p.18) -->
 
-<Vertical id="tmf_q_galvanized_screen">
-<CapaProblem id="tmf_q_galvanized_problem" title="Vocabulary: galvanized" maxAttempts="1">
-<KeyGrader id="tmf_q_galvanized_grader">
-<ChoiceInput id="tmf_q_galvanized">
+<Vertical id="temperance_vocab_galvanized_screen">
+<CapaProblem id="temperance_vocab_galvanized_problem" title="Vocabulary: galvanized" maxAttempts="1">
+<KeyGrader id="temperance_vocab_galvanized_grader">
+<ChoiceInput id="temperance_vocab_galvanized">
 <Markdown>
 What is the best definition of **galvanized**?
 
@@ -815,27 +815,27 @@ What is the best definition of **galvanized**?
    follows, so these lines stay short. The old options
    were all worded around "electric shock," which sent students hunting for a
    literal current instead of reading the sentence; the shock framing is gone. -->
-<Markdown when="@tmf_q_galvanized.value === 'gradually_built' &amp;&amp; @tmf_q_galvanized_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_galvanized.value === 'gradually_built' &amp;&amp; @temperance_vocab_galvanized_problem.submitCount &gt; 0">
 *The pace is wrong. To galvanize is to spur into action — the support was energized all at once, not built up slowly.*
 </Markdown>
-<Markdown when="@tmf_q_galvanized.value === 'zinc_coating' &amp;&amp; @tmf_q_galvanized_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_galvanized.value === 'zinc_coating' &amp;&amp; @temperance_vocab_galvanized_problem.submitCount &gt; 0">
 *That's galvanized steel, a real but different sense of the word. Here the sense is figurative: the effort spurred the middle class into action.*
 </Markdown>
-<Markdown when="@tmf_q_galvanized.value === 'wore_down' &amp;&amp; @tmf_q_galvanized_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_galvanized.value === 'wore_down' &amp;&amp; @temperance_vocab_galvanized_problem.submitCount &gt; 0">
 *Backwards. The sentence says the movement's effort won widespread support — it spurred people into action rather than wearing them down.*
 </Markdown>
-<Markdown when="@tmf_q_galvanized.value === 'spurred_into_action' &amp;&amp; @tmf_q_galvanized_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_galvanized.value === 'spurred_into_action' &amp;&amp; @temperance_vocab_galvanized_problem.submitCount &gt; 0">
 *Right — the effort spurred the middle class into action and energized their support.*
 </Markdown>
-</CapaProblem> <!-- tmf_q_galvanized_problem -->
-</Vertical> <!-- tmf_q_galvanized_screen -->
+</CapaProblem> <!-- temperance_vocab_galvanized_problem -->
+</Vertical> <!-- temperance_vocab_galvanized_screen -->
 
 <!-- CHAT-EMBEDDED — vocabulary, chunk C / para 4 (PDF p.19-21) -->
 
-<Vertical id="tmf_q_eradicating_screen">
-<CapaProblem id="tmf_q_eradicating_problem" title="Vocabulary: eradicating" maxAttempts="1">
-<KeyGrader id="tmf_q_eradicating_grader">
-<ChoiceInput id="tmf_q_eradicating">
+<Vertical id="temperance_vocab_eradicating_screen">
+<CapaProblem id="temperance_vocab_eradicating_problem" title="Vocabulary: eradicating" maxAttempts="1">
+<KeyGrader id="temperance_vocab_eradicating_grader">
+<ChoiceInput id="temperance_vocab_eradicating">
 <Markdown>
 What words could take the place of **eradicating** — but keep the meaning the same?
 
@@ -849,25 +849,25 @@ What words could take the place of **eradicating** — but keep the meaning the 
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_q_eradicating.value === 'making_rules' &amp;&amp; @tmf_q_eradicating_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_eradicating.value === 'making_rules' &amp;&amp; @temperance_vocab_eradicating_problem.submitCount &gt; 0">
 *Regulating liquor is a milder goal than the one the sentence describes. To eradicate is to remove completely — these societies wanted liquor gone, not managed.*
 </Markdown>
-<Markdown when="@tmf_q_eradicating.value === 'advertising' &amp;&amp; @tmf_q_eradicating_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_eradicating.value === 'advertising' &amp;&amp; @temperance_vocab_eradicating_problem.submitCount &gt; 0">
 *The opposite of what a temperance society was dedicated to: eradicating liquor means removing it completely.*
 </Markdown>
-<Markdown when="@tmf_q_eradicating.value === 'keeping_safe' &amp;&amp; @tmf_q_eradicating_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_eradicating.value === 'keeping_safe' &amp;&amp; @temperance_vocab_eradicating_problem.submitCount &gt; 0">
 *"Dedicated to keeping liquor safe" turns the sentence around. The societies were against liquor — eradicating it means removing it completely.*
 </Markdown>
-<Markdown when="@tmf_q_eradicating.value === 'completely_removing' &amp;&amp; @tmf_q_eradicating_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_eradicating.value === 'completely_removing' &amp;&amp; @temperance_vocab_eradicating_problem.submitCount &gt; 0">
 *Yes — to eradicate is to root out entirely. That's why it goes with "full abstinence" rather than "moderation."*
 </Markdown>
-</CapaProblem> <!-- tmf_q_eradicating_problem -->
-</Vertical> <!-- tmf_q_eradicating_screen -->
+</CapaProblem> <!-- temperance_vocab_eradicating_problem -->
+</Vertical> <!-- temperance_vocab_eradicating_screen -->
 
-<Vertical id="tmf_q_exacerbated_screen">
-<CapaProblem id="tmf_q_exacerbated_problem" title="Vocabulary: exacerbated" maxAttempts="1">
-<KeyGrader id="tmf_q_exacerbated_grader">
-<ChoiceInput id="tmf_q_exacerbated">
+<Vertical id="temperance_vocab_exacerbated_screen">
+<CapaProblem id="temperance_vocab_exacerbated_problem" title="Vocabulary: exacerbated" maxAttempts="1">
+<KeyGrader id="temperance_vocab_exacerbated_grader">
+<ChoiceInput id="temperance_vocab_exacerbated">
 <Markdown>
 What words could take the place of **exacerbated** — but keep the meaning the same?
 
@@ -881,25 +881,25 @@ What words could take the place of **exacerbated** — but keep the meaning the 
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_q_exacerbated.value === 'calmed_down' &amp;&amp; @tmf_q_exacerbated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_exacerbated.value === 'calmed_down' &amp;&amp; @temperance_vocab_exacerbated_problem.submitCount &gt; 0">
 *Backwards. If the intrusions had calmed things, the paragraph wouldn't be about tensions at all — to exacerbate is to make something worse.*
 </Markdown>
-<Markdown when="@tmf_q_exacerbated.value === 'fixed' &amp;&amp; @tmf_q_exacerbated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_exacerbated.value === 'fixed' &amp;&amp; @temperance_vocab_exacerbated_problem.submitCount &gt; 0">
 *The wrong direction — nothing here gets repaired. The paragraph describes friction getting worse, not its cure.*
 </Markdown>
-<Markdown when="@tmf_q_exacerbated.value === 'started_over' &amp;&amp; @tmf_q_exacerbated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_exacerbated.value === 'started_over' &amp;&amp; @temperance_vocab_exacerbated_problem.submitCount &gt; 0">
 *The class, ethnic, and religious tensions were already there. The intrusions made them worse — a change of degree, not a new start.*
 </Markdown>
-<Markdown when="@tmf_q_exacerbated.value === 'made_worse' &amp;&amp; @tmf_q_exacerbated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_exacerbated.value === 'made_worse' &amp;&amp; @temperance_vocab_exacerbated_problem.submitCount &gt; 0">
 *Right — to exacerbate is to make something bad that already exists worse.*
 </Markdown>
-</CapaProblem> <!-- tmf_q_exacerbated_problem -->
-</Vertical> <!-- tmf_q_exacerbated_screen -->
+</CapaProblem> <!-- temperance_vocab_exacerbated_problem -->
+</Vertical> <!-- temperance_vocab_exacerbated_screen -->
 
-<Vertical id="tmf_q_per_capita_screen">
-<CapaProblem id="tmf_q_per_capita_problem" title="Vocabulary: per capita" maxAttempts="1">
-<KeyGrader id="tmf_q_per_capita_grader">
-<ChoiceInput id="tmf_q_per_capita">
+<Vertical id="temperance_vocab_per_capita_screen">
+<CapaProblem id="temperance_vocab_per_capita_problem" title="Vocabulary: per capita" maxAttempts="1">
+<KeyGrader id="temperance_vocab_per_capita_grader">
+<ChoiceInput id="temperance_vocab_per_capita">
 <Markdown>
 What words could take the place of **per capita consumption** — but keep the meaning the same?
 
@@ -913,30 +913,30 @@ What words could take the place of **per capita consumption** — but keep the m
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_q_per_capita.value === 'per_saloon' &amp;&amp; @tmf_q_per_capita_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_per_capita.value === 'per_saloon' &amp;&amp; @temperance_vocab_per_capita_problem.submitCount &gt; 0">
 *"Capita" is Latin for heads — people, not places. Per capita consumption is the average amount per person.*
 </Markdown>
-<Markdown when="@tmf_q_per_capita.value === 'nationwide_total' &amp;&amp; @tmf_q_per_capita_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_per_capita.value === 'nationwide_total' &amp;&amp; @temperance_vocab_per_capita_problem.submitCount &gt; 0">
 *A national total would climb just because the population climbed. Per capita divides by the people — the average per person — which is what makes the drop meaningful.*
 </Markdown>
-<Markdown when="@tmf_q_per_capita.value === 'per_ethnic_group' &amp;&amp; @tmf_q_per_capita_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_per_capita.value === 'per_ethnic_group' &amp;&amp; @temperance_vocab_per_capita_problem.submitCount &gt; 0">
 *Groups do show up elsewhere in this paragraph, but "per capita" counts by head — the average per person.*
 </Markdown>
-<Markdown when="@tmf_q_per_capita.value === 'per_person' &amp;&amp; @tmf_q_per_capita_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_per_capita.value === 'per_person' &amp;&amp; @temperance_vocab_per_capita_problem.submitCount &gt; 0">
 *Yes — the average per person. Take all the alcohol drunk in the country and divide it by everyone in it: the average American in the 1840s drank half of what the average American drank in the 1820s.*
 </Markdown>
-</CapaProblem> <!-- tmf_q_per_capita_problem -->
-</Vertical> <!-- tmf_q_per_capita_screen -->
+</CapaProblem> <!-- temperance_vocab_per_capita_problem -->
+</Vertical> <!-- temperance_vocab_per_capita_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — Benevolent Empire, disciplinary term (PDF p.22-24)
      ============================================================ -->
 
-<Vertical id="tmf_be_term_screen">
-<CapaProblem id="tmf_be_term_problem" title="Benevolent Empire: the term" maxAttempts="1">
-<KeyGrader id="tmf_be_term_grader">
-<ChoiceInput id="tmf_be_term">
+<Vertical id="temperance_term_pick_screen">
+<CapaProblem id="temperance_term_pick_problem" title="Benevolent Empire: the term" maxAttempts="1">
+<KeyGrader id="temperance_term_pick_grader">
+<ChoiceInput id="temperance_term_pick">
 <Markdown>
 **Benevolent Empire** is a discipline-specific term. Using clues in the passage,
 which word or phrase most directly helps us understand what it was?
@@ -948,25 +948,25 @@ which word or phrase most directly helps us understand what it was?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_be_term.value === 'traditional_religion' &amp;&amp; @tmf_be_term_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_pick.value === 'traditional_religion' &amp;&amp; @temperance_term_pick_problem.submitCount &gt; 0">
 *The passage says traditional Protestantism was "at low tide." The Benevolent Empire is the new thing, not the old one — the "powerful network" of societies that grew in its place.*
 </Markdown>
-<Markdown when="@tmf_be_term.value === 'industrial_revolution' &amp;&amp; @tmf_be_term_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_pick.value === 'industrial_revolution' &amp;&amp; @temperance_term_pick_problem.submitCount &gt; 0">
 *That's the cause of the social problems the reformers answered, not a name for the reformers' network. The phrase the passage gives for that is "a powerful network."*
 </Markdown>
-<Markdown when="@tmf_be_term.value === 'spiritual_response' &amp;&amp; @tmf_be_term_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_pick.value === 'spiritual_response' &amp;&amp; @temperance_term_pick_problem.submitCount &gt; 0">
 *That phrase describes the Second Great Awakening. The Benevolent Empire is the organized thing the Awakening produced — "a powerful network" of societies.*
 </Markdown>
-<Markdown when="@tmf_be_term.value === 'powerful_network' &amp;&amp; @tmf_be_term_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_pick.value === 'powerful_network' &amp;&amp; @temperance_term_pick_problem.submitCount &gt; 0">
 *Yes — the passage hands you the phrase: "a powerful network." Many societies, linked together, melding religion and reform.*
 </Markdown>
-</CapaProblem> <!-- tmf_be_term_problem -->
-</Vertical> <!-- tmf_be_term_screen -->
+</CapaProblem> <!-- temperance_term_pick_problem -->
+</Vertical> <!-- temperance_term_pick_screen -->
 
-<Vertical id="tmf_be_connect_screen">
-<CapaProblem id="tmf_be_connect_problem" title="Benevolent Empire: what connects to it" maxAttempts="1">
-<CheckboxGrader id="tmf_be_connect_grader">
-<CheckboxInput id="tmf_be_connect">
+<Vertical id="temperance_term_connect_screen">
+<CapaProblem id="temperance_term_connect_problem" title="Benevolent Empire: what connects to it" maxAttempts="1">
+<CheckboxGrader id="temperance_term_connect_grader">
+<CheckboxInput id="temperance_term_connect">
 <Markdown>
 The Benevolent Empire was, indeed, a **powerful network.** What other words or
 phrases from the chapter describe or connect to it? **Select all that apply.**
@@ -988,33 +988,33 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
    anything else is simply wrong. That is a strict rule for a six-option
    select-all, and it is declared here as the rule this form scores by, not
    as the only defensible one — partial credit is the obvious next question. -->
-<Markdown when="@tmf_be_connect.value.includes('american_independence') &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_connect.value.includes('american_independence') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
 *American independence is the era the chapter opens in — the backdrop, not a piece of the network.*
 </Markdown>
-<Markdown when="@tmf_be_connect.value.includes('commercial_distilleries') &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_connect.value.includes('commercial_distilleries') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
 *Distilleries are what the reformers were up against — the target of the network, not part of it.*
 </Markdown>
-<Markdown when="@tmf_be_connect.value.includes('irish_catholics') &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_connect.value.includes('irish_catholics') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
 *Irish Catholic workers are the people the middle-class reformers intruded on: the other side of the tension, not part of the network.*
 </Markdown>
-<Markdown when="@tmf_be_connect.value.length &gt; 0 &amp;&amp; @tmf_be_connect.value.length &lt; 3 &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_connect.value.length &gt; 0 &amp;&amp; @temperance_term_connect.value.length &lt; 3 &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
 *Fewer than the full set. Three phrases describe the network: who was in it (middle-class), how it was organized (societies / movements), and what it joined together (religion and reform).*
 </Markdown>
-<Markdown when="@tmf_be_connect.value.length === 3 &amp;&amp; @tmf_be_connect.value.includes('societies_movements') &amp;&amp; @tmf_be_connect.value.includes('middle_class') &amp;&amp; @tmf_be_connect.value.includes('religion_and_reform') &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_connect.value.length === 3 &amp;&amp; @temperance_term_connect.value.includes('societies_movements') &amp;&amp; @temperance_term_connect.value.includes('middle_class') &amp;&amp; @temperance_term_connect.value.includes('religion_and_reform') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
 *That's the set: middle-class people, organized into societies and movements, melding religion and reform.*
 </Markdown>
-</CapaProblem> <!-- tmf_be_connect_problem -->
-</Vertical> <!-- tmf_be_connect_screen -->
+</CapaProblem> <!-- temperance_term_connect_problem -->
+</Vertical> <!-- temperance_term_connect_screen -->
 
 <!-- Three items in this form ask which peer's sentence is best (this one, the
      self-optimization sentence, the closing comparison). Each peer is right in
      exactly one of them: a peer who is reliably right is a cue that has nothing
      to do with reading. Option values name the sentence, not the speaker, so
      an attribution can move without touching values, gates, or analytics. -->
-<Vertical id="tmf_be_bestdef_screen">
-<CapaProblem id="tmf_be_bestdef_problem" title="Benevolent Empire: the best definition" maxAttempts="1">
-<KeyGrader id="tmf_be_bestdef_grader">
-<ChoiceInput id="tmf_be_bestdef">
+<Vertical id="temperance_term_bestdef_screen">
+<CapaProblem id="temperance_term_bestdef_problem" title="Benevolent Empire: the best definition" maxAttempts="1">
+<KeyGrader id="temperance_term_bestdef_grader">
+<ChoiceInput id="temperance_term_bestdef">
 <Markdown>
 Each member of your group wrote a one-sentence description of the Benevolent
 Empire. Read them and choose the **best** one.
@@ -1025,24 +1025,24 @@ Empire. Read them and choose the **best** one.
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_be_bestdef.value === 'evangelicals_name' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_bestdef.value === 'evangelicals_name' &amp;&amp; @temperance_term_bestdef_problem.submitCount &gt; 0">
 *Joe names who was in it, but not what it **was** — and the Benevolent Empire was much wider than temperance alone. Danielle's sentence has the missing piece: a network of societies joining religion and reform.*
 </Markdown>
-<Markdown when="@tmf_be_bestdef.value === 'reforms_promote_religion' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_bestdef.value === 'reforms_promote_religion' &amp;&amp; @temperance_term_bestdef_problem.submitCount &gt; 0">
 *Karis has the engine running backwards. Religious revival came first and powered the reform, rather than reform being invented to prop religion back up — Danielle's sentence has the order right.*
 </Markdown>
-<Markdown when="@tmf_be_bestdef.value === 'network_religion_reform' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
+<Markdown when="@temperance_term_bestdef.value === 'network_religion_reform' &amp;&amp; @temperance_term_bestdef_problem.submitCount &gt; 0">
 *Yes — Danielle's has all three pieces: a network, made of societies, joining religion and reform among the middle class.*
 </Markdown>
-</CapaProblem> <!-- tmf_be_bestdef_problem -->
-</Vertical> <!-- tmf_be_bestdef_screen -->
+</CapaProblem> <!-- temperance_term_bestdef_problem -->
+</Vertical> <!-- temperance_term_bestdef_screen -->
 
 <!-- CHAT-EMBEDDED — why did the intrusions exacerbate tensions? (PDF p.29) -->
 
-<Vertical id="tmf_why_exacerbated_screen">
-<CapaProblem id="tmf_why_exacerbated_problem" title="Why the intrusions exacerbated tensions" maxAttempts="1">
-<KeyGrader id="tmf_why_exacerbated_grader">
-<ChoiceInput id="tmf_why_exacerbated">
+<Vertical id="temperance_gram_why_screen">
+<CapaProblem id="temperance_gram_why_problem" title="Why the intrusions exacerbated tensions" maxAttempts="1">
+<KeyGrader id="temperance_gram_why_grader">
+<ChoiceInput id="temperance_gram_why">
 <Markdown>
 So why did those intrusions — like the temperance campaigns — *exacerbate*
 class, ethnic, and religious tensions?
@@ -1054,30 +1054,30 @@ class, ethnic, and religious tensions?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_why_exacerbated.value === 'money_to_saloons' &amp;&amp; @tmf_why_exacerbated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_gram_why.value === 'money_to_saloons' &amp;&amp; @temperance_gram_why_problem.submitCount &gt; 0">
 *No money changes hands in this passage, and money isn't what the tension is about. It's about one group — middle-class Protestant reformers — reaching into the customs of another.*
 </Markdown>
-<Markdown when="@tmf_why_exacerbated.value === 'only_irish_affected' &amp;&amp; @tmf_why_exacerbated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_gram_why.value === 'only_irish_affected' &amp;&amp; @temperance_gram_why_problem.submitCount &gt; 0">
 *The sentence names Irish Catholics as many of the lower-class workers, not as the only people affected. The friction runs between classes: middle-class reformers intruding on working-class communities.*
 </Markdown>
-<Markdown when="@tmf_why_exacerbated.value === 'irish_led_movement' &amp;&amp; @tmf_why_exacerbated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_gram_why.value === 'irish_led_movement' &amp;&amp; @temperance_gram_why_problem.submitCount &gt; 0">
 *The other way around: temperance was "championed by the middle class," and it threatened to intrude on lower-class workers, many of whom were Irish Catholics.*
 </Markdown>
-<Markdown when="@tmf_why_exacerbated.value === 'middle_class_intrusion' &amp;&amp; @tmf_why_exacerbated_problem.submitCount &gt; 0">
+<Markdown when="@temperance_gram_why.value === 'middle_class_intrusion' &amp;&amp; @temperance_gram_why_problem.submitCount &gt; 0">
 *Yes — one group reaching into another group's private life is exactly what makes class, ethnic, and religious tensions worse.*
 </Markdown>
-</CapaProblem> <!-- tmf_why_exacerbated_problem -->
-</Vertical> <!-- tmf_why_exacerbated_screen -->
+</CapaProblem> <!-- temperance_gram_why_problem -->
+</Vertical> <!-- temperance_gram_why_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — article vocabulary (PDF p.37-39)
      ============================================================ -->
 
-<Vertical id="tmf_q_teetotaling_screen">
-<CapaProblem id="tmf_q_teetotaling_problem" title="Vocabulary: teetotaling" maxAttempts="1">
-<KeyGrader id="tmf_q_teetotaling_grader">
-<ChoiceInput id="tmf_q_teetotaling">
+<Vertical id="temperance_vocab_teetotaling_screen">
+<CapaProblem id="temperance_vocab_teetotaling_problem" title="Vocabulary: teetotaling" maxAttempts="1">
+<KeyGrader id="temperance_vocab_teetotaling_grader">
+<ChoiceInput id="temperance_vocab_teetotaling">
 <Markdown>
 Dr. Booker asked us to think about **self-optimization**. It's in this sentence:
 
@@ -1093,25 +1093,25 @@ First — what does **teetotaling** mean?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_q_teetotaling.value === 'heavy_drinking' &amp;&amp; @tmf_q_teetotaling_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_teetotaling.value === 'heavy_drinking' &amp;&amp; @temperance_vocab_teetotaling_problem.submitCount &gt; 0">
 *The opposite. Teetotaling is not drinking at all — the "total" hiding inside teetotal.*
 </Markdown>
-<Markdown when="@tmf_q_teetotaling.value === 'persuading_others' &amp;&amp; @tmf_q_teetotaling_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_teetotaling.value === 'persuading_others' &amp;&amp; @temperance_vocab_teetotaling_problem.submitCount &gt; 0">
 *That's what a movement does. Teetotaling is what one person does about their own drinking: none at all.*
 </Markdown>
-<Markdown when="@tmf_q_teetotaling.value === 'drinking_tea' &amp;&amp; @tmf_q_teetotaling_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_teetotaling.value === 'drinking_tea' &amp;&amp; @temperance_vocab_teetotaling_problem.submitCount &gt; 0">
 *A reasonable guess from the spelling, but the "tee" is an emphatic T, for **total** — no alcohol at all, not tea.*
 </Markdown>
-<Markdown when="@tmf_q_teetotaling.value === 'no_alcohol_at_all' &amp;&amp; @tmf_q_teetotaling_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_teetotaling.value === 'no_alcohol_at_all' &amp;&amp; @temperance_vocab_teetotaling_problem.submitCount &gt; 0">
 *Right — total abstinence, none at all. That's the "total" hiding inside teetotal.*
 </Markdown>
-</CapaProblem> <!-- tmf_q_teetotaling_problem -->
-</Vertical> <!-- tmf_q_teetotaling_screen -->
+</CapaProblem> <!-- temperance_vocab_teetotaling_problem -->
+</Vertical> <!-- temperance_vocab_teetotaling_screen -->
 
-<Vertical id="tmf_selfoptim">
-<CapaProblem id="tmf_selfoptim_pick_problem" title="Self-optimization: the best sentence" maxAttempts="1">
-<KeyGrader id="tmf_selfoptim_pick_grader">
-<ChoiceInput id="tmf_selfoptim_pick">
+<Vertical id="temperance_article_sentence_screen">
+<CapaProblem id="temperance_article_sentence_problem" title="Self-optimization: the best sentence" maxAttempts="1">
+<KeyGrader id="temperance_article_sentence_grader">
+<ChoiceInput id="temperance_article_sentence">
 <Markdown>
 To pin down what **self-optimization** means, each of us found a sentence from
 the article that gives it context. Who picked the **best** one?
@@ -1122,27 +1122,27 @@ the article that gives it context. Who picked the **best** one?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_selfoptim_pick.value === 'health_research' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_sentence.value === 'health_research' &amp;&amp; @temperance_article_sentence_problem.submitCount &gt; 0">
 *Danielle's sentence says why health is on people's minds. Self-**optimization** is about making yourself better — Karis's sentence, where not drinking becomes "authenticity or self-care."*
 </Markdown>
-<Markdown when="@tmf_selfoptim_pick.value === 'freedom_to_choose' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_sentence.value === 'freedom_to_choose' &amp;&amp; @temperance_article_sentence_problem.submitCount &gt; 0">
 *"Freedom to choose" is about having the choice, not about what the choice does for you. Karis's sentence says what not drinking makes a person — "an act of authenticity or self-care."*
 </Markdown>
-<Markdown when="@tmf_selfoptim_pick.value === 'authenticity_selfcare' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_sentence.value === 'authenticity_selfcare' &amp;&amp; @temperance_article_sentence_problem.submitCount &gt; 0">
 *Yes — "an act of authenticity or self-care" turns not drinking into working on yourself. That's the self-optimization the writer means.*
 </Markdown>
-</CapaProblem> <!-- tmf_selfoptim_pick_problem -->
+</CapaProblem> <!-- temperance_article_sentence_problem -->
 
 <Markdown>**Explain why you chose that sentence.**</Markdown>
-<TextArea id="tmf_selfoptim_explain" rows="3" placeholder="I chose that sentence because…" />
-</Vertical> <!-- tmf_selfoptim -->
+<TextArea id="temperance_article_sentence_explain" rows="3" placeholder="I chose that sentence because…" />
+</Vertical> <!-- temperance_article_sentence_screen -->
 
 <!-- CHAT-EMBEDDED — summarize the first paragraph (PDF p.41) -->
 
-<Vertical id="tmf_summary_pick_screen">
-<CapaProblem id="tmf_summary_pick_problem" title="The best summary of the first paragraph" maxAttempts="1">
-<KeyGrader id="tmf_summary_pick_grader">
-<ChoiceInput id="tmf_summary_pick">
+<Vertical id="temperance_article_summary_screen">
+<CapaProblem id="temperance_article_summary_problem" title="The best summary of the first paragraph" maxAttempts="1">
+<KeyGrader id="temperance_article_summary_grader">
+<ChoiceInput id="temperance_article_summary">
 <Markdown>
 Which is the **best summary** of the article's first paragraph (about Carrie
 Nation)?
@@ -1154,27 +1154,27 @@ Nation)?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_summary_pick.value === 'hatchet_detail_only' &amp;&amp; @tmf_summary_pick_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_summary.value === 'hatchet_detail_only' &amp;&amp; @temperance_article_summary_problem.submitCount &gt; 0">
 *True, but only half the paragraph. A summary has to carry **why** she did it — liquor and "society's moral failings" — not just what she swung.*
 </Markdown>
-<Markdown when="@tmf_summary_pick.value === 'vague_smashers' &amp;&amp; @tmf_summary_pick_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_summary.value === 'vague_smashers' &amp;&amp; @temperance_article_summary_problem.submitCount &gt; 0">
 *"Destroyed everything" overstates it, and the "smashers" were the women who joined her. A summary shouldn't blur the facts it reports.*
 </Markdown>
-<Markdown when="@tmf_summary_pick.value === 'opinion_interesting' &amp;&amp; @tmf_summary_pick_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_summary.value === 'opinion_interesting' &amp;&amp; @temperance_article_summary_problem.submitCount &gt; 0">
 *That's an opinion about Carrie Nation, not a summary of the paragraph. Summaries report; they don't rate.*
 </Markdown>
-<Markdown when="@tmf_summary_pick.value === 'what_and_why' &amp;&amp; @tmf_summary_pick_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_summary.value === 'what_and_why' &amp;&amp; @temperance_article_summary_problem.submitCount &gt; 0">
 *Yes — what she did, how she did it, and the reason the paragraph gives: she blamed liquor for "society's moral failings."*
 </Markdown>
-</CapaProblem> <!-- tmf_summary_pick_problem -->
-</Vertical> <!-- tmf_summary_pick_screen -->
+</CapaProblem> <!-- temperance_article_summary_problem -->
+</Vertical> <!-- temperance_article_summary_screen -->
 
 <!-- CHAT-EMBEDDED — article: "authenticity" vocab + overall thesis -->
 
-<Vertical id="tmf_q_authenticity_screen">
-<CapaProblem id="tmf_q_authenticity_problem" title="Vocabulary: authenticity" maxAttempts="1">
-<KeyGrader id="tmf_q_authenticity_grader">
-<ChoiceInput id="tmf_q_authenticity">
+<Vertical id="temperance_vocab_authenticity_screen">
+<CapaProblem id="temperance_vocab_authenticity_problem" title="Vocabulary: authenticity" maxAttempts="1">
+<KeyGrader id="temperance_vocab_authenticity_grader">
+<ChoiceInput id="temperance_vocab_authenticity">
 <Markdown>
 The article says choosing not to drink is seen as "an act of **authenticity**
 or self-care." What does **authenticity** mean here?
@@ -1186,25 +1186,25 @@ or self-care." What does **authenticity** mean here?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_q_authenticity.value === 'following_rules' &amp;&amp; @tmf_q_authenticity_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_authenticity.value === 'following_rules' &amp;&amp; @temperance_vocab_authenticity_problem.submitCount &gt; 0">
 *Rules arrive from outside you. The article pairs authenticity with self-care — something that comes from inside: being true to who you are.*
 </Markdown>
-<Markdown when="@tmf_q_authenticity.value === 'group_approval' &amp;&amp; @tmf_q_authenticity_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_authenticity.value === 'group_approval' &amp;&amp; @temperance_vocab_authenticity_problem.submitCount &gt; 0">
 *Nearly the opposite: the article's example is not drinking in "an alcohol-soaked culture" — being yourself without the group's blessing.*
 </Markdown>
-<Markdown when="@tmf_q_authenticity.value === 'doing_whats_popular' &amp;&amp; @tmf_q_authenticity_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_authenticity.value === 'doing_whats_popular' &amp;&amp; @temperance_vocab_authenticity_problem.submitCount &gt; 0">
 *Popularity is everyone else's taste. Authenticity is your own — being true to who you really are.*
 </Markdown>
-<Markdown when="@tmf_q_authenticity.value === 'true_to_self' &amp;&amp; @tmf_q_authenticity_problem.submitCount &gt; 0">
+<Markdown when="@temperance_vocab_authenticity.value === 'true_to_self' &amp;&amp; @temperance_vocab_authenticity_problem.submitCount &gt; 0">
 *Right — being genuinely yourself. That's how turning down a drink becomes a statement about who you are.*
 </Markdown>
-</CapaProblem> <!-- tmf_q_authenticity_problem -->
-</Vertical> <!-- tmf_q_authenticity_screen -->
+</CapaProblem> <!-- temperance_vocab_authenticity_problem -->
+</Vertical> <!-- temperance_vocab_authenticity_screen -->
 
-<Vertical id="tmf_article_thesis_screen">
-<CapaProblem id="tmf_article_thesis_problem" title="The article's main point" maxAttempts="1">
-<KeyGrader id="tmf_article_thesis_grader">
-<ChoiceInput id="tmf_article_thesis">
+<Vertical id="temperance_article_thesis_screen">
+<CapaProblem id="temperance_article_thesis_problem" title="The article's main point" maxAttempts="1">
+<KeyGrader id="temperance_article_thesis_grader">
+<ChoiceInput id="temperance_article_thesis">
 <Markdown>
 Step back from the details — what is the article's **main point** overall?
 </Markdown>
@@ -1215,27 +1215,27 @@ Step back from the details — what is the article's **main point** overall?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_article_thesis.value === 'nation_most_important' &amp;&amp; @tmf_article_thesis_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_thesis.value === 'nation_most_important' &amp;&amp; @temperance_article_thesis_problem.submitCount &gt; 0">
 *She's the article's opening image, not its point. The writer uses her to set up a comparison: today's sober-curious movement as a new temperance, with a morality that has shifted from society to the self.*
 </Markdown>
-<Markdown when="@tmf_article_thesis.value === 'more_dangerous_today' &amp;&amp; @tmf_article_thesis_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_thesis.value === 'more_dangerous_today' &amp;&amp; @temperance_article_thesis_problem.submitCount &gt; 0">
 *The article does report research on alcohol's harms, but it never claims today's alcohol is worse. That's a supporting detail; the point is the shift from protecting society to improving the self.*
 </Markdown>
-<Markdown when="@tmf_article_thesis.value === 'surgeon_general_prohibition' &amp;&amp; @tmf_article_thesis_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_thesis.value === 'surgeon_general_prohibition' &amp;&amp; @temperance_article_thesis_problem.submitCount &gt; 0">
 *Another detail, and an overstatement — a warning label is not a ban. The article's point is the shift from protecting society to improving the self.*
 </Markdown>
-<Markdown when="@tmf_article_thesis.value === 'new_temperance_new_morality' &amp;&amp; @tmf_article_thesis_problem.submitCount &gt; 0">
+<Markdown when="@temperance_article_thesis.value === 'new_temperance_new_morality' &amp;&amp; @temperance_article_thesis_problem.submitCount &gt; 0">
 *Yes — same behavior, different reason. The 1800s movement set out to protect society; today's sets out to improve the self.*
 </Markdown>
-</CapaProblem> <!-- tmf_article_thesis_problem -->
-</Vertical> <!-- tmf_article_thesis_screen -->
+</CapaProblem> <!-- temperance_article_thesis_problem -->
+</Vertical> <!-- temperance_article_thesis_screen -->
 
 <!-- CHAT-EMBEDDED — lithograph comprehension (Part 4) -->
 
-<Vertical id="tmf_litho_observe_screen">
-<CapaProblem id="tmf_litho_observe_problem" title="The lithograph: what it shows" maxAttempts="1">
-<KeyGrader id="tmf_litho_observe_grader">
-<ChoiceInput id="tmf_litho_observe">
+<Vertical id="temperance_litho_observe_screen">
+<CapaProblem id="temperance_litho_observe_problem" title="The lithograph: what it shows" maxAttempts="1">
+<KeyGrader id="temperance_litho_observe_grader">
+<ChoiceInput id="temperance_litho_observe">
 <Markdown>
 What does the image show across its nine numbered steps?
 </Markdown>
@@ -1246,25 +1246,25 @@ What does the image show across its nine numbered steps?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_litho_observe.value === 'top_is_moderate' &amp;&amp; @tmf_litho_observe_problem.submitCount &gt; 0">
+<Markdown when="@temperance_litho_observe.value === 'top_is_moderate' &amp;&amp; @temperance_litho_observe_problem.submitCount &gt; 0">
 *Step 5's caption says otherwise: "the summit attained" is "a confirmed drunkard" — and it's where the fall starts. The arch is one man's decline.*
 </Markdown>
-<Markdown when="@tmf_litho_observe.value === 'nine_different_men' &amp;&amp; @tmf_litho_observe_problem.submitCount &gt; 0">
+<Markdown when="@temperance_litho_observe.value === 'nine_different_men' &amp;&amp; @temperance_litho_observe_problem.submitCount &gt; 0">
 *It's one man, nine times — the same life at nine moments. That's why it's called a "progress."*
 </Markdown>
-<Markdown when="@tmf_litho_observe.value === 'good_and_bad_sides' &amp;&amp; @tmf_litho_observe_problem.submitCount &gt; 0">
+<Markdown when="@temperance_litho_observe.value === 'good_and_bad_sides' &amp;&amp; @temperance_litho_observe_problem.submitCount &gt; 0">
 *The image is one-sided on purpose. It only rises in order to fall; nothing on the arch is offered as a good ending.*
 </Markdown>
-<Markdown when="@tmf_litho_observe.value === 'one_mans_decline' &amp;&amp; @tmf_litho_observe_problem.submitCount &gt; 0">
+<Markdown when="@temperance_litho_observe.value === 'one_mans_decline' &amp;&amp; @temperance_litho_observe_problem.submitCount &gt; 0">
 *Yes — one life, climbing to the summit and then dropping step by step to the grave.*
 </Markdown>
-</CapaProblem> <!-- tmf_litho_observe_problem -->
-</Vertical> <!-- tmf_litho_observe_screen -->
+</CapaProblem> <!-- temperance_litho_observe_problem -->
+</Vertical> <!-- temperance_litho_observe_screen -->
 
-<Vertical id="tmf_litho_purpose_screen">
-<CapaProblem id="tmf_litho_purpose_problem" title="The lithograph: why it was made" maxAttempts="1">
-<KeyGrader id="tmf_litho_purpose_grader">
-<ChoiceInput id="tmf_litho_purpose">
+<Vertical id="temperance_litho_purpose_screen">
+<CapaProblem id="temperance_litho_purpose_problem" title="The lithograph: why it was made" maxAttempts="1">
+<KeyGrader id="temperance_litho_purpose_grader">
+<ChoiceInput id="temperance_litho_purpose">
 <Markdown>
 Why would the temperance movement create and share an image like this?
 </Markdown>
@@ -1275,27 +1275,27 @@ Why would the temperance movement create and share an image like this?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_litho_purpose.value === 'advertise_saloons' &amp;&amp; @tmf_litho_purpose_problem.submitCount &gt; 0">
+<Markdown when="@temperance_litho_purpose.value === 'advertise_saloons' &amp;&amp; @temperance_litho_purpose_problem.submitCount &gt; 0">
 *An advertisement wouldn't run all the way to step 9. Everything past the summit is a warning — the image was made to persuade people not to drink.*
 </Markdown>
-<Markdown when="@tmf_litho_purpose.value === 'record_social_life' &amp;&amp; @tmf_litho_purpose_problem.submitCount &gt; 0">
+<Markdown when="@temperance_litho_purpose.value === 'record_social_life' &amp;&amp; @temperance_litho_purpose_problem.submitCount &gt; 0">
 *It isn't a record of anything that happened. The ruined home beneath the arch is there to make you feel something — this is persuasion, not documentation.*
 </Markdown>
-<Markdown when="@tmf_litho_purpose.value === 'no_consequences' &amp;&amp; @tmf_litho_purpose_problem.submitCount &gt; 0">
+<Markdown when="@temperance_litho_purpose.value === 'no_consequences' &amp;&amp; @temperance_litho_purpose_problem.submitCount &gt; 0">
 *The whole arch is consequences: poverty, disease, crime, death. The image argues that a first glass leads there.*
 </Markdown>
-<Markdown when="@tmf_litho_purpose.value === 'warn_and_persuade' &amp;&amp; @tmf_litho_purpose_problem.submitCount &gt; 0">
+<Markdown when="@temperance_litho_purpose.value === 'warn_and_persuade' &amp;&amp; @temperance_litho_purpose_problem.submitCount &gt; 0">
 *Yes — this is persuasion. Take one friendly glass, the picture argues, and the other eight steps follow.*
 </Markdown>
-</CapaProblem> <!-- tmf_litho_purpose_problem -->
-</Vertical> <!-- tmf_litho_purpose_screen -->
+</CapaProblem> <!-- temperance_litho_purpose_problem -->
+</Vertical> <!-- temperance_litho_purpose_screen -->
 
 <!-- CHAT-EMBEDDED — synthesis: evaluate peer comparisons (Part 4) -->
 
-<Vertical id="tmf_synth_peereval_screen">
-<CapaProblem id="tmf_synth_peereval_problem" title="Then and now: the best comparison" maxAttempts="1">
-<KeyGrader id="tmf_synth_peereval_grader">
-<ChoiceInput id="tmf_synth_peereval">
+<Vertical id="temperance_synth_compare_screen">
+<CapaProblem id="temperance_synth_compare_problem" title="Then and now: the best comparison" maxAttempts="1">
+<KeyGrader id="temperance_synth_compare_grader">
+<ChoiceInput id="temperance_synth_compare">
 <Markdown>
 Your group each summed up the biggest difference between the two movements.
 Which comparison is **best**?
@@ -1306,16 +1306,16 @@ Which comparison is **best**?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_synth_peereval.value === 'not_different' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@temperance_synth_compare.value === 'not_different' &amp;&amp; @temperance_synth_compare_problem.submitCount &gt; 0">
 *Karis has the likeness right, but a comparison owes us the difference too: the two movements give very different reasons for the same behavior — society and family then, the self now.*
 </Markdown>
-<Markdown when="@tmf_synth_peereval.value === 'price_of_alcohol' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@temperance_synth_compare.value === 'price_of_alcohol' &amp;&amp; @temperance_synth_compare_problem.submitCount &gt; 0">
 *Price isn't a contrast either text draws — the textbook says whiskey was cheap. The real difference is what each movement was trying to protect: society and family then, the self now.*
 </Markdown>
-<Markdown when="@tmf_synth_peereval.value === 'moral_vs_health' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@temperance_synth_compare.value === 'moral_vs_health' &amp;&amp; @temperance_synth_compare_problem.submitCount &gt; 0">
 *Yes — both discourage drinking; what changed is the reason. Society and family then, the self now. That's the comparison your final paragraph needs.*
 </Markdown>
-</CapaProblem> <!-- tmf_synth_peereval_problem -->
-</Vertical> <!-- tmf_synth_peereval_screen -->
+</CapaProblem> <!-- temperance_synth_compare_problem -->
+</Vertical> <!-- temperance_synth_compare_screen -->
 
-</Vertical> <!-- temperance_module_full_activities_part1 -->
+</Vertical> <!-- temperance_activities -->

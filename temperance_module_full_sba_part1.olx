@@ -42,10 +42,11 @@ lang: en-Latn-US
   Highlights a student makes on a passage in the flow are the highlights they see
   when they reopen its tab.
 
-  The magazine article has no tab — it is a paper handout (see tmf_article_read).
+  The magazine article has no tab — it is a paper handout (see temperance_article_read).
 
   Activity screens live in temperance_module_full_activities_part1.olx. Ids are
-  prefixed `tmf_` so this build coexists with the `tmod_` faithful build.
+  prefixed `temperance_`, the form's name; the parallel form uses
+  `womens_sphere_`.
 
   No print="no-chrome" on <Tabs>: this module has no print/submit page yet, so
   there is no export for the tab strip to intrude on.
@@ -53,10 +54,10 @@ lang: en-Latn-US
   How the pane is driven. The conversation opens each activity screen with a
   TARGET EMBED in the chatpeg —
 
-      ::tmf_vks [display=target:tmf_main label="How familiar are these words?"]
+      ::temperance_vks [display=target:temperance_pane label="How familiar are these words?"]
 
-  — rather than a bare `tmf_main <- tmf_vks` set command. The screen still lands
-  HERE, in the tmf_main pane; what the embed adds is a small labelled button left
+  — rather than a bare `temperance_pane <- temperance_vks` set command. The screen still lands
+  HERE, in the temperance_pane pane; what the embed adds is a small labelled button left
   behind in the transcript at the point in the discussion where that activity
   happened. It is a visible marker of where you were, and clicking it repoints
   the pane at that screen again, so going back to an earlier activity is one
@@ -65,17 +66,17 @@ lang: en-Latn-US
   drag the pane back to the top of the module.
 
   The Flash/FocusAction cues below still work unchanged: a target embed writes
-  @tmf_main.value exactly as the set command did, so the watch expressions fire
+  @temperance_pane.value exactly as the set command did, so the watch expressions fire
   the same way.
 
-  Only `tmf_main <- tmf_blank` is still a set command — parking the pane empty is
+  Only `temperance_pane <- temperance_pane_blank` is still a set command — parking the pane empty is
   not an activity, so there is nothing to mark or to return to.
 -->
 
-<Tabs id="temperance_module_full_sba" title="Temperance — Full SBA (READ 1000)" launchable="true">
+<Tabs id="temperance_module" title="Temperance — Full SBA (READ 1000)" launchable="true">
 
   <!-- ===== Tab 1 (index 0): the session — conversation + activity pane ===== -->
-  <Vertical id="tmf_tab_main" title="Discussion">
+  <Vertical id="temperance_tab_main" title="Discussion">
 
     <!-- Attention cues. Students don't notice the right pane changing and don't
          know where to look, so every screen the chat opens gets a pulse (Flash)
@@ -101,13 +102,13 @@ lang: en-Latn-US
          embeds write qualified refs. The intended fix is cues riding the embed itself
          (flash=/focus= on the ::screen [display=target:...] line) so no pane-value
          comparison exists at all — see bugs.md. We ship this and clean up later. -->
-    <Trigger id="tmf_intro_cue"      watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_intro')"      mode="each">
-      <Flash id="tmf_intro_flash"      target="tmf_intro" />
+    <Trigger id="temperance_intro_cue"      watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_intro')"      mode="each">
+      <Flash id="temperance_intro_flash"      target="temperance_intro" />
     </Trigger>
 
-    <Trigger id="tmf_vks_cue"        watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_vks')"        mode="each">
-      <Flash id="tmf_vks_flash"        target="tmf_vks_grid" />
-      <FocusAction id="tmf_vks_focus"  target="tmf_vks_grid" />
+    <Trigger id="temperance_vks_cue"        watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_vks')"        mode="each">
+      <Flash id="temperance_vks_flash"        target="temperance_vks_grid" />
+      <FocusAction id="temperance_vks_focus"  target="temperance_vks_grid" />
     </Trigger>
 
     <!-- The readings. Each is an Annotate (or, for the lithograph, an image);
@@ -116,80 +117,80 @@ lang: en-Latn-US
     <!-- Prof. Hale's lecture has no cue: it is an optional reference on its own
          tab now, never parked in the pane, so there is nothing to point at. -->
 
-    <Trigger id="tmf_tb_a_cue"       watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_tb_a')"       mode="each">
-      <Flash id="tmf_tb_a_flash"       target="tmf_tb_a_annotate" />
+    <Trigger id="temperance_read_1_cue"       watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_read_1')"       mode="each">
+      <Flash id="temperance_read_1_flash"       target="temperance_read_1_annotate" />
     </Trigger>
 
-    <Trigger id="tmf_tb_a2_cue"      watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_tb_a2')"      mode="each">
-      <Flash id="tmf_tb_a2_flash"      target="tmf_tb_a2_annotate" />
+    <Trigger id="temperance_read_2_cue"      watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_read_2')"      mode="each">
+      <Flash id="temperance_read_2_flash"      target="temperance_read_2_annotate" />
     </Trigger>
 
-    <Trigger id="tmf_tb_b_cue"       watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_tb_b')"       mode="each">
-      <Flash id="tmf_tb_b_flash"       target="tmf_tb_b_annotate" />
+    <Trigger id="temperance_read_3_cue"       watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_read_3')"       mode="each">
+      <Flash id="temperance_read_3_flash"       target="temperance_read_3_annotate" />
     </Trigger>
 
-    <Trigger id="tmf_tb_c_cue"       watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_tb_c')"       mode="each">
-      <Flash id="tmf_tb_c_flash"       target="tmf_tb_c_annotate" />
+    <Trigger id="temperance_read_4_cue"       watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_read_4')"       mode="each">
+      <Flash id="temperance_read_4_flash"       target="temperance_read_4_annotate" />
     </Trigger>
 
     <!-- The article is read on PAPER, so the only thing on screen to point at is
          the instruction block. The caret is deliberately NOT parked on its Done:
          that is the thing you press after reading, not before. -->
-    <Trigger id="tmf_article_cue"    watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_article_read')" mode="each">
-      <Flash id="tmf_article_flash"    target="tmf_article_read" />
+    <Trigger id="temperance_article_cue"    watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_article_read')" mode="each">
+      <Flash id="temperance_article_flash"    target="temperance_article_read" />
     </Trigger>
 
-    <Trigger id="tmf_litho_cue"      watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_litho_read')" mode="each">
-      <Flash id="tmf_litho_flash"      target="tmf_litho_img" />
+    <Trigger id="temperance_litho_cue"      watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_litho')" mode="each">
+      <Flash id="temperance_litho_flash"      target="temperance_litho_img" />
     </Trigger>
 
     <!-- The tasks. -->
 
-    <Trigger id="tmf_notecheck_cue"  watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_notecheck')"  mode="each">
-      <Flash id="tmf_notecheck_flash"  target="tmf_notecheck_grid" />
-      <FocusAction id="tmf_notecheck_focus" target="tmf_notecheck_grid" />
+    <Trigger id="temperance_notes_cue"  watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_notes')"  mode="each">
+      <Flash id="temperance_notes_flash"  target="temperance_notes_grid" />
+      <FocusAction id="temperance_notes_focus" target="temperance_notes_grid" />
     </Trigger>
 
     <!-- Highlighting is worked by dragging over the text and matching by
          clicking pairs, so neither task has a single control to park a caret
          on — pulse only. -->
-    <Trigger id="tmf_grammar_svo_cue" watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_grammar_svo')" mode="each">
-      <Flash id="tmf_grammar_svo_flash" target="tmf_grammar_svo_verb" />
+    <Trigger id="temperance_gram_svo_cue" watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_gram_svo')" mode="each">
+      <Flash id="temperance_gram_svo_flash" target="temperance_gram_verb" />
     </Trigger>
 
-    <Trigger id="tmf_grammar_np_cue" watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_grammar_np')" mode="each">
-      <Flash id="tmf_grammar_np_flash" target="tmf_grammar_np_match" />
+    <Trigger id="temperance_gram_np_cue" watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_gram_np')" mode="each">
+      <Flash id="temperance_gram_np_flash" target="temperance_gram_np_match" />
     </Trigger>
 
-    <Trigger id="tmf_grammar_structure_cue" watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_grammar_structure')" mode="each">
-      <Flash id="tmf_grammar_structure_flash" target="tmf_grammar_structure" />
+    <Trigger id="temperance_gram_structure_cue" watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_gram_structure')" mode="each">
+      <Flash id="temperance_gram_structure_flash" target="temperance_gram_structure" />
     </Trigger>
 
-    <Trigger id="tmf_grammar_antecedent_cue" watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_grammar_antecedent')" mode="each">
-      <Flash id="tmf_grammar_antecedent_flash" target="tmf_grammar_antecedent" />
+    <Trigger id="temperance_gram_antecedent_cue" watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_gram_antecedent')" mode="each">
+      <Flash id="temperance_gram_antecedent_flash" target="temperance_gram_antecedent" />
     </Trigger>
 
     <!-- The comprehension questions are chat-embedded now; the pane holds the
          full excerpt to read from, so this is a reading cue — pulse, no caret. -->
-    <Trigger id="tmf_comp_reading_cue" watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_comp_reading')" mode="each">
-      <Flash id="tmf_comp_reading_flash" target="tmf_comp_reading" />
+    <Trigger id="temperance_comp_reading_cue" watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_comp_reading')" mode="each">
+      <Flash id="temperance_comp_reading_flash" target="temperance_comp_reading" />
     </Trigger>
 
-    <Trigger id="tmf_synth_sort_cue" watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_synth_sort')" mode="each">
-      <Flash id="tmf_synth_sort_flash" target="tmf_synth_sort_grid" />
-      <FocusAction id="tmf_synth_sort_focus" target="tmf_synth_sort_grid" />
+    <Trigger id="temperance_synth_sort_cue" watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_synth_sort')" mode="each">
+      <Flash id="temperance_synth_sort_flash" target="temperance_synth_sort_grid" />
+      <FocusAction id="temperance_synth_sort_focus" target="temperance_synth_sort_grid" />
     </Trigger>
 
-    <Trigger id="tmf_final_write_cue" watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_final_write_screen')" mode="each">
-      <Flash id="tmf_final_write_flash" target="tmf_final_write" />
-      <FocusAction id="tmf_final_write_focus" target="tmf_final_write" />
+    <Trigger id="temperance_final_cue" watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_final')" mode="each">
+      <Flash id="temperance_final_flash" target="temperance_final_write" />
+      <FocusAction id="temperance_final_focus" target="temperance_final_write" />
     </Trigger>
 
-    <Trigger id="tmf_conclusion_cue" watch="DefinitionKey(@tmf_main.value) === DefinitionKey('tmf_conclusion')" mode="each">
-      <Flash id="tmf_conclusion_flash" target="tmf_conclusion_md" />
+    <Trigger id="temperance_conclusion_cue" watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_conclusion')" mode="each">
+      <Flash id="temperance_conclusion_flash" target="temperance_conclusion_md" />
     </Trigger>
 
-    <SplitPanel id="tmf_split" sizes="40, 60">
+    <SplitPanel id="temperance_split" sizes="40, 60">
 
       <StartPane>
         <!-- height is a FIXED 460px, not the "flex-1" default. This transcript
@@ -200,47 +201,47 @@ lang: en-Latn-US
              Memphis writing journals. It has to sit on <Chat>, NOT on
              <StartPane>: SplitPanel's parser keeps only the pane tag's children,
              so attributes on the pane tag are silently dropped. -->
-        <Chat id="tmf_chat"
+        <Chat id="temperance_chat"
               src="temperance_module_full_dialogue_part1.chatpeg"
               cast="characters.cast"
               height="460px" />
       </StartPane>
 
       <EndPane>
-        <UseHistory id="tmf_main" initial="tmf_intro" />
+        <UseHistory id="temperance_pane" initial="temperance_intro" />
       </EndPane>
 
     </SplitPanel>
   </Vertical>
 
   <!-- ===== Tab 2 (index 1): the background lecture ===== -->
-  <Vertical id="tmf_tab_lecture" title="Prof. Hale's Lecture">
-    <Use ref="tmf_lecture_read" />
+  <Vertical id="temperance_tab_lecture" title="Prof. Hale's Lecture">
+    <Use ref="temperance_lecture" />
   </Vertical>
 
   <!-- ===== Tabs 3-6 (indices 2-5): the American Yawp excerpt, one tab per
                  part, in reading order. These are the same four Annotate
                  blocks the conversation walks through. ===== -->
 
-  <Vertical id="tmf_tab_textbook_1" title="Textbook 1: Benevolent Empire">
-    <Use ref="tmf_tb_a" />
+  <Vertical id="temperance_tab_textbook_1" title="Textbook 1: Benevolent Empire">
+    <Use ref="temperance_read_1" />
   </Vertical>
 
-  <Vertical id="tmf_tab_textbook_2" title="Textbook 2: Women Reformers">
-    <Use ref="tmf_tb_a2" />
+  <Vertical id="temperance_tab_textbook_2" title="Textbook 2: Women Reformers">
+    <Use ref="temperance_read_2" />
   </Vertical>
 
-  <Vertical id="tmf_tab_textbook_3" title="Textbook 3: The Crusade">
-    <Use ref="tmf_tb_b" />
+  <Vertical id="temperance_tab_textbook_3" title="Textbook 3: The Crusade">
+    <Use ref="temperance_read_3" />
   </Vertical>
 
-  <Vertical id="tmf_tab_textbook_4" title="Textbook 4: Class Tensions">
-    <Use ref="tmf_tb_c" />
+  <Vertical id="temperance_tab_textbook_4" title="Textbook 4: Class Tensions">
+    <Use ref="temperance_read_4" />
   </Vertical>
 
   <!-- ===== Tab 7 (index 6): the third text — the 1846 lithograph ===== -->
-  <Vertical id="tmf_tab_litho" title="The Drunkard's Progress">
-    <Use ref="tmf_litho_read" />
+  <Vertical id="temperance_tab_litho" title="The Drunkard's Progress">
+    <Use ref="temperance_litho" />
   </Vertical>
 
 

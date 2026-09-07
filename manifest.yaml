@@ -27,4 +27,4 @@ content_notice: >
   N. Currier's lithograph "The Drunkard's Progress, from the first glass to the
   grave" (1846) is in the public domain.
 routes:
-  "/": temperance/temperance_module_full_sba
+  "/": temperance/temperance_module

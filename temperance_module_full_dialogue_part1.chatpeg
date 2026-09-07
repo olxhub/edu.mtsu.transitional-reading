@@ -6,23 +6,23 @@ description: A simulated small-group discussion in READ 1000. With peers Daniell
 Part 1: Introduction — Meet Your Peers [id=part1]
 -------------------------------------------------
 
-// The Introduction (tmf_intro) is already showing in the Main Content tab
+// The Introduction (temperance_intro) is already showing in the Main Content tab
 // (the UseHistory `initial`). Dialogue is kept lean.
 
 // HOW THE ACTIVITY PANE IS DRIVEN.
 //
 // Every screen the conversation opens in the pane is written as a TARGET EMBED:
 //
-//     ::tmf_vks [display=target:tmf_main label="How familiar are these words?"]
+//     ::temperance_vks [display=target:temperance_pane label="How familiar are these words?"]
 //
-// which does two things at once. It repoints the tmf_main UseHistory at that
+// which does two things at once. It repoints the temperance_pane UseHistory at that
 // screen (once, the first time the line is revealed — CompactPopout persists a
 // `repointed` flag, so a reload doesn't yank the pane backwards), and it leaves
 // a small labelled button sitting in the transcript at exactly the point in the
 // conversation where the activity happened. Clicking that button repoints the
 // pane there again.
 //
-// That transcript marker is the reason for the form. A bare `tmf_main <- x` set
+// That transcript marker is the reason for the form. A bare `temperance_pane <- x` set
 // command is invisible: the pane changes and the record of WHY is only in the
 // surrounding dialogue. With a marker, a student scrolling back through a long
 // session can see where each activity sat in the discussion and reopen it,
@@ -35,7 +35,7 @@ Part 1: Introduction — Meet Your Peers [id=part1]
 // talk — the vocabulary MCQs, the five comprehension questions — render in the
 // chat so that the pane is free to hold the text they are about.
 //
-// The one arrow left is `tmf_main <- tmf_blank`: parking the pane on a blank
+// The one arrow left is `temperance_pane <- temperance_pane_blank`: parking the pane on a blank
 // screen isn't an activity, so there is nothing worth marking or going back to.
 //
 // Timing note: a set command executes while the reveal walks past it, without
@@ -51,9 +51,9 @@ Joe: Sure. But, uh… what even is temperance? I feel like I should already know
 
 Karis: What do YOU think it has to do with?
 
-::tmf_temp_guess
+::temperance_intro_guess
 
---- wait @tmf_temp_guess.value ---
+--- wait @temperance_intro_guess.value ---
 
 Karis: I looked it up — it means holding yourself back from something. The history part is that the temperance movement tried to get people to stop drinking alcohol, or at least drink less.
 
@@ -66,11 +66,11 @@ Danielle: Good to know. OK — here's Professor Booker.
 Part 2: Explore the Topic Background [id=part2]
 -----------------------------------------------
 
-::tmf_vks [display=target:tmf_main label="How familiar are these words?"]
+::temperance_vks [display=target:temperance_pane label="How familiar are these words?"]
 
 Professor Booker: Before we read, take a look at some words you'll meet in the texts. I'm not grading this — I just want to know how familiar each one is. Fill out the table on the right. [face=calm]
 
---- wait Object.keys(@tmf_vks_grid.value).length >= 8 ---
+--- wait Object.keys(@temperance_vks_grid.value).length >= 8 ---
 
 // The lecture is no longer parked in the pane or gated — it is an optional
 // reference on its own tab. The grid stays up while the group is still talking
@@ -82,7 +82,7 @@ Professor Booker: We'll get to vocabulary exercises later — the words come bac
 
 Danielle: Professor Hale's note is under its tab if you want the background — we'll hit the essentials as we go.
 
-tmf_main <- tmf_blank
+temperance_pane <- temperance_pane_blank
 
 Professor Booker: One tool before we start, because you'll use it on every reading here. Select any stretch of text with your mouse and an **Annotate** button pops up.
 
@@ -96,13 +96,13 @@ Part 3: Main Readings [id=part3]
 // The textbook is read one paragraph at a time; each part appears only after
 // the peers have talked through the one before it (chunking + mediating dialog).
 
-::tmf_tb_a [display=target:tmf_main label="The excerpt — part 1"]
+::temperance_read_1 [display=target:temperance_pane label="The excerpt — part 1"]
 
 Professor Booker: Now the reading that matters most for the comparison we're building: the textbook chapter. Read the first part and highlight as you go. It's on the right --->
 
 Professor Booker: Click **Mark as read** under it when you're through, and we'll talk it over.
 
---- wait @tmf_tb_a_done.value ---
+--- wait @temperance_read_1_done.value ---
 
 Joe: I'm confused — what did it mean for "traditional" Protestant Christianity to be "at low tide," and why did that matter?
 
@@ -126,15 +126,15 @@ Danielle: First one — what does "commerce" mean here?
 // instrument: Karis's reading of the lithograph comes after the observation
 // item, not before it, and lead-ins say WHERE to look, not what to find.
 
-::tmf_q_commerce_screen
+::temperance_vocab_commerce_screen
 
---- wait @tmf_q_commerce_problem.submitCount > 0 ---
+--- wait @temperance_vocab_commerce_problem.submitCount > 0 ---
 
 Joe: Next: antidote. I looked it up, and here are the definitions I found.
 
-::tmf_q_antidote_screen
+::temperance_vocab_antidote_screen
 
---- wait @tmf_q_antidote_problem.submitCount > 0 ---
+--- wait @temperance_vocab_antidote_problem.submitCount > 0 ---
 
 Danielle: I think you pasted in a couple of definitions for "anecdote," not "antidote."
 
@@ -146,17 +146,17 @@ Joe: Yeah, I see that. In the textbook, they don't mean an actual medicine — i
 
 Danielle: One more from this part — "proliferated."
 
-::tmf_q_proliferated_screen
+::temperance_vocab_proliferated_screen
 
---- wait @tmf_q_proliferated_problem.submitCount > 0 ---
+--- wait @temperance_vocab_proliferated_problem.submitCount > 0 ---
 
-::tmf_tb_a2 [display=target:tmf_main label="The excerpt — part 2"]
+::temperance_read_2 [display=target:temperance_pane label="The excerpt — part 2"]
 
 Professor Booker: Here's the next part of the chapter, on the right --->
 
 Danielle: **Mark as read** when you're done — Karis has a question about this one.
 
---- wait @tmf_tb_a2_done.value ---
+--- wait @temperance_read_2_done.value ---
 
 Karis: Now I'm kind of stuck. The people here are middle-class evangelicals — especially women. I get the classes — upper, middle, working — but I've heard "evangelical" without really understanding it.
 
@@ -170,29 +170,29 @@ Danielle: Benevolent Empire!
 
 Professor Booker: The chapter's title points to it. Using the passage, which phrase most directly tells us what it was?
 
-::tmf_be_term_screen
+::temperance_term_pick_screen
 
---- wait @tmf_be_term_problem.submitCount > 0 ---
+--- wait @temperance_term_pick_problem.submitCount > 0 ---
 
 Professor Booker: The phrase that captures it is "a powerful network." What else in the chapter connects to it? Select all that apply.
 
-::tmf_be_connect_screen
+::temperance_term_connect_screen
 
---- wait @tmf_be_connect_problem.submitCount > 0 ---
+--- wait @temperance_term_connect_problem.submitCount > 0 ---
 
 Professor Booker: Now put it together. Each of you wrote a one-sentence definition — read them and pick the best.
 
-::tmf_be_bestdef_screen
+::temperance_term_bestdef_screen
 
---- wait @tmf_be_bestdef_problem.submitCount > 0 ---
+--- wait @temperance_term_bestdef_problem.submitCount > 0 ---
 
-::tmf_tb_b [display=target:tmf_main label="The excerpt — part 3"]
+::temperance_read_3 [display=target:temperance_pane label="The excerpt — part 3"]
 
 Professor Booker: On to the next part of the excerpt, over on the right --->
 
 Karis: mark it read when you're through. I want to get to the women's-rights part.
 
---- wait @tmf_tb_b_done.value ---
+--- wait @temperance_read_3_done.value ---
 
 Danielle: Wow — whiskey cheaper than milk and safer to drink than water? I just filled my bottle at the drinking fountain before class for free.
 
@@ -200,21 +200,21 @@ Karis: I'm remembering that Professor Hale said that before the temperance movem
 
 Danielle: There's a word here — "galvanized." I looked it up, and there are a bunch of definitions. Which one is right in this context?
 
-::tmf_q_galvanized_screen
+::temperance_vocab_galvanized_screen
 
---- wait @tmf_q_galvanized_problem.submitCount > 0 ---
+--- wait @temperance_vocab_galvanized_problem.submitCount > 0 ---
 
 Karis: I picked "to spur into action."
 
 Danielle: Me too. The support got energized — people actually started doing something. Nobody was coating anything in metal.
 
-::tmf_notecheck [display=target:tmf_main label="Checking Joe's notes"]
+::temperance_notes [display=target:temperance_pane label="Checking Joe's notes"]
 
 Joe: I also jotted some notes on the chapter so far. Can you check them? And even if something's right, is it important enough to use when we pull the texts together at the end?
 
 Joe: Here's my list. Sort each statement on the right, then press Check.
 
---- wait @tmf_notecheck_problem.submitCount > 0 ---
+--- wait @temperance_notes_problem.submitCount > 0 ---
 
 Karis: One of those is off, Joe. The textbook said the Industrial Revolution LED TO the social problems. It wasn't a response to them.
 
@@ -222,197 +222,197 @@ Joe: Ah — good catch. Thanks.
 
 Danielle: Lyman Beecher's role in the movement and when those reform societies were growing are good pieces of information, but they're details. The network, the Awakening, and the women's role are the ideas that belong in our final summary.
 
-::tmf_tb_c [display=target:tmf_main label="The excerpt — part 4"]
+::temperance_read_4 [display=target:temperance_pane label="The excerpt — part 4"]
 
 Professor Booker: Here's the last part of the excerpt. These next few words are a kind of paraphrasing — find words that could take the term's place without changing the meaning.
 
 Professor Booker: **Mark as read** when you've found them.
 
---- wait @tmf_tb_c_done.value ---
+--- wait @temperance_read_4_done.value ---
 
 Karis: I'll start — what could replace "eradicating"?
 
-::tmf_q_eradicating_screen
+::temperance_vocab_eradicating_screen
 
---- wait @tmf_q_eradicating_problem.submitCount > 0 ---
+--- wait @temperance_vocab_eradicating_problem.submitCount > 0 ---
 
 Joe: How about "exacerbated"?
 
-::tmf_q_exacerbated_screen
+::temperance_vocab_exacerbated_screen
 
---- wait @tmf_q_exacerbated_problem.submitCount > 0 ---
+--- wait @temperance_vocab_exacerbated_problem.submitCount > 0 ---
 
 Professor Booker: One more — "per capita."
 
-::tmf_q_per_capita_screen
+::temperance_vocab_per_capita_screen
 
---- wait @tmf_q_per_capita_problem.submitCount > 0 ---
+--- wait @temperance_vocab_per_capita_problem.submitCount > 0 ---
 
-::tmf_grammar_svo [display=target:tmf_main label="Verb, subject, object"]
+::temperance_gram_svo [display=target:temperance_pane label="Verb, subject, object"]
 
 Joe: Can we look again at the sentence I highlighted — "Such intrusions by the Protestant middle class exacerbated class, ethnic, and religious tensions"?
 
 Professor Booker: A good sentence to analyze. On the right, highlight the verb first — one word — then the subject and the object, each of those a whole phrase, every word of it.
 
---- wait @tmf_grammar_svo_verb_problem.submitCount > 0 && @tmf_grammar_svo_subject_problem.submitCount > 0 && @tmf_grammar_svo_object_problem.submitCount > 0 ---
+--- wait @temperance_gram_verb_problem.submitCount > 0 && @temperance_gram_subject_problem.submitCount > 0 && @temperance_gram_object_problem.submitCount > 0 ---
 
-::tmf_grammar_np [display=target:tmf_main label="Inside the noun phrase"]
+::temperance_gram_np [display=target:temperance_pane label="Inside the noun phrase"]
 
 Professor Booker: Notice the subject is a noun phrase. On the right it's on its own, without the rest of the sentence — match each part of it to the job that part does: head noun, determiner, postmodifier.
 
---- wait @tmf_grammar_np_problem.submitCount > 0 ---
+--- wait @temperance_gram_np_problem.submitCount > 0 ---
 
-::tmf_grammar_structure [display=target:tmf_main label="The grammatical structure"]
+::temperance_gram_structure [display=target:temperance_pane label="The grammatical structure"]
 
 Professor Booker: Here's the whole structure laid out on the right. Take it in, then click **I understand** at the bottom.
 
---- wait @tmf_grammar_structure_done.value ---
+--- wait @temperance_gram_structure_done.value ---
 
 Danielle: Wait — what intrusions is it even talking about?
 
-::tmf_grammar_antecedent [display=target:tmf_main label="Find the antecedent"]
+::temperance_gram_antecedent [display=target:temperance_pane label="Find the antecedent"]
 
 Professor Booker: Good question. We need the antecedent. On the right, find the earlier sentence that describes the intrusions and highlight the whole thing, start to finish.
 
---- wait @tmf_grammar_antecedent_problem.submitCount > 0 ---
+--- wait @temperance_gram_antecedent_problem.submitCount > 0 ---
 
 Professor Booker: So, using that, why did those intrusions "exacerbate" tensions?
 
-::tmf_why_exacerbated_screen
+::temperance_gram_why_screen
 
---- wait @tmf_why_exacerbated_problem.submitCount > 0 ---
+--- wait @temperance_gram_why_problem.submitCount > 0 ---
 
 // The comprehension questions are embedded HERE, in the conversation, so the
-// activity pane is free to hold the text they are about (tmf_comp_reading — all
+// activity pane is free to hold the text they are about (temperance_comp_reading — all
 // four Yawp parts end to end). Answering with the passage closed was a memory
 // test; answering with it open on the right is reading.
 
-::tmf_comp_reading [display=target:tmf_main label="The excerpt — all four parts"]
+::temperance_comp_reading [display=target:temperance_pane label="The excerpt — all four parts"]
 
 Professor Booker: Let's check your understanding of the excerpt. The whole thing is on the right now, all four parts end to end, with your highlights on it — scroll it while you answer. [face=calm]
 
 Danielle: First one's about the Second Great Awakening. That's the top of part 1.
 
-::tmf_comp_q1
+::temperance_comp_1
 
---- wait @tmf_comp_q1.submitCount > 0 ---
+--- wait @temperance_comp_1.submitCount > 0 ---
 
 Joe: This next one I remember — scroll down to part 2, the bit about who had the time to do all this reforming.
 
-::tmf_comp_q2
+::temperance_comp_2
 
---- wait @tmf_comp_q2.submitCount > 0 ---
+--- wait @temperance_comp_2.submitCount > 0 ---
 
 Karis: Part 3 now — the part about what the reformers were asking for.
 
-::tmf_comp_q3
+::temperance_comp_3
 
---- wait @tmf_comp_q3.submitCount > 0 ---
+--- wait @temperance_comp_3.submitCount > 0 ---
 
 Karis: And part 4 — this is the women's part, the one I wanted to get to.
 
-::tmf_comp_q4
+::temperance_comp_4
 
---- wait @tmf_comp_q4.submitCount > 0 ---
+--- wait @temperance_comp_4.submitCount > 0 ---
 
 Professor Booker: Last one. Scroll to the end of part 4 and find the evidence that the movement actually worked.
 
-::tmf_comp_q5
+::temperance_comp_5
 
---- wait @tmf_comp_q5.submitCount > 0 ---
+--- wait @temperance_comp_5.submitCount > 0 ---
 
 Danielle: Half of what they drank twenty years earlier. That's the number I'd put in the comparison at the end.
 
-::tmf_litho_read [display=target:tmf_main label="A temperance-era image"]
+::temperance_litho [display=target:temperance_pane label="A temperance-era image"]
 
 Professor Booker: Nice work on the chapter. Before we bring in a modern article, let's look at an image from the temperance era itself — it connects directly to what we just read. It's on the right --->
 
 Professor Booker: Look closely at the nine steps, then answer.
 
-::tmf_litho_observe_screen
+::temperance_litho_observe_screen
 
---- wait @tmf_litho_observe_problem.submitCount > 0 ---
+--- wait @temperance_litho_observe_problem.submitCount > 0 ---
 
 Karis: Whoa — it's like a staircase of a man's whole life, going up and then crashing down.
 
 Joe: Grim. Why would the temperance folks make something like this?
 
-::tmf_litho_purpose_screen
+::temperance_litho_purpose_screen
 
---- wait @tmf_litho_purpose_problem.submitCount > 0 ---
+--- wait @temperance_litho_purpose_problem.submitCount > 0 ---
 
-::tmf_article_read [display=target:tmf_main label="The magazine article"]
+::temperance_article_read [display=target:temperance_pane label="The magazine article"]
 
 Professor Booker: Images like this were made to persuade. Now for the third text — a recent magazine article that connects the temperance era to today. I handed out a paper copy; take it out and read it, marking it up as you go. The instructions are on the right --->
 
 Professor Booker: When you've been through it, press "I've read the handout" on the right and we'll talk about it.
 
---- wait @tmf_article_read_done.value ---
+--- wait @temperance_article_read_done.value ---
 
 Karis: Wow — Carrie Nation really went after those saloons.
 
 Danielle: Ha — she'd have fit right into the temperance movement. Dr. Booker wanted us to think about "self-optimization." But first, this word:
 
-::tmf_q_teetotaling_screen
+::temperance_vocab_teetotaling_screen
 
---- wait @tmf_q_teetotaling_problem.submitCount > 0 ---
+--- wait @temperance_vocab_teetotaling_problem.submitCount > 0 ---
 
 Joe: So, teetotaling — not drinking at all. Where does "self-optimization" come in? Let's each find a sentence that gives it context, then pick the best.
 
-::tmf_selfoptim
+::temperance_article_sentence_screen
 
---- wait @tmf_selfoptim_pick_problem.submitCount > 0 && @tmf_selfoptim_explain.value ---
+--- wait @temperance_article_sentence_problem.submitCount > 0 && @temperance_article_sentence_explain.value ---
 
 Karis: The line that really pins down self-optimization is the one about not drinking being an act of authenticity or self-care. Put it with the bit about posting on Instagram about inflammation, jawlines, and sleep scores, and you can see it's about focusing on your own health.
 
 Professor Booker: Now, to see how it all fits, let's summarize. Which is the best summary of the article's first paragraph?
 
-::tmf_summary_pick_screen
+::temperance_article_summary_screen
 
---- wait @tmf_summary_pick_problem.submitCount > 0 ---
+--- wait @temperance_article_summary_problem.submitCount > 0 ---
 
 Professor Booker: One more term the article flags — "authenticity."
 
-::tmf_q_authenticity_screen
+::temperance_vocab_authenticity_screen
 
---- wait @tmf_q_authenticity_problem.submitCount > 0 ---
+--- wait @temperance_vocab_authenticity_problem.submitCount > 0 ---
 
 Professor Booker: Now step back from the details. What is the article's main point overall?
 
-::tmf_article_thesis_screen
+::temperance_article_thesis_screen
 
---- wait @tmf_article_thesis_problem.submitCount > 0 ---
+--- wait @temperance_article_thesis_problem.submitCount > 0 ---
 
 Danielle: OK — that's all three texts. Time to put them side by side.
 
 Part 4: Building Understanding and Synthesizing [id=part4]
 ----------------------------------------------------------
 
-::tmf_synth_sort [display=target:tmf_main label="Then and now"]
+::temperance_synth_sort [display=target:temperance_pane label="Then and now"]
 
 Professor Booker: Let's pull all three texts together. On the right, sort each description under the movement it fits, then press Check.
 
---- wait @tmf_synth_sort_problem.submitCount > 0 ---
+--- wait @temperance_synth_sort_problem.submitCount > 0 ---
 
 Danielle: Each of us also tried to sum up the big difference in one sentence. Whose comparison is best?
 
-::tmf_synth_peereval_screen
+::temperance_synth_compare_screen
 
---- wait @tmf_synth_peereval_problem.submitCount > 0 ---
+--- wait @temperance_synth_compare_problem.submitCount > 0 ---
 
 Part 5: Conclusion [id=part5]
 -----------------------------
 
-::tmf_final_write_screen [display=target:tmf_main label="Pulling it together"]
+::temperance_final [display=target:temperance_pane label="Pulling it together"]
 
 Professor Booker: You're ready for the goal we set at the start — pulling it all together. On the right, write four or five sentences comparing the historic temperance movement with today's approaches to drinking less. Draw on the textbook, the printed article, and the lithograph.
 
 // Soft gate: any real start opens it. The old `>= 40` turned a writing task into
 // a word count, and students wrote to the number.
 
---- wait wordcount(@tmf_final_write.value) >= 1 ---
+--- wait wordcount(@temperance_final_write.value) >= 1 ---
 
-::tmf_conclusion [display=target:tmf_main label="You're done"]
+::temperance_conclusion [display=target:temperance_pane label="You're done"]
 
 Professor Booker: That's the comparison we've been building toward all along. [face=calm]
 
