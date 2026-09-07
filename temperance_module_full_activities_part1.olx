@@ -703,10 +703,10 @@ Look at the highlighted sentence and choose the best definition for **commerce**
 > "…the Industrial Revolution had led to a host of social problems associated
 > with urban growth and large-scale **commerce**."
 </Markdown>
-  <Distractor value="church_formation"> The way Christianity formed in the U.S.        </Distractor>
-  <Distractor value="population_study"> The study of how urban populations grow.       </Distractor>
-         <Key value="buying_selling"  > The buying and selling of products.            </Key>
-  <Distractor value="social_laws"     > The laws people make to limit social problems. </Distractor>
+  <Distractor id="temperance_vocab_commerce_church_formation" value="church_formation"> The way Christianity formed in the U.S.        </Distractor>
+  <Distractor id="temperance_vocab_commerce_population_study" value="population_study"> The study of how urban populations grow.       </Distractor>
+         <Key id="temperance_vocab_commerce_buying_selling"   value="buying_selling"  > The buying and selling of products.            </Key>
+  <Distractor id="temperance_vocab_commerce_social_laws"      value="social_laws"     > The laws people make to limit social problems. </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -736,10 +736,10 @@ Choose the best definition for **antidote**:
 > providing an institutional **antidote** to the insecurities of a rapidly
 > changing world."
 </Markdown>
-  <Distractor value="anecdote_story"     > A short story about a real person or event. </Distractor>
-  <Distractor value="poison_medicine"    > A medicine that saves you from poison.      </Distractor>
-  <Distractor value="unpublished_writing"> An unpublished piece of writing.            </Distractor>
-         <Key value="counteracts_harm"   > Something that works against a harm.        </Key>
+  <Distractor id="temperance_vocab_antidote_anecdote_story"      value="anecdote_story"     > A short story about a real person or event. </Distractor>
+  <Distractor id="temperance_vocab_antidote_poison_medicine"     value="poison_medicine"    > A medicine that saves you from poison.      </Distractor>
+  <Distractor id="temperance_vocab_antidote_unpublished_writing" value="unpublished_writing"> An unpublished piece of writing.            </Distractor>
+         <Key id="temperance_vocab_antidote_counteracts_harm"    value="counteracts_harm"   > Something that works against a harm.        </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -770,10 +770,10 @@ Choose the best definition for **proliferated**:
 > "These new societies **proliferated** in the United States between 1815 and
 > 1861…"
 </Markdown>
-         <Key value="increased_rapidly"  > Increased rapidly in numbers.                </Key>
-  <Distractor value="merged_into_one"    > Came together to form a single organization. </Distractor>
-  <Distractor value="decreased_influence"> Decreased rapidly in influence.              </Distractor>
-  <Distractor value="moved_to_cities"    > Moved from farms to major cities.            </Distractor>
+         <Key id="temperance_vocab_proliferated_increased_rapidly"   value="increased_rapidly"  > Increased rapidly in numbers.                </Key>
+  <Distractor id="temperance_vocab_proliferated_merged_into_one"     value="merged_into_one"    > Came together to form a single organization. </Distractor>
+  <Distractor id="temperance_vocab_proliferated_decreased_influence" value="decreased_influence"> Decreased rapidly in influence.              </Distractor>
+  <Distractor id="temperance_vocab_proliferated_moved_to_cities"     value="moved_to_cities"    > Moved from farms to major cities.            </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -804,10 +804,10 @@ What is the best definition of **galvanized**?
 > "…the movement's effort to curb the consumption of alcohol **galvanized**
 > widespread support among the middle class."
 </Markdown>
-         <Key value="spurred_into_action"> To spur into action; to energize.       </Key>
-  <Distractor value="zinc_coating"       > To coat iron or steel with zinc.        </Distractor>
-  <Distractor value="gradually_built"    > To build up slowly, a little at a time. </Distractor>
-  <Distractor value="wore_down"          > To discourage or wear down.             </Distractor>
+         <Key id="temperance_vocab_galvanized_spurred_into_action" value="spurred_into_action"> To spur into action; to energize.       </Key>
+  <Distractor id="temperance_vocab_galvanized_zinc_coating"        value="zinc_coating"       > To coat iron or steel with zinc.        </Distractor>
+  <Distractor id="temperance_vocab_galvanized_gradually_built"     value="gradually_built"    > To build up slowly, a little at a time. </Distractor>
+  <Distractor id="temperance_vocab_galvanized_wore_down"           value="wore_down"          > To discourage or wear down.             </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -842,10 +842,10 @@ What words could take the place of **eradicating** — but keep the meaning the 
 > "…women formed a significant presence in societies dedicated to
 > **eradicating** liquor."
 </Markdown>
-  <Distractor value="making_rules"       > making rules for     </Distractor>
-  <Distractor value="advertising"        > helping to advertise </Distractor>
-         <Key value="completely_removing"> completely removing  </Key>
-  <Distractor value="keeping_safe"       > keeping safe from    </Distractor>
+  <Distractor id="temperance_vocab_eradicating_making_rules"        value="making_rules"       > making rules for     </Distractor>
+  <Distractor id="temperance_vocab_eradicating_advertising"         value="advertising"        > helping to advertise </Distractor>
+         <Key id="temperance_vocab_eradicating_completely_removing" value="completely_removing"> completely removing  </Key>
+  <Distractor id="temperance_vocab_eradicating_keeping_safe"        value="keeping_safe"       > keeping safe from    </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -874,10 +874,10 @@ What words could take the place of **exacerbated** — but keep the meaning the 
 > "Such intrusions by the Protestant middle class **exacerbated** class, ethnic,
 > and religious tensions."
 </Markdown>
-  <Distractor value="calmed_down" > calmed right down </Distractor>
-         <Key value="made_worse"  > made much worse   </Key>
-  <Distractor value="fixed"       > fixed right up    </Distractor>
-  <Distractor value="started_over"> started over      </Distractor>
+  <Distractor id="temperance_vocab_exacerbated_calmed_down"  value="calmed_down" > calmed right down </Distractor>
+         <Key id="temperance_vocab_exacerbated_made_worse"   value="made_worse"  > made much worse   </Key>
+  <Distractor id="temperance_vocab_exacerbated_fixed"        value="fixed"       > fixed right up    </Distractor>
+  <Distractor id="temperance_vocab_exacerbated_started_over" value="started_over"> started over      </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -906,10 +906,10 @@ What words could take the place of **per capita consumption** — but keep the m
 > "In the 1840s, Americans drank half of what they had in the 1820s, and
 > **per capita** consumption continued to decline over the next two decades."
 </Markdown>
-  <Distractor value="per_saloon"      > the amount of drinking within each saloon       </Distractor>
-  <Distractor value="nationwide_total"> the amount of drinking across the whole country </Distractor>
-  <Distractor value="per_ethnic_group"> the amount of drinking by each ethnic group     </Distractor>
-         <Key value="per_person"      > the average amount of drinking per person       </Key>
+  <Distractor id="temperance_vocab_per_capita_per_saloon"       value="per_saloon"      > the amount of drinking within each saloon       </Distractor>
+  <Distractor id="temperance_vocab_per_capita_nationwide_total" value="nationwide_total"> the amount of drinking across the whole country </Distractor>
+  <Distractor id="temperance_vocab_per_capita_per_ethnic_group" value="per_ethnic_group"> the amount of drinking by each ethnic group     </Distractor>
+         <Key id="temperance_vocab_per_capita_per_person"       value="per_person"      > the average amount of drinking per person       </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -941,10 +941,10 @@ What words could take the place of **per capita consumption** — but keep the m
 **Benevolent Empire** is a discipline-specific term. Using clues in the passage,
 which word or phrase most directly helps us understand what it was?
 </Markdown>
-         <Key value="powerful_network"     > powerful network      </Key>
-  <Distractor value="industrial_revolution"> Industrial Revolution </Distractor>
-  <Distractor value="traditional_religion" > traditional religion  </Distractor>
-  <Distractor value="spiritual_response"   > spiritual response    </Distractor>
+         <Key id="temperance_term_pick_powerful_network"      value="powerful_network"     > powerful network      </Key>
+  <Distractor id="temperance_term_pick_industrial_revolution" value="industrial_revolution"> Industrial Revolution </Distractor>
+  <Distractor id="temperance_term_pick_traditional_religion"  value="traditional_religion" > traditional religion  </Distractor>
+  <Distractor id="temperance_term_pick_spiritual_response"    value="spiritual_response"   > spiritual response    </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -971,12 +971,12 @@ which word or phrase most directly helps us understand what it was?
 The Benevolent Empire was, indeed, a **powerful network.** What other words or
 phrases from the chapter describe or connect to it? **Select all that apply.**
 </Markdown>
-         <Key value="societies_movements"    > societies / movements   </Key>
-         <Key value="middle_class"           > middle-class            </Key>
-  <Distractor value="american_independence"  > American independence   </Distractor>
-  <Distractor value="commercial_distilleries"> commercial distilleries </Distractor>
-         <Key value="religion_and_reform"    > religion and reform     </Key>
-  <Distractor value="irish_catholics"        > Irish Catholics         </Distractor>
+         <Key id="temperance_term_connect_societies_movements"     value="societies_movements"    > societies / movements   </Key>
+         <Key id="temperance_term_connect_middle_class"            value="middle_class"           > middle-class            </Key>
+  <Distractor id="temperance_term_connect_american_independence"   value="american_independence"  > American independence   </Distractor>
+  <Distractor id="temperance_term_connect_commercial_distilleries" value="commercial_distilleries"> commercial distilleries </Distractor>
+         <Key id="temperance_term_connect_religion_and_reform"     value="religion_and_reform"    > religion and reform     </Key>
+  <Distractor id="temperance_term_connect_irish_catholics"         value="irish_catholics"        > Irish Catholics         </Distractor>
 </CheckboxInput>
 </CheckboxGrader>
 
@@ -1019,9 +1019,9 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
 Each member of your group wrote a one-sentence description of the Benevolent
 Empire. Read them and choose the **best** one.
 </Markdown>
-         <Key value="network_religion_reform" > **Danielle:** A network of religious societies that joined religion and reform among middle-class Evangelicals.       </Key>
-  <Distractor value="evangelicals_name"       > **Joe:** The name given to the Evangelicals in the temperance movement after the Second Great Awakening.              </Distractor>
-  <Distractor value="reforms_promote_religion"> **Karis:** The set of reforms designed to promote religious ideas that had decreased after the Industrial Revolution. </Distractor>
+         <Key id="temperance_term_bestdef_network_religion_reform"  value="network_religion_reform" > **Danielle:** A network of religious societies that joined religion and reform among middle-class Evangelicals.       </Key>
+  <Distractor id="temperance_term_bestdef_evangelicals_name"        value="evangelicals_name"       > **Joe:** The name given to the Evangelicals in the temperance movement after the Second Great Awakening.              </Distractor>
+  <Distractor id="temperance_term_bestdef_reforms_promote_religion" value="reforms_promote_religion"> **Karis:** The set of reforms designed to promote religious ideas that had decreased after the Industrial Revolution. </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1047,10 +1047,10 @@ Empire. Read them and choose the **best** one.
 So why did those intrusions — like the temperance campaigns — *exacerbate*
 class, ethnic, and religious tensions?
 </Markdown>
-  <Distractor value="money_to_saloons"      > Because reformers gave money directly to saloon owners instead of working-class people.                        </Distractor>
-  <Distractor value="only_irish_affected"   > Because the campaigns ended up affecting only the Irish Catholics but not the working-class people.            </Distractor>
-  <Distractor value="irish_led_movement"    > Because Irish Catholic immigrants led the temperance movement themselves, against the Protestant middle class. </Distractor>
-         <Key value="middle_class_intrusion"> Because middle-class Protestant reformers intruded on the customs of working-class and immigrant communities.  </Key>
+  <Distractor id="temperance_gram_why_money_to_saloons"       value="money_to_saloons"      > Because reformers gave money directly to saloon owners instead of working-class people.                        </Distractor>
+  <Distractor id="temperance_gram_why_only_irish_affected"    value="only_irish_affected"   > Because the campaigns ended up affecting only the Irish Catholics but not the working-class people.            </Distractor>
+  <Distractor id="temperance_gram_why_irish_led_movement"     value="irish_led_movement"    > Because Irish Catholic immigrants led the temperance movement themselves, against the Protestant middle class. </Distractor>
+         <Key id="temperance_gram_why_middle_class_intrusion" value="middle_class_intrusion"> Because middle-class Protestant reformers intruded on the customs of working-class and immigrant communities.  </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1086,10 +1086,10 @@ Dr. Booker asked us to think about **self-optimization**. It's in this sentence:
 
 First — what does **teetotaling** mean?
 </Markdown>
-  <Distractor value="heavy_drinking"   > drinking too much alcohol                        </Distractor>
-  <Distractor value="persuading_others"> convincing other people to stop drinking alcohol </Distractor>
-  <Distractor value="drinking_tea"     > replacing alcohol with tea or coffee             </Distractor>
-         <Key value="no_alcohol_at_all"> not drinking alcohol at all                      </Key>
+  <Distractor id="temperance_vocab_teetotaling_heavy_drinking"    value="heavy_drinking"   > drinking too much alcohol                        </Distractor>
+  <Distractor id="temperance_vocab_teetotaling_persuading_others" value="persuading_others"> convincing other people to stop drinking alcohol </Distractor>
+  <Distractor id="temperance_vocab_teetotaling_drinking_tea"      value="drinking_tea"     > replacing alcohol with tea or coffee             </Distractor>
+         <Key id="temperance_vocab_teetotaling_no_alcohol_at_all" value="no_alcohol_at_all"> not drinking alcohol at all                      </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1116,9 +1116,9 @@ First — what does **teetotaling** mean?
 To pin down what **self-optimization** means, each of us found a sentence from
 the article that gives it context. Who picked the **best** one?
 </Markdown>
-  <Distractor value="freedom_to_choose"    > **Joe:** "Sober-curiosity, she said, was about a person's 'freedom to choose.'"                                                                                                          </Distractor>
-  <Distractor value="health_research"      > **Danielle:** "(To be fair, this focus on health is partially a response to research on moderate alcohol consumption's detrimental effects on heart health, cancer risk, and lifespan.)" </Distractor>
-         <Key value="authenticity_selfcare"> **Karis:** "…choosing not to drink in an alcohol-soaked culture is seen as an act of authenticity or self-care…"                                                                         </Key>
+  <Distractor id="temperance_article_sentence_freedom_to_choose"     value="freedom_to_choose"    > **Joe:** "Sober-curiosity, she said, was about a person's 'freedom to choose.'"                                                                                                          </Distractor>
+  <Distractor id="temperance_article_sentence_health_research"       value="health_research"      > **Danielle:** "(To be fair, this focus on health is partially a response to research on moderate alcohol consumption's detrimental effects on heart health, cancer risk, and lifespan.)" </Distractor>
+         <Key id="temperance_article_sentence_authenticity_selfcare" value="authenticity_selfcare"> **Karis:** "…choosing not to drink in an alcohol-soaked culture is seen as an act of authenticity or self-care…"                                                                         </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1147,10 +1147,10 @@ the article that gives it context. Who picked the **best** one?
 Which is the **best summary** of the article's first paragraph (about Carrie
 Nation)?
 </Markdown>
-         <Key value="what_and_why"       > In the early 1900s, Carrie Nation used bricks, stones, and a hatchet to destroy liquor bottles because she believed liquor caused "society's moral failings."                  </Key>
-  <Distractor value="hatchet_detail_only"> Carrie Nation gained fame in 1900 for using a hatchet to break up liquor bottles in several saloons in the midwest.                                                            </Distractor>
-  <Distractor value="vague_smashers"     > Starting in 1900, Carrie Nation invaded saloons and destroyed everything with "smashers."                                                                                      </Distractor>
-  <Distractor value="opinion_interesting"> Carrie Nation is one of the most interesting figures of the early 1900s, mostly because she focused on getting physically (and violently) involved in the temperance movement. </Distractor>
+         <Key id="temperance_article_summary_what_and_why"        value="what_and_why"       > In the early 1900s, Carrie Nation used bricks, stones, and a hatchet to destroy liquor bottles because she believed liquor caused "society's moral failings."                  </Key>
+  <Distractor id="temperance_article_summary_hatchet_detail_only" value="hatchet_detail_only"> Carrie Nation gained fame in 1900 for using a hatchet to break up liquor bottles in several saloons in the midwest.                                                            </Distractor>
+  <Distractor id="temperance_article_summary_vague_smashers"      value="vague_smashers"     > Starting in 1900, Carrie Nation invaded saloons and destroyed everything with "smashers."                                                                                      </Distractor>
+  <Distractor id="temperance_article_summary_opinion_interesting" value="opinion_interesting"> Carrie Nation is one of the most interesting figures of the early 1900s, mostly because she focused on getting physically (and violently) involved in the temperance movement. </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1179,10 +1179,10 @@ Nation)?
 The article says choosing not to drink is seen as "an act of **authenticity**
 or self-care." What does **authenticity** mean here?
 </Markdown>
-  <Distractor value="following_rules"    > Following a strict set of official rules.     </Distractor>
-         <Key value="true_to_self"       > Being true to who you really are.             </Key>
-  <Distractor value="group_approval"     > Getting approval from a group before you act. </Distractor>
-  <Distractor value="doing_whats_popular"> Doing whatever happens to be popular.         </Distractor>
+  <Distractor id="temperance_vocab_authenticity_following_rules"     value="following_rules"    > Following a strict set of official rules.     </Distractor>
+         <Key id="temperance_vocab_authenticity_true_to_self"        value="true_to_self"       > Being true to who you really are.             </Key>
+  <Distractor id="temperance_vocab_authenticity_group_approval"      value="group_approval"     > Getting approval from a group before you act. </Distractor>
+  <Distractor id="temperance_vocab_authenticity_doing_whats_popular" value="doing_whats_popular"> Doing whatever happens to be popular.         </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1208,10 +1208,10 @@ or self-care." What does **authenticity** mean here?
 <Markdown>
 Step back from the details — what is the article's **main point** overall?
 </Markdown>
-  <Distractor value="nation_most_important"      > Carrie Nation was the most important figure in the temperance movement, more important even than Lyman Beecher.                                     </Distractor>
-         <Key value="new_temperance_new_morality"> Today's "sober-curious" movement is a new temperance, but its morality has shifted from protecting society to improving one's own health.           </Key>
-  <Distractor value="more_dangerous_today"       > Drinking alcohol is far more dangerous today than it was in the 1800s because today's alcohol causes heart disease, cancer, and a shorter lifespan. </Distractor>
-  <Distractor value="surgeon_general_prohibition"> The Surgeon General's goal in suggesting a warning label on alcohol is to bring back Prohibition.                                                   </Distractor>
+  <Distractor id="temperance_article_thesis_nation_most_important"       value="nation_most_important"      > Carrie Nation was the most important figure in the temperance movement, more important even than Lyman Beecher.                                     </Distractor>
+         <Key id="temperance_article_thesis_new_temperance_new_morality" value="new_temperance_new_morality"> Today's "sober-curious" movement is a new temperance, but its morality has shifted from protecting society to improving one's own health.           </Key>
+  <Distractor id="temperance_article_thesis_more_dangerous_today"        value="more_dangerous_today"       > Drinking alcohol is far more dangerous today than it was in the 1800s because today's alcohol causes heart disease, cancer, and a shorter lifespan. </Distractor>
+  <Distractor id="temperance_article_thesis_surgeon_general_prohibition" value="surgeon_general_prohibition"> The Surgeon General's goal in suggesting a warning label on alcohol is to bring back Prohibition.                                                   </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1239,10 +1239,10 @@ Step back from the details — what is the article's **main point** overall?
 <Markdown>
 What does the image show across its nine numbered steps?
 </Markdown>
-  <Distractor value="top_is_moderate"   > That the best stage of becoming a drinker, at the top, is moderate drinking.             </Distractor>
-  <Distractor value="nine_different_men"> Nine different men, each working in a different profession that was common in the 1800s. </Distractor>
-  <Distractor value="good_and_bad_sides"> The good and bad sides of drinking alcohol for working-class people in the 1800s.        </Distractor>
-         <Key value="one_mans_decline"  > One man's life of drinking, from the first glass to poverty, crime, and death.           </Key>
+  <Distractor id="temperance_litho_observe_top_is_moderate"    value="top_is_moderate"   > That the best stage of becoming a drinker, at the top, is moderate drinking.             </Distractor>
+  <Distractor id="temperance_litho_observe_nine_different_men" value="nine_different_men"> Nine different men, each working in a different profession that was common in the 1800s. </Distractor>
+  <Distractor id="temperance_litho_observe_good_and_bad_sides" value="good_and_bad_sides"> The good and bad sides of drinking alcohol for working-class people in the 1800s.        </Distractor>
+         <Key id="temperance_litho_observe_one_mans_decline"   value="one_mans_decline"  > One man's life of drinking, from the first glass to poverty, crime, and death.           </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1268,10 +1268,10 @@ What does the image show across its nine numbered steps?
 <Markdown>
 Why would the temperance movement create and share an image like this?
 </Markdown>
-  <Distractor value="advertise_saloons" > To advertise the saloons pictured in it and encourage people to get together with their friends. </Distractor>
-  <Distractor value="record_social_life"> To record the kinds of social activities that a typical wealthy family participated in in 1846.  </Distractor>
-         <Key value="warn_and_persuade" > To warn that even one drink can lead step by step to ruin, and so persuade people not to drink.  </Key>
-  <Distractor value="no_consequences"   > To show that drinking has no lasting consequences for a man who keeps to a moderate amount.      </Distractor>
+  <Distractor id="temperance_litho_purpose_advertise_saloons"  value="advertise_saloons" > To advertise the saloons pictured in it and encourage people to get together with their friends. </Distractor>
+  <Distractor id="temperance_litho_purpose_record_social_life" value="record_social_life"> To record the kinds of social activities that a typical wealthy family participated in in 1846.  </Distractor>
+         <Key id="temperance_litho_purpose_warn_and_persuade"  value="warn_and_persuade" > To warn that even one drink can lead step by step to ruin, and so persuade people not to drink.  </Key>
+  <Distractor id="temperance_litho_purpose_no_consequences"    value="no_consequences"   > To show that drinking has no lasting consequences for a man who keeps to a moderate amount.      </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1300,9 +1300,9 @@ Why would the temperance movement create and share an image like this?
 Your group each summed up the biggest difference between the two movements.
 Which comparison is **best**?
 </Markdown>
-  <Distractor value="not_different"   > **Karis:** They're actually NOT that different — both are about not drinking at all or drinking only moderately to protect society and families.         </Distractor>
-         <Key value="moral_vs_health" > **Joe:** Both discourage drinking, but the 1800s movement was a moral crusade, while today's is about personal health and self-improvement.              </Key>
-  <Distractor value="price_of_alcohol"> **Danielle:** The main difference is that people in the 1800s drank more expensive alcohol than people do today, which caused harm to a lot of families. </Distractor>
+  <Distractor id="temperance_synth_compare_not_different"    value="not_different"   > **Karis:** They're actually NOT that different — both are about not drinking at all or drinking only moderately to protect society and families.         </Distractor>
+         <Key id="temperance_synth_compare_moral_vs_health"  value="moral_vs_health" > **Joe:** Both discourage drinking, but the 1800s movement was a moral crusade, while today's is about personal health and self-improvement.              </Key>
+  <Distractor id="temperance_synth_compare_price_of_alcohol" value="price_of_alcohol"> **Danielle:** The main difference is that people in the 1800s drank more expensive alcohol than people do today, which caused harm to a lot of families. </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
