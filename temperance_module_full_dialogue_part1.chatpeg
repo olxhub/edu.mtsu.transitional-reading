@@ -272,7 +272,7 @@ Danielle: Wait — what intrusions is it even talking about?
 
 ::temperance_gram_antecedent [display=target:temperance_pane label="Find the antecedent"]
 
-Professor Booker: Good question. We need the antecedent. On the right, find the earlier sentence that describes the intrusions and highlight the whole thing, start to finish.
+Professor Booker: Good question. We need the antecedent. On the right, click the earlier sentence that describes the intrusions.
 
 --- wait @temperance_gram_antecedent_problem.submitCount > 0 ---
 

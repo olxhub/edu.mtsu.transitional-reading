@@ -243,9 +243,9 @@ rows:
      submitCount — the same shape every other assessed item here has.
 
      Spelled out rather than written as <SimpleTextSelection
-     mode="graded">: the terse tag drops maxAttempts on the floor, and
-     an assessment item that quietly allows unlimited attempts is worse
-     than three extra lines of XML.
+     mode="graded"> so that the three items and their shared heading sit
+     on one screen; the terse tag forwards the same problem attributes (see
+     the antecedent item below) and is the right form for a single item.
      ============================================================ -->
 
 <!-- p.25 — three highlight questions on the key sentence. The verb is a single
@@ -374,9 +374,13 @@ sentence, you hold each whole phrase together.
 <Done id="temperance_gram_structure_done" label="I understand" />
 </Vertical>
 
-<!-- p.28 — highlight the antecedent of "Such intrusions" -->
-<SimpleTextSelection id="temperance_gram_antecedent" mode="graded" title="Find the Antecedent" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
-"Such intrusions" points back to an earlier sentence. Find the sentence that describes those intrusions — its antecedent — and highlight the entire sentence, from its first word through its final period.
+<!-- p.28 — the antecedent of "Such intrusions". The passage is split into
+     sentences (separatorRegexp on the period; no abbreviations here, so the
+     naive split is exact) and a sentence is the unit the student clicks:
+     the answer is a whole sentence, and sweeping twenty-nine words to a
+     pixel-exact period is a test of dragging, not of reading. -->
+<SimpleTextSelection id="temperance_gram_antecedent" mode="graded" title="Find the Antecedent" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed" separatorRegexp="\.">
+"Such intrusions" points back to an earlier sentence. Click the sentence that describes those intrusions — its antecedent.
 ---
 In response to the perception that heavy drinking was associated with men who abused, abandoned, or neglected their family obligations, women formed a significant presence in societies dedicated to eradicating liquor. Temperance became a hallmark of middle-class respectability among both men and women and developed into a crusade with a visible class character. [Temperance, like many other reform efforts, was championed by the middle class and threatened to intrude on the private lives of lower-class workers, many of whom were Irish Catholics.] Such intrusions by the Protestant middle class exacerbated class, ethnic, and religious tensions. Still, while the temperance movement made less substantial inroads into lower-class workers' drinking culture, the movement was still a great success for reformers.
 ---
