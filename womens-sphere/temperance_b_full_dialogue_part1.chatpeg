@@ -115,7 +115,7 @@ Danielle: First one — what does "public sphere" mean here?
 
 ::tmb_q_publicsphere_screen
 
---- wait @tmb_q_publicsphere.value === 'public_life' ---
+--- wait @tmb_q_publicsphere_problem.submitCount > 0 ---
 
 Joe: Got it — the public sphere is life OUTSIDE the home. So the "domestic sphere" would be the home itself.
 
@@ -133,25 +133,25 @@ Danielle: There's a vocab phrase in here first — "in tandem with."
 
 ::tmb_q_tandem_screen
 
---- wait @tmb_q_tandem.value === 'alongside' ---
+--- wait @tmb_q_tandem_problem.submitCount > 0 ---
 
 Professor Booker: Now a term that's special to history. The passage gives this ideal a name. Using the passage, which phrase most directly tells us what it was?
 
 ::tmb_cd_term_screen
 
---- wait @tmb_cd_term.value === 'domestic_sphere' ---
+--- wait @tmb_cd_term_problem.submitCount > 0 ---
 
 Professor Booker: The phrase that captures it is "the domestic sphere." What else in the chapter connects to it? Select all that apply.
 
 ::tmb_cd_connect_screen
 
---- wait @tmb_cd_connect.value.length === 3 && @tmb_cd_connect.value.includes('true_womanhood') && @tmb_cd_connect.value.includes('guardians_of_virtue') && @tmb_cd_connect.value.includes('pious_pure_submissive') ---
+--- wait @tmb_cd_connect_problem.submitCount > 0 ---
 
 Professor Booker: Now put it together. Each of you wrote a one-sentence definition — read them and pick the best.
 
 ::tmb_cd_bestdef_screen
 
---- wait @tmb_cd_bestdef.value === 'joe_home_ideal' ---
+--- wait @tmb_cd_bestdef_problem.submitCount > 0 ---
 
 ::tmb_tb_b [display=target:tmb_main label="The excerpt — part 3"]
 
@@ -167,7 +167,7 @@ Karis: There's that word again — "domestic." We saw "domesticity" a minute ago
 
 ::tmb_q_domestic_screen
 
---- wait @tmb_q_domestic.value === 'home_focused' ---
+--- wait @tmb_q_domestic_problem.submitCount > 0 ---
 
 Joe: Nice — "domestic" is the adjective, "domesticity" is the noun for the whole idea. The "-ity" ending turns the quality into a thing.
 
@@ -197,25 +197,25 @@ Karis: I'll start — the big one is "ideology."
 
 ::tmb_q_ideology_screen
 
---- wait @tmb_q_ideology.value === 'belief_system' ---
+--- wait @tmb_q_ideology_problem.submitCount > 0 ---
 
 Joe: Next — "en masse." Women left their homes "en masse."
 
 ::tmb_q_enmasse_screen
 
---- wait @tmb_q_enmasse.value === 'all_together' ---
+--- wait @tmb_q_enmasse_problem.submitCount > 0 ---
 
 Danielle: Two more from the Southern-women part. First, "moralizing."
 
 ::tmb_q_moralizing_screen
 
---- wait @tmb_q_moralizing.value === 'teaching_right' ---
+--- wait @tmb_q_moralizing_problem.submitCount > 0 ---
 
 Professor Booker: And the last one — "euphemism."
 
 ::tmb_q_euphemism_screen
 
---- wait @tmb_q_euphemism.value === 'polite_substitute' ---
+--- wait @tmb_q_euphemism_problem.submitCount > 0 ---
 
 ::tmb_grammar_svo [display=target:tmb_main label="Verb, subject, object"]
 
@@ -249,7 +249,7 @@ Professor Booker: So, using that, how did women take that home-bound ideology an
 
 ::tmb_why_publicrole_screen
 
---- wait @tmb_why_publicrole.value === 'moral_authority' ---
+--- wait @tmb_why_publicrole_problem.submitCount > 0 ---
 
 // The comprehension questions are embedded HERE, in the conversation, so the
 // activity pane is free to hold the text they are about (tmb_comp_reading — all
@@ -302,13 +302,13 @@ Professor Booker: Look closely at the scene and the title, then answer.
 
 ::tmb_img_observe_screen
 
---- wait @tmb_img_observe.value === 'mother_at_home' ---
+--- wait @tmb_img_observe_problem.submitCount > 0 ---
 
 Joe: So why would a magazine print a picture like this?
 
 ::tmb_img_purpose_screen
 
---- wait @tmb_img_purpose.value === 'promote_ideal' ---
+--- wait @tmb_img_purpose_problem.submitCount > 0 ---
 
 ::tmb_article_read [display=target:tmb_main label="The magazine article"]
 
@@ -324,13 +324,13 @@ Danielle: Right. Dr. Booker wanted us to think about "economic precarity." But f
 
 ::tmb_q_tradwife_screen
 
---- wait @tmb_q_tradwife.value === 'traditional_homemaker' ---
+--- wait @tmb_q_tradwife_problem.submitCount > 0 ---
 
 Joe: So, tradwife — a traditional stay-at-home wife. Where does "economic precarity" come in? Let's each find a sentence that gives it context, then pick the best.
 
 ::tmb_precarity
 
---- wait @tmb_precarity_pick.value === 'joe_low_income' && @tmb_precarity_explain.value ---
+--- wait @tmb_precarity_pick_problem.submitCount > 0 && @tmb_precarity_explain.value ---
 
 Karis: The line that really pins down economic precarity is the one about exhausted, low-income moms who can't afford child care. Put it with the article's "precarity-to-tradwife pipeline," and you can see it's about money and insecurity, not a dream of domesticity.
 
@@ -338,19 +338,19 @@ Professor Booker: Now, to see how it all fits, let's summarize. Which is the bes
 
 ::tmb_summary_pick_screen
 
---- wait @tmb_summary_pick.value === 'what_and_why' ---
+--- wait @tmb_summary_pick_problem.submitCount > 0 ---
 
 Professor Booker: One more term the article flags — "egalitarian."
 
 ::tmb_q_egalitarian_screen
 
---- wait @tmb_q_egalitarian.value === 'based_on_equality' ---
+--- wait @tmb_q_egalitarian_problem.submitCount > 0 ---
 
 Professor Booker: Now step back from the details. What is the article's main point overall?
 
 ::tmb_article_thesis_screen
 
---- wait @tmb_article_thesis.value === 'glossy_hides_precarity' ---
+--- wait @tmb_article_thesis_problem.submitCount > 0 ---
 
 Danielle: So underneath, the old ideal and today's trend are actually pretty different.
 
@@ -367,7 +367,7 @@ Danielle: Each of us also tried to sum up the big difference in one sentence. Wh
 
 ::tmb_synth_peereval_screen
 
---- wait @tmb_synth_peereval.value === 'danielle_duty_vs_image' ---
+--- wait @tmb_synth_peereval_problem.submitCount > 0 ---
 
 Part 5: Conclusion [id=part5]
 -----------------------------
