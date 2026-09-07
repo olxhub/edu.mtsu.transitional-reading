@@ -804,9 +804,9 @@ What is the best definition of **galvanized**?
 > "…the movement's effort to curb the consumption of alcohol **galvanized**
 > widespread support among the middle class."
 </Markdown>
-  <Distractor value="gradually_built"    > To build up slowly, a little at a time. </Distractor>
          <Key value="spurred_into_action"> To spur into action; to energize.       </Key>
   <Distractor value="zinc_coating"       > To coat iron or steel with zinc.        </Distractor>
+  <Distractor value="gradually_built"    > To build up slowly, a little at a time. </Distractor>
   <Distractor value="wore_down"          > To discourage or wear down.             </Distractor>
 </ChoiceInput>
 </KeyGrader>
@@ -941,9 +941,9 @@ What words could take the place of **per capita consumption** — but keep the m
 **Benevolent Empire** is a discipline-specific term. Using clues in the passage,
 which word or phrase most directly helps us understand what it was?
 </Markdown>
-  <Distractor value="traditional_religion" > traditional religion  </Distractor>
          <Key value="powerful_network"     > powerful network      </Key>
   <Distractor value="industrial_revolution"> Industrial Revolution </Distractor>
+  <Distractor value="traditional_religion" > traditional religion  </Distractor>
   <Distractor value="spiritual_response"   > spiritual response    </Distractor>
 </ChoiceInput>
 </KeyGrader>
@@ -1174,8 +1174,8 @@ Nation)?
 The article says choosing not to drink is seen as "an act of **authenticity**
 or self-care." What does **authenticity** mean here?
 </Markdown>
-         <Key value="true_to_self"       > Being true to who you really are.             </Key>
   <Distractor value="following_rules"    > Following a strict set of official rules.     </Distractor>
+         <Key value="true_to_self"       > Being true to who you really are.             </Key>
   <Distractor value="group_approval"     > Getting approval from a group before you act. </Distractor>
   <Distractor value="doing_whats_popular"> Doing whatever happens to be popular.         </Distractor>
 </ChoiceInput>
