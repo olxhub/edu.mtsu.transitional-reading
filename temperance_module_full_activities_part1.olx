@@ -1006,6 +1006,11 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
 </CapaProblem> <!-- tmf_be_connect_problem -->
 </Vertical> <!-- tmf_be_connect_screen -->
 
+<!-- Three items in this form ask which peer's sentence is best (this one, the
+     self-optimization sentence, the closing comparison). Each peer is right in
+     exactly one of them: a peer who is reliably right is a cue that has nothing
+     to do with reading. Option values name the sentence, not the speaker, so
+     an attribution can move without touching values, gates, or analytics. -->
 <Vertical id="tmf_be_bestdef_screen">
 <CapaProblem id="tmf_be_bestdef_problem" title="Benevolent Empire: the best definition" maxAttempts="1">
 <KeyGrader id="tmf_be_bestdef_grader">
@@ -1014,20 +1019,20 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
 Each member of your group wrote a one-sentence description of the Benevolent
 Empire. Read them and choose the **best** one.
 </Markdown>
-  <Distractor value="danielle_evangelicals_name"    > **Danielle:** The name given to the Evangelicals in the temperance movement after the Second Great Awakening.               </Distractor>
-         <Key value="joe_network_religion_reform"   > **Joe:** A strong network of religious societies that brought together religion and reform among middle-class Evangelicals. </Key>
-  <Distractor value="karis_reforms_promote_religion"> **Karis:** The set of reforms designed to promote religious ideas that had decreased after the Industrial Revolution.       </Distractor>
+         <Key value="network_religion_reform" > **Danielle:** A network of religious societies that joined religion and reform among middle-class Evangelicals.       </Key>
+  <Distractor value="evangelicals_name"       > **Joe:** The name given to the Evangelicals in the temperance movement after the Second Great Awakening.              </Distractor>
+  <Distractor value="reforms_promote_religion"> **Karis:** The set of reforms designed to promote religious ideas that had decreased after the Industrial Revolution. </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_be_bestdef.value === 'danielle_evangelicals_name' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
-*Danielle names who was in it, but not what it **was** — and the Benevolent Empire was much wider than temperance alone. Joe's sentence has the missing piece: a network of societies joining religion and reform.*
+<Markdown when="@tmf_be_bestdef.value === 'evangelicals_name' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
+*Joe names who was in it, but not what it **was** — and the Benevolent Empire was much wider than temperance alone. Danielle's sentence has the missing piece: a network of societies joining religion and reform.*
 </Markdown>
-<Markdown when="@tmf_be_bestdef.value === 'karis_reforms_promote_religion' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
-*Karis has the engine running backwards. Religious revival came first and powered the reform, rather than reform being invented to prop religion back up — Joe's sentence has the order right.*
+<Markdown when="@tmf_be_bestdef.value === 'reforms_promote_religion' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
+*Karis has the engine running backwards. Religious revival came first and powered the reform, rather than reform being invented to prop religion back up — Danielle's sentence has the order right.*
 </Markdown>
-<Markdown when="@tmf_be_bestdef.value === 'joe_network_religion_reform' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
-*Yes — Joe's has all three pieces: a network, made of societies, joining religion and reform among the middle class.*
+<Markdown when="@tmf_be_bestdef.value === 'network_religion_reform' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
+*Yes — Danielle's has all three pieces: a network, made of societies, joining religion and reform among the middle class.*
 </Markdown>
 </CapaProblem> <!-- tmf_be_bestdef_problem -->
 </Vertical> <!-- tmf_be_bestdef_screen -->
@@ -1111,19 +1116,19 @@ First — what does **teetotaling** mean?
 To pin down what **self-optimization** means, each of us found a sentence from
 the article that gives it context. Who picked the **best** one?
 </Markdown>
-  <Distractor value="danielle_health_research" > **Danielle:** "(To be fair, this focus on health is partially a response to research on moderate alcohol consumption's detrimental effects on heart health, cancer risk, and lifespan.)" </Distractor>
-  <Distractor value="karis_freedom_to_choose"  > **Karis:** "Sober-curiosity, she said, was about a person's 'freedom to choose.'"                                                                                                        </Distractor>
-         <Key value="joe_authenticity_selfcare"> **Joe:** "…choosing not to drink in an alcohol-soaked culture is seen as an act of authenticity or self-care…"                                                                           </Key>
+  <Distractor value="freedom_to_choose"    > **Joe:** "Sober-curiosity, she said, was about a person's 'freedom to choose.'"                                                                                                          </Distractor>
+  <Distractor value="health_research"      > **Danielle:** "(To be fair, this focus on health is partially a response to research on moderate alcohol consumption's detrimental effects on heart health, cancer risk, and lifespan.)" </Distractor>
+         <Key value="authenticity_selfcare"> **Karis:** "…choosing not to drink in an alcohol-soaked culture is seen as an act of authenticity or self-care…"                                                                         </Key>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_selfoptim_pick.value === 'danielle_health_research' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
-*Danielle's sentence says why health is on people's minds. Self-**optimization** is about making yourself better — Joe's sentence, where not drinking becomes "authenticity or self-care."*
+<Markdown when="@tmf_selfoptim_pick.value === 'health_research' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
+*Danielle's sentence says why health is on people's minds. Self-**optimization** is about making yourself better — Karis's sentence, where not drinking becomes "authenticity or self-care."*
 </Markdown>
-<Markdown when="@tmf_selfoptim_pick.value === 'karis_freedom_to_choose' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
-*"Freedom to choose" is about having the choice, not about what the choice does for you. Joe's sentence says what not drinking makes a person — "an act of authenticity or self-care."*
+<Markdown when="@tmf_selfoptim_pick.value === 'freedom_to_choose' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
+*"Freedom to choose" is about having the choice, not about what the choice does for you. Karis's sentence says what not drinking makes a person — "an act of authenticity or self-care."*
 </Markdown>
-<Markdown when="@tmf_selfoptim_pick.value === 'joe_authenticity_selfcare' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
+<Markdown when="@tmf_selfoptim_pick.value === 'authenticity_selfcare' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
 *Yes — "an act of authenticity or self-care" turns not drinking into working on yourself. That's the self-optimization the writer means.*
 </Markdown>
 </CapaProblem> <!-- tmf_selfoptim_pick_problem -->
@@ -1295,19 +1300,19 @@ Why would the temperance movement create and share an image like this?
 Your group each summed up the biggest difference between the two movements.
 Which comparison is **best**?
 </Markdown>
-  <Distractor value="joe_not_different"       > **Joe:** They're actually NOT that different — both are about not drinking at all or drinking only moderately to protect society and families.                       </Distractor>
-         <Key value="danielle_moral_vs_health"> **Danielle:** Both discourage drinking, but the 1800s movement was a moral and social crusade, while today's movement is about personal health and self-improvement. </Key>
-  <Distractor value="karis_price_of_alcohol"  > **Karis:** The main difference is that people in the 1800s drank more expensive alcohol than people do today, which caused harm to a lot of families.                </Distractor>
+  <Distractor value="not_different"   > **Karis:** They're actually NOT that different — both are about not drinking at all or drinking only moderately to protect society and families.         </Distractor>
+         <Key value="moral_vs_health" > **Joe:** Both discourage drinking, but the 1800s movement was a moral crusade, while today's is about personal health and self-improvement.              </Key>
+  <Distractor value="price_of_alcohol"> **Danielle:** The main difference is that people in the 1800s drank more expensive alcohol than people do today, which caused harm to a lot of families. </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmf_synth_peereval.value === 'joe_not_different' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
-*Joe has the likeness right, but a comparison owes us the difference too: the two movements give very different reasons for the same behavior — society and family then, the self now.*
+<Markdown when="@tmf_synth_peereval.value === 'not_different' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
+*Karis has the likeness right, but a comparison owes us the difference too: the two movements give very different reasons for the same behavior — society and family then, the self now.*
 </Markdown>
-<Markdown when="@tmf_synth_peereval.value === 'karis_price_of_alcohol' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@tmf_synth_peereval.value === 'price_of_alcohol' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
 *Price isn't a contrast either text draws — the textbook says whiskey was cheap. The real difference is what each movement was trying to protect: society and family then, the self now.*
 </Markdown>
-<Markdown when="@tmf_synth_peereval.value === 'danielle_moral_vs_health' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@tmf_synth_peereval.value === 'moral_vs_health' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
 *Yes — both discourage drinking; what changed is the reason. Society and family then, the self now. That's the comparison your final paragraph needs.*
 </Markdown>
 </CapaProblem> <!-- tmf_synth_peereval_problem -->
