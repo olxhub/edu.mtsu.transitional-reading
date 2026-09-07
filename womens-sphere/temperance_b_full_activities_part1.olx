@@ -399,7 +399,7 @@ whole phrase together.
 [Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the "cult of domesticity," or the "cult of true womanhood."] These ideas developed in tandem with industrialization, the market revolution, and the Second Great Awakening. In reality, they applied primarily to upper-class and middle-upper-class women. In the era of revivalism and reform, Americans understood the family and home as the hearthstones of civic virtue and moral influence. Women were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic. Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
 ---
 all: Yes — that earlier sentence is where the text names the ideology: the "cult of domesticity," or "cult of true womanhood." That is the ideology "the very ideology" points back to.
-: You are looking for the one sentence that NAMES the ideology — the one with the words "cult of domesticity" in it. Highlight the whole sentence.
+: "The very ideology" points to an ideology the text has already named — the sentence that first calls it the "cult of domesticity."
 </SimpleTextSelection>
 
 
@@ -691,8 +691,12 @@ Here is the finished work — the comparison you built from all three texts.
      well as on the chosen value. Keyed on the value alone, a student with a
      Check button in front of them could click each option in turn and read
      which one comes back "Yes" before ever submitting — the whole item,
-     answered for them, under a rule that allows one attempt. The feedback
-     text is unchanged; it is now the explanation that follows the answer. -->
+     answered for them, under a rule that allows one attempt.
+
+     Register: each line is the explanation that follows a submission, not a
+     hint toward a second try — there is none. A wrong-choice line says why
+     that option misses and what the key is; nothing tells the student to
+     look again. -->
 
 <Vertical id="tmb_q_publicsphere_screen">
 <CapaProblem id="tmb_q_publicsphere_problem" title="Vocabulary: public sphere" maxAttempts="1">
@@ -712,13 +716,13 @@ Look at the highlighted sentence and choose the best definition for **public sph
 </KeyGrader>
 
 <Markdown when="@tmb_q_publicsphere.value === 'private_home' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
-*Not quite — that's the **domestic** sphere, the opposite of the public one. The public sphere is life OUTSIDE the home.*
+*That's the **domestic** sphere, the opposite of the public one. The public sphere is life outside the home — work, politics, community.*
 </Markdown>
 <Markdown when="@tmb_q_publicsphere.value === 'town_square' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
-*Not quite — "sphere" here isn't a literal place you can stand in. It means a whole area of life — work, politics, community.*
+*"Sphere" here isn't a literal place you can stand in. It means a whole area of life — work, politics, community — outside the home.*
 </Markdown>
 <Markdown when="@tmb_q_publicsphere.value === 'shared_opinion' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
-*Not quite — the public sphere is where people act and argue in common, not a single shared opinion.*
+*The public sphere is where people act and argue in common, not a single shared opinion: the shared world outside the home.*
 </Markdown>
 <Markdown when="@tmb_q_publicsphere.value === 'public_life' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
 *Yes — the public sphere is life outside the home: work, politics, and community. Its opposite is the "domestic sphere," which comes up next.*
@@ -746,13 +750,13 @@ What words could take the place of **in tandem with** — but keep the meaning t
 </KeyGrader>
 
 <Markdown when="@tmb_q_tandem.value === 'against' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
-*Not quite — backwards. The ideas didn't fight those changes; they grew up right alongside them.*
+*Backwards. The ideas didn't fight those changes; they grew up right alongside them — "in tandem with" means together, at the same time.*
 </Markdown>
 <Markdown when="@tmb_q_tandem.value === 'before' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
-*Not quite — "in tandem" is about the same time, not one ahead of the other. Think of two riders on a tandem bicycle, moving together.*
+*"In tandem" is about the same time, not one ahead of the other: two riders on a tandem bicycle move together.*
 </Markdown>
 <Markdown when="@tmb_q_tandem.value === 'instead' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
-*Not quite — the ideas didn't replace industrialization or the revival; they developed together with them.*
+*The ideas didn't replace industrialization or the revival; they developed together with them, at the same time.*
 </Markdown>
 <Markdown when="@tmb_q_tandem.value === 'alongside' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
 *Yes — "in tandem with" means together, at the same time. A tandem bicycle carries two riders moving as one.*
@@ -781,13 +785,13 @@ passage, which phrase most directly helps us understand what it was?
 </KeyGrader>
 
 <Markdown when="@tmb_cd_term.value === 'market_revolution' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
-*Not quite — the market revolution is one of the changes the idea developed alongside, not what the idea WAS.*
+*The market revolution is one of the changes the idea developed alongside, not what the idea WAS. The passage's own phrase for it is "the domestic sphere."*
 </Markdown>
 <Markdown when="@tmb_cd_term.value === 'public_sphere' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
-*Not quite — that's the opposite. The cult of domesticity tied women to the HOME, away from the public sphere.*
+*That's the opposite. The cult of domesticity tied women to the HOME — "the domestic sphere," in the passage's words — away from public life.*
 </Markdown>
 <Markdown when="@tmb_cd_term.value === 'second_awakening' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
-*Not quite — the Second Great Awakening helped shape the idea, but it isn't a definition of it.*
+*The Second Great Awakening helped shape the idea, but it isn't a definition of it. The passage's phrase for what it was is "the domestic sphere."*
 </Markdown>
 <Markdown when="@tmb_cd_term.value === 'domestic_sphere' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
 *Yes — the passage hands you the phrase: femininity was "intimately tied to the domestic sphere." A woman's proper place was the home.*
@@ -822,16 +826,16 @@ it? **Select all that apply.**
    select-all, and it is declared here as the rule this form scores by, not
    as the only defensible one — partial credit is the obvious next question. -->
 <Markdown when="@tmb_cd_connect.value.includes('reform_societies') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
-*Not that one — reform societies are the PUBLIC role women fashioned once they left the home, not part of the domestic ideal.*
+*Reform societies are the PUBLIC role women fashioned once they left the home, not part of the domestic ideal.*
 </Markdown>
 <Markdown when="@tmb_cd_connect.value.includes('antislavery_movement') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
-*Not that one — joining the antislavery movement took women OUT into public life. It's the opposite of staying in the domestic sphere.*
+*Joining the antislavery movement took women OUT into public life — the opposite of staying in the domestic sphere.*
 </Markdown>
 <Markdown when="@tmb_cd_connect.value.includes('working_class_labor') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
-*Not that one — working-class women joined the public sphere through their labor, out of necessity. They're the exception to the ideal, not part of it.*
+*Working-class women joined the public sphere through their labor, out of necessity. They're the exception to the ideal, not part of it.*
 </Markdown>
 <Markdown when="@tmb_cd_connect.value.length &gt; 0 &amp;&amp; @tmb_cd_connect.value.length &lt; 3 &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
-*Keep looking — more than one phrase here belongs to the domestic ideal. Ask of each: does it describe the "true woman" AT HOME, or something women did OUT in public?*
+*Fewer than the full set. Three phrases describe the "true woman" at home: the "cult of true womanhood," women as guardians of virtue, and the qualities she was to have — pious, pure, submissive, domestic.*
 </Markdown>
 <Markdown when="@tmb_cd_connect.value.length === 3 &amp;&amp; @tmb_cd_connect.value.includes('true_womanhood') &amp;&amp; @tmb_cd_connect.value.includes('guardians_of_virtue') &amp;&amp; @tmb_cd_connect.value.includes('pious_pure_submissive') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
 *That's the set: the "cult of true womanhood," women as guardians of virtue, and the qualities of the ideal woman — pious, pure, submissive, and domestic.*
@@ -854,10 +858,10 @@ domesticity. Read them and choose the **best** one.
 </KeyGrader>
 
 <Markdown when="@tmb_cd_bestdef.value === 'danielle_reform_movement' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
-*Not quite — Danielle has it backwards. That's the PUBLIC role women fashioned FROM the ideology; the cult of domesticity itself was about staying home.*
+*Danielle has it backwards. That's the PUBLIC role women fashioned FROM the ideology; the cult of domesticity itself was about staying home.*
 </Markdown>
 <Markdown when="@tmb_cd_bestdef.value === 'karis_laws_all_women' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
-*Not quite — Karis makes it a law for everyone. It was a cultural and religious ideal, not a law, and it applied mainly to upper- and middle-class women.*
+*Karis makes it a law for everyone. It was a cultural and religious ideal, not a law, and it applied mainly to upper- and middle-class women.*
 </Markdown>
 <Markdown when="@tmb_cd_bestdef.value === 'joe_home_ideal' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
 *Yes — Joe's has all the pieces: the home as a woman's proper place, the qualities of the "true woman," and passing virtue on to her children.*
@@ -889,13 +893,13 @@ Choose the best definition for **domestic** as it's used here:
 <!-- Karis names the morphology link in the dialogue after this: "domestic"
    (adjective) shares a root with "domesticity" (noun) from part 2. -->
 <Markdown when="@tmb_q_domestic.value === 'made_in_country' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
-*Not quite — that's a real sense of "domestic" (as in "domestic products"), but not this one. Here it's about the home, not the country.*
+*A real sense of "domestic" (as in "domestic products"), but not this one. Here it's about the home: devoted to home and family life.*
 </Markdown>
 <Markdown when="@tmb_q_domestic.value === 'tame_animal' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
-*Not quite — also a real sense ("a domestic animal"), but the sentence is describing a woman, not a pet. Read it as being devoted to the home.*
+*Also a real sense ("a domestic animal"), but the sentence is describing a woman, not a pet. Here it means devoted to the home and family.*
 </Markdown>
 <Markdown when="@tmb_q_domestic.value === 'strict_rules' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
-*Not quite — nothing in "domestic" is about strictness. It's about the home.*
+*Nothing in "domestic" is about strictness. It's about the home — devoted to home and family life.*
 </Markdown>
 <Markdown when="@tmb_q_domestic.value === 'home_focused' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
 *Right — devoted to the home and family. It's the same root you saw in "domesticity" back in part 2 — the noun for the whole idea.*
@@ -926,13 +930,13 @@ Choose the best definition for **ideology**:
 </KeyGrader>
 
 <Markdown when="@tmb_q_ideology.value === 'single_feeling' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
-*Not quite — an ideology is bigger than one feeling. It's a whole system of beliefs about how things should be.*
+*An ideology is bigger than one feeling. It's a whole system of beliefs about how things should be — here, that a woman's place is the home.*
 </Markdown>
 <Markdown when="@tmb_q_ideology.value === 'government_law' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
-*Not quite — laws are written and enforced; an ideology is a set of shared beliefs. The cult of domesticity was an ideology, not a law.*
+*Laws are written and enforced; an ideology is a set of shared beliefs. The cult of domesticity was an ideology, not a law.*
 </Markdown>
 <Markdown when="@tmb_q_ideology.value === 'mind_study' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
-*Not quite — that's "psychology." The "-ology" ending fools a lot of people here.*
+*That's "psychology." The "-ology" ending fools a lot of people; an ideology is a set of beliefs about how society should work.*
 </Markdown>
 <Markdown when="@tmb_q_ideology.value === 'belief_system' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
 *Right — a shared set of beliefs about how society should work. Here it's the belief that a woman's place is the home.*
@@ -958,13 +962,13 @@ What words could take the place of **en masse** — but keep the meaning the sam
 </KeyGrader>
 
 <Markdown when="@tmb_q_enmasse.value === 'one_at_a_time' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
-*Not quite — the opposite. "En masse" means as a large group, all at once.*
+*The opposite. "En masse" means as a large group, all at once.*
 </Markdown>
 <Markdown when="@tmb_q_enmasse.value === 'in_secret' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
-*Not quite — nothing about "en masse" is hidden. It's about numbers — a whole crowd, out in the open.*
+*Nothing about "en masse" is hidden. It's about numbers — a whole crowd, all together, out in the open.*
 </Markdown>
 <Markdown when="@tmb_q_enmasse.value === 'by_force' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
-*Not quite — "en masse" is about how MANY, not whether they were forced. The women left in large numbers, of their own accord.*
+*"En masse" is about how MANY, not whether they were forced. The women left in large numbers, of their own accord.*
 </Markdown>
 <Markdown when="@tmb_q_enmasse.value === 'all_together' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
 *Yes — "en masse" is French for "in a mass" — in large numbers, all together. Watch for it again in the article.*
@@ -990,13 +994,13 @@ Choose the best definition for **moralizing** as it's used here:
 </KeyGrader>
 
 <Markdown when="@tmb_q_moralizing.value === 'discouraging' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
-*Not quite — you may be thinking of "demoralizing," which is nearly the opposite. "Moralizing" is about morals — right and wrong.*
+*That's "demoralizing," which is nearly the opposite. "Moralizing" is about morals — encouraging right living.*
 </Markdown>
 <Markdown when="@tmb_q_moralizing.value === 'guilt_tripping' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
-*Not quite — a moralizing influence encourages GOOD behavior; it isn't only about guilt. The passage pairs it with "calming."*
+*A moralizing influence encourages GOOD behavior; it isn't about guilt. The passage pairs it with "calming."*
 </Markdown>
 <Markdown when="@tmb_q_moralizing.value === 'cheering_up' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
-*Not quite — that's "boosting morale," a different word. "Moralizing" is about morals, not team spirit.*
+*That's "boosting morale," a different word. "Moralizing" is about morals — encouraging good behavior — not team spirit.*
 </Markdown>
 <Markdown when="@tmb_q_moralizing.value === 'teaching_right' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
 *Right — a moralizing influence encourages good behavior and right living. It fits the idea of women as the "guardians of virtue."*
@@ -1022,13 +1026,13 @@ Choose the best definition for **euphemism**:
 </KeyGrader>
 
 <Markdown when="@tmb_q_euphemism.value === 'opposite_meaning' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
-*Not quite — that's irony or sarcasm. A euphemism doesn't reverse the meaning; it softens it.*
+*That's irony or sarcasm. A euphemism doesn't reverse the meaning; it softens it — a polite word in place of a blunter one.*
 </Markdown>
 <Markdown when="@tmb_q_euphemism.value === 'foreign_word' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
-*Not quite — a euphemism can be a perfectly ordinary English word. What makes it a euphemism is that it's a gentler stand-in for a blunter one.*
+*A euphemism can be a perfectly ordinary English word. What makes it a euphemism is that it's a gentler stand-in for a blunter one.*
 </Markdown>
 <Markdown when="@tmb_q_euphemism.value === 'short_lesson' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
-*Not quite — that's a proverb or an aphorism. A euphemism is a polite substitute for a more direct word.*
+*That's a proverb or an aphorism. A euphemism is a polite substitute for a more direct word.*
 </Markdown>
 <Markdown when="@tmb_q_euphemism.value === 'polite_substitute' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
 *Right — a euphemism is a milder, more polite word standing in for a blunter one. Here, "female virtue" was a gentle way of saying "sexual purity."*
@@ -1057,13 +1061,13 @@ and turn it into a **public** role?
 </KeyGrader>
 
 <Markdown when="@tmb_why_publicrole.value === 'rejected_ideology' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
-*Not quite — read it again: women "took the very ideology" and USED it. They didn't reject it; they turned it to a new purpose.*
+*Women "took the very ideology" and USED it. They didn't reject it; they turned the moral authority it gave them into a reason to act in public.*
 </Markdown>
 <Markdown when="@tmb_why_publicrole.value === 'factory_owners' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
-*Not quite — that was working-class women, who labored out of necessity. Middle-class women's public role grew out of moral authority and new education, not factory work.*
+*That was working-class women, who labored out of necessity. Middle-class women's public role grew out of the moral authority the ideology gave them, not factory work.*
 </Markdown>
 <Markdown when="@tmb_why_publicrole.value === 'government_role' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
-*Not quite — no law gave them this role. They claimed it themselves, out of the moral authority the ideology already granted them.*
+*No law gave them this role. They claimed it themselves, out of the moral authority the ideology already granted them.*
 </Markdown>
 <Markdown when="@tmb_why_publicrole.value === 'moral_authority' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
 *Yes — if a woman is the guardian of virtue and morality, then cleaning up society becomes her job too. That's how the home-bound ideal became a reason to act in public.*
@@ -1091,13 +1095,13 @@ The article is about **tradwives.** First — what does **tradwife** mean?
 </KeyGrader>
 
 <Markdown when="@tmb_q_tradwife.value === 'trades_stocks' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
-*Not quite — a reasonable guess from "trad," but it's short for **traditional**, not "trade." A tradwife embraces a traditional wife-and-homemaker role.*
+*A reasonable guess from "trad," but it's short for **traditional**, not "trade." A tradwife embraces a traditional wife-and-homemaker role.*
 </Markdown>
 <Markdown when="@tmb_q_tradwife.value === 'working_mother' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
-*Not quite — nearly the opposite. The tradwife image is about staying HOME, not working outside it.*
+*Nearly the opposite. The tradwife image is about staying HOME as a traditional homemaker, not working outside it.*
 </Markdown>
 <Markdown when="@tmb_q_tradwife.value === 'marriage_activist' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
-*Not quite — a tradwife is defined by the role she lives (homemaker), not by campaigning for laws.*
+*A tradwife is defined by the role she lives — traditional homemaker — not by campaigning for laws.*
 </Markdown>
 <Markdown when="@tmb_q_tradwife.value === 'traditional_homemaker' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
 *Right — "trad" is short for traditional. A tradwife embraces the traditional stay-at-home wife-and-mother role.*
@@ -1121,10 +1125,10 @@ of us found a sentence from the article that gives it context. Who picked the
 </KeyGrader>
 
 <Markdown when="@tmb_precarity_pick.value === 'danielle_political' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
-*Not quite — Danielle's sentence is about the political fight over tradwives. Economic **precarity** needs a sentence about money and insecurity.*
+*Danielle's sentence is about the political fight over tradwives. Economic **precarity** needs a sentence about money and insecurity.*
 </Markdown>
 <Markdown when="@tmb_precarity_pick.value === 'karis_businesswomen' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
-*Not quite — Karis found the well-off influencers, who are the opposite of precarious. Precarity is about insecurity, not "making huge sums."*
+*Karis found the well-off influencers, who are the opposite of precarious. Precarity is about insecurity, not "making huge sums."*
 </Markdown>
 <Markdown when="@tmb_precarity_pick.value === 'joe_low_income' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
 *Yes — "exhausted, low-income moms who can't afford child care" shows exactly what economic precarity is: financial insecurity that leaves people few choices.*
@@ -1151,13 +1155,13 @@ Which is the **best summary** of the article's first paragraph (about how
 </KeyGrader>
 
 <Markdown when="@tmb_summary_pick.value === 'image_only' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
-*Not quite — true, but only the picture. A summary has to carry the point: that the trend became a culture-war flashpoint.*
+*True, but only the picture. A summary has to carry the point: that the trend became a culture-war flashpoint over what women want.*
 </Markdown>
 <Markdown when="@tmb_summary_pick.value === 'overstated' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
-*Not quite — "the single most important issue in American politics" overstates it. A summary shouldn't exaggerate what the paragraph says.*
+*That overstates it — the paragraph says the trend became a flashpoint, not the biggest issue in politics. A summary shouldn't exaggerate what it reports.*
 </Markdown>
 <Markdown when="@tmb_summary_pick.value === 'opinion' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
-*Not quite — that's an opinion about tradwives, not a summary of the paragraph. Summaries report; they don't rate.*
+*That's an opinion about tradwives, not a summary of the paragraph. Summaries report; they don't rate.*
 </Markdown>
 <Markdown when="@tmb_summary_pick.value === 'what_and_why' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
 *Yes — what appeared (glamorous tradwife images), where (social media), and the point: both sides turned it into a fight over what women want.*
@@ -1181,13 +1185,13 @@ does **egalitarian** mean?
 </KeyGrader>
 
 <Markdown when="@tmb_q_egalitarian.value === 'by_earnings' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
-*Not quite — that's what actually happens in the article (the role falls to whoever earns less), but it's the opposite of egalitarian, which means equal.*
+*That's what actually happens in the article — the role falls to whoever earns less — but it's the opposite of egalitarian, which means equal.*
 </Markdown>
 <Markdown when="@tmb_q_egalitarian.value === 'traditional' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
-*Not quite — that's the traditional arrangement. "Egalitarian" points the other way: toward equality between the partners.*
+*That's the traditional arrangement. "Egalitarian" points the other way: toward equality between the partners.*
 </Markdown>
 <Markdown when="@tmb_q_egalitarian.value === 'both_must_work' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
-*Not quite — egalitarian is about sharing the work equally, not about forcing both partners into outside jobs.*
+*Egalitarian is about sharing the work equally, not about forcing both partners into outside jobs.*
 </Markdown>
 <Markdown when="@tmb_q_egalitarian.value === 'based_on_equality' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
 *Right — "egalitarian" comes from "equal." An egalitarian division of labor shares the work evenly between partners.*
@@ -1210,13 +1214,13 @@ Step back from the details — what is the article's **main point** overall?
 </KeyGrader>
 
 <Markdown when="@tmb_article_thesis.value === 'mostly_wealthy' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
-*Not quite — the wealthy influencers are one detail. The article's point is about the MANY who are low-income, not the few making "huge sums."*
+*The wealthy influencers are one detail. The article's point is about the MANY who are low-income: the glossy image hides economic precarity.*
 </Markdown>
 <Markdown when="@tmb_article_thesis.value === 'women_shouldnt_stay' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
-*Not quite — the article never says women shouldn't stay home. It says many aren't choosing it freely — they're pushed by money.*
+*The article never says women shouldn't stay home. It says many aren't choosing it freely — they're pushed by money, which the glossy image hides.*
 </Markdown>
 <Markdown when="@tmb_article_thesis.value === 'free_childcare' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
-*Not quite — expensive child care is part of the problem the article describes, but "make child care free" isn't the point it's arguing.*
+*Expensive child care is part of the problem the article describes, but "make child care free" isn't the point it's arguing. The point is what the glossy image hides.*
 </Markdown>
 <Markdown when="@tmb_article_thesis.value === 'glossy_hides_precarity' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
 *Yes — the shiny image and the harder reality. Behind the glossy videos, most stay-at-home moms are there because of economic precarity, not a dream of domesticity.*
@@ -1244,13 +1248,13 @@ What does the engraving show?
 </KeyGrader>
 
 <Markdown when="@tmb_img_observe.value === 'reform_meeting' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
-*Not quite — there's no meeting here. The scene is a home: a mother and her children in a parlor.*
+*There's no meeting here. The scene is a home: a mother with her baby and two children in a parlor.*
 </Markdown>
 <Markdown when="@tmb_img_observe.value === 'factory_work' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
-*Not quite — no factory, no men. Everything in the picture points to the home and the family.*
+*No factory, no men. Everything in the picture points to the home and the family — a mother with her children.*
 </Markdown>
 <Markdown when="@tmb_img_observe.value === 'classroom' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
-*Not quite — it isn't a classroom. It's a mother at home with her own children — the title even calls it "the sphere of woman."*
+*It isn't a classroom. It's a mother at home with her own children — the title even calls it "the sphere of woman."*
 </Markdown>
 <Markdown when="@tmb_img_observe.value === 'mother_at_home' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
 *Yes — a peaceful domestic scene: a mother at home with her children. The caption names it "the sphere of woman."*
@@ -1274,13 +1278,13 @@ Sphere of Woman"?
 </KeyGrader>
 
 <Markdown when="@tmb_img_purpose.value === 'record_real_family' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
-*Not quite — it isn't a snapshot of a real family. It's an ideal — a picture of how a "true woman's" life was supposed to look.*
+*It isn't a snapshot of a real family. It's an ideal — a picture of how a "true woman's" life was supposed to look, published to promote it.*
 </Markdown>
 <Markdown when="@tmb_img_purpose.value === 'advertise_toys' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
-*Not quite — the objects aren't the point. The scene is selling an idea: that a woman belongs at home with her children.*
+*The objects aren't the point. The scene is selling an idea: that a woman belongs at home with her children.*
 </Markdown>
 <Markdown when="@tmb_img_purpose.value === 'encourage_public' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
-*Not quite — the opposite. The whole image keeps the woman inside the home, at the center of the family.*
+*The opposite. The whole image keeps the woman inside the home, at the center of the family — that's the ideal it promotes.*
 </Markdown>
 <Markdown when="@tmb_img_purpose.value === 'promote_ideal' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
 *Yes — this is persuasion. The title says it plainly: the home is "the sphere of woman," her proper and natural place.*
@@ -1308,10 +1312,10 @@ ideal and today's tradwife trend. Which comparison is **best**?
 </KeyGrader>
 
 <Markdown when="@tmb_synth_peereval.value === 'joe_same' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
-*Not quite — Joe has the likeness right, but a comparison owes us the difference too, and the two give very different reasons for the same picture.*
+*Joe has the likeness right, but a comparison owes us the difference too, and the two give very different reasons for the same picture.*
 </Markdown>
 <Markdown when="@tmb_synth_peereval.value === 'karis_family_size' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
-*Not quite — family size isn't a contrast either text draws. Compare what the ideal MEANT: a moral duty then, an image (often masking hardship) now.*
+*Family size isn't a contrast either text draws. Compare what the ideal MEANT: a moral duty then, an image (often masking hardship) now.*
 </Markdown>
 <Markdown when="@tmb_synth_peereval.value === 'danielle_duty_vs_image' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
 *Yes — both idealize the woman at home; what changed is the reason. A moral and religious duty then; a social-media image, often hiding economic precarity, now. That's the comparison your final paragraph needs.*
