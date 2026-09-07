@@ -106,6 +106,13 @@ Professor Booker: Let's build some vocabulary from this part. Look at the highli
 
 Danielle: First one — what does "public sphere" mean here?
 
+// Every gate on a graded item waits for a SUBMISSION, never for a correct
+// value. The items allow one attempt, so a wait-until-correct gate would
+// strand a student who answers wrong once — no second try to open it with,
+// and the conversation stops there forever. The gates that already read
+// `.submitCount` (the grammar highlights, the comprehension questions) are
+// the pattern; the rest now match it.
+
 ::tmb_q_publicsphere_screen
 
 --- wait @tmb_q_publicsphere.value === 'public_life' ---

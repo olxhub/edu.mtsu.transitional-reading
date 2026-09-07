@@ -82,10 +82,9 @@ This module is a little bit different from participating in our READ 1000 class.
 Danielle, Joe, Karis, Professor Booker, and Professor Hale are **not real
 people,** but you can learn from and interact with them.
 
-**About answering questions.** You can change any answer as many times as you
-like, and on some questions the conversation waits until you land on the right
-one. When we look over your work, though, it's mostly your **first** answer we
-pay attention to — so think it through before you click, and then fix it freely.
+**About answering questions.** Most questions give you **one** submission: choose
+your answer, press **Check,** and the conversation moves on whether you got it
+right or not. Take your time before you press it — you won't be asked again.
 
 All right, now imagine that you are in your classroom, but class has not started
 yet. You are talking to Danielle, Joe, and Karis. Click **Continue** in the
@@ -642,9 +641,25 @@ Here is the finished work — the comparison you built from all three texts.
 <!-- Each chat-embedded question is wrapped in a Vertical that TAKES OVER the
      embed id (`::tmb_q_publicsphere_screen`), so the correctness feedback under
      the choices renders inside the chat bubble with them. The ChoiceInput
-     keeps its own id — every wait, and every readback, still names it. -->
+     keeps its own id — every wait, and every readback, still names it.
+
+     Inside that Vertical the question is a one-attempt CapaProblem
+     (`<id>_problem`, maxAttempts="1") around a KeyGrader around the
+     ChoiceInput: this is an assessment, and each item is answered once. The
+     Check button is the CapaProblem's own footer. The ChoiceInput id and every
+     option value are unchanged — the chatpeg gates and the analytics read
+     them. maxAttempts is spelled out because "0" means unlimited, not none.
+
+     Every per-choice verdict below is gated on `<id>_problem.submitCount` as
+     well as on the chosen value. Keyed on the value alone, a student with a
+     Check button in front of them could click each option in turn and read
+     which one comes back "Yes" before ever submitting — the whole item,
+     answered for them, under a rule that allows one attempt. The feedback
+     text is unchanged; it is now the explanation that follows the answer. -->
 
 <Vertical id="tmb_q_publicsphere_screen">
+<CapaProblem id="tmb_q_publicsphere_problem" title="Vocabulary: public sphere" maxAttempts="1">
+<KeyGrader id="tmb_q_publicsphere_grader">
 <ChoiceInput id="tmb_q_publicsphere">
 <Markdown>
 Look at the highlighted sentence and choose the best definition for **public sphere**:
@@ -657,24 +672,28 @@ Look at the highlighted sentence and choose the best definition for **public sph
   <Distractor value="town_square"     > A large public square or park in the center of a town.                  </Distractor>
   <Distractor value="shared_opinion"  > A group of people who all share the same opinion.                       </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_q_publicsphere.value === 'private_home'">
+<Markdown when="@tmb_q_publicsphere.value === 'private_home' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
 *Not quite — that's the **domestic** sphere, the opposite of the public one. The public sphere is life OUTSIDE the home.*
 </Markdown>
-<Markdown when="@tmb_q_publicsphere.value === 'town_square'">
+<Markdown when="@tmb_q_publicsphere.value === 'town_square' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
 *Not quite — "sphere" here isn't a literal place you can stand in. It means a whole area of life — work, politics, community.*
 </Markdown>
-<Markdown when="@tmb_q_publicsphere.value === 'shared_opinion'">
+<Markdown when="@tmb_q_publicsphere.value === 'shared_opinion' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
 *Not quite — the public sphere is where people act and argue in common, not a single shared opinion.*
 </Markdown>
-<Markdown when="@tmb_q_publicsphere.value === 'public_life'">
+<Markdown when="@tmb_q_publicsphere.value === 'public_life' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
 *Yes — the public sphere is life outside the home: work, politics, and community. Its opposite is the "domestic sphere," which comes up next.*
 </Markdown>
+</CapaProblem> <!-- tmb_q_publicsphere_problem -->
 </Vertical> <!-- tmb_q_publicsphere_screen -->
 
 <!-- CHAT-EMBEDDED — vocabulary, chunk A2 / para 2 -->
 
 <Vertical id="tmb_q_tandem_screen">
+<CapaProblem id="tmb_q_tandem_problem" title="Vocabulary: tandem" maxAttempts="1">
+<KeyGrader id="tmb_q_tandem_grader">
 <ChoiceInput id="tmb_q_tandem">
 <Markdown>
 What words could take the place of **in tandem with** — but keep the meaning the same?
@@ -687,19 +706,21 @@ What words could take the place of **in tandem with** — but keep the meaning t
   <Distractor value="before"         > long before; ahead of              </Distractor>
   <Distractor value="instead"        > instead of; in place of            </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_q_tandem.value === 'against'">
+<Markdown when="@tmb_q_tandem.value === 'against' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
 *Not quite — backwards. The ideas didn't fight those changes; they grew up right alongside them.*
 </Markdown>
-<Markdown when="@tmb_q_tandem.value === 'before'">
+<Markdown when="@tmb_q_tandem.value === 'before' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
 *Not quite — "in tandem" is about the same time, not one ahead of the other. Think of two riders on a tandem bicycle, moving together.*
 </Markdown>
-<Markdown when="@tmb_q_tandem.value === 'instead'">
+<Markdown when="@tmb_q_tandem.value === 'instead' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
 *Not quite — the ideas didn't replace industrialization or the revival; they developed together with them.*
 </Markdown>
-<Markdown when="@tmb_q_tandem.value === 'alongside'">
+<Markdown when="@tmb_q_tandem.value === 'alongside' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
 *Yes — "in tandem with" means together, at the same time. A tandem bicycle carries two riders moving as one.*
 </Markdown>
+</CapaProblem> <!-- tmb_q_tandem_problem -->
 </Vertical> <!-- tmb_q_tandem_screen -->
 
 
@@ -708,6 +729,8 @@ What words could take the place of **in tandem with** — but keep the meaning t
      ============================================================ -->
 
 <Vertical id="tmb_cd_term_screen">
+<CapaProblem id="tmb_cd_term_problem" title="Cult of domesticity: the term" maxAttempts="1">
+<KeyGrader id="tmb_cd_term_grader">
 <ChoiceInput id="tmb_cd_term">
 <Markdown>
 **Cult of domesticity** is a discipline-specific term. Using clues in the
@@ -718,19 +741,21 @@ passage, which phrase most directly helps us understand what it was?
   <Distractor value="public_sphere"      > the public sphere            </Distractor>
   <Distractor value="second_awakening"   > the Second Great Awakening   </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_cd_term.value === 'market_revolution'">
+<Markdown when="@tmb_cd_term.value === 'market_revolution' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
 *Not quite — the market revolution is one of the changes the idea developed alongside, not what the idea WAS.*
 </Markdown>
-<Markdown when="@tmb_cd_term.value === 'public_sphere'">
+<Markdown when="@tmb_cd_term.value === 'public_sphere' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
 *Not quite — that's the opposite. The cult of domesticity tied women to the HOME, away from the public sphere.*
 </Markdown>
-<Markdown when="@tmb_cd_term.value === 'second_awakening'">
+<Markdown when="@tmb_cd_term.value === 'second_awakening' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
 *Not quite — the Second Great Awakening helped shape the idea, but it isn't a definition of it.*
 </Markdown>
-<Markdown when="@tmb_cd_term.value === 'domestic_sphere'">
+<Markdown when="@tmb_cd_term.value === 'domestic_sphere' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
 *Yes — the passage hands you the phrase: femininity was "intimately tied to the domestic sphere." A woman's proper place was the home.*
 </Markdown>
+</CapaProblem> <!-- tmb_cd_term_problem -->
 </Vertical> <!-- tmb_cd_term_screen -->
 
 <Vertical id="tmb_cd_connect_screen">
@@ -769,6 +794,8 @@ it? **Select all that apply.**
 </Vertical> <!-- tmb_cd_connect_screen -->
 
 <Vertical id="tmb_cd_bestdef_screen">
+<CapaProblem id="tmb_cd_bestdef_problem" title="Cult of domesticity: the best definition" maxAttempts="1">
+<KeyGrader id="tmb_cd_bestdef_grader">
 <ChoiceInput id="tmb_cd_bestdef">
 <Markdown>
 Each member of your group wrote a one-sentence description of the cult of
@@ -778,16 +805,18 @@ domesticity. Read them and choose the **best** one.
          <Key value="joe_home_ideal"             > **Joe:** The belief that a true woman's proper place was the home, where she was to be pious, pure, submissive, and domestic, and to raise her children in virtue. </Key>
   <Distractor value="karis_laws_all_women"       > **Karis:** A set of laws that required all women, rich and poor, to stay home and manage their households.                                     </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_cd_bestdef.value === 'danielle_reform_movement'">
+<Markdown when="@tmb_cd_bestdef.value === 'danielle_reform_movement' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
 *Not quite — Danielle has it backwards. That's the PUBLIC role women fashioned FROM the ideology; the cult of domesticity itself was about staying home.*
 </Markdown>
-<Markdown when="@tmb_cd_bestdef.value === 'karis_laws_all_women'">
+<Markdown when="@tmb_cd_bestdef.value === 'karis_laws_all_women' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
 *Not quite — Karis makes it a law for everyone. It was a cultural and religious ideal, not a law, and it applied mainly to upper- and middle-class women.*
 </Markdown>
-<Markdown when="@tmb_cd_bestdef.value === 'joe_home_ideal'">
+<Markdown when="@tmb_cd_bestdef.value === 'joe_home_ideal' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
 *Yes — Joe's has all the pieces: the home as a woman's proper place, the qualities of the "true woman," and passing virtue on to her children.*
 </Markdown>
+</CapaProblem> <!-- tmb_cd_bestdef_problem -->
 </Vertical> <!-- tmb_cd_bestdef_screen -->
 
 
@@ -796,6 +825,8 @@ domesticity. Read them and choose the **best** one.
      ============================================================ -->
 
 <Vertical id="tmb_q_domestic_screen">
+<CapaProblem id="tmb_q_domestic_problem" title="Vocabulary: domestic" maxAttempts="1">
+<KeyGrader id="tmb_q_domestic_grader">
 <ChoiceInput id="tmb_q_domestic">
 <Markdown>
 Choose the best definition for **domestic** as it's used here:
@@ -807,21 +838,23 @@ Choose the best definition for **domestic** as it's used here:
   <Distractor value="tame_animal"     > Tame or trained, like a household animal.         </Distractor>
   <Distractor value="strict_rules"    > Strict and demanding about rules.                 </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
 <!-- Karis names the morphology link in the dialogue after this: "domestic"
    (adjective) shares a root with "domesticity" (noun) from part 2. -->
-<Markdown when="@tmb_q_domestic.value === 'made_in_country'">
+<Markdown when="@tmb_q_domestic.value === 'made_in_country' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
 *Not quite — that's a real sense of "domestic" (as in "domestic products"), but not this one. Here it's about the home, not the country.*
 </Markdown>
-<Markdown when="@tmb_q_domestic.value === 'tame_animal'">
+<Markdown when="@tmb_q_domestic.value === 'tame_animal' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
 *Not quite — also a real sense ("a domestic animal"), but the sentence is describing a woman, not a pet. Read it as being devoted to the home.*
 </Markdown>
-<Markdown when="@tmb_q_domestic.value === 'strict_rules'">
+<Markdown when="@tmb_q_domestic.value === 'strict_rules' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
 *Not quite — nothing in "domestic" is about strictness. It's about the home.*
 </Markdown>
-<Markdown when="@tmb_q_domestic.value === 'home_focused'">
+<Markdown when="@tmb_q_domestic.value === 'home_focused' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
 *Right — devoted to the home and family. It's the same root you saw in "domesticity" back in part 2 — the noun for the whole idea.*
 </Markdown>
+</CapaProblem> <!-- tmb_q_domestic_problem -->
 </Vertical> <!-- tmb_q_domestic_screen -->
 
 
@@ -830,6 +863,8 @@ Choose the best definition for **domestic** as it's used here:
      ============================================================ -->
 
 <Vertical id="tmb_q_ideology_screen">
+<CapaProblem id="tmb_q_ideology_problem" title="Vocabulary: ideology" maxAttempts="1">
+<KeyGrader id="tmb_q_ideology_grader">
 <ChoiceInput id="tmb_q_ideology">
 <Markdown>
 Choose the best definition for **ideology**:
@@ -842,22 +877,26 @@ Choose the best definition for **ideology**:
   <Distractor value="government_law"   > A law passed by the government.                                      </Distractor>
   <Distractor value="mind_study"      > The scientific study of how the mind works.                          </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_q_ideology.value === 'single_feeling'">
+<Markdown when="@tmb_q_ideology.value === 'single_feeling' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
 *Not quite — an ideology is bigger than one feeling. It's a whole system of beliefs about how things should be.*
 </Markdown>
-<Markdown when="@tmb_q_ideology.value === 'government_law'">
+<Markdown when="@tmb_q_ideology.value === 'government_law' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
 *Not quite — laws are written and enforced; an ideology is a set of shared beliefs. The cult of domesticity was an ideology, not a law.*
 </Markdown>
-<Markdown when="@tmb_q_ideology.value === 'mind_study'">
+<Markdown when="@tmb_q_ideology.value === 'mind_study' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
 *Not quite — that's "psychology." The "-ology" ending fools a lot of people here.*
 </Markdown>
-<Markdown when="@tmb_q_ideology.value === 'belief_system'">
+<Markdown when="@tmb_q_ideology.value === 'belief_system' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
 *Right — a shared set of beliefs about how society should work. Here it's the belief that a woman's place is the home.*
 </Markdown>
+</CapaProblem> <!-- tmb_q_ideology_problem -->
 </Vertical> <!-- tmb_q_ideology_screen -->
 
 <Vertical id="tmb_q_enmasse_screen">
+<CapaProblem id="tmb_q_enmasse_problem" title="Vocabulary: en masse" maxAttempts="1">
+<KeyGrader id="tmb_q_enmasse_grader">
 <ChoiceInput id="tmb_q_enmasse">
 <Markdown>
 What words could take the place of **en masse** — but keep the meaning the same?
@@ -870,22 +909,26 @@ What words could take the place of **en masse** — but keep the meaning the sam
   <Distractor value="in_secret"       > in secret, without being seen  </Distractor>
   <Distractor value="by_force"        > by force, against their will   </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_q_enmasse.value === 'one_at_a_time'">
+<Markdown when="@tmb_q_enmasse.value === 'one_at_a_time' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
 *Not quite — the opposite. "En masse" means as a large group, all at once.*
 </Markdown>
-<Markdown when="@tmb_q_enmasse.value === 'in_secret'">
+<Markdown when="@tmb_q_enmasse.value === 'in_secret' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
 *Not quite — nothing about "en masse" is hidden. It's about numbers — a whole crowd, out in the open.*
 </Markdown>
-<Markdown when="@tmb_q_enmasse.value === 'by_force'">
+<Markdown when="@tmb_q_enmasse.value === 'by_force' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
 *Not quite — "en masse" is about how MANY, not whether they were forced. The women left in large numbers, of their own accord.*
 </Markdown>
-<Markdown when="@tmb_q_enmasse.value === 'all_together'">
+<Markdown when="@tmb_q_enmasse.value === 'all_together' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
 *Yes — "en masse" is French for "in a mass" — in large numbers, all together. Watch for it again in the article.*
 </Markdown>
+</CapaProblem> <!-- tmb_q_enmasse_problem -->
 </Vertical> <!-- tmb_q_enmasse_screen -->
 
 <Vertical id="tmb_q_moralizing_screen">
+<CapaProblem id="tmb_q_moralizing_problem" title="Vocabulary: moralizing" maxAttempts="1">
+<KeyGrader id="tmb_q_moralizing_grader">
 <ChoiceInput id="tmb_q_moralizing">
 <Markdown>
 Choose the best definition for **moralizing** as it's used here:
@@ -898,22 +941,26 @@ Choose the best definition for **moralizing** as it's used here:
   <Distractor value="guilt_tripping"  > Making people feel guilty on purpose.             </Distractor>
   <Distractor value="cheering_up"     > Boosting a team's spirit before a game.           </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_q_moralizing.value === 'discouraging'">
+<Markdown when="@tmb_q_moralizing.value === 'discouraging' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
 *Not quite — you may be thinking of "demoralizing," which is nearly the opposite. "Moralizing" is about morals — right and wrong.*
 </Markdown>
-<Markdown when="@tmb_q_moralizing.value === 'guilt_tripping'">
+<Markdown when="@tmb_q_moralizing.value === 'guilt_tripping' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
 *Not quite — a moralizing influence encourages GOOD behavior; it isn't only about guilt. The passage pairs it with "calming."*
 </Markdown>
-<Markdown when="@tmb_q_moralizing.value === 'cheering_up'">
+<Markdown when="@tmb_q_moralizing.value === 'cheering_up' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
 *Not quite — that's "boosting morale," a different word. "Moralizing" is about morals, not team spirit.*
 </Markdown>
-<Markdown when="@tmb_q_moralizing.value === 'teaching_right'">
+<Markdown when="@tmb_q_moralizing.value === 'teaching_right' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
 *Right — a moralizing influence encourages good behavior and right living. It fits the idea of women as the "guardians of virtue."*
 </Markdown>
+</CapaProblem> <!-- tmb_q_moralizing_problem -->
 </Vertical> <!-- tmb_q_moralizing_screen -->
 
 <Vertical id="tmb_q_euphemism_screen">
+<CapaProblem id="tmb_q_euphemism_problem" title="Vocabulary: euphemism" maxAttempts="1">
+<KeyGrader id="tmb_q_euphemism_grader">
 <ChoiceInput id="tmb_q_euphemism">
 <Markdown>
 Choose the best definition for **euphemism**:
@@ -926,19 +973,21 @@ Choose the best definition for **euphemism**:
   <Distractor value="foreign_word"       > A word borrowed from another language.                               </Distractor>
   <Distractor value="short_lesson"       > A short saying that teaches a lesson.                                </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_q_euphemism.value === 'opposite_meaning'">
+<Markdown when="@tmb_q_euphemism.value === 'opposite_meaning' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
 *Not quite — that's irony or sarcasm. A euphemism doesn't reverse the meaning; it softens it.*
 </Markdown>
-<Markdown when="@tmb_q_euphemism.value === 'foreign_word'">
+<Markdown when="@tmb_q_euphemism.value === 'foreign_word' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
 *Not quite — a euphemism can be a perfectly ordinary English word. What makes it a euphemism is that it's a gentler stand-in for a blunter one.*
 </Markdown>
-<Markdown when="@tmb_q_euphemism.value === 'short_lesson'">
+<Markdown when="@tmb_q_euphemism.value === 'short_lesson' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
 *Not quite — that's a proverb or an aphorism. A euphemism is a polite substitute for a more direct word.*
 </Markdown>
-<Markdown when="@tmb_q_euphemism.value === 'polite_substitute'">
+<Markdown when="@tmb_q_euphemism.value === 'polite_substitute' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
 *Right — a euphemism is a milder, more polite word standing in for a blunter one. Here, "female virtue" was a gentle way of saying "sexual purity."*
 </Markdown>
+</CapaProblem> <!-- tmb_q_euphemism_problem -->
 </Vertical> <!-- tmb_q_euphemism_screen -->
 
 
@@ -947,6 +996,8 @@ Choose the best definition for **euphemism**:
      ============================================================ -->
 
 <Vertical id="tmb_why_publicrole_screen">
+<CapaProblem id="tmb_why_publicrole_problem" title="How women fashioned a public role" maxAttempts="1">
+<KeyGrader id="tmb_why_publicrole_grader">
 <ChoiceInput id="tmb_why_publicrole">
 <Markdown>
 So how did women take "the very ideology that defined their place in the home"
@@ -957,19 +1008,21 @@ and turn it into a **public** role?
          <Key value="moral_authority"      > The ideology cast women as the guardians of virtue, so they used that moral authority as a reason to act in public. </Key>
   <Distractor value="government_role"      > The government passed laws giving women a formal role in public life.                              </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_why_publicrole.value === 'rejected_ideology'">
+<Markdown when="@tmb_why_publicrole.value === 'rejected_ideology' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
 *Not quite — read it again: women "took the very ideology" and USED it. They didn't reject it; they turned it to a new purpose.*
 </Markdown>
-<Markdown when="@tmb_why_publicrole.value === 'factory_owners'">
+<Markdown when="@tmb_why_publicrole.value === 'factory_owners' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
 *Not quite — that was working-class women, who labored out of necessity. Middle-class women's public role grew out of moral authority and new education, not factory work.*
 </Markdown>
-<Markdown when="@tmb_why_publicrole.value === 'government_role'">
+<Markdown when="@tmb_why_publicrole.value === 'government_role' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
 *Not quite — no law gave them this role. They claimed it themselves, out of the moral authority the ideology already granted them.*
 </Markdown>
-<Markdown when="@tmb_why_publicrole.value === 'moral_authority'">
+<Markdown when="@tmb_why_publicrole.value === 'moral_authority' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
 *Yes — if a woman is the guardian of virtue and morality, then cleaning up society becomes her job too. That's how the home-bound ideal became a reason to act in public.*
 </Markdown>
+</CapaProblem> <!-- tmb_why_publicrole_problem -->
 </Vertical> <!-- tmb_why_publicrole_screen -->
 
 
@@ -978,6 +1031,8 @@ and turn it into a **public** role?
      ============================================================ -->
 
 <Vertical id="tmb_q_tradwife_screen">
+<CapaProblem id="tmb_q_tradwife_problem" title="Vocabulary: tradwife" maxAttempts="1">
+<KeyGrader id="tmb_q_tradwife_grader">
 <ChoiceInput id="tmb_q_tradwife">
 <Markdown>
 The article is about **tradwives.** First — what does **tradwife** mean?
@@ -987,22 +1042,26 @@ The article is about **tradwives.** First — what does **tradwife** mean?
   <Distractor value="working_mother"        > A mother who works full-time outside the home while raising children.                                  </Distractor>
   <Distractor value="marriage_activist"     > A woman who campaigns for traditional marriage laws.                                                    </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_q_tradwife.value === 'trades_stocks'">
+<Markdown when="@tmb_q_tradwife.value === 'trades_stocks' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
 *Not quite — a reasonable guess from "trad," but it's short for **traditional**, not "trade." A tradwife embraces a traditional wife-and-homemaker role.*
 </Markdown>
-<Markdown when="@tmb_q_tradwife.value === 'working_mother'">
+<Markdown when="@tmb_q_tradwife.value === 'working_mother' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
 *Not quite — nearly the opposite. The tradwife image is about staying HOME, not working outside it.*
 </Markdown>
-<Markdown when="@tmb_q_tradwife.value === 'marriage_activist'">
+<Markdown when="@tmb_q_tradwife.value === 'marriage_activist' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
 *Not quite — a tradwife is defined by the role she lives (homemaker), not by campaigning for laws.*
 </Markdown>
-<Markdown when="@tmb_q_tradwife.value === 'traditional_homemaker'">
+<Markdown when="@tmb_q_tradwife.value === 'traditional_homemaker' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
 *Right — "trad" is short for traditional. A tradwife embraces the traditional stay-at-home wife-and-mother role.*
 </Markdown>
+</CapaProblem> <!-- tmb_q_tradwife_problem -->
 </Vertical> <!-- tmb_q_tradwife_screen -->
 
 <Vertical id="tmb_precarity">
+<CapaProblem id="tmb_precarity_pick_problem" title="Economic precarity: the best sentence" maxAttempts="1">
+<KeyGrader id="tmb_precarity_pick_grader">
 <ChoiceInput id="tmb_precarity_pick">
 <Markdown>
 The article's key idea is **economic precarity.** To pin down what it means, each
@@ -1013,22 +1072,26 @@ of us found a sentence from the article that gives it context. Who picked the
   <Distractor value="karis_businesswomen"     > **Karis:** "The women who post about their impeccable meals and beloved husbands might be better understood as businesswomen; some are making huge sums." </Distractor>
          <Key value="joe_low_income"          > **Joe:** "Many are just exhausted, low-income moms who can't afford child care."                                                      </Key>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_precarity_pick.value === 'danielle_political'">
+<Markdown when="@tmb_precarity_pick.value === 'danielle_political' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
 *Not quite — Danielle's sentence is about the political fight over tradwives. Economic **precarity** needs a sentence about money and insecurity.*
 </Markdown>
-<Markdown when="@tmb_precarity_pick.value === 'karis_businesswomen'">
+<Markdown when="@tmb_precarity_pick.value === 'karis_businesswomen' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
 *Not quite — Karis found the well-off influencers, who are the opposite of precarious. Precarity is about insecurity, not "making huge sums."*
 </Markdown>
-<Markdown when="@tmb_precarity_pick.value === 'joe_low_income'">
+<Markdown when="@tmb_precarity_pick.value === 'joe_low_income' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
 *Yes — "exhausted, low-income moms who can't afford child care" shows exactly what economic precarity is: financial insecurity that leaves people few choices.*
 </Markdown>
+</CapaProblem> <!-- tmb_precarity_pick_problem -->
 
 <Markdown>**Explain why you chose that sentence.**</Markdown>
 <TextArea id="tmb_precarity_explain" rows="3" placeholder="I chose that sentence because…" />
 </Vertical> <!-- tmb_precarity -->
 
 <Vertical id="tmb_summary_pick_screen">
+<CapaProblem id="tmb_summary_pick_problem" title="The best summary of the first paragraph" maxAttempts="1">
+<KeyGrader id="tmb_summary_pick_grader">
 <ChoiceInput id="tmb_summary_pick">
 <Markdown>
 Which is the **best summary** of the article's first paragraph (about how
@@ -1039,22 +1102,26 @@ Which is the **best summary** of the article's first paragraph (about how
   <Distractor value="overstated"          > All of a sudden, tradwives took over everyone's phones and became the single most important issue in American politics.                                                                                                    </Distractor>
   <Distractor value="opinion"             > Tradwives are one of the most fascinating internet trends of the last few years, and it's easy to see why so many people admire them.                                                                                   </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_summary_pick.value === 'image_only'">
+<Markdown when="@tmb_summary_pick.value === 'image_only' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
 *Not quite — true, but only the picture. A summary has to carry the point: that the trend became a culture-war flashpoint.*
 </Markdown>
-<Markdown when="@tmb_summary_pick.value === 'overstated'">
+<Markdown when="@tmb_summary_pick.value === 'overstated' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
 *Not quite — "the single most important issue in American politics" overstates it. A summary shouldn't exaggerate what the paragraph says.*
 </Markdown>
-<Markdown when="@tmb_summary_pick.value === 'opinion'">
+<Markdown when="@tmb_summary_pick.value === 'opinion' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
 *Not quite — that's an opinion about tradwives, not a summary of the paragraph. Summaries report; they don't rate.*
 </Markdown>
-<Markdown when="@tmb_summary_pick.value === 'what_and_why'">
+<Markdown when="@tmb_summary_pick.value === 'what_and_why' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
 *Yes — what appeared (glamorous tradwife images), where (social media), and the point: both sides turned it into a fight over what women want.*
 </Markdown>
+</CapaProblem> <!-- tmb_summary_pick_problem -->
 </Vertical> <!-- tmb_summary_pick_screen -->
 
 <Vertical id="tmb_q_egalitarian_screen">
+<CapaProblem id="tmb_q_egalitarian_problem" title="Vocabulary: egalitarian" maxAttempts="1">
+<KeyGrader id="tmb_q_egalitarian_grader">
 <ChoiceInput id="tmb_q_egalitarian">
 <Markdown>
 The article says many couples want "an **egalitarian** division of labor." What
@@ -1065,22 +1132,26 @@ does **egalitarian** mean?
   <Distractor value="traditional"       > Following traditional roles, with the wife at home.         </Distractor>
   <Distractor value="both_must_work"    > Requiring both partners to work outside the home.           </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_q_egalitarian.value === 'by_earnings'">
+<Markdown when="@tmb_q_egalitarian.value === 'by_earnings' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
 *Not quite — that's what actually happens in the article (the role falls to whoever earns less), but it's the opposite of egalitarian, which means equal.*
 </Markdown>
-<Markdown when="@tmb_q_egalitarian.value === 'traditional'">
+<Markdown when="@tmb_q_egalitarian.value === 'traditional' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
 *Not quite — that's the traditional arrangement. "Egalitarian" points the other way: toward equality between the partners.*
 </Markdown>
-<Markdown when="@tmb_q_egalitarian.value === 'both_must_work'">
+<Markdown when="@tmb_q_egalitarian.value === 'both_must_work' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
 *Not quite — egalitarian is about sharing the work equally, not about forcing both partners into outside jobs.*
 </Markdown>
-<Markdown when="@tmb_q_egalitarian.value === 'based_on_equality'">
+<Markdown when="@tmb_q_egalitarian.value === 'based_on_equality' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
 *Right — "egalitarian" comes from "equal." An egalitarian division of labor shares the work evenly between partners.*
 </Markdown>
+</CapaProblem> <!-- tmb_q_egalitarian_problem -->
 </Vertical> <!-- tmb_q_egalitarian_screen -->
 
 <Vertical id="tmb_article_thesis_screen">
+<CapaProblem id="tmb_article_thesis_problem" title="The article's main point" maxAttempts="1">
+<KeyGrader id="tmb_article_thesis_grader">
 <ChoiceInput id="tmb_article_thesis">
 <Markdown>
 Step back from the details — what is the article's **main point** overall?
@@ -1090,19 +1161,21 @@ Step back from the details — what is the article's **main point** overall?
   <Distractor value="women_shouldnt_stay"      > Women today should never stay home to raise their children.                                                                            </Distractor>
   <Distractor value="free_childcare"           > The government's main job should be to make child care free for every family.                                                          </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_article_thesis.value === 'mostly_wealthy'">
+<Markdown when="@tmb_article_thesis.value === 'mostly_wealthy' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
 *Not quite — the wealthy influencers are one detail. The article's point is about the MANY who are low-income, not the few making "huge sums."*
 </Markdown>
-<Markdown when="@tmb_article_thesis.value === 'women_shouldnt_stay'">
+<Markdown when="@tmb_article_thesis.value === 'women_shouldnt_stay' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
 *Not quite — the article never says women shouldn't stay home. It says many aren't choosing it freely — they're pushed by money.*
 </Markdown>
-<Markdown when="@tmb_article_thesis.value === 'free_childcare'">
+<Markdown when="@tmb_article_thesis.value === 'free_childcare' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
 *Not quite — expensive child care is part of the problem the article describes, but "make child care free" isn't the point it's arguing.*
 </Markdown>
-<Markdown when="@tmb_article_thesis.value === 'glossy_hides_precarity'">
+<Markdown when="@tmb_article_thesis.value === 'glossy_hides_precarity' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
 *Yes — the shiny image and the harder reality. Behind the glossy videos, most stay-at-home moms are there because of economic precarity, not a dream of domesticity.*
 </Markdown>
+</CapaProblem> <!-- tmb_article_thesis_problem -->
 </Vertical> <!-- tmb_article_thesis_screen -->
 
 
@@ -1111,6 +1184,8 @@ Step back from the details — what is the article's **main point** overall?
      ============================================================ -->
 
 <Vertical id="tmb_img_observe_screen">
+<CapaProblem id="tmb_img_observe_problem" title="The engraving: what it shows" maxAttempts="1">
+<KeyGrader id="tmb_img_observe_grader">
 <ChoiceInput id="tmb_img_observe">
 <Markdown>
 What does the engraving show?
@@ -1120,22 +1195,26 @@ What does the engraving show?
          <Key value="mother_at_home"    > A mother at home caring for her baby while two children read and play nearby. </Key>
   <Distractor value="classroom"         > A teacher leading a classroom full of young students.                        </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_img_observe.value === 'reform_meeting'">
+<Markdown when="@tmb_img_observe.value === 'reform_meeting' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
 *Not quite — there's no meeting here. The scene is a home: a mother and her children in a parlor.*
 </Markdown>
-<Markdown when="@tmb_img_observe.value === 'factory_work'">
+<Markdown when="@tmb_img_observe.value === 'factory_work' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
 *Not quite — no factory, no men. Everything in the picture points to the home and the family.*
 </Markdown>
-<Markdown when="@tmb_img_observe.value === 'classroom'">
+<Markdown when="@tmb_img_observe.value === 'classroom' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
 *Not quite — it isn't a classroom. It's a mother at home with her own children — the title even calls it "the sphere of woman."*
 </Markdown>
-<Markdown when="@tmb_img_observe.value === 'mother_at_home'">
+<Markdown when="@tmb_img_observe.value === 'mother_at_home' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
 *Yes — a peaceful domestic scene: a mother at home with her children. The caption names it "the sphere of woman."*
 </Markdown>
+</CapaProblem> <!-- tmb_img_observe_problem -->
 </Vertical> <!-- tmb_img_observe_screen -->
 
 <Vertical id="tmb_img_purpose_screen">
+<CapaProblem id="tmb_img_purpose_problem" title="The engraving: why it was made" maxAttempts="1">
+<KeyGrader id="tmb_img_purpose_grader">
 <ChoiceInput id="tmb_img_purpose">
 <Markdown>
 Why would a popular women's magazine publish an image like this, titled "The
@@ -1146,19 +1225,21 @@ Sphere of Woman"?
          <Key value="promote_ideal"       > To hold up the home as woman's proper place — to promote the ideal of domesticity. </Key>
   <Distractor value="encourage_public"    > To encourage women to leave the home for public life.                               </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_img_purpose.value === 'record_real_family'">
+<Markdown when="@tmb_img_purpose.value === 'record_real_family' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
 *Not quite — it isn't a snapshot of a real family. It's an ideal — a picture of how a "true woman's" life was supposed to look.*
 </Markdown>
-<Markdown when="@tmb_img_purpose.value === 'advertise_toys'">
+<Markdown when="@tmb_img_purpose.value === 'advertise_toys' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
 *Not quite — the objects aren't the point. The scene is selling an idea: that a woman belongs at home with her children.*
 </Markdown>
-<Markdown when="@tmb_img_purpose.value === 'encourage_public'">
+<Markdown when="@tmb_img_purpose.value === 'encourage_public' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
 *Not quite — the opposite. The whole image keeps the woman inside the home, at the center of the family.*
 </Markdown>
-<Markdown when="@tmb_img_purpose.value === 'promote_ideal'">
+<Markdown when="@tmb_img_purpose.value === 'promote_ideal' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
 *Yes — this is persuasion. The title says it plainly: the home is "the sphere of woman," her proper and natural place.*
 </Markdown>
+</CapaProblem> <!-- tmb_img_purpose_problem -->
 </Vertical> <!-- tmb_img_purpose_screen -->
 
 
@@ -1167,6 +1248,8 @@ Sphere of Woman"?
      ============================================================ -->
 
 <Vertical id="tmb_synth_peereval_screen">
+<CapaProblem id="tmb_synth_peereval_problem" title="Then and now: the best comparison" maxAttempts="1">
+<KeyGrader id="tmb_synth_peereval_grader">
 <ChoiceInput id="tmb_synth_peereval">
 <Markdown>
 Your group each summed up the biggest difference between the two — the 1800s
@@ -1176,16 +1259,18 @@ ideal and today's tradwife trend. Which comparison is **best**?
          <Key value="danielle_duty_vs_image"> **Danielle:** Both hold up the stay-at-home wife and mother as an ideal — but in the 1800s it was a moral and religious duty, while today it's a social-media image that often hides economic precarity. </Key>
   <Distractor value="karis_family_size"    > **Karis:** The biggest difference is that women in the 1800s had many more children than tradwives do today.                                              </Distractor>
 </ChoiceInput>
+</KeyGrader>
 
-<Markdown when="@tmb_synth_peereval.value === 'joe_same'">
+<Markdown when="@tmb_synth_peereval.value === 'joe_same' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
 *Not quite — Joe has the likeness right, but a comparison owes us the difference too, and the two give very different reasons for the same picture.*
 </Markdown>
-<Markdown when="@tmb_synth_peereval.value === 'karis_family_size'">
+<Markdown when="@tmb_synth_peereval.value === 'karis_family_size' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
 *Not quite — family size isn't a contrast either text draws. Compare what the ideal MEANT: a moral duty then, an image (often masking hardship) now.*
 </Markdown>
-<Markdown when="@tmb_synth_peereval.value === 'danielle_duty_vs_image'">
+<Markdown when="@tmb_synth_peereval.value === 'danielle_duty_vs_image' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
 *Yes — both idealize the woman at home; what changed is the reason. A moral and religious duty then; a social-media image, often hiding economic precarity, now. That's the comparison your final paragraph needs.*
 </Markdown>
+</CapaProblem> <!-- tmb_synth_peereval_problem -->
 </Vertical> <!-- tmb_synth_peereval_screen -->
 
 </Vertical> <!-- temperance_b_full_activities_part1 -->
