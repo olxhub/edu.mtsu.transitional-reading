@@ -843,6 +843,11 @@ it? **Select all that apply.**
 </CapaProblem> <!-- tmb_cd_connect_problem -->
 </Vertical> <!-- tmb_cd_connect_screen -->
 
+<!-- Three items in this form ask which peer's sentence is best (this one, the
+     economic-precarity sentence, the closing comparison). Each peer is right in
+     exactly one of them: a peer who is reliably right is a cue that has nothing
+     to do with reading. Option values name the sentence, not the speaker, so
+     an attribution can move without touching values, gates, or analytics. -->
 <Vertical id="tmb_cd_bestdef_screen">
 <CapaProblem id="tmb_cd_bestdef_problem" title="Cult of domesticity: the best definition" maxAttempts="1">
 <KeyGrader id="tmb_cd_bestdef_grader">
@@ -851,20 +856,20 @@ it? **Select all that apply.**
 Each member of your group wrote a one-sentence description of the cult of
 domesticity. Read them and choose the **best** one.
 </Markdown>
-         <Key value="joe_home_ideal"          > **Joe:** The belief that a true woman belonged at home — pious, pure, submissive, domestic — raising her children in virtue.      </Key>
-  <Distractor value="danielle_reform_movement"> **Danielle:** The name for the movement that sent middle-class women out of their homes to join antislavery and reform societies. </Distractor>
-  <Distractor value="karis_laws_all_women"    > **Karis:** A set of laws passed in the 1830s requiring women, rich and poor, to stay home and manage their households.            </Distractor>
+         <Key value="home_ideal"     > **Danielle:** The belief that a true woman belonged at home — pious, pure, submissive, domestic — raising her children in virtue. </Key>
+  <Distractor value="reform_movement"> **Joe:** The name for the movement that sent middle-class women out of their homes to join antislavery and reform societies.      </Distractor>
+  <Distractor value="laws_all_women" > **Karis:** A set of laws passed in the 1830s requiring women, rich and poor, to stay home and manage their households.            </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_cd_bestdef.value === 'danielle_reform_movement' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
-*Danielle has it backwards. That's the PUBLIC role women fashioned FROM the ideology; the cult of domesticity itself was about staying home.*
+<Markdown when="@tmb_cd_bestdef.value === 'reform_movement' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
+*Joe has it backwards. That's the PUBLIC role women fashioned FROM the ideology; the cult of domesticity itself was about staying home — Danielle's sentence.*
 </Markdown>
-<Markdown when="@tmb_cd_bestdef.value === 'karis_laws_all_women' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
-*Karis makes it a law for everyone. It was a cultural and religious ideal, not a law, and it applied mainly to upper- and middle-class women.*
+<Markdown when="@tmb_cd_bestdef.value === 'laws_all_women' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
+*Karis makes it a law for everyone. It was a cultural and religious ideal, not a law, and it applied mainly to upper- and middle-class women — Danielle's sentence has it.*
 </Markdown>
-<Markdown when="@tmb_cd_bestdef.value === 'joe_home_ideal' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
-*Yes — Joe's has all the pieces: the home as a woman's proper place, the qualities of the "true woman," and passing virtue on to her children.*
+<Markdown when="@tmb_cd_bestdef.value === 'home_ideal' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
+*Yes — Danielle's has all the pieces: the home as a woman's proper place, the qualities of the "true woman," and passing virtue on to her children.*
 </Markdown>
 </CapaProblem> <!-- tmb_cd_bestdef_problem -->
 </Vertical> <!-- tmb_cd_bestdef_screen -->
@@ -1118,19 +1123,19 @@ The article's key idea is **economic precarity.** To pin down what it means, eac
 of us found a sentence from the article that gives it context. Who picked the
 **best** one?
 </Markdown>
-  <Distractor value="danielle_political"      > **Danielle:** "Conservative commentators embraced them as evidence that women want to stay home."                                        </Distractor>
-  <Distractor value="karis_businesswomen"     > **Karis:** "The women who post about their impeccable meals and beloved husbands might be better understood as businesswomen; some are making huge sums." </Distractor>
-         <Key value="joe_low_income"          > **Joe:** "Many are just exhausted, low-income moms who can't afford child care."                                                      </Key>
+  <Distractor value="political"    > **Joe:** "Conservative commentators embraced them as evidence that women want to stay home."                                                                 </Distractor>
+  <Distractor value="businesswomen"> **Danielle:** "The women who post about their impeccable meals and beloved husbands might be better understood as businesswomen; some are making huge sums." </Distractor>
+         <Key value="low_income"   > **Karis:** "Many are just exhausted, low-income moms who can't afford child care."                                                                           </Key>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_precarity_pick.value === 'danielle_political' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
-*Danielle's sentence is about the political fight over tradwives. Economic **precarity** needs a sentence about money and insecurity.*
+<Markdown when="@tmb_precarity_pick.value === 'political' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
+*Joe's sentence is about the political fight over tradwives. Economic **precarity** is about money and insecurity — Karis's sentence, the exhausted, low-income moms who can't afford child care.*
 </Markdown>
-<Markdown when="@tmb_precarity_pick.value === 'karis_businesswomen' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
-*Karis found the well-off influencers, who are the opposite of precarious. Precarity is about insecurity, not "making huge sums."*
+<Markdown when="@tmb_precarity_pick.value === 'businesswomen' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
+*Danielle found the well-off influencers, who are the opposite of precarious. Precarity is insecurity, not "making huge sums" — Karis's sentence has it.*
 </Markdown>
-<Markdown when="@tmb_precarity_pick.value === 'joe_low_income' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
+<Markdown when="@tmb_precarity_pick.value === 'low_income' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
 *Yes — "exhausted, low-income moms who can't afford child care" shows exactly what economic precarity is: financial insecurity that leaves people few choices.*
 </Markdown>
 </CapaProblem> <!-- tmb_precarity_pick_problem -->
@@ -1305,19 +1310,19 @@ Sphere of Woman"?
 Your group each summed up the biggest difference between the two — the 1800s
 ideal and today's tradwife trend. Which comparison is **best**?
 </Markdown>
-  <Distractor value="joe_same"              > **Joe:** They're really the same thing — both are about women choosing to stay home and care for their families instead of working, whether in the 1800s or now. </Distractor>
-         <Key value="danielle_duty_vs_image"> **Danielle:** Both idealize the wife at home, but then it was a moral and religious duty; today it's a social-media image that often hides economic precarity.   </Key>
-  <Distractor value="karis_family_size"     > **Karis:** The biggest difference is that women in the 1800s had far more children than today's tradwives do, so the home was more work.                         </Distractor>
+  <Distractor value="same"         > **Karis:** They're really the same thing — both are about women choosing to stay home and care for their families instead of working, whether in the 1800s or now. </Distractor>
+         <Key value="duty_vs_image"> **Joe:** Both idealize the wife at home, but then it was a moral and religious duty; today it's a social-media image that often hides economic precarity.          </Key>
+  <Distractor value="family_size"  > **Danielle:** The biggest difference is that women in the 1800s had far more children than today's tradwives do, so the home was more work.                        </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_synth_peereval.value === 'joe_same' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
-*Joe has the likeness right, but a comparison owes us the difference too, and the two give very different reasons for the same picture.*
+<Markdown when="@tmb_synth_peereval.value === 'same' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
+*Karis has the likeness right, but a comparison owes us the difference too: a moral and religious duty then, a social-media image that often hides economic precarity now.*
 </Markdown>
-<Markdown when="@tmb_synth_peereval.value === 'karis_family_size' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
-*Family size isn't a contrast either text draws. Compare what the ideal MEANT: a moral duty then, an image (often masking hardship) now.*
+<Markdown when="@tmb_synth_peereval.value === 'family_size' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
+*Family size isn't a contrast either text draws. The real difference is what the ideal MEANT: a moral duty then, an image often masking hardship now.*
 </Markdown>
-<Markdown when="@tmb_synth_peereval.value === 'danielle_duty_vs_image' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@tmb_synth_peereval.value === 'duty_vs_image' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
 *Yes — both idealize the woman at home; what changed is the reason. A moral and religious duty then; a social-media image, often hiding economic precarity, now. That's the comparison your final paragraph needs.*
 </Markdown>
 </CapaProblem> <!-- tmb_synth_peereval_problem -->
