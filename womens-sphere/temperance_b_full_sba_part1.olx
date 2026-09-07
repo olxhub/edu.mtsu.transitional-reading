@@ -133,14 +133,15 @@ lang: en-Latn-US
       <FocusAction id="tmb_notecheck_focus" target="tmb_notecheck_grid" />
     </Trigger>
 
+    <!-- Highlighting is worked by dragging over the text and matching by
+         clicking pairs, so neither task has a single control to park a caret
+         on — pulse only. -->
     <Trigger id="tmb_grammar_svo_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_grammar_svo')" mode="each">
       <Flash id="tmb_grammar_svo_flash" target="tmb_grammar_svo_verb" />
     </Trigger>
 
-    <!-- The SimpleTextSelection tasks are worked by dragging over the text,
-         so there is no single control to park a caret on — pulse only. -->
     <Trigger id="tmb_grammar_np_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_grammar_np')" mode="each">
-      <Flash id="tmb_grammar_np_flash" target="tmb_grammar_np_head" />
+      <Flash id="tmb_grammar_np_flash" target="tmb_grammar_np_match" />
     </Trigger>
 
     <Trigger id="tmb_grammar_structure_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_grammar_structure')" mode="each">

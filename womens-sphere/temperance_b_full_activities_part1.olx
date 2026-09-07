@@ -322,10 +322,18 @@ all: Right — the object is the whole phrase "the very ideology that defined th
 </CapaProblem> <!-- tmb_grammar_svo_object_problem -->
 </Vertical> <!-- tmb_grammar_svo -->
 
-<!-- Inside the OBJECT noun phrase. Three sequential highlights, matching the
-     SVO screen's one-question-at-a-time pattern. The text shown is ONLY the
-     noun phrase, not the whole sentence: the rest is nothing but a place to
-     make mistakes here.
+<!-- Inside the OBJECT noun phrase. ONE matching item, where three sequential
+     highlights used to be. The parts on the right are the constituents of the
+     phrase the student has just finished analyzing as a whole; naming them is
+     recognition, and recognition of three related labels is one question, not
+     three. Three separate one-attempt highlights would also mean three Check
+     buttons and three chances to be told nothing useful.
+
+     Matching also carries partial credit, so a student who has the head noun
+     and the postmodifier but not the determiner is scored as such.
+
+     The phrase is shown WITHOUT the rest of the sentence: the rest of the
+     sentence is nothing but a place to make mistakes here.
 
      "Determiner," not "premodifier" — it is the category the course uses for
      the pointing word(s) in front of the head noun. "the very" points at one
@@ -335,35 +343,27 @@ all: Right — the object is the whole phrase "the very ideology that defined th
 ## Inside the Noun Phrase
 
 The object of that sentence is a noun phrase all by itself. Here it is on its
-own — take it apart in three steps.
+own — take it apart.
 </Markdown>
 
-<SimpleTextSelection id="tmb_grammar_np_head" mode="graded" title="Highlight the head noun">
-Highlight the head noun — the one word the whole phrase is built around.
----
-the very [ideology] that defined their place in the home
----
-all: Right — "ideology" is the head noun. Everything else in the phrase is there to tell you which ideology.
-: It is a single word, and it is the thing the phrase is naming. Which one word could stand in for the whole phrase?
-</SimpleTextSelection>
+<CapaProblem id="tmb_grammar_np_problem" title="Inside the Noun Phrase" maxAttempts="1">
+<MatchingGrader id="tmb_grammar_np_grader">
+<Markdown id="tmb_grammar_np_prompt">
+Match each part of a noun phrase to the part that plays it in **the very
+ideology that defined their place in the home**.
+</Markdown>
+<MatchingInput id="tmb_grammar_np_match">
+  <Markdown id="tmb_grammar_np_role_head"> **Head noun** — the one word the whole phrase is built around                     </Markdown>
+  <Markdown id="tmb_grammar_np_part_head"> ideology                                                                         </Markdown>
 
-<SimpleTextSelection id="tmb_grammar_np_det" mode="graded" title="Highlight the determiner">
-Highlight the determiner — the word (or words) in front of the head noun that point at which one.
----
-[the] {very} ideology that defined their place in the home
----
-all: Right — "the" (with "very") is the determiner. It points back at one particular ideology — the one the text has already described.
-: It comes before the head noun, and words like "the," "these," "his," and "such" do this job.
-</SimpleTextSelection>
+  <Markdown id="tmb_grammar_np_role_det" > **Determiner** — the word before the head noun that helps identify or specify it </Markdown>
+  <Markdown id="tmb_grammar_np_part_det" > the                                                                              </Markdown>
 
-<SimpleTextSelection id="tmb_grammar_np_post" mode="graded" title="Highlight the postmodifier">
-Highlight the postmodifier — the part after the head noun that tells you more about it.
----
-the very ideology [that defined their place in the home]
----
-all: Right — "that defined their place in the home" is the postmodifier. It tells you which ideology — the one that kept women in the home.
-: It follows the head noun, and here it is a whole phrase rather than a single word.
-</SimpleTextSelection>
+  <Markdown id="tmb_grammar_np_role_post"> **Postmodifier** — the part after the head noun that tells you more about it     </Markdown>
+  <Markdown id="tmb_grammar_np_part_post"> that defined their place in the home                                             </Markdown>
+</MatchingInput>
+</MatchingGrader>
+</CapaProblem> <!-- tmb_grammar_np_problem -->
 </Vertical> <!-- tmb_grammar_np -->
 
 <!-- The structure, laid out (info screen) -->
@@ -373,12 +373,13 @@ all: Right — "that defined their place in the home" is the postmodifier. It te
 
 Here is the sentence laid out:
 
-> **women** — subject
+> **[ women ]** — subject (a noun)
 > **took** — verb
 > **[ the very ideology that defined their place in the home ]** — direct object (a noun phrase)
+> *and used it to fashion a public role for themselves* — a second verb phrase, joined to the first by "and"
 
 The object is a **noun phrase** — to understand the sentence, you hold the
-whole phrase together as the one thing the women took.
+whole phrase together.
 </Markdown>
 <Done id="tmb_grammar_structure_done" label="I understand" />
 </Vertical>

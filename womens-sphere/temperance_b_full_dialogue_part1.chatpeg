@@ -227,9 +227,9 @@ Professor Booker: A good sentence to analyze. On the right, highlight the first 
 
 ::tmb_grammar_np [display=target:tmb_main label="Inside the noun phrase"]
 
-Professor Booker: Notice the object is a noun phrase. On the right it's on its own, without the rest of the sentence — take it apart. The head noun first, then the determiner, then the postmodifier.
+Professor Booker: Notice the object is a noun phrase. On the right it's on its own, without the rest of the sentence — match each part of it to the job that part does: head noun, determiner, postmodifier.
 
---- wait @tmb_grammar_np_head_problem.submitCount > 0 && @tmb_grammar_np_det_problem.submitCount > 0 && @tmb_grammar_np_post_problem.submitCount > 0 ---
+--- wait @tmb_grammar_np_problem.submitCount > 0 ---
 
 ::tmb_grammar_structure [display=target:tmb_main label="The grammatical structure"]
 
