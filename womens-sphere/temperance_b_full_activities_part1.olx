@@ -240,20 +240,37 @@ rows:
 
 <!-- ============================================================
      Part 3 — Academic language / close reading
-     Graded text-highlighting on the key sentence, via
-     SimpleTextSelection (mode=graded → Check button; the
-     generated problem is <id>_problem, gated on submitCount).
+     Graded text-highlighting on the key sentence: a one-attempt
+     CapaProblem (`<id>_problem`, maxAttempts="1") around a
+     TextSelectionGrader around the TextSelectionInput, gated on
+     submitCount — the same shape every other assessed item here has.
+
+     Spelled out rather than written as <SimpleTextSelection
+     mode="graded">: the terse tag drops maxAttempts on the floor, and
+     an assessment item that quietly allows unlimited attempts is worse
+     than three extra lines of XML.
      ============================================================ -->
 
-<!-- Three highlight questions on the key sentence. Because "women" is a bare
-     one-word subject and the rich noun phrase is the OBJECT, the NP break-down
-     (next screen) is done on the object. As in SBA A: the essential word MUST
-     be selected; the rest of its phrase MAY be ({optional}), so a student who
-     highlights the whole phrase is just as right as one who picks the single
-     head word.
+<!-- Three highlight questions on the key sentence. The verb is a single word;
+     the subject and the object are graded as WHOLE PHRASES — every word of the
+     phrase and nothing outside it.
 
-     Order is VERB -> SUBJECT -> OBJECT, not S-V-O. The verb is the one part
-     you can find without having identified anything else. -->
+     Grading the phrase as a phrase is the lesson. The next screen asks students
+     to hold a noun phrase together as one unit; accepting the head word by
+     itself here would teach the opposite on the screen before.
+
+     The phrase that next screen takes apart is the OBJECT, not the subject:
+     the subject here is the bare word "women," and the rich noun phrase is what
+     the women took.
+
+     The verb prompt names the two-verb structure, so what is scored is
+     identifying a verb rather than guessing which of two coordinated verbs the
+     author meant.
+
+     Order is VERB → SUBJECT → OBJECT, not S-V-O. The verb is the one part you
+     can find without having identified anything else; once you have it, "who
+     did it" and "what got done to" are questions about the verb. Asking for the
+     subject first asks students to find it out of nowhere. -->
 <Vertical id="tmb_grammar_svo">
 <Markdown id="tmb_grammar_svo_md">
 ## Verb, Subject, Object
@@ -261,37 +278,48 @@ rows:
 Three quick highlights on the key sentence — the verb first, then the subject,
 then the object.
 
-A part may be a **single word or a whole phrase**. For each one you **must**
-include the essential word; beyond that, highlight as much or as little of the
-rest of its phrase as you see fit.
+The verb is a **single word**. The subject and the object are **whole phrases**:
+highlight every word of the phrase, and nothing outside it.
 </Markdown>
 
-<SimpleTextSelection id="tmb_grammar_svo_verb" mode="graded" title="Highlight the verb">
-Highlight the main verb — the first thing women did with that ideology.
+<CapaProblem id="tmb_grammar_svo_verb_problem" title="Highlight the verb" maxAttempts="1">
+<TextSelectionGrader id="tmb_grammar_svo_verb_grader">
+<TextSelectionInput id="tmb_grammar_svo_verb">
+This sentence has two verbs joined by "and." Highlight the first one — a single word.
 ---
 Yet women [took] the very ideology that defined their place in the home and used it to fashion a public role for themselves.
 ---
-all: Right — "took" is the main verb: the action at the heart of the sentence — what women DID with that ideology.
-: The main verb is the action word. Of everything happening here, which single word is what women first did with the ideology?
-</SimpleTextSelection>
+all: Right — "took" is the first verb: what women did with that ideology before they used it.
+: The verb is the action word — here "took," the first thing women did in the sentence.
+</TextSelectionInput>
+</TextSelectionGrader>
+</CapaProblem> <!-- tmb_grammar_svo_verb_problem -->
 
-<SimpleTextSelection id="tmb_grammar_svo_subject" mode="graded" title="Highlight the subject">
-Highlight the subject of the sentence.
+<CapaProblem id="tmb_grammar_svo_subject_problem" title="Highlight the subject" maxAttempts="1">
+<TextSelectionGrader id="tmb_grammar_svo_subject_grader">
+<TextSelectionInput id="tmb_grammar_svo_subject">
+Highlight the subject — the entire subject phrase, every word of it.
 ---
-Yet {the} [women] took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
+Yet [women] took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
 ---
-all: Right — "women" is the subject: they are the ones who did the taking.
-: The subject is who or what does the action. Who took the ideology?
-</SimpleTextSelection>
+all: Right — the subject is "women." Here the whole subject phrase is that one word: they are the ones who did the taking.
+: The subject is who or what does the action — "women," the ones who did the taking.
+</TextSelectionInput>
+</TextSelectionGrader>
+</CapaProblem> <!-- tmb_grammar_svo_subject_problem -->
 
-<SimpleTextSelection id="tmb_grammar_svo_object" mode="graded" title="Highlight the object">
-Highlight the direct object — what women took.
+<CapaProblem id="tmb_grammar_svo_object_problem" title="Highlight the object" maxAttempts="1">
+<TextSelectionGrader id="tmb_grammar_svo_object_grader">
+<TextSelectionInput id="tmb_grammar_svo_object">
+Highlight the direct object of that first verb — the entire object phrase, every word of it.
 ---
-Yet women took {the very} [ideology] {that defined their place in the home} and used it to fashion a public role for themselves.
+Yet women took [the very ideology that defined their place in the home] and used it to fashion a public role for themselves.
 ---
-all: Right — "ideology" is what got taken, and the full phrase "the very ideology that defined their place in the home" works too.
-: What did the women take? Find that noun.
-</SimpleTextSelection>
+all: Right — the object is the whole phrase "the very ideology that defined their place in the home." Its head noun is "ideology"; the rest of the phrase tells you which ideology.
+: The object is what women took — the whole phrase "the very ideology that defined their place in the home," built around the noun "ideology."
+</TextSelectionInput>
+</TextSelectionGrader>
+</CapaProblem> <!-- tmb_grammar_svo_object_problem -->
 </Vertical> <!-- tmb_grammar_svo -->
 
 <!-- Inside the OBJECT noun phrase. Three sequential highlights, matching the
