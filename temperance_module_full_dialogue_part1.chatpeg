@@ -361,7 +361,7 @@ Joe: So, teetotaling — not drinking at all. Where does "self-optimization" com
 
 ::temperance_article_sentence_screen
 
---- wait @temperance_article_sentence_problem.submitCount > 0 && @temperance_article_sentence_explain.value ---
+--- wait @temperance_article_sentence_problem.submitCount > 0 ---
 
 Karis: The line that really pins down self-optimization is the one about not drinking being an act of authenticity or self-care. Put it with the bit about posting on Instagram about inflammation, jawlines, and sleep scores, and you can see it's about focusing on your own health.
 

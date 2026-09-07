@@ -1179,9 +1179,6 @@ the article that gives it context. Who picked the **best** one?
 *Yes — "an act of authenticity or self-care" turns not drinking into working on yourself. That's the self-optimization the writer means.*
 </Markdown>
 </CapaProblem> <!-- temperance_article_sentence_problem -->
-
-<Markdown>**Explain why you chose that sentence.**</Markdown>
-<TextArea id="temperance_article_sentence_explain" rows="3" placeholder="I chose that sentence because…" />
 </Vertical> <!-- temperance_article_sentence_screen -->
 
 <!-- CHAT-EMBEDDED — summarize the first paragraph (PDF p.41) -->
