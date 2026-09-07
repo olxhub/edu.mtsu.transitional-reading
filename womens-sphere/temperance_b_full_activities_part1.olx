@@ -82,7 +82,7 @@ Danielle, Joe, Karis, Professor Booker, and Professor Hale are **not real
 people,** but you can learn from and interact with them.
 
 **About answering questions.** Most questions give you **one** submission: choose
-your answer, press **Check,** and the conversation moves on whether you got it
+your answer, press **Submit,** and the conversation moves on whether you got it
 right or not. Take your time before you press it — you won't be asked again.
 
 All right, now imagine that you are in your classroom, but class has not started
@@ -180,10 +180,9 @@ rows:
      3-way scale: correct and central / correct but less important /
      not correct. Answers keyed to the textbook excerpt.
 
-     One attempt, and no showanswer="always": that puts a Show Answer
-     button on screen BEFORE the one submission the key is meant to
-     follow. The default reveal-after-attempt is the policy for every
-     scored item here.
+     The assessment attributes (see the vocabulary items below): one
+     attempt; the key appears on its own with the result of that one
+     submission; the grid freezes.
      ============================================================ -->
 
 <Vertical id="womens_sphere_notes">
@@ -193,9 +192,9 @@ rows:
 Joe made a list of what he thought were the important points from the *American
 Yawp* excerpt. For **each statement**, decide whether it is **correct and central
 to the text**, **correct but less important**, or **not correct**. Then press
-**Check**.
+**Submit**.
 </Markdown>
-<CapaProblem id="womens_sphere_notes_problem" title="Joe's Notes on the Textbook" maxAttempts="1">
+<CapaProblem id="womens_sphere_notes_problem" title="Joe's Notes on the Textbook" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TabularMCQGrader id="womens_sphere_notes_grader">
 <TabularMCQ id="womens_sphere_notes_grid">
 cols:
@@ -286,7 +285,7 @@ The verb is a **single word**. The subject and the object are **whole phrases**:
 highlight every word of the phrase, and nothing outside it.
 </Markdown>
 
-<CapaProblem id="womens_sphere_gram_verb_problem" title="Highlight the verb" maxAttempts="1">
+<CapaProblem id="womens_sphere_gram_verb_problem" title="Highlight the verb" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="womens_sphere_gram_verb_grader">
 <TextSelectionInput id="womens_sphere_gram_verb">
 This sentence has two verbs joined by "and." Highlight the first one — a single word.
@@ -299,7 +298,7 @@ all: Right — "took" is the first verb: what women did with that ideology befor
 </TextSelectionGrader>
 </CapaProblem> <!-- womens_sphere_gram_verb_problem -->
 
-<CapaProblem id="womens_sphere_gram_subject_problem" title="Highlight the subject" maxAttempts="1">
+<CapaProblem id="womens_sphere_gram_subject_problem" title="Highlight the subject" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="womens_sphere_gram_subject_grader">
 <TextSelectionInput id="womens_sphere_gram_subject">
 Highlight the subject — the entire subject phrase, every word of it.
@@ -312,7 +311,7 @@ all: Right — the subject is "women." Here the whole subject phrase is that one
 </TextSelectionGrader>
 </CapaProblem> <!-- womens_sphere_gram_subject_problem -->
 
-<CapaProblem id="womens_sphere_gram_object_problem" title="Highlight the object" maxAttempts="1">
+<CapaProblem id="womens_sphere_gram_object_problem" title="Highlight the object" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="womens_sphere_gram_object_grader">
 <TextSelectionInput id="womens_sphere_gram_object">
 Highlight the direct object of that first verb — the entire object phrase, every word of it.
@@ -330,7 +329,7 @@ all: Right — the object is the whole phrase "the very ideology that defined th
      highlights used to be. The parts on the right are the constituents of the
      phrase the student has just finished analyzing as a whole; naming them is
      recognition, and recognition of three related labels is one question, not
-     three. Three separate one-attempt highlights would also mean three Check
+     three. Three separate one-attempt highlights would also mean three Submit
      buttons and three chances to be told nothing useful.
 
      Matching also carries partial credit, so a student who has the head noun
@@ -351,7 +350,7 @@ The object of that sentence is a noun phrase all by itself. Here it is on its
 own — take it apart.
 </Markdown>
 
-<CapaProblem id="womens_sphere_gram_np_problem" title="Inside the Noun Phrase" maxAttempts="1">
+<CapaProblem id="womens_sphere_gram_np_problem" title="Inside the Noun Phrase" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <MatchingGrader id="womens_sphere_gram_np_grader">
 <Markdown id="womens_sphere_gram_np_prompt">
 Match each part of a noun phrase to the part that plays it in **the very
@@ -393,7 +392,7 @@ whole phrase together.
      points back to. Only one sentence in the passage names it ("cult of
      domesticity" / "cult of true womanhood"), so the target is unambiguous
      even though the passage spans several paragraphs. -->
-<SimpleTextSelection id="womens_sphere_gram_antecedent" mode="graded" title="Find the Antecedent">
+<SimpleTextSelection id="womens_sphere_gram_antecedent" mode="graded" title="Find the Antecedent" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 "The very ideology that defined their place in the home" points back to an ideology the text has already named. Find the earlier sentence that first gives it that name — the one that calls it the "cult of domesticity" — and highlight the entire sentence, from its first word through its final period.
 ---
 [Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the "cult of domesticity," or the "cult of true womanhood."] These ideas developed in tandem with industrialization, the market revolution, and the Second Great Awakening. In reality, they applied primarily to upper-class and middle-upper-class women. In the era of revivalism and reform, Americans understood the family and home as the hearthstones of civic virtue and moral influence. Women were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic. Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
@@ -414,7 +413,7 @@ all: Yes — that earlier sentence is where the text names the ideology: the "cu
      so a student answers with the excerpt open beside them.
 
      Each is a CapaProblem wrapping a KeyGrader wrapping a ChoiceInput with
-     semantic option values, so it carries its own Check button, shows its
+     semantic option values, so it carries its own Submit button, shows its
      explanation after submission, and the chat can wait on .submitCount.
      One attempt each, like every other scored item.
      ============================================================ -->
@@ -441,7 +440,7 @@ Scroll through it as you answer the questions in the conversation.
 <!-- CHAT-EMBEDDED — the five comprehension questions -->
 
 <Vertical id="womens_sphere_comp_1_screen">
-<CapaProblem id="womens_sphere_comp_1_problem" title="Question 1" maxAttempts="1">
+<CapaProblem id="womens_sphere_comp_1_problem" title="Question 1" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_comp_1_grader">
 <ChoiceInput id="womens_sphere_comp_1">
 <Markdown>
@@ -462,7 +461,7 @@ emerged?
 </Vertical> <!-- womens_sphere_comp_1_screen -->
 
 <Vertical id="womens_sphere_comp_2_screen">
-<CapaProblem id="womens_sphere_comp_2_problem" title="Question 2" maxAttempts="1">
+<CapaProblem id="womens_sphere_comp_2_problem" title="Question 2" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_comp_2_grader">
 <ChoiceInput id="womens_sphere_comp_2">
 <Markdown>
@@ -483,7 +482,7 @@ whom did it mainly apply?
 </Vertical> <!-- womens_sphere_comp_2_screen -->
 
 <Vertical id="womens_sphere_comp_3_screen">
-<CapaProblem id="womens_sphere_comp_3_problem" title="Question 3" maxAttempts="1">
+<CapaProblem id="womens_sphere_comp_3_problem" title="Question 3" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_comp_3_grader">
 <ChoiceInput id="womens_sphere_comp_3">
 <Markdown>
@@ -504,7 +503,7 @@ to be?
 </Vertical> <!-- womens_sphere_comp_3_screen -->
 
 <Vertical id="womens_sphere_comp_4_screen">
-<CapaProblem id="womens_sphere_comp_4_problem" title="Question 4" maxAttempts="1">
+<CapaProblem id="womens_sphere_comp_4_problem" title="Question 4" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_comp_4_grader">
 <ChoiceInput id="womens_sphere_comp_4">
 <Markdown>
@@ -524,7 +523,7 @@ How did women turn the ideology of domesticity into something new?
 </Vertical> <!-- womens_sphere_comp_4_screen -->
 
 <Vertical id="womens_sphere_comp_5_screen">
-<CapaProblem id="womens_sphere_comp_5_problem" title="Question 5" maxAttempts="1">
+<CapaProblem id="womens_sphere_comp_5_problem" title="Question 5" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_comp_5_grader">
 <ChoiceInput id="womens_sphere_comp_5">
 <Markdown>
@@ -612,9 +611,8 @@ place: the home, at the center of family and children.
 
 <!-- ============================================================
      Part 4 — Synthesis: sort each description as "then" (the 1800s
-     ideal) vs "now" (the tradwife trend), drawing on all three texts. Graded:
-     one attempt, key revealed after submission, not before (see the
-     note-check grid).
+     ideal) vs "now" (the tradwife trend), drawing on all three texts. Graded
+     with the assessment attributes (see the vocabulary items).
      ============================================================ -->
 
 <Vertical id="womens_sphere_synth_sort">
@@ -622,9 +620,9 @@ place: the home, at the center of family and children.
 ## Then and Now
 
 Using the textbook, the printed article, and the engraving, sort each description
-under the movement it best fits. Then press **Check.**
+under the movement it best fits. Then press **Submit.**
 </Markdown>
-<CapaProblem id="womens_sphere_synth_sort_problem" title="Then vs. Now" maxAttempts="1">
+<CapaProblem id="womens_sphere_synth_sort_problem" title="Then vs. Now" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TabularMCQGrader id="womens_sphere_synth_sort_grader">
 <TabularMCQ id="womens_sphere_synth_sort_grid">
 cols:
@@ -720,16 +718,24 @@ Here is the finished work — the comparison you built from all three texts.
      the choices renders inside the chat bubble with them. The ChoiceInput
      keeps its own id — every wait, and every readback, still names it.
 
-     Inside that Vertical the question is a one-attempt CapaProblem
-     (`<id>_problem`, maxAttempts="1") around a KeyGrader around the
-     ChoiceInput: this is an assessment, and each item is answered once. The
-     Check button is the CapaProblem's own footer. The ChoiceInput id and every
-     option value are unchanged — the chatpeg gates and the analytics read
-     them. maxAttempts is spelled out because "0" means unlimited, not none.
+     Inside that Vertical the question is a CapaProblem (`<id>_problem`)
+     around a KeyGrader around the ChoiceInput, carrying the four assessment
+     attributes every scored item in this form carries:
+
+         maxAttempts="1"          one submission; "0" would mean unlimited
+         showAnswer="attempted"   the key becomes available on that submission
+         answerReveal="auto"      and appears by itself — there is no Show
+                                  Answer button to find
+         lockInput="closed"       the input freezes once attempts are used,
+                                  so what is on screen is what was scored
+
+     The Submit button is the CapaProblem's own footer. The ChoiceInput id and
+     every option value are unchanged — the chatpeg gates and the analytics
+     read them.
 
      Every per-choice verdict below is gated on `<id>_problem.submitCount` as
      well as on the chosen value. Keyed on the value alone, a student with a
-     Check button in front of them could click each option in turn and read
+     Submit button in front of them could click each option in turn and read
      which one comes back "Yes" before ever submitting — the whole item,
      answered for them, under a rule that allows one attempt.
 
@@ -739,7 +745,7 @@ Here is the finished work — the comparison you built from all three texts.
      look again. -->
 
 <Vertical id="womens_sphere_vocab_publicsphere_screen">
-<CapaProblem id="womens_sphere_vocab_publicsphere_problem" title="Vocabulary: public sphere" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_publicsphere_problem" title="Vocabulary: public sphere" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_publicsphere_grader">
 <ChoiceInput id="womens_sphere_vocab_publicsphere">
 <Markdown>
@@ -773,7 +779,7 @@ Look at the highlighted sentence and choose the best definition for **public sph
 <!-- CHAT-EMBEDDED — vocabulary, chunk A2 / para 2 -->
 
 <Vertical id="womens_sphere_vocab_tandem_screen">
-<CapaProblem id="womens_sphere_vocab_tandem_problem" title="Vocabulary: tandem" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_tandem_problem" title="Vocabulary: tandem" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_tandem_grader">
 <ChoiceInput id="womens_sphere_vocab_tandem">
 <Markdown>
@@ -810,7 +816,7 @@ What words could take the place of **in tandem with** — but keep the meaning t
      ============================================================ -->
 
 <Vertical id="womens_sphere_term_pick_screen">
-<CapaProblem id="womens_sphere_term_pick_problem" title="Cult of domesticity: the term" maxAttempts="1">
+<CapaProblem id="womens_sphere_term_pick_problem" title="Cult of domesticity: the term" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_term_pick_grader">
 <ChoiceInput id="womens_sphere_term_pick">
 <Markdown>
@@ -840,7 +846,7 @@ passage, which phrase most directly helps us understand what it was?
 </Vertical> <!-- womens_sphere_term_pick_screen -->
 
 <Vertical id="womens_sphere_term_connect_screen">
-<CapaProblem id="womens_sphere_term_connect_problem" title="Cult of domesticity: what connects to it" maxAttempts="1">
+<CapaProblem id="womens_sphere_term_connect_problem" title="Cult of domesticity: what connects to it" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <CheckboxGrader id="womens_sphere_term_connect_grader">
 <CheckboxInput id="womens_sphere_term_connect">
 <Markdown>
@@ -889,7 +895,7 @@ it? **Select all that apply.**
      to do with reading. Option values name the sentence, not the speaker, so
      an attribution can move without touching values, gates, or analytics. -->
 <Vertical id="womens_sphere_term_bestdef_screen">
-<CapaProblem id="womens_sphere_term_bestdef_problem" title="Cult of domesticity: the best definition" maxAttempts="1">
+<CapaProblem id="womens_sphere_term_bestdef_problem" title="Cult of domesticity: the best definition" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_term_bestdef_grader">
 <ChoiceInput id="womens_sphere_term_bestdef">
 <Markdown>
@@ -920,7 +926,7 @@ domesticity. Read them and choose the **best** one.
      ============================================================ -->
 
 <Vertical id="womens_sphere_vocab_domestic_screen">
-<CapaProblem id="womens_sphere_vocab_domestic_problem" title="Vocabulary: domestic" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_domestic_problem" title="Vocabulary: domestic" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_domestic_grader">
 <ChoiceInput id="womens_sphere_vocab_domestic">
 <Markdown>
@@ -958,7 +964,7 @@ Choose the best definition for **domestic** as it's used here:
      ============================================================ -->
 
 <Vertical id="womens_sphere_vocab_ideology_screen">
-<CapaProblem id="womens_sphere_vocab_ideology_problem" title="Vocabulary: ideology" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_ideology_problem" title="Vocabulary: ideology" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_ideology_grader">
 <ChoiceInput id="womens_sphere_vocab_ideology">
 <Markdown>
@@ -990,7 +996,7 @@ Choose the best definition for **ideology**:
 </Vertical> <!-- womens_sphere_vocab_ideology_screen -->
 
 <Vertical id="womens_sphere_vocab_enmasse_screen">
-<CapaProblem id="womens_sphere_vocab_enmasse_problem" title="Vocabulary: en masse" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_enmasse_problem" title="Vocabulary: en masse" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_enmasse_grader">
 <ChoiceInput id="womens_sphere_vocab_enmasse">
 <Markdown>
@@ -1022,7 +1028,7 @@ What words could take the place of **en masse** — but keep the meaning the sam
 </Vertical> <!-- womens_sphere_vocab_enmasse_screen -->
 
 <Vertical id="womens_sphere_vocab_moralizing_screen">
-<CapaProblem id="womens_sphere_vocab_moralizing_problem" title="Vocabulary: moralizing" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_moralizing_problem" title="Vocabulary: moralizing" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_moralizing_grader">
 <ChoiceInput id="womens_sphere_vocab_moralizing">
 <Markdown>
@@ -1054,7 +1060,7 @@ Choose the best definition for **moralizing** as it's used here:
 </Vertical> <!-- womens_sphere_vocab_moralizing_screen -->
 
 <Vertical id="womens_sphere_vocab_euphemism_screen">
-<CapaProblem id="womens_sphere_vocab_euphemism_problem" title="Vocabulary: euphemism" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_euphemism_problem" title="Vocabulary: euphemism" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_euphemism_grader">
 <ChoiceInput id="womens_sphere_vocab_euphemism">
 <Markdown>
@@ -1091,7 +1097,7 @@ Choose the best definition for **euphemism**:
      ============================================================ -->
 
 <Vertical id="womens_sphere_gram_why_screen">
-<CapaProblem id="womens_sphere_gram_why_problem" title="How women fashioned a public role" maxAttempts="1">
+<CapaProblem id="womens_sphere_gram_why_problem" title="How women fashioned a public role" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_gram_why_grader">
 <ChoiceInput id="womens_sphere_gram_why">
 <Markdown>
@@ -1126,7 +1132,7 @@ and turn it into a **public** role?
      ============================================================ -->
 
 <Vertical id="womens_sphere_vocab_tradwife_screen">
-<CapaProblem id="womens_sphere_vocab_tradwife_problem" title="Vocabulary: tradwife" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_tradwife_problem" title="Vocabulary: tradwife" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_tradwife_grader">
 <ChoiceInput id="womens_sphere_vocab_tradwife">
 <Markdown>
@@ -1155,7 +1161,7 @@ The article is about **tradwives.** First — what does **tradwife** mean?
 </Vertical> <!-- womens_sphere_vocab_tradwife_screen -->
 
 <Vertical id="womens_sphere_article_sentence_screen">
-<CapaProblem id="womens_sphere_article_sentence_problem" title="Economic precarity: the best sentence" maxAttempts="1">
+<CapaProblem id="womens_sphere_article_sentence_problem" title="Economic precarity: the best sentence" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_article_sentence_grader">
 <ChoiceInput id="womens_sphere_article_sentence">
 <Markdown>
@@ -1185,7 +1191,7 @@ of us found a sentence from the article that gives it context. Who picked the
 </Vertical> <!-- womens_sphere_article_sentence_screen -->
 
 <Vertical id="womens_sphere_article_summary_screen">
-<CapaProblem id="womens_sphere_article_summary_problem" title="The best summary of the first paragraph" maxAttempts="1">
+<CapaProblem id="womens_sphere_article_summary_problem" title="The best summary of the first paragraph" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_article_summary_grader">
 <ChoiceInput id="womens_sphere_article_summary">
 <Markdown>
@@ -1215,7 +1221,7 @@ Which is the **best summary** of the article's first paragraph (about how
 </Vertical> <!-- womens_sphere_article_summary_screen -->
 
 <Vertical id="womens_sphere_vocab_egalitarian_screen">
-<CapaProblem id="womens_sphere_vocab_egalitarian_problem" title="Vocabulary: egalitarian" maxAttempts="1">
+<CapaProblem id="womens_sphere_vocab_egalitarian_problem" title="Vocabulary: egalitarian" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_vocab_egalitarian_grader">
 <ChoiceInput id="womens_sphere_vocab_egalitarian">
 <Markdown>
@@ -1245,7 +1251,7 @@ does **egalitarian** mean?
 </Vertical> <!-- womens_sphere_vocab_egalitarian_screen -->
 
 <Vertical id="womens_sphere_article_thesis_screen">
-<CapaProblem id="womens_sphere_article_thesis_problem" title="The article's main point" maxAttempts="1">
+<CapaProblem id="womens_sphere_article_thesis_problem" title="The article's main point" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_article_thesis_grader">
 <ChoiceInput id="womens_sphere_article_thesis">
 <Markdown>
@@ -1279,7 +1285,7 @@ Step back from the details — what is the article's **main point** overall?
      ============================================================ -->
 
 <Vertical id="womens_sphere_image_observe_screen">
-<CapaProblem id="womens_sphere_image_observe_problem" title="The engraving: what it shows" maxAttempts="1">
+<CapaProblem id="womens_sphere_image_observe_problem" title="The engraving: what it shows" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_image_observe_grader">
 <ChoiceInput id="womens_sphere_image_observe">
 <Markdown>
@@ -1308,7 +1314,7 @@ What does the engraving show?
 </Vertical> <!-- womens_sphere_image_observe_screen -->
 
 <Vertical id="womens_sphere_image_purpose_screen">
-<CapaProblem id="womens_sphere_image_purpose_problem" title="The engraving: why it was made" maxAttempts="1">
+<CapaProblem id="womens_sphere_image_purpose_problem" title="The engraving: why it was made" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_image_purpose_grader">
 <ChoiceInput id="womens_sphere_image_purpose">
 <Markdown>
@@ -1343,7 +1349,7 @@ Sphere of Woman"?
      ============================================================ -->
 
 <Vertical id="womens_sphere_synth_compare_screen">
-<CapaProblem id="womens_sphere_synth_compare_problem" title="Then and now: the best comparison" maxAttempts="1">
+<CapaProblem id="womens_sphere_synth_compare_problem" title="Then and now: the best comparison" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_synth_compare_grader">
 <ChoiceInput id="womens_sphere_synth_compare">
 <Markdown>

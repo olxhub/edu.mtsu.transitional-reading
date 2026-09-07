@@ -180,7 +180,7 @@ Joe: Nice — "domestic" is the adjective, "domesticity" is the noun for the who
 
 Joe: I also jotted some notes on the chapter so far. Can you check them? And even if something's right, is it important enough to use when we pull the texts together at the end?
 
-Joe: Here's my list. Sort each statement on the right, then press Check.
+Joe: Here's my list. Sort each statement on the right, then press Submit.
 
 --- wait @womens_sphere_notes_problem.submitCount > 0 ---
 
@@ -364,7 +364,7 @@ Part 4: Building Understanding and Synthesizing [id=part4]
 
 ::womens_sphere_synth_sort [display=target:womens_sphere_pane label="Then and now"]
 
-Professor Booker: Let's pull all three texts together. On the right, sort each description under the one it fits, then press Check.
+Professor Booker: Let's pull all three texts together. On the right, sort each description under the one it fits, then press Submit.
 
 --- wait @womens_sphere_synth_sort_problem.submitCount > 0 ---
 
