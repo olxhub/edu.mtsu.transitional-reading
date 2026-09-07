@@ -759,6 +759,8 @@ passage, which phrase most directly helps us understand what it was?
 </Vertical> <!-- tmb_cd_term_screen -->
 
 <Vertical id="tmb_cd_connect_screen">
+<CapaProblem id="tmb_cd_connect_problem" title="Cult of domesticity: what connects to it" maxAttempts="1">
+<CheckboxGrader id="tmb_cd_connect_grader">
 <CheckboxInput id="tmb_cd_connect">
 <Markdown>
 The cult of domesticity was the idea that a woman's proper place was the
@@ -772,25 +774,32 @@ it? **Select all that apply.**
   <Distractor value="antislavery_movement"  > the antislavery movement           </Distractor>
   <Distractor value="working_class_labor"   > working-class women's labor        </Distractor>
 </CheckboxInput>
+</CheckboxGrader>
 
 <!-- Multi-select, so the feedback has to cover three cases: a wrong pick, a
-   right-but-incomplete set, and the whole set. The gate below (in the
-   chatpeg) asks for all three Keys and nothing else. -->
-<Markdown when="@tmb_cd_connect.value.includes('reform_societies')">
+   right-but-incomplete set, and the whole set.
+
+   SCORING RULE: exact match. CheckboxGrader with no partialCredit marks the
+   response correct only when all three Keys and no Distractor are selected;
+   anything else is simply wrong. That is a strict rule for a six-option
+   select-all, and it is declared here as the rule this form scores by, not
+   as the only defensible one — partial credit is the obvious next question. -->
+<Markdown when="@tmb_cd_connect.value.includes('reform_societies') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
 *Not that one — reform societies are the PUBLIC role women fashioned once they left the home, not part of the domestic ideal.*
 </Markdown>
-<Markdown when="@tmb_cd_connect.value.includes('antislavery_movement')">
+<Markdown when="@tmb_cd_connect.value.includes('antislavery_movement') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
 *Not that one — joining the antislavery movement took women OUT into public life. It's the opposite of staying in the domestic sphere.*
 </Markdown>
-<Markdown when="@tmb_cd_connect.value.includes('working_class_labor')">
+<Markdown when="@tmb_cd_connect.value.includes('working_class_labor') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
 *Not that one — working-class women joined the public sphere through their labor, out of necessity. They're the exception to the ideal, not part of it.*
 </Markdown>
-<Markdown when="@tmb_cd_connect.value.length &gt; 0 &amp;&amp; @tmb_cd_connect.value.length &lt; 3">
+<Markdown when="@tmb_cd_connect.value.length &gt; 0 &amp;&amp; @tmb_cd_connect.value.length &lt; 3 &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
 *Keep looking — more than one phrase here belongs to the domestic ideal. Ask of each: does it describe the "true woman" AT HOME, or something women did OUT in public?*
 </Markdown>
-<Markdown when="@tmb_cd_connect.value.length === 3 &amp;&amp; @tmb_cd_connect.value.includes('true_womanhood') &amp;&amp; @tmb_cd_connect.value.includes('guardians_of_virtue') &amp;&amp; @tmb_cd_connect.value.includes('pious_pure_submissive')">
+<Markdown when="@tmb_cd_connect.value.length === 3 &amp;&amp; @tmb_cd_connect.value.includes('true_womanhood') &amp;&amp; @tmb_cd_connect.value.includes('guardians_of_virtue') &amp;&amp; @tmb_cd_connect.value.includes('pious_pure_submissive') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
 *That's the set: the "cult of true womanhood," women as guardians of virtue, and the qualities of the ideal woman — pious, pure, submissive, and domestic.*
 </Markdown>
+</CapaProblem> <!-- tmb_cd_connect_problem -->
 </Vertical> <!-- tmb_cd_connect_screen -->
 
 <Vertical id="tmb_cd_bestdef_screen">
