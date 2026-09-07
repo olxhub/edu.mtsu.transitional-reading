@@ -1185,9 +1185,6 @@ of us found a sentence from the article that gives it context. Who picked the
 *Yes — "exhausted, low-income moms who can't afford child care" shows exactly what economic precarity is: financial insecurity that leaves people few choices.*
 </Markdown>
 </CapaProblem> <!-- womens_sphere_article_sentence_problem -->
-
-<Markdown>**Explain why you chose that sentence.**</Markdown>
-<TextArea id="womens_sphere_article_sentence_explain" rows="3" placeholder="I chose that sentence because…" />
 </Vertical> <!-- womens_sphere_article_sentence_screen -->
 
 <Vertical id="womens_sphere_article_summary_screen">

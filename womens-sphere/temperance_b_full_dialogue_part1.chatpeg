@@ -335,7 +335,7 @@ Joe: So, tradwife — a traditional stay-at-home wife. Where does "economic prec
 
 ::womens_sphere_article_sentence_screen
 
---- wait @womens_sphere_article_sentence_problem.submitCount > 0 && @womens_sphere_article_sentence_explain.value ---
+--- wait @womens_sphere_article_sentence_problem.submitCount > 0 ---
 
 Karis: The line that really pins down economic precarity is the one about exhausted, low-income moms who can't afford child care. Put it with the article's "precarity-to-tradwife pipeline," and you can see it's about money and insecurity, not a dream of domesticity.
 
