@@ -396,8 +396,9 @@ all: Yes — that earlier sentence describes the intrusion (the middle class thr
      The pane holds the text (temperance_comp_reading, below) for the whole stretch,
      so a student answers with the excerpt open beside them.
 
-     Each is a single-question MarkupProblem, so it carries its own Check
-     button and per-item feedback and the chat can wait on .submitCount.
+     Each is a CapaProblem wrapping a KeyGrader wrapping a ChoiceInput with
+     semantic option values, so it carries its own Check button, shows its
+     explanation after submission, and the chat can wait on .submitCount.
      One attempt each, like every other scored item.
      ============================================================ -->
 
@@ -422,70 +423,110 @@ Scroll through it as you answer the questions in the conversation.
 
 <!-- CHAT-EMBEDDED — the five comprehension questions -->
 
-<MarkupProblem id="temperance_comp_1" title="Question 1" maxAttempts="1"><![CDATA[
->>How did the Second Great Awakening address the rapid social and economic changes of the post-independence era?<<
+<Vertical id="temperance_comp_1_screen">
+<CapaProblem id="temperance_comp_1_problem" title="Question 1" maxAttempts="1">
+<KeyGrader id="temperance_comp_1_grader">
+<ChoiceInput id="temperance_comp_1">
+<Markdown>
+How did the Second Great Awakening address the rapid social and economic
+changes of the post-independence era?
+</Markdown>
+  <Distractor id="temperance_comp_1_prohibition_distilleries"  value="prohibition_distilleries" > By advocating for the prohibition of commercial distilleries.                      </Distractor>
+  <Distractor id="temperance_comp_1_traditional_protestantism" value="traditional_protestantism"> By promoting traditional Protestant Christianity while rejecting reform movements. </Distractor>
+         <Key id="temperance_comp_1_revitalize_and_reform"     value="revitalize_and_reform"    > By revitalizing Christian spirits and inspiring personal and social reform.        </Key>
+  <Distractor id="temperance_comp_1_discourage_charity"        value="discourage_charity"       > By discouraging middle-class involvement in charitable organizations.              </Distractor>
+</ChoiceInput>
+</KeyGrader>
 
-( ) By advocating for the prohibition of commercial distilleries.
-( ) By promoting traditional Protestant Christianity while rejecting reform movements.
-(x) By revitalizing Christian spirits and inspiring personal and social reform.
-( ) By discouraging middle-class involvement in charitable organizations.
+<Markdown when="@temperance_comp_1_problem.submitCount &gt; 0">
+*The passage calls the Second Great Awakening "a spiritual response to such changes, revitalizing Christian spirits while also providing an institutional antidote... by inspiring both personal and social reform."*
+</Markdown>
+</CapaProblem> <!-- temperance_comp_1_problem -->
+</Vertical> <!-- temperance_comp_1_screen -->
 
-[explanation]
-The passage calls the Second Great Awakening "a spiritual response to such changes, revitalizing Christian spirits while also providing an institutional antidote... by inspiring both personal and social reform."
-[/explanation]
-]]></MarkupProblem>
+<Vertical id="temperance_comp_2_screen">
+<CapaProblem id="temperance_comp_2_problem" title="Question 2" maxAttempts="1">
+<KeyGrader id="temperance_comp_2_grader">
+<ChoiceInput id="temperance_comp_2">
+<Markdown>
+Why were middle-class evangelicals able to devote significant time and
+resources to reform campaigns?
+</Markdown>
+         <Key id="temperance_comp_2_industrial_revolution_resources" value="industrial_revolution_resources"> The Industrial Revolution left them with time and resources to spare.       </Key>
+  <Distractor id="temperance_comp_2_churches_and_government"         value="churches_and_government"        > They were financially supported by their churches and by state governments. </Distractor>
+  <Distractor id="temperance_comp_2_tract_society_mandate"           value="tract_society_mandate"          > They were required to do so by the rules of the American Tract Society.     </Distractor>
+  <Distractor id="temperance_comp_2_laborers_funded"                 value="laborers_funded"                > Working-class laborers funded their reform efforts.                         </Distractor>
+</ChoiceInput>
+</KeyGrader>
 
-<MarkupProblem id="temperance_comp_2" title="Question 2" maxAttempts="1"><![CDATA[
->>Why were middle-class evangelicals able to devote significant time and resources to reform campaigns?<<
+<Markdown when="@temperance_comp_2_problem.submitCount &gt; 0">
+*"Because of the Industrial Revolution, middle-class evangelicals had time and resources to devote to reform campaigns."*
+</Markdown>
+</CapaProblem> <!-- temperance_comp_2_problem -->
+</Vertical> <!-- temperance_comp_2_screen -->
 
-(x) The Industrial Revolution left them with time and resources to spare.
-( ) They were financially supported by their churches and by state governments.
-( ) They were required to do so by the rules of the American Tract Society.
-( ) Working-class laborers funded their reform efforts.
+<Vertical id="temperance_comp_3_screen">
+<CapaProblem id="temperance_comp_3_problem" title="Question 3" maxAttempts="1">
+<KeyGrader id="temperance_comp_3_grader">
+<ChoiceInput id="temperance_comp_3">
+<Markdown>
+How did temperance reformers shift their approach as alcoholism became an
+increasingly visible issue in towns and cities?
+</Markdown>
+  <Distractor id="temperance_comp_3_prohibition_to_moderation" value="prohibition_to_moderation"> They shifted from demanding total prohibition to encouraging moderate consumption.             </Distractor>
+  <Distractor id="temperance_comp_3_taxing_distilleries"       value="taxing_distilleries"      > They focused on taxing commercial distilleries rather than on getting people to stop drinking. </Distractor>
+         <Key id="temperance_comp_3_moderation_to_abstinence"  value="moderation_to_abstinence" > They shifted from advocating moderation to demanding full abstinence from all alcohol.         </Key>
+  <Distractor id="temperance_comp_3_gave_up_bans"              value="gave_up_bans"             > They gave up on seeking legal bans on liquor sales and turned to persuasion.                   </Distractor>
+</ChoiceInput>
+</KeyGrader>
 
-[explanation]
-"Because of the Industrial Revolution, middle-class evangelicals had time and resources to devote to reform campaigns."
-[/explanation]
-]]></MarkupProblem>
+<Markdown when="@temperance_comp_3_problem.submitCount &gt; 0">
+*"Most reformers escalated their efforts from advocating moderation in liquor consumption to full abstinence from all alcohol."*
+</Markdown>
+</CapaProblem> <!-- temperance_comp_3_problem -->
+</Vertical> <!-- temperance_comp_3_screen -->
 
-<MarkupProblem id="temperance_comp_3" title="Question 3" maxAttempts="1"><![CDATA[
->>How did temperance reformers shift their approach as alcoholism became an increasingly visible issue in towns and cities?<<
+<Vertical id="temperance_comp_4_screen">
+<CapaProblem id="temperance_comp_4_problem" title="Question 4" maxAttempts="1">
+<KeyGrader id="temperance_comp_4_grader">
+<ChoiceInput id="temperance_comp_4">
+<Markdown>
+What primary concern prompted many women to join societies dedicated to
+stopping drinking alcohol?
+</Markdown>
+  <Distractor id="temperance_comp_4_dairy_taxes"              value="dairy_taxes"             > They could no longer afford to pay the high taxes imposed on household dairy products like milk.     </Distractor>
+         <Key id="temperance_comp_4_drinking_harmed_families" value="drinking_harmed_families"> They linked heavy drinking to men abusing, abandoning, or neglecting their families.                 </Key>
+  <Distractor id="temperance_comp_4_distillery_work"          value="distillery_work"         > The women wanted to work in the commercial distilleries, but state laws kept them out.               </Distractor>
+  <Distractor id="temperance_comp_4_opposed_beecher"          value="opposed_beecher"         > The women were opposed to the preaching of Lyman Beecher and the work of the American Tract Society. </Distractor>
+</ChoiceInput>
+</KeyGrader>
 
-( ) They shifted from demanding total prohibition to encouraging moderate consumption.
-( ) They focused on taxing commercial distilleries rather than on getting people to stop drinking.
-(x) They shifted from advocating moderation to demanding full abstinence from all alcohol.
-( ) They gave up on seeking legal bans on liquor sales and turned to persuasion.
+<Markdown when="@temperance_comp_4_problem.submitCount &gt; 0">
+*Women formed a presence in these societies "in response to the perception that heavy drinking was associated with men who abused, abandoned, or neglected their family obligations."*
+</Markdown>
+</CapaProblem> <!-- temperance_comp_4_problem -->
+</Vertical> <!-- temperance_comp_4_screen -->
 
-[explanation]
-"Most reformers escalated their efforts from advocating moderation in liquor consumption to full abstinence from all alcohol."
-[/explanation]
-]]></MarkupProblem>
+<Vertical id="temperance_comp_5_screen">
+<CapaProblem id="temperance_comp_5_problem" title="Question 5" maxAttempts="1">
+<KeyGrader id="temperance_comp_5_grader">
+<ChoiceInput id="temperance_comp_5">
+<Markdown>
+What evidence from the text demonstrates the ultimate success of the
+temperance movement by the 1840s?
+</Markdown>
+  <Distractor id="temperance_comp_5_consumption_ended"          value="consumption_ended"         > Alcohol consumption ended in most towns and cities by the 1840s.       </Distractor>
+  <Distractor id="temperance_comp_5_legislatures_banned"        value="legislatures_banned"       > Most state legislatures banned the production of alcohol by the 1840s. </Distractor>
+  <Distractor id="temperance_comp_5_workers_adopted_protestant" value="workers_adopted_protestant"> Lower-class workers adopted Protestant drinking culture.               </Distractor>
+         <Key id="temperance_comp_5_half_of_1820s"              value="half_of_1820s"             > Americans in the 1840s drank half of what they had in the 1820s.       </Key>
+</ChoiceInput>
+</KeyGrader>
 
-<MarkupProblem id="temperance_comp_4" title="Question 4" maxAttempts="1"><![CDATA[
->>What primary concern prompted many women to join societies dedicated to stopping drinking alcohol?<<
-
-( ) They could no longer afford to pay the high taxes imposed on household dairy products like milk.
-(x) They linked heavy drinking to men abusing, abandoning, or neglecting their families.
-( ) The women wanted to work in the commercial distilleries, but state laws kept them out.
-( ) The women were opposed to the preaching of Lyman Beecher and the work of the American Tract Society.
-
-[explanation]
-Women formed a presence in these societies "in response to the perception that heavy drinking was associated with men who abused, abandoned, or neglected their family obligations."
-[/explanation]
-]]></MarkupProblem>
-
-<MarkupProblem id="temperance_comp_5" title="Question 5" maxAttempts="1"><![CDATA[
->>What evidence from the text demonstrates the ultimate success of the temperance movement by the 1840s?<<
-
-( ) Alcohol consumption ended in most towns and cities by the 1840s.
-( ) Most state legislatures banned the production of alcohol by the 1840s.
-( ) Lower-class workers adopted Protestant drinking culture.
-(x) Americans in the 1840s drank half of what they had in the 1820s.
-
-[explanation]
-"In the 1840s, Americans drank half of what they had in the 1820s, and per capita consumption continued to decline over the next two decades."
-[/explanation]
-]]></MarkupProblem>
+<Markdown when="@temperance_comp_5_problem.submitCount &gt; 0">
+*"In the 1840s, Americans drank half of what they had in the 1820s, and per capita consumption continued to decline over the next two decades."*
+</Markdown>
+</CapaProblem> <!-- temperance_comp_5_problem -->
+</Vertical> <!-- temperance_comp_5_screen -->
 
 
 <!-- ============================================================

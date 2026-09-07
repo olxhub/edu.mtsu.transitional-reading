@@ -293,33 +293,33 @@ Professor Booker: Let's check your understanding of the excerpt. The whole thing
 
 Danielle: First one's about the Second Great Awakening. That's the top of part 1.
 
-::temperance_comp_1
+::temperance_comp_1_screen
 
---- wait @temperance_comp_1.submitCount > 0 ---
+--- wait @temperance_comp_1_problem.submitCount > 0 ---
 
 Joe: This next one I remember — scroll down to part 2, the bit about who had the time to do all this reforming.
 
-::temperance_comp_2
+::temperance_comp_2_screen
 
---- wait @temperance_comp_2.submitCount > 0 ---
+--- wait @temperance_comp_2_problem.submitCount > 0 ---
 
 Karis: Part 3 now — the part about what the reformers were asking for.
 
-::temperance_comp_3
+::temperance_comp_3_screen
 
---- wait @temperance_comp_3.submitCount > 0 ---
+--- wait @temperance_comp_3_problem.submitCount > 0 ---
 
 Karis: And part 4 — this is the women's part, the one I wanted to get to.
 
-::temperance_comp_4
+::temperance_comp_4_screen
 
---- wait @temperance_comp_4.submitCount > 0 ---
+--- wait @temperance_comp_4_problem.submitCount > 0 ---
 
 Professor Booker: Last one. Scroll to the end of part 4 and find the evidence that the movement actually worked.
 
-::temperance_comp_5
+::temperance_comp_5_screen
 
---- wait @temperance_comp_5.submitCount > 0 ---
+--- wait @temperance_comp_5_problem.submitCount > 0 ---
 
 Danielle: Half of what they drank twenty years earlier. That's the number I'd put in the comparison at the end.
 
