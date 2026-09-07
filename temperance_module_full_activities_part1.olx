@@ -425,7 +425,7 @@ Scroll through it as you answer the questions in the conversation.
 <MarkupProblem id="tmf_comp_q1" title="Question 1" maxAttempts="1"><![CDATA[
 >>How did the Second Great Awakening address the rapid social and economic changes of the post-independence era?<<
 
-( ) By advocating for the total prohibition of all commercial distilleries.
+( ) By advocating for the prohibition of commercial distilleries.
 ( ) By promoting traditional Protestant Christianity while rejecting reform movements.
 (x) By revitalizing Christian spirits and inspiring personal and social reform.
 ( ) By discouraging middle-class involvement in charitable organizations.
@@ -438,9 +438,9 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 <MarkupProblem id="tmf_comp_q2" title="Question 2" maxAttempts="1"><![CDATA[
 >>Why were middle-class evangelicals able to devote significant time and resources to reform campaigns?<<
 
-(x) The Industrial Revolution provided them with the necessary time and resources.
-( ) They were financially supported by churches and the government.
-( ) They were mandated to do so by the American Tract Society.
+(x) The Industrial Revolution left them with time and resources to spare.
+( ) They were financially supported by their churches and by state governments.
+( ) They were required to do so by the rules of the American Tract Society.
 ( ) Working-class laborers funded their reform efforts.
 
 [explanation]
@@ -452,9 +452,9 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 >>How did temperance reformers shift their approach as alcoholism became an increasingly visible issue in towns and cities?<<
 
 ( ) They shifted from demanding total prohibition to encouraging moderate consumption.
-( ) They focused exclusively on taxing commercial distilleries rather than trying to get people to stop drinking.
-(x) They shifted from advocating moderate drinking to demanding full abstinence from all alcohol.
-( ) They stopped seeking legal bans on liquor sales altogether.
+( ) They focused on taxing commercial distilleries rather than on getting people to stop drinking.
+(x) They shifted from advocating moderation to demanding full abstinence from all alcohol.
+( ) They gave up on seeking legal bans on liquor sales and turned to persuasion.
 
 [explanation]
 "Most reformers escalated their efforts from advocating moderation in liquor consumption to full abstinence from all alcohol."
@@ -465,8 +465,8 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 >>What primary concern prompted many women to join societies dedicated to stopping drinking alcohol?<<
 
 ( ) They could no longer afford to pay the high taxes imposed on household dairy products like milk.
-(x) They believed that heavy drinking was linked to men abusing, abandoning, or neglecting their families.
-( ) The women wanted to work in commercial distilleries, but it was against the law.
+(x) They linked heavy drinking to men abusing, abandoning, or neglecting their families.
+( ) The women wanted to work in the commercial distilleries, but state laws kept them out.
 ( ) The women were opposed to the preaching of Lyman Beecher and the work of the American Tract Society.
 
 [explanation]
@@ -477,8 +477,8 @@ Women formed a presence in these societies "in response to the perception that h
 <MarkupProblem id="tmf_comp_q5" title="Question 5" maxAttempts="1"><![CDATA[
 >>What evidence from the text demonstrates the ultimate success of the temperance movement by the 1840s?<<
 
-( ) Alcohol consumption completely ceased across all social classes.
-( ) All state legislatures permanently banned the production of alcohol.
+( ) Alcohol consumption ended in most towns and cities by the 1840s.
+( ) Most state legislatures banned the production of alcohol by the 1840s.
 ( ) Lower-class workers adopted Protestant drinking culture.
 (x) Americans in the 1840s drank half of what they had in the 1820s.
 
@@ -705,7 +705,7 @@ Look at the highlighted sentence and choose the best definition for **commerce**
 </Markdown>
   <Distractor value="church_formation"> The way Christianity formed in the U.S.        </Distractor>
   <Distractor value="population_study"> The study of how urban populations grow.       </Distractor>
-         <Key value="buying_selling"  > The activities of buying and selling products. </Key>
+         <Key value="buying_selling"  > The buying and selling of products.            </Key>
   <Distractor value="social_laws"     > The laws people make to limit social problems. </Distractor>
 </ChoiceInput>
 </KeyGrader>
@@ -736,10 +736,10 @@ Choose the best definition for **antidote**:
 > providing an institutional **antidote** to the insecurities of a rapidly
 > changing world."
 </Markdown>
-  <Distractor value="anecdote_story"     > A short story about a real person or event.     </Distractor>
-  <Distractor value="poison_medicine"    > A medicine that saves you from poison.          </Distractor>
-  <Distractor value="unpublished_writing"> An unpublished writing.                         </Distractor>
-         <Key value="counteracts_harm"   > Something that counteracts a harmful situation. </Key>
+  <Distractor value="anecdote_story"     > A short story about a real person or event. </Distractor>
+  <Distractor value="poison_medicine"    > A medicine that saves you from poison.      </Distractor>
+  <Distractor value="unpublished_writing"> An unpublished piece of writing.            </Distractor>
+         <Key value="counteracts_harm"   > Something that works against a harm.        </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -874,10 +874,10 @@ What words could take the place of **exacerbated** — but keep the meaning the 
 > "Such intrusions by the Protestant middle class **exacerbated** class, ethnic,
 > and religious tensions."
 </Markdown>
-  <Distractor value="calmed_down" > calmed down completely </Distractor>
-         <Key value="made_worse"  > made much worse        </Key>
-  <Distractor value="fixed"       > fixed right up         </Distractor>
-  <Distractor value="started_over"> started over           </Distractor>
+  <Distractor value="calmed_down" > calmed right down </Distractor>
+         <Key value="made_worse"  > made much worse   </Key>
+  <Distractor value="fixed"       > fixed right up    </Distractor>
+  <Distractor value="started_over"> started over      </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1042,10 +1042,10 @@ Empire. Read them and choose the **best** one.
 So why did those intrusions — like the temperance campaigns — *exacerbate*
 class, ethnic, and religious tensions?
 </Markdown>
-  <Distractor value="money_to_saloons"      > Because reformers gave money directly to saloon owners instead of working-class people.                       </Distractor>
-  <Distractor value="only_irish_affected"   > Because the campaigns ended up affecting only the Irish Catholics but not the working-class people.           </Distractor>
-  <Distractor value="irish_led_movement"    > Because Irish Catholic immigrants led the temperance movement themselves.                                     </Distractor>
-         <Key value="middle_class_intrusion"> Because middle-class Protestant reformers intruded on the customs of immigrant and working-class communities. </Key>
+  <Distractor value="money_to_saloons"      > Because reformers gave money directly to saloon owners instead of working-class people.                        </Distractor>
+  <Distractor value="only_irish_affected"   > Because the campaigns ended up affecting only the Irish Catholics but not the working-class people.            </Distractor>
+  <Distractor value="irish_led_movement"    > Because Irish Catholic immigrants led the temperance movement themselves, against the Protestant middle class. </Distractor>
+         <Key value="middle_class_intrusion"> Because middle-class Protestant reformers intruded on the customs of working-class and immigrant communities.  </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1203,10 +1203,10 @@ or self-care." What does **authenticity** mean here?
 <Markdown>
 Step back from the details — what is the article's **main point** overall?
 </Markdown>
-  <Distractor value="nation_most_important"      > Carrie Nation was the single most important figure in the temperance movement, surpassing even Lyman Beecher.                                          </Distractor>
-         <Key value="new_temperance_new_morality"> Today's "sober-curious" movement is a kind of new temperance, but its morality has shifted from protecting society to improving a person's own health. </Key>
-  <Distractor value="more_dangerous_today"       > Drinking alcohol is far more dangerous today than it was in the 1800s because today's alcohol causes heart disease and cancer.                         </Distractor>
-  <Distractor value="surgeon_general_prohibition"> The Surgeon General's goal in suggesting a warning label on alcohol is to bring back Prohibition.                                                      </Distractor>
+  <Distractor value="nation_most_important"      > Carrie Nation was the most important figure in the temperance movement, more important even than Lyman Beecher.                                     </Distractor>
+         <Key value="new_temperance_new_morality"> Today's "sober-curious" movement is a new temperance, but its morality has shifted from protecting society to improving one's own health.           </Key>
+  <Distractor value="more_dangerous_today"       > Drinking alcohol is far more dangerous today than it was in the 1800s because today's alcohol causes heart disease, cancer, and a shorter lifespan. </Distractor>
+  <Distractor value="surgeon_general_prohibition"> The Surgeon General's goal in suggesting a warning label on alcohol is to bring back Prohibition.                                                   </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1234,10 +1234,10 @@ Step back from the details — what is the article's **main point** overall?
 <Markdown>
 What does the image show across its nine numbered steps?
 </Markdown>
-  <Distractor value="top_is_moderate"   > That the best stage of becoming a drinker, at the top, is moderate drinking.                              </Distractor>
-  <Distractor value="nine_different_men"> Nine different men, each working in a different profession that was common in the 1800s.                  </Distractor>
-  <Distractor value="good_and_bad_sides"> The good and bad sides of drinking alcohol for working class people.                                      </Distractor>
-         <Key value="one_mans_decline"  > One man's life of drinking, from a first drink, to the summit, to falling into poverty, crime, and death. </Key>
+  <Distractor value="top_is_moderate"   > That the best stage of becoming a drinker, at the top, is moderate drinking.             </Distractor>
+  <Distractor value="nine_different_men"> Nine different men, each working in a different profession that was common in the 1800s. </Distractor>
+  <Distractor value="good_and_bad_sides"> The good and bad sides of drinking alcohol for working-class people in the 1800s.        </Distractor>
+         <Key value="one_mans_decline"  > One man's life of drinking, from the first glass to poverty, crime, and death.           </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1263,10 +1263,10 @@ What does the image show across its nine numbered steps?
 <Markdown>
 Why would the temperance movement create and share an image like this?
 </Markdown>
-  <Distractor value="advertise_saloons" > To advertise the saloons pictured in it and encourage people to get together with their friends.          </Distractor>
-  <Distractor value="record_social_life"> To record the kinds of social activities that a typical wealthy family participated in in 1846.           </Distractor>
-         <Key value="warn_and_persuade" > To warn people that even a first drink can lead step by step to ruin — to persuade them to stop drinking. </Key>
-  <Distractor value="no_consequences"   > To show that drinking has no lasting consequences as long as you drink moderately.                        </Distractor>
+  <Distractor value="advertise_saloons" > To advertise the saloons pictured in it and encourage people to get together with their friends. </Distractor>
+  <Distractor value="record_social_life"> To record the kinds of social activities that a typical wealthy family participated in in 1846.  </Distractor>
+         <Key value="warn_and_persuade" > To warn that even one drink can lead step by step to ruin, and so persuade people not to drink.  </Key>
+  <Distractor value="no_consequences"   > To show that drinking has no lasting consequences for a man who keeps to a moderate amount.      </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
