@@ -249,9 +249,9 @@ rows:
      submitCount — the same shape every other assessed item here has.
 
      Spelled out rather than written as <SimpleTextSelection
-     mode="graded">: the terse tag drops maxAttempts on the floor, and
-     an assessment item that quietly allows unlimited attempts is worse
-     than three extra lines of XML.
+     mode="graded"> so that the three items and their shared heading sit
+     on one screen; the terse tag forwards the same problem attributes (see
+     the antecedent item below) and is the right form for a single item.
      ============================================================ -->
 
 <!-- Three highlight questions on the key sentence. The verb is a single word;
@@ -388,12 +388,20 @@ whole phrase together.
 <Done id="womens_sphere_gram_structure_done" label="I understand" />
 </Vertical>
 
-<!-- Highlight the sentence that first NAMES the ideology "the very ideology"
-     points back to. Only one sentence in the passage names it ("cult of
-     domesticity" / "cult of true womanhood"), so the target is unambiguous
-     even though the passage spans several paragraphs. -->
-<SimpleTextSelection id="womens_sphere_gram_antecedent" mode="graded" title="Find the Antecedent" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
-"The very ideology that defined their place in the home" points back to an ideology the text has already named. Find the earlier sentence that first gives it that name — the one that calls it the "cult of domesticity" — and highlight the entire sentence, from its first word through its final period.
+<!-- The antecedent of "the very ideology". Only one sentence in the passage
+     names the ideology ("cult of domesticity" / "cult of true womanhood"), so
+     the target is unambiguous even though the passage spans several
+     paragraphs. The passage is split into sentences (separatorRegexp) and a
+     sentence is the unit the student clicks: the answer is a whole sentence,
+     and sweeping thirty words to a pixel-exact period is a test of dragging,
+     not of reading.
+
+     The pattern is `\."?` and the attribute is single-quoted so the double
+     quote can sit inside it. The target sentence ends `womanhood."` — the
+     closing quote follows the period, so a bare `\.` would leave that quote at
+     the start of the next chunk and the answer would cross a chunk boundary. -->
+<SimpleTextSelection id="womens_sphere_gram_antecedent" mode="graded" title="Find the Antecedent" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed" separatorRegexp='\."?'>
+"The very ideology that defined their place in the home" points back to an ideology the text has already named. Click the sentence that first names it.
 ---
 [Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the "cult of domesticity," or the "cult of true womanhood."] These ideas developed in tandem with industrialization, the market revolution, and the Second Great Awakening. In reality, they applied primarily to upper-class and middle-upper-class women. In the era of revivalism and reform, Americans understood the family and home as the hearthstones of civic virtue and moral influence. Women were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic. Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
 ---

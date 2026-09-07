@@ -246,7 +246,7 @@ Danielle: Wait — which ideology is it even talking about?
 
 ::womens_sphere_gram_antecedent [display=target:womens_sphere_pane label="Find the antecedent"]
 
-Professor Booker: Good question. We need the antecedent. On the right, find the earlier sentence that NAMES the ideology and highlight the whole thing, start to finish.
+Professor Booker: Good question. We need the antecedent. On the right, click the earlier sentence that names the ideology.
 
 --- wait @womens_sphere_gram_antecedent_problem.submitCount > 0 ---
 
