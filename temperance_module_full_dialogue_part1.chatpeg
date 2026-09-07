@@ -66,9 +66,11 @@ Danielle: Good to know. OK — here's Professor Booker.
 Part 2: Explore the Topic Background [id=part2]
 -----------------------------------------------
 
+Professor Booker: Before we read, take a look at some words you'll meet in the texts. I'm not grading this — I just want to know how familiar each one is. [face=calm]
+
 ::temperance_vks [display=target:temperance_pane label="How familiar are these words?"]
 
-Professor Booker: Before we read, take a look at some words you'll meet in the texts. I'm not grading this — I just want to know how familiar each one is. Fill out the table on the right. [face=calm]
+Professor Booker: Fill out the table on the right.
 
 --- wait Object.keys(@temperance_vks_grid.value).length >= 8 ---
 
