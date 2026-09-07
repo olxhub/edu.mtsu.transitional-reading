@@ -1,6 +1,6 @@
 <!--
 ---
-description: "READ 1000 — Women's Sphere (FULL SBA / SBA B): the SBA B build of the READ 1000 module, the exact structural twin of sba/temperance_A with new texts and items. Across five parts, a study group (peers Danielle, Joe, Karis; reading instructor Professor Booker) works through three texts — an American Yawp Ch. 11 textbook excerpt on women and the 'cult of domesticity', the 1850 engraving 'The Sphere of Woman', and a magazine article on today's 'tradwife' trend the instructor hands out on paper — building toward PULLING IT TOGETHER, a four-or-five-sentence synthesis, by rating vocabulary, close-reading and highlighting, checking a peer's notes, answering comprehension questions, and analyzing the image, then finally writing four or five sentences comparing the 1800s ideal of womanhood with today's 'tradwife' trend. Tabbed design: a Discussion tab holding the scripted conversation beside the activity pane — the conversation opens each activity into the pane with a target embed, which also leaves a labelled, clickable marker in the transcript at the point the activity happened — then one tab per reading (Professor Hale's lecture, the four American Yawp parts, the engraving). Companion to sba/temperance_A."
+description: "READ 1000 — Women's Sphere (FULL SBA): one of the two parallel forms of the READ 1000 module. Across five parts, a study group (peers Danielle, Joe, Karis; reading instructor Professor Booker) works through three texts — an American Yawp Ch. 11 textbook excerpt on women and the 'cult of domesticity', the 1850 engraving 'The Sphere of Woman', and a magazine article on today's 'tradwife' trend the instructor hands out on paper — building toward PULLING IT TOGETHER, a four-or-five-sentence synthesis, by rating vocabulary, close-reading and highlighting, checking a peer's notes, answering comprehension questions, and analyzing the image, then finally writing four or five sentences comparing the 1800s ideal of womanhood with today's 'tradwife' trend. Tabbed design: a Discussion tab holding the scripted conversation beside the activity pane — the conversation opens each activity into the pane with a target embed, which also leaves a labelled, clickable marker in the transcript at the point the activity happened — then one tab per reading (Professor Hale's lecture, the four American Yawp parts, the engraving). Pulling It Together is the last screen the conversation opens in the pane. Companion to the parallel Temperance form."
 category: writing
 index: 58
 lang: en-Latn-US
@@ -8,11 +8,11 @@ lang: en-Latn-US
 -->
 
 <!--
-  READ 1000 — Women's Sphere — FULL SBA / SBA B (Part 1)
+  READ 1000 — Women's Sphere — FULL SBA (Part 1)
 
-  The SBA B build. It is the exact structural twin of the SBA A build
-  (sba/temperance_A): same tabbed interface, same UseHistory-driven pane, same
-  attention cues, same five-part arc. What changes is the content —
+  The Women's Sphere form. Its tabbed interface, its UseHistory-driven pane, its
+  attention cues, and its five-part arc are the ones the parallel form has; what
+  differs is the content —
 
     * Part 3 (Main Readings) — the textbook (American Yawp Ch. 11, "The Cotton
       Revolution": women, the family, and the "cult of domesticity"), read in
@@ -27,7 +27,7 @@ lang: en-Latn-US
       sentences comparing the 1800s ideal of womanhood with today's "tradwife"
       trend), and a wrap-up.
 
-  Course-team departures from the storyboard (carried over from SBA A):
+  Course-team departures from the storyboard, in both forms:
     * "Joe's notes" (the note-checking matrix) tests the TEXTBOOK.
     * Professor Booker is the READING instructor.
 
@@ -47,8 +47,8 @@ lang: en-Latn-US
   The magazine article has no tab — it is a paper handout (see tmb_article_read).
 
   Activity screens live in temperance_b_full_activities_part1.olx. Ids are
-  prefixed `tmb_` and the namespace is `womens_sphere`, so this build coexists
-  with the SBA A (`tmf_`) and faithful (`tmod_`) builds.
+  prefixed `tmb_` and the namespace is `womens_sphere`, so this form's ids never
+  collide with the parallel form's.
 
   How the pane is driven. The conversation opens each activity screen with a
   TARGET EMBED in the chatpeg —
@@ -81,10 +81,12 @@ lang: en-Latn-US
          never re-fires. Mounted out here it stays alive for the whole session,
          so mode="each" means each visit. -->
 
-    <!-- HACK carried over from SBA A: the DefinitionKey(...) normalization in
-         these watch expressions papers over the arrow-era assumption that pane
-         values are bare screen names; target embeds write qualified refs. Not
-         long-term stable; see SBA A notes. -->
+    <!-- HACK: the DefinitionKey(...) normalization in these watch expressions is
+         NOT long-term stable and should NOT be copied into other courses. It papers
+         over the arrow-era assumption that pane values are bare screen names; target
+         embeds write qualified refs. The intended fix is cues riding the embed itself
+         (flash=/focus= on the ::screen [display=target:...] line) so no pane-value
+         comparison exists at all — see bugs.md. We ship this and clean up later. -->
     <Trigger id="tmb_intro_cue"      watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_intro')"      mode="each">
       <Flash id="tmb_intro_flash"      target="tmb_intro" />
     </Trigger>
@@ -175,11 +177,12 @@ lang: en-Latn-US
     <SplitPanel id="tmb_split" sizes="40, 60">
 
       <StartPane>
-        <!-- height is a FIXED 460px, not the "flex-1" default — same reason as
-             SBA A: this transcript runs long, and with flex-1 the chat grows
-             taller with every message and pushes the pane off-screen. The
-             attribute has to sit on <Chat>, NOT on <StartPane> (SplitPanel drops
-             attributes on the pane tag). -->
+        <!-- height is a FIXED 460px, not the "flex-1" default. This transcript
+             runs long, and with flex-1 there is nothing upstream constraining the
+             pane, so the chat grows taller with every message and pushes the
+             activity pane off the bottom of the screen. A fixed box scrolls
+             internally instead. The attribute has to sit on <Chat>, NOT on
+             <StartPane> (SplitPanel drops attributes on the pane tag). -->
         <Chat id="tmb_chat"
               src="temperance_b_full_dialogue_part1.chatpeg"
               cast="characters.cast"

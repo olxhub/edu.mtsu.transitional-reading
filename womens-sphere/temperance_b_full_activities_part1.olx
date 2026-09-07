@@ -1,6 +1,6 @@
 <!--
 ---
-description: "Activity bank for the READ 1000 Women's Sphere module (SBA B). Holds the Main Content screens the study-group conversation pulls into the right-hand panel — the vocabulary self-check, Professor Hale's brief background lecture, the American Yawp textbook excerpt (revealed in chunks), the note-checking table, the close-reading / grammar tasks, the reading-comprehension check, the 'Sphere of Woman' engraving, and the cue to read the magazine article the instructor hands out on paper — plus the vocabulary, cult-of-domesticity, and article questions that appear inline in the chat. This is the SBA B counterpart to sba/temperance_A: same structure and interface, new texts and items. Launchable so it can be previewed and edited on its own."
+description: "Activity bank for the READ 1000 Women's Sphere module. Holds the Main Content screens the study-group conversation pulls into the right-hand panel — the vocabulary self-check, the American Yawp textbook excerpt (revealed in four chunks), the note-checking table, the close-reading / grammar tasks, the full excerpt for the reading-comprehension check, the 'Sphere of Woman' engraving, the cue to read the magazine article the instructor hands out on paper, the then-and-now sort, and Pulling It Together — plus Professor Hale's background lecture (its own tab) and the vocabulary, cult-of-domesticity, comprehension, and article questions that appear inline in the chat. Launchable so it can be previewed and edited on its own."
 category: writing
 index: 57
 lang: en-Latn-US
@@ -8,15 +8,15 @@ lang: en-Latn-US
 -->
 
 <!--
-READ 1000 — Women's Sphere / SBA B  (Activity bank)
+READ 1000 — Women's Sphere  (Activity bank)
 
-The SBA B build of the READ 1000 module. It keeps the exact structure and
-interface of the SBA A build (sba/temperance_A), swapping in a new textbook
-chapter (American Yawp Ch. 11, "The Cotton Revolution" — women, the family,
-and the "cult of domesticity"), a new period image ("The Sphere of Woman,"
-Godey's Lady's Book, 1850), a new magazine article ("The Unglamorous Truth
-About the Average Tradwife," The Atlantic, 2026), and a fresh set of
-assessment items. One deliberate departure carried over from SBA A:
+The Women's Sphere form of the READ 1000 module. It carries the structure and
+interface the parallel form has over its own texts — the American Yawp chapter
+(Ch. 11, "The Cotton Revolution" — women, the family, and the "cult of
+domesticity"), a period image ("The Sphere of Woman," Godey's Lady's Book,
+1850), a magazine article ("The Unglamorous Truth About the Average Tradwife,"
+The Atlantic, 2026) — and its own set of assessment items. One deliberate
+departure, in both forms:
   * "Joe's notes" (the note-checking matrix) tests the TEXTBOOK excerpt.
 
 Layout (see temperance_b_full_sba_part1.olx). The tab strip is the top level;
@@ -38,9 +38,8 @@ This FULL build carries the module through all five parts: textbook, image,
 article, a then/now synthesis, and Pulling It Together — the culminating
 four-or-five-sentence synthesis.
 
-Ids are prefixed `tmb_` (temperance module B) and the namespace is
-`womens_sphere`, so this build coexists with the SBA A build's `tmf_` / the
-faithful build's `tmod_` ids.
+Ids are prefixed `tmb_` and the namespace is `womens_sphere`, so this form's
+ids never collide with the parallel form's.
      -->
 
 <Vertical id="temperance_b_full_activities_part1" title="Women's Sphere (Activities)" launchable="true">
@@ -342,7 +341,8 @@ all: Right — the object is the whole phrase "the very ideology that defined th
 
      "Determiner," not "premodifier" — it is the category the course uses for
      the pointing word(s) in front of the head noun. "the very" points at one
-     particular ideology, so it does the same job "Such" did in SBA A. -->
+     particular ideology, so it does the same job "Such" does in the parallel
+     form. -->
 <Vertical id="tmb_grammar_np">
 <Markdown id="tmb_grammar_np_md">
 ## Inside the Noun Phrase
