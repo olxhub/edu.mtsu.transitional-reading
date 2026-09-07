@@ -708,10 +708,10 @@ Look at the highlighted sentence and choose the best definition for **public sph
 > "In the **public sphere**, women increasingly challenged the moral direction
 > of this new American society."
 </Markdown>
-         <Key value="public_life"     > The shared world of work, politics, and community life outside the home. </Key>
   <Distractor value="private_home"    > The private world of the household and family.                          </Distractor>
   <Distractor value="town_square"     > A large public square or park in the center of a town.                  </Distractor>
   <Distractor value="shared_opinion"  > A group of people who all share the same opinion.                       </Distractor>
+         <Key value="public_life"     > The shared world of work, politics, and community life outside the home. </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -742,9 +742,9 @@ What words could take the place of **in tandem with** — but keep the meaning t
 > "These ideas developed **in tandem with** industrialization, the market
 > revolution, and the Second Great Awakening."
 </Markdown>
-         <Key value="alongside"      > together with; at the same time as </Key>
-  <Distractor value="against"        > in opposition to; against          </Distractor>
   <Distractor value="before"         > long before; ahead of              </Distractor>
+  <Distractor value="against"        > in opposition to; against          </Distractor>
+         <Key value="alongside"      > together with; at the same time as </Key>
   <Distractor value="instead"        > instead of; in place of            </Distractor>
 </ChoiceInput>
 </KeyGrader>
@@ -851,8 +851,8 @@ it? **Select all that apply.**
 Each member of your group wrote a one-sentence description of the cult of
 domesticity. Read them and choose the **best** one.
 </Markdown>
-  <Distractor value="danielle_reform_movement"   > **Danielle:** The name for the movement that sent middle-class women out of their homes to join antislavery and reform societies.        </Distractor>
          <Key value="joe_home_ideal"             > **Joe:** The belief that a true woman's proper place was the home, where she was to be pious, pure, submissive, and domestic, and to raise her children in virtue. </Key>
+  <Distractor value="danielle_reform_movement"   > **Danielle:** The name for the movement that sent middle-class women out of their homes to join antislavery and reform societies.        </Distractor>
   <Distractor value="karis_laws_all_women"       > **Karis:** A set of laws that required all women, rich and poor, to stay home and manage their households.                                     </Distractor>
 </ChoiceInput>
 </KeyGrader>
@@ -883,8 +883,8 @@ Choose the best definition for **domestic** as it's used here:
 
 > "They were to be pious, pure, submissive, and **domestic**."
 </Markdown>
-         <Key value="home_focused"    > Devoted to the home and family life.               </Key>
   <Distractor value="made_in_country" > Made or produced inside one's own country.        </Distractor>
+         <Key value="home_focused"    > Devoted to the home and family life.               </Key>
   <Distractor value="tame_animal"     > Tame or trained, like a household animal.         </Distractor>
   <Distractor value="strict_rules"    > Strict and demanding about rules.                 </Distractor>
 </ChoiceInput>
@@ -922,10 +922,10 @@ Choose the best definition for **ideology**:
 > "Yet women took the very **ideology** that defined their place in the home and
 > used it to fashion a public role for themselves."
 </Markdown>
-         <Key value="belief_system"   > A set of beliefs and ideas, especially about how society should work. </Key>
   <Distractor value="single_feeling"  > A single strong feeling or emotion.                                  </Distractor>
   <Distractor value="government_law"   > A law passed by the government.                                      </Distractor>
   <Distractor value="mind_study"      > The scientific study of how the mind works.                          </Distractor>
+         <Key value="belief_system"   > A set of beliefs and ideas, especially about how society should work. </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -954,9 +954,9 @@ What words could take the place of **en masse** — but keep the meaning the sam
 > "…enabled white middle-class women, especially in the North, to leave their
 > homes **en masse**…"
 </Markdown>
-         <Key value="all_together"    > in large numbers, all together </Key>
   <Distractor value="one_at_a_time"   > one at a time, slowly          </Distractor>
   <Distractor value="in_secret"       > in secret, without being seen  </Distractor>
+         <Key value="all_together"    > in large numbers, all together </Key>
   <Distractor value="by_force"        > by force, against their will   </Distractor>
 </ChoiceInput>
 </KeyGrader>
@@ -986,10 +986,10 @@ Choose the best definition for **moralizing** as it's used here:
 > "Southern women were more often instructed to offer a calming, **moralizing**
 > influence on husbands and children…"
 </Markdown>
-         <Key value="teaching_right"  > Encouraging good behavior and right living.       </Key>
   <Distractor value="discouraging"    > Lowering someone's confidence; discouraging them. </Distractor>
   <Distractor value="guilt_tripping"  > Making people feel guilty on purpose.             </Distractor>
   <Distractor value="cheering_up"     > Boosting a team's spirit before a game.           </Distractor>
+         <Key value="teaching_right"  > Encouraging good behavior and right living.       </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1018,8 +1018,8 @@ Choose the best definition for **euphemism**:
 > "Female virtue, particularly in the South, came to be understood largely as a
 > **euphemism** for sexual purity."
 </Markdown>
-         <Key value="polite_substitute" > A mild or polite word used in place of a harsher or more direct one. </Key>
   <Distractor value="opposite_meaning"   > A word that means the exact opposite of what it says.                </Distractor>
+         <Key value="polite_substitute" > A mild or polite word used in place of a harsher or more direct one. </Key>
   <Distractor value="foreign_word"       > A word borrowed from another language.                               </Distractor>
   <Distractor value="short_lesson"       > A short saying that teaches a lesson.                                </Distractor>
 </ChoiceInput>
@@ -1087,10 +1087,10 @@ and turn it into a **public** role?
 <Markdown>
 The article is about **tradwives.** First — what does **tradwife** mean?
 </Markdown>
-         <Key value="traditional_homemaker" > A woman who embraces a traditional homemaker role — staying home to cook, keep house, and raise children. </Key>
   <Distractor value="trades_stocks"         > A woman who trades or invests money for a living.                                                       </Distractor>
   <Distractor value="working_mother"        > A mother who works full-time outside the home while raising children.                                  </Distractor>
   <Distractor value="marriage_activist"     > A woman who campaigns for traditional marriage laws.                                                    </Distractor>
+         <Key value="traditional_homemaker" > A woman who embraces a traditional homemaker role — staying home to cook, keep house, and raise children. </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1147,8 +1147,8 @@ of us found a sentence from the article that gives it context. Who picked the
 Which is the **best summary** of the article's first paragraph (about how
 "tradwives" appeared)?
 </Markdown>
-         <Key value="what_and_why"        > A few years ago, images of glamorous stay-at-home "tradwives" spread across social media, and the trend became a flashpoint — praised on the right as proof women want to stay home and attacked on the left as a regressive agenda. </Key>
   <Distractor value="image_only"          > Tradwives are women with glossy hair who post videos of themselves cooking meat and holding calm babies.                                                                                                                    </Distractor>
+         <Key value="what_and_why"        > A few years ago, images of glamorous stay-at-home "tradwives" spread across social media, and the trend became a flashpoint — praised on the right as proof women want to stay home and attacked on the left as a regressive agenda. </Key>
   <Distractor value="overstated"          > All of a sudden, tradwives took over everyone's phones and became the single most important issue in American politics.                                                                                                    </Distractor>
   <Distractor value="opinion"             > Tradwives are one of the most fascinating internet trends of the last few years, and it's easy to see why so many people admire them.                                                                                   </Distractor>
 </ChoiceInput>
@@ -1177,9 +1177,9 @@ Which is the **best summary** of the article's first paragraph (about how
 The article says many couples want "an **egalitarian** division of labor." What
 does **egalitarian** mean?
 </Markdown>
-         <Key value="based_on_equality" > Based on equality — both partners sharing the work equally. </Key>
   <Distractor value="by_earnings"       > Decided by whoever earns the most money.                    </Distractor>
   <Distractor value="traditional"       > Following traditional roles, with the wife at home.         </Distractor>
+         <Key value="based_on_equality" > Based on equality — both partners sharing the work equally. </Key>
   <Distractor value="both_must_work"    > Requiring both partners to work outside the home.           </Distractor>
 </ChoiceInput>
 </KeyGrader>
@@ -1270,9 +1270,9 @@ What does the engraving show?
 Why would a popular women's magazine publish an image like this, titled "The
 Sphere of Woman"?
 </Markdown>
+         <Key value="promote_ideal"       > To hold up the home as woman's proper place — to promote the ideal of domesticity. </Key>
   <Distractor value="record_real_family" > To record what one specific real family looked like in 1850.                        </Distractor>
   <Distractor value="advertise_toys"      > To advertise the toys and furniture shown in the scene.                             </Distractor>
-         <Key value="promote_ideal"       > To hold up the home as woman's proper place — to promote the ideal of domesticity. </Key>
   <Distractor value="encourage_public"    > To encourage women to leave the home for public life.                               </Distractor>
 </ChoiceInput>
 </KeyGrader>
