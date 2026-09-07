@@ -120,6 +120,11 @@ Danielle: First one — what does "commerce" mean here?
 // and the conversation stops there forever. The gates that already read
 // `.submitCount` (the grammar highlights, the comprehension questions) are
 // the pattern; the rest now match it.
+//
+// Peers discuss an answer only AFTER its item is submitted. A beat that
+// states or strongly cues an answer before the item is contamination in an
+// instrument: Karis's reading of the lithograph comes after the observation
+// item, not before it, and lead-ins say WHERE to look, not what to find.
 
 ::tmf_q_commerce_screen
 
@@ -157,7 +162,7 @@ Karis: Now I'm kind of stuck. The people here are middle-class evangelicals — 
 
 Danielle: From the lecture, evangelicals are a group within Protestantism who emphasized the Bible and sharing their faith — not one specific church or organization. The groups from the last paragraph, like the American Bible Society, were evangelical.
 
-Joe: I'm interested in what the textbook says about women. I can imagine how, back then, men drinking heavily caused problems that really affected women's lives.
+Joe: I'm interested in what the textbook says about women. I want to see where that goes.
 
 Professor Booker: Now a term that's special to history. Look at the chapter title — can you guess it?
 
@@ -298,7 +303,7 @@ Joe: This next one I remember — scroll down to part 2, the bit about who had t
 
 --- wait @tmf_comp_q2.submitCount > 0 ---
 
-Karis: Part 3 now. Watch what the reformers were asking for at the start versus later on.
+Karis: Part 3 now — the part about what the reformers were asking for.
 
 ::tmf_comp_q3
 
@@ -322,13 +327,13 @@ Danielle: Half of what they drank twenty years earlier. That's the number I'd pu
 
 Professor Booker: Nice work on the chapter. Before we bring in a modern article, let's look at an image from the temperance era itself — it connects directly to what we just read. It's on the right --->
 
-Karis: Whoa — it's like a staircase of a man's whole life, going up and then crashing down.
-
 Professor Booker: Look closely at the nine steps, then answer.
 
 ::tmf_litho_observe_screen
 
 --- wait @tmf_litho_observe_problem.submitCount > 0 ---
+
+Karis: Whoa — it's like a staircase of a man's whole life, going up and then crashing down.
 
 Joe: Grim. Why would the temperance folks make something like this?
 
@@ -378,7 +383,7 @@ Professor Booker: Now step back from the details. What is the article's main poi
 
 --- wait @tmf_article_thesis_problem.submitCount > 0 ---
 
-Danielle: So underneath, the old movement and today's movement are actually pretty different.
+Danielle: OK — that's all three texts. Time to put them side by side.
 
 Part 4: Building Understanding and Synthesizing [id=part4]
 ----------------------------------------------------------
