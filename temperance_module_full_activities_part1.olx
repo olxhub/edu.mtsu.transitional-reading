@@ -1,6 +1,6 @@
 <!--
 ---
-description: "Activity bank for the READ 1000 Temperance module. Holds the Main Content screens the study-group conversation pulls into the right-hand panel — the vocabulary self-check, Professor Hale's brief background lecture, the American Yawp textbook excerpt (revealed in three chunks), the note-checking table, the close-reading / grammar tasks, the reading-comprehension check, the lithograph, and the cue to read the magazine article the instructor hands out on paper — plus the vocabulary, Benevolent Empire, and article questions that appear inline in the chat. Launchable so it can be previewed and edited on its own."
+description: "Activity bank for the READ 1000 Temperance module. Holds the Main Content screens the study-group conversation pulls into the right-hand panel — the vocabulary self-check, the American Yawp textbook excerpt (revealed in four chunks), the note-checking table, the close-reading / grammar tasks, the full excerpt for the reading-comprehension check, the lithograph, the cue to read the magazine article the instructor hands out on paper, the then-and-now sort, and Pulling It Together — plus Professor Hale's background lecture (its own tab) and the vocabulary, Benevolent Empire, comprehension, and article questions that appear inline in the chat. Launchable so it can be previewed and edited on its own."
 category: writing
 index: 55
 lang: en-Latn-US
@@ -20,9 +20,9 @@ level; its first tab, "Main Content," is the session itself:
   * Left  pane : the scripted small-group conversation
                  (temperance_module_full_dialogue_part1.chatpeg). Peers Danielle,
                  Joe, and Karis and the reading instructor Professor Booker.
-  * Right pane : a UseHistory (tmf_main) the conversation drives via
-                 `tmf_main <- <id>` set commands (the new chatpeg assignment
-                 arrow; the old `->` is retired).
+  * Right pane : a UseHistory (tmf_main) the conversation drives with
+                 target embeds — `::screen [display=target:tmf_main ...]`,
+                 explained in the chatpeg's header comment.
 Each READING screen below — the lecture, the four textbook parts, the
 lithograph — also gets its own tab, via <Use ref="..."> of the same block, so a
 student can reopen it (with their own highlights) at any point.

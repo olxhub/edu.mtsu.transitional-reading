@@ -1,6 +1,6 @@
 <!--
 ---
-description: "READ 1000 — Temperance (FULL SBA): the complete Temperance module, extending the storyboard's authored portion through the parts it left 'in progress'. Across five parts, a study group (peers Danielle, Joe, Karis; reading instructor Professor Booker) works through three texts — an American Yawp textbook excerpt, N. Currier's 1846 lithograph 'The Drunkard's Progress', and a magazine article the instructor hands out on paper — building toward PULLING IT TOGETHER, a four-or-five-sentence synthesis of all three texts, by rating vocabulary, close-reading and highlighting, checking a peer's notes, answering comprehension questions, and analyzing the image, then finally writing four or five sentences comparing the historic temperance movement (the 1800s) with today's approaches to drinking less. Tabbed design: a Main Content tab holding the scripted conversation beside the activity pane — the conversation opens each activity into the pane with a target embed, which also leaves a labelled, clickable marker in the transcript at the point the activity happened — then one tab per reading (Professor Hale's lecture, the four American Yawp parts, the lithograph), and the Pulling It Together tab. Companion to the storyboard-faithful build (sba/temperance_module_sba)."
+description: "READ 1000 — Temperance (FULL SBA): the complete Temperance module, extending the storyboard's authored portion through the parts it left 'in progress'. Across five parts, a study group (peers Danielle, Joe, Karis; reading instructor Professor Booker) works through three texts — an American Yawp textbook excerpt, N. Currier's 1846 lithograph 'The Drunkard's Progress', and a magazine article the instructor hands out on paper — building toward PULLING IT TOGETHER, a four-or-five-sentence synthesis of all three texts, by rating vocabulary, close-reading and highlighting, checking a peer's notes, answering comprehension questions, and analyzing the image, then finally writing four or five sentences comparing the historic temperance movement (the 1800s) with today's approaches to drinking less. Tabbed design: a Main Content tab holding the scripted conversation beside the activity pane — the conversation opens each activity into the pane with a target embed, which also leaves a labelled, clickable marker in the transcript at the point the activity happened — then one tab per reading (Professor Hale's lecture, the four American Yawp parts, the lithograph). Pulling It Together is the last screen the conversation opens in the pane. Companion to the storyboard-faithful build (sba/temperance_module_sba)."
 category: writing
 index: 56
 lang: en-Latn-US
@@ -36,7 +36,6 @@ lang: en-Latn-US
     Prof. Hale's Lecture    \
     Textbook 1..4           |  the readings, each on its own tab, so a student can
     The Drunkard's Progress /  reopen any one of them at any point
-    Pulling It Together     the culminating task and the material to build it from
 
   Every reading tab is a <Use ref="..."> of the very same block the conversation
   parks in the activity pane, NOT a second copy: one block, one state, two doors.
