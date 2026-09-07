@@ -280,7 +280,7 @@ Highlight the verb — a single word.
 Such intrusions by the Protestant middle class [exacerbated] class, ethnic, and religious tensions.
 ---
 all: Right — "exacerbated" is the verb: it's what the intrusions did.
-: The verb is the action word — what happened in this sentence?
+: The verb is the action word — here "exacerbated," what the intrusions did.
 </TextSelectionInput>
 </TextSelectionGrader>
 </CapaProblem> <!-- tmf_grammar_svo_verb_problem -->
@@ -293,7 +293,7 @@ Highlight the subject — the entire subject phrase, every word of it.
 [Such intrusions by the Protestant middle class] exacerbated class, ethnic, and religious tensions.
 ---
 all: Right — the subject is the whole phrase "Such intrusions by the Protestant middle class." Its head noun is "intrusions"; the rest of the phrase tells you which intrusions.
-: The subject is who or what does the action. Find the noun that did the exacerbating, then take the whole phrase built around it.
+: The subject is who or what does the action — the whole phrase "Such intrusions by the Protestant middle class," built around the noun "intrusions."
 </TextSelectionInput>
 </TextSelectionGrader>
 </CapaProblem> <!-- tmf_grammar_svo_subject_problem -->
@@ -309,7 +309,7 @@ Highlight the direct object — the entire object phrase, every word of it.
 Such intrusions by the Protestant middle class exacerbated [class, ethnic, and religious tensions]{.}
 ---
 all: Right — the object is the whole phrase "class, ethnic, and religious tensions." Its head noun is "tensions"; the words in front of it say which tensions.
-: What did the intrusions exacerbate? Find that noun, then take the whole phrase built around it.
+: The object is what the intrusions exacerbated — the whole phrase "class, ethnic, and religious tensions," built around the noun "tensions."
 </TextSelectionInput>
 </TextSelectionGrader>
 </CapaProblem> <!-- tmf_grammar_svo_object_problem -->
@@ -382,7 +382,7 @@ sentence, you hold each whole phrase together.
 In response to the perception that heavy drinking was associated with men who abused, abandoned, or neglected their family obligations, women formed a significant presence in societies dedicated to eradicating liquor. Temperance became a hallmark of middle-class respectability among both men and women and developed into a crusade with a visible class character. [Temperance, like many other reform efforts, was championed by the middle class and threatened to intrude on the private lives of lower-class workers, many of whom were Irish Catholics.] Such intrusions by the Protestant middle class exacerbated class, ethnic, and religious tensions. Still, while the temperance movement made less substantial inroads into lower-class workers' drinking culture, the movement was still a great success for reformers.
 ---
 all: Yes — that earlier sentence describes the intrusion (the middle class threatening to intrude on lower-class, largely Irish Catholic workers) that "Such intrusions" refers back to.
-: "Such intrusions" must point to an intrusion already named. Find the sentence that describes the middle class intruding on workers' lives.
+: "Such intrusions" points to an intrusion already named — the sentence just before it, where temperance "threatened to intrude on the private lives of lower-class workers."
 </SimpleTextSelection>
 
 
@@ -686,8 +686,12 @@ Here is the finished work — the comparison you built from all three texts.
      well as on the chosen value. Keyed on the value alone, a student with a
      Check button in front of them could click each option in turn and read
      which one comes back "Yes" before ever submitting — the whole item,
-     answered for them, under a rule that allows one attempt. The feedback
-     text is unchanged; it is now the explanation that follows the answer. -->
+     answered for them, under a rule that allows one attempt.
+
+     Register: each line is the explanation that follows a submission, not a
+     hint toward a second try — there is none. A wrong-choice line says why
+     that option misses and what the key is; nothing tells the student to
+     look again. -->
 
 <Vertical id="tmf_q_commerce_screen">
 <CapaProblem id="tmf_q_commerce_problem" title="Vocabulary: commerce" maxAttempts="1">
@@ -707,13 +711,13 @@ Look at the highlighted sentence and choose the best definition for **commerce**
 </KeyGrader>
 
 <Markdown when="@tmf_q_commerce.value === 'church_formation' &amp;&amp; @tmf_q_commerce_problem.submitCount &gt; 0">
-*Not quite — that's the religious half of the paragraph. "Large-scale commerce" sits next to "urban growth" — both are economic changes the Industrial Revolution brought.*
+*That's the religious half of the paragraph. "Large-scale commerce" sits next to "urban growth" — both are economic changes the Industrial Revolution brought, and commerce is the trade: buying and selling.*
 </Markdown>
 <Markdown when="@tmf_q_commerce.value === 'population_study' &amp;&amp; @tmf_q_commerce_problem.submitCount &gt; 0">
-*Not quite — that's the "urban growth" half of the sentence. "Commerce" is the other half — trade, not counting people.*
+*That's the "urban growth" half of the sentence. "Commerce" is the other half — buying and selling, not counting people.*
 </Markdown>
 <Markdown when="@tmf_q_commerce.value === 'social_laws' &amp;&amp; @tmf_q_commerce_problem.submitCount &gt; 0">
-*Not quite — laws come later in the chapter, with prohibition. "Commerce" names the economic activity itself, not the rules made about it.*
+*Laws come later in the chapter, with prohibition. "Commerce" names the economic activity itself — buying and selling — not the rules made about it.*
 </Markdown>
 <Markdown when="@tmf_q_commerce.value === 'buying_selling' &amp;&amp; @tmf_q_commerce_problem.submitCount &gt; 0">
 *Yes — commerce is buying and selling. "Large-scale commerce" means trade grown big enough to reshape whole cities.*
@@ -742,13 +746,13 @@ Choose the best definition for **antidote**:
 <!-- The peers unpack the two "anecdote" definitions and the medicine reading in
    the dialogue right after this, so the feedback here stays short. -->
 <Markdown when="@tmf_q_antidote.value === 'anecdote_story' &amp;&amp; @tmf_q_antidote_problem.submitCount &gt; 0">
-*Not quite — that's an **anecdote** — one letter off, an entirely different word.*
+*That's an **anecdote** — one letter off, an entirely different word. An antidote works against a harm; here, against the insecurities of a changing world.*
 </Markdown>
 <Markdown when="@tmf_q_antidote.value === 'unpublished_writing' &amp;&amp; @tmf_q_antidote_problem.submitCount &gt; 0">
-*Not quite — also a definition of some other word — nothing in "antidote" is about writing.*
+*A definition of some other word — nothing in "antidote" is about writing. An antidote works against a harm; here, against the insecurities of a changing world.*
 </Markdown>
 <Markdown when="@tmf_q_antidote.value === 'poison_medicine' &amp;&amp; @tmf_q_antidote_problem.submitCount &gt; 0">
-*Not quite — a real meaning of the word, but not this one: the Awakening was no literal medicine. Read it figuratively.*
+*A real meaning of the word, but the literal one: the Awakening was no medicine. Here the sense is figurative — something that works against a harm, the insecurities of a changing world.*
 </Markdown>
 <Markdown when="@tmf_q_antidote.value === 'counteracts_harm' &amp;&amp; @tmf_q_antidote_problem.submitCount &gt; 0">
 *Right — the figurative sense: something that works against a harm. Here, against the insecurities of a changing world.*
@@ -774,13 +778,13 @@ Choose the best definition for **proliferated**:
 </KeyGrader>
 
 <Markdown when="@tmf_q_proliferated.value === 'merged_into_one' &amp;&amp; @tmf_q_proliferated_problem.submitCount &gt; 0">
-*Not quite — nearly the opposite: these societies multiplied and spread rather than folding into one body.*
+*Nearly the opposite: to proliferate is to multiply. These societies spread rather than folding into one body.*
 </Markdown>
 <Markdown when="@tmf_q_proliferated.value === 'decreased_influence' &amp;&amp; @tmf_q_proliferated_problem.submitCount &gt; 0">
-*Not quite — "Rapidly" is right; the direction isn't. Between 1815 and 1861 the societies were growing, not fading.*
+*"Rapidly" is right; the direction isn't. To proliferate is to increase fast — between 1815 and 1861 the societies were multiplying, not fading.*
 </Markdown>
 <Markdown when="@tmf_q_proliferated.value === 'moved_to_cities' &amp;&amp; @tmf_q_proliferated_problem.submitCount &gt; 0">
-*Not quite — that's the urban growth from the paragraph before. "Proliferated" is about number, not location.*
+*That's the urban growth from the paragraph before. "Proliferated" is about number, not location: the societies increased rapidly.*
 </Markdown>
 <Markdown when="@tmf_q_proliferated.value === 'increased_rapidly' &amp;&amp; @tmf_q_proliferated_problem.submitCount &gt; 0">
 *Yes — to proliferate is to multiply fast. The societies didn't just appear; they kept appearing.*
@@ -808,17 +812,17 @@ What is the best definition of **galvanized**?
 </KeyGrader>
 
 <!-- Karis and Danielle name the figurative definition in the dialogue that
-   follows, so these lines only have to get a student there. The old options
+   follows, so these lines stay short. The old options
    were all worded around "electric shock," which sent students hunting for a
    literal current instead of reading the sentence; the shock framing is gone. -->
 <Markdown when="@tmf_q_galvanized.value === 'gradually_built' &amp;&amp; @tmf_q_galvanized_problem.submitCount &gt; 0">
-*Not quite — watch the pace. Galvanized support arrives all at once; something that builds up slowly is the opposite.*
+*The pace is wrong. To galvanize is to spur into action — the support was energized all at once, not built up slowly.*
 </Markdown>
 <Markdown when="@tmf_q_galvanized.value === 'zinc_coating' &amp;&amp; @tmf_q_galvanized_problem.submitCount &gt; 0">
-*Not quite — that's galvanized steel, a real but different sense of the word. The support wasn't coated in metal.*
+*That's galvanized steel, a real but different sense of the word. Here the sense is figurative: the effort spurred the middle class into action.*
 </Markdown>
 <Markdown when="@tmf_q_galvanized.value === 'wore_down' &amp;&amp; @tmf_q_galvanized_problem.submitCount &gt; 0">
-*Not quite — backwards. The sentence says the movement's effort won widespread support, not that it wore support down.*
+*Backwards. The sentence says the movement's effort won widespread support — it spurred people into action rather than wearing them down.*
 </Markdown>
 <Markdown when="@tmf_q_galvanized.value === 'spurred_into_action' &amp;&amp; @tmf_q_galvanized_problem.submitCount &gt; 0">
 *Right — the effort spurred the middle class into action and energized their support.*
@@ -846,13 +850,13 @@ What words could take the place of **eradicating** — but keep the meaning the 
 </KeyGrader>
 
 <Markdown when="@tmf_q_eradicating.value === 'making_rules' &amp;&amp; @tmf_q_eradicating_problem.submitCount &gt; 0">
-*Not quite — regulating liquor is a milder goal than the one the sentence describes. These societies wanted it gone, not managed.*
+*Regulating liquor is a milder goal than the one the sentence describes. To eradicate is to remove completely — these societies wanted liquor gone, not managed.*
 </Markdown>
 <Markdown when="@tmf_q_eradicating.value === 'advertising' &amp;&amp; @tmf_q_eradicating_problem.submitCount &gt; 0">
-*Not quite — the opposite of what a temperance society was dedicated to.*
+*The opposite of what a temperance society was dedicated to: eradicating liquor means removing it completely.*
 </Markdown>
 <Markdown when="@tmf_q_eradicating.value === 'keeping_safe' &amp;&amp; @tmf_q_eradicating_problem.submitCount &gt; 0">
-*Not quite — read it back in: "dedicated to keeping liquor safe" turns the sentence around. The societies were against it.*
+*"Dedicated to keeping liquor safe" turns the sentence around. The societies were against liquor — eradicating it means removing it completely.*
 </Markdown>
 <Markdown when="@tmf_q_eradicating.value === 'completely_removing' &amp;&amp; @tmf_q_eradicating_problem.submitCount &gt; 0">
 *Yes — to eradicate is to root out entirely. That's why it goes with "full abstinence" rather than "moderation."*
@@ -878,13 +882,13 @@ What words could take the place of **exacerbated** — but keep the meaning the 
 </KeyGrader>
 
 <Markdown when="@tmf_q_exacerbated.value === 'calmed_down' &amp;&amp; @tmf_q_exacerbated_problem.submitCount &gt; 0">
-*Not quite — backwards. Read it into the sentence: if the intrusions had calmed things, the paragraph wouldn't be about tensions at all.*
+*Backwards. If the intrusions had calmed things, the paragraph wouldn't be about tensions at all — to exacerbate is to make something worse.*
 </Markdown>
 <Markdown when="@tmf_q_exacerbated.value === 'fixed' &amp;&amp; @tmf_q_exacerbated_problem.submitCount &gt; 0">
-*Not quite — also the wrong direction — nothing here gets repaired. The paragraph is describing friction, not its cure.*
+*The wrong direction — nothing here gets repaired. The paragraph describes friction getting worse, not its cure.*
 </Markdown>
 <Markdown when="@tmf_q_exacerbated.value === 'started_over' &amp;&amp; @tmf_q_exacerbated_problem.submitCount &gt; 0">
-*Not quite — the class, ethnic, and religious tensions were already there. The intrusions changed their degree, not their starting point.*
+*The class, ethnic, and religious tensions were already there. The intrusions made them worse — a change of degree, not a new start.*
 </Markdown>
 <Markdown when="@tmf_q_exacerbated.value === 'made_worse' &amp;&amp; @tmf_q_exacerbated_problem.submitCount &gt; 0">
 *Right — to exacerbate is to make something bad that already exists worse.*
@@ -910,13 +914,13 @@ What words could take the place of **per capita consumption** — but keep the m
 </KeyGrader>
 
 <Markdown when="@tmf_q_per_capita.value === 'per_saloon' &amp;&amp; @tmf_q_per_capita_problem.submitCount &gt; 0">
-*Not quite — "Capita" is Latin for heads — people, not places.*
+*"Capita" is Latin for heads — people, not places. Per capita consumption is the average amount per person.*
 </Markdown>
 <Markdown when="@tmf_q_per_capita.value === 'nationwide_total' &amp;&amp; @tmf_q_per_capita_problem.submitCount &gt; 0">
-*Not quite — a national total would climb just because the population climbed. Per capita divides by the people, which is what makes the drop meaningful.*
+*A national total would climb just because the population climbed. Per capita divides by the people — the average per person — which is what makes the drop meaningful.*
 </Markdown>
 <Markdown when="@tmf_q_per_capita.value === 'per_ethnic_group' &amp;&amp; @tmf_q_per_capita_problem.submitCount &gt; 0">
-*Not quite — groups do show up elsewhere in this paragraph, but "per capita" counts by head — one person at a time.*
+*Groups do show up elsewhere in this paragraph, but "per capita" counts by head — the average per person.*
 </Markdown>
 <Markdown when="@tmf_q_per_capita.value === 'per_person' &amp;&amp; @tmf_q_per_capita_problem.submitCount &gt; 0">
 *Yes — the average per person. Take all the alcohol drunk in the country and divide it by everyone in it: the average American in the 1840s drank half of what the average American drank in the 1820s.*
@@ -945,13 +949,13 @@ which word or phrase most directly helps us understand what it was?
 </KeyGrader>
 
 <Markdown when="@tmf_be_term.value === 'traditional_religion' &amp;&amp; @tmf_be_term_problem.submitCount &gt; 0">
-*Not quite — the passage says traditional Protestantism was "at low tide." The Benevolent Empire is the new thing, not the old one.*
+*The passage says traditional Protestantism was "at low tide." The Benevolent Empire is the new thing, not the old one — the "powerful network" of societies that grew in its place.*
 </Markdown>
 <Markdown when="@tmf_be_term.value === 'industrial_revolution' &amp;&amp; @tmf_be_term_problem.submitCount &gt; 0">
-*Not quite — that's the cause of the social problems the reformers answered — not a name for the reformers' network.*
+*That's the cause of the social problems the reformers answered, not a name for the reformers' network. The phrase the passage gives for that is "a powerful network."*
 </Markdown>
 <Markdown when="@tmf_be_term.value === 'spiritual_response' &amp;&amp; @tmf_be_term_problem.submitCount &gt; 0">
-*Not quite — that phrase describes the Second Great Awakening. The Benevolent Empire is the organized thing the Awakening produced.*
+*That phrase describes the Second Great Awakening. The Benevolent Empire is the organized thing the Awakening produced — "a powerful network" of societies.*
 </Markdown>
 <Markdown when="@tmf_be_term.value === 'powerful_network' &amp;&amp; @tmf_be_term_problem.submitCount &gt; 0">
 *Yes — the passage hands you the phrase: "a powerful network." Many societies, linked together, melding religion and reform.*
@@ -985,16 +989,16 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
    select-all, and it is declared here as the rule this form scores by, not
    as the only defensible one — partial credit is the obvious next question. -->
 <Markdown when="@tmf_be_connect.value.includes('american_independence') &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
-*Not that one — American independence is the era the chapter opens in. The backdrop, not a piece of the network.*
+*American independence is the era the chapter opens in — the backdrop, not a piece of the network.*
 </Markdown>
 <Markdown when="@tmf_be_connect.value.includes('commercial_distilleries') &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
-*Not that one — distilleries are what the reformers were up against. Look for the words that describe the reformers themselves.*
+*Distilleries are what the reformers were up against — the target of the network, not part of it.*
 </Markdown>
 <Markdown when="@tmf_be_connect.value.includes('irish_catholics') &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
-*Not that one — Irish Catholic workers are the people the middle-class reformers intruded on: the other side of the tension, not part of the network.*
+*Irish Catholic workers are the people the middle-class reformers intruded on: the other side of the tension, not part of the network.*
 </Markdown>
 <Markdown when="@tmf_be_connect.value.length &gt; 0 &amp;&amp; @tmf_be_connect.value.length &lt; 3 &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
-*Keep looking — more than one phrase here belongs to the network. Ask of each: who was in it, how were they organized, and what did it join together?*
+*Fewer than the full set. Three phrases describe the network: who was in it (middle-class), how it was organized (societies / movements), and what it joined together (religion and reform).*
 </Markdown>
 <Markdown when="@tmf_be_connect.value.length === 3 &amp;&amp; @tmf_be_connect.value.includes('societies_movements') &amp;&amp; @tmf_be_connect.value.includes('middle_class') &amp;&amp; @tmf_be_connect.value.includes('religion_and_reform') &amp;&amp; @tmf_be_connect_problem.submitCount &gt; 0">
 *That's the set: middle-class people, organized into societies and movements, melding religion and reform.*
@@ -1017,10 +1021,10 @@ Empire. Read them and choose the **best** one.
 </KeyGrader>
 
 <Markdown when="@tmf_be_bestdef.value === 'danielle_evangelicals_name' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
-*Not quite — Danielle names who was in it, but not what it **was** — and the Benevolent Empire was much wider than temperance alone.*
+*Danielle names who was in it, but not what it **was** — and the Benevolent Empire was much wider than temperance alone. Joe's sentence has the missing piece: a network of societies joining religion and reform.*
 </Markdown>
 <Markdown when="@tmf_be_bestdef.value === 'karis_reforms_promote_religion' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
-*Not quite — Karis has the engine running backwards. Religious revival came first and powered the reform, rather than reform being invented to prop religion back up.*
+*Karis has the engine running backwards. Religious revival came first and powered the reform, rather than reform being invented to prop religion back up — Joe's sentence has the order right.*
 </Markdown>
 <Markdown when="@tmf_be_bestdef.value === 'joe_network_religion_reform' &amp;&amp; @tmf_be_bestdef_problem.submitCount &gt; 0">
 *Yes — Joe's has all three pieces: a network, made of societies, joining religion and reform among the middle class.*
@@ -1046,13 +1050,13 @@ class, ethnic, and religious tensions?
 </KeyGrader>
 
 <Markdown when="@tmf_why_exacerbated.value === 'money_to_saloons' &amp;&amp; @tmf_why_exacerbated_problem.submitCount &gt; 0">
-*Not quite — no money changes hands in this passage, and money isn't what the tension is about.*
+*No money changes hands in this passage, and money isn't what the tension is about. It's about one group — middle-class Protestant reformers — reaching into the customs of another.*
 </Markdown>
 <Markdown when="@tmf_why_exacerbated.value === 'only_irish_affected' &amp;&amp; @tmf_why_exacerbated_problem.submitCount &gt; 0">
-*Not quite — the sentence names Irish Catholics as many of the lower-class workers, not as the only people affected. The friction runs between classes.*
+*The sentence names Irish Catholics as many of the lower-class workers, not as the only people affected. The friction runs between classes: middle-class reformers intruding on working-class communities.*
 </Markdown>
 <Markdown when="@tmf_why_exacerbated.value === 'irish_led_movement' &amp;&amp; @tmf_why_exacerbated_problem.submitCount &gt; 0">
-*Not quite — turn it around: temperance was "championed by the middle class," and it threatened to intrude on lower-class workers, many of whom were Irish Catholics.*
+*The other way around: temperance was "championed by the middle class," and it threatened to intrude on lower-class workers, many of whom were Irish Catholics.*
 </Markdown>
 <Markdown when="@tmf_why_exacerbated.value === 'middle_class_intrusion' &amp;&amp; @tmf_why_exacerbated_problem.submitCount &gt; 0">
 *Yes — one group reaching into another group's private life is exactly what makes class, ethnic, and religious tensions worse.*
@@ -1085,13 +1089,13 @@ First — what does **teetotaling** mean?
 </KeyGrader>
 
 <Markdown when="@tmf_q_teetotaling.value === 'heavy_drinking' &amp;&amp; @tmf_q_teetotaling_problem.submitCount &gt; 0">
-*Not quite — the opposite. Teetotaling is on the abstaining side of the question.*
+*The opposite. Teetotaling is not drinking at all — the "total" hiding inside teetotal.*
 </Markdown>
 <Markdown when="@tmf_q_teetotaling.value === 'persuading_others' &amp;&amp; @tmf_q_teetotaling_problem.submitCount &gt; 0">
-*Not quite — that's what a movement does. Teetotaling is what one person does — about their own drinking.*
+*That's what a movement does. Teetotaling is what one person does about their own drinking: none at all.*
 </Markdown>
 <Markdown when="@tmf_q_teetotaling.value === 'drinking_tea' &amp;&amp; @tmf_q_teetotaling_problem.submitCount &gt; 0">
-*Not quite — a reasonable guess from the spelling, but the "tee" is an emphatic T, for **total** — not tea.*
+*A reasonable guess from the spelling, but the "tee" is an emphatic T, for **total** — no alcohol at all, not tea.*
 </Markdown>
 <Markdown when="@tmf_q_teetotaling.value === 'no_alcohol_at_all' &amp;&amp; @tmf_q_teetotaling_problem.submitCount &gt; 0">
 *Right — total abstinence, none at all. That's the "total" hiding inside teetotal.*
@@ -1114,10 +1118,10 @@ the article that gives it context. Who picked the **best** one?
 </KeyGrader>
 
 <Markdown when="@tmf_selfoptim_pick.value === 'danielle_health_research' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
-*Not quite — Danielle's sentence says why health is on people's minds. Self-**optimization** needs a sentence about making yourself better, not about the research behind it.*
+*Danielle's sentence says why health is on people's minds. Self-**optimization** is about making yourself better — Joe's sentence, where not drinking becomes "authenticity or self-care."*
 </Markdown>
 <Markdown when="@tmf_selfoptim_pick.value === 'karis_freedom_to_choose' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
-*Not quite — "Freedom to choose" is about having the choice, not about what the choice does for you. Look for the sentence that says what not drinking makes a person.*
+*"Freedom to choose" is about having the choice, not about what the choice does for you. Joe's sentence says what not drinking makes a person — "an act of authenticity or self-care."*
 </Markdown>
 <Markdown when="@tmf_selfoptim_pick.value === 'joe_authenticity_selfcare' &amp;&amp; @tmf_selfoptim_pick_problem.submitCount &gt; 0">
 *Yes — "an act of authenticity or self-care" turns not drinking into working on yourself. That's the self-optimization the writer means.*
@@ -1146,13 +1150,13 @@ Nation)?
 </KeyGrader>
 
 <Markdown when="@tmf_summary_pick.value === 'hatchet_detail_only' &amp;&amp; @tmf_summary_pick_problem.submitCount &gt; 0">
-*Not quite — true, but only half the paragraph. A summary has to carry **why** she did it, not just what she swung.*
+*True, but only half the paragraph. A summary has to carry **why** she did it — liquor and "society's moral failings" — not just what she swung.*
 </Markdown>
 <Markdown when="@tmf_summary_pick.value === 'vague_smashers' &amp;&amp; @tmf_summary_pick_problem.submitCount &gt; 0">
-*Not quite — "Destroyed everything" overstates it, and the "smashers" were the women who joined her. A summary shouldn't blur the facts it reports.*
+*"Destroyed everything" overstates it, and the "smashers" were the women who joined her. A summary shouldn't blur the facts it reports.*
 </Markdown>
 <Markdown when="@tmf_summary_pick.value === 'opinion_interesting' &amp;&amp; @tmf_summary_pick_problem.submitCount &gt; 0">
-*Not quite — that's an opinion about Carrie Nation, not a summary of the paragraph. Summaries report; they don't rate.*
+*That's an opinion about Carrie Nation, not a summary of the paragraph. Summaries report; they don't rate.*
 </Markdown>
 <Markdown when="@tmf_summary_pick.value === 'what_and_why' &amp;&amp; @tmf_summary_pick_problem.submitCount &gt; 0">
 *Yes — what she did, how she did it, and the reason the paragraph gives: she blamed liquor for "society's moral failings."*
@@ -1178,13 +1182,13 @@ or self-care." What does **authenticity** mean here?
 </KeyGrader>
 
 <Markdown when="@tmf_q_authenticity.value === 'following_rules' &amp;&amp; @tmf_q_authenticity_problem.submitCount &gt; 0">
-*Not quite — rules arrive from outside you. The article pairs authenticity with self-care — something that comes from inside.*
+*Rules arrive from outside you. The article pairs authenticity with self-care — something that comes from inside: being true to who you are.*
 </Markdown>
 <Markdown when="@tmf_q_authenticity.value === 'group_approval' &amp;&amp; @tmf_q_authenticity_problem.submitCount &gt; 0">
-*Not quite — nearly the opposite: the article's example is not drinking in "an alcohol-soaked culture" — without the group's blessing.*
+*Nearly the opposite: the article's example is not drinking in "an alcohol-soaked culture" — being yourself without the group's blessing.*
 </Markdown>
 <Markdown when="@tmf_q_authenticity.value === 'doing_whats_popular' &amp;&amp; @tmf_q_authenticity_problem.submitCount &gt; 0">
-*Not quite — popularity is everyone else's taste. Authenticity is your own.*
+*Popularity is everyone else's taste. Authenticity is your own — being true to who you really are.*
 </Markdown>
 <Markdown when="@tmf_q_authenticity.value === 'true_to_self' &amp;&amp; @tmf_q_authenticity_problem.submitCount &gt; 0">
 *Right — being genuinely yourself. That's how turning down a drink becomes a statement about who you are.*
@@ -1207,13 +1211,13 @@ Step back from the details — what is the article's **main point** overall?
 </KeyGrader>
 
 <Markdown when="@tmf_article_thesis.value === 'nation_most_important' &amp;&amp; @tmf_article_thesis_problem.submitCount &gt; 0">
-*Not quite — she's the article's opening image, not its point. Ask what the writer is **using** her for.*
+*She's the article's opening image, not its point. The writer uses her to set up a comparison: today's sober-curious movement as a new temperance, with a morality that has shifted from society to the self.*
 </Markdown>
 <Markdown when="@tmf_article_thesis.value === 'more_dangerous_today' &amp;&amp; @tmf_article_thesis_problem.submitCount &gt; 0">
-*Not quite — the article does report research on alcohol's harms, but it never claims today's alcohol is worse. That's a supporting detail.*
+*The article does report research on alcohol's harms, but it never claims today's alcohol is worse. That's a supporting detail; the point is the shift from protecting society to improving the self.*
 </Markdown>
 <Markdown when="@tmf_article_thesis.value === 'surgeon_general_prohibition' &amp;&amp; @tmf_article_thesis_problem.submitCount &gt; 0">
-*Not quite — another detail, and an overstatement — a warning label is not a ban.*
+*Another detail, and an overstatement — a warning label is not a ban. The article's point is the shift from protecting society to improving the self.*
 </Markdown>
 <Markdown when="@tmf_article_thesis.value === 'new_temperance_new_morality' &amp;&amp; @tmf_article_thesis_problem.submitCount &gt; 0">
 *Yes — same behavior, different reason. The 1800s movement set out to protect society; today's sets out to improve the self.*
@@ -1238,13 +1242,13 @@ What does the image show across its nine numbered steps?
 </KeyGrader>
 
 <Markdown when="@tmf_litho_observe.value === 'top_is_moderate' &amp;&amp; @tmf_litho_observe_problem.submitCount &gt; 0">
-*Not quite — read step 5's caption again: "the summit attained" is "a confirmed drunkard" — and it's where the fall starts.*
+*Step 5's caption says otherwise: "the summit attained" is "a confirmed drunkard" — and it's where the fall starts. The arch is one man's decline.*
 </Markdown>
 <Markdown when="@tmf_litho_observe.value === 'nine_different_men' &amp;&amp; @tmf_litho_observe_problem.submitCount &gt; 0">
-*Not quite — it's one man, nine times — the same life at nine moments. That's why it's called a "progress."*
+*It's one man, nine times — the same life at nine moments. That's why it's called a "progress."*
 </Markdown>
 <Markdown when="@tmf_litho_observe.value === 'good_and_bad_sides' &amp;&amp; @tmf_litho_observe_problem.submitCount &gt; 0">
-*Not quite — the image is one-sided on purpose. It only rises in order to fall; nothing on the arch is offered as a good ending.*
+*The image is one-sided on purpose. It only rises in order to fall; nothing on the arch is offered as a good ending.*
 </Markdown>
 <Markdown when="@tmf_litho_observe.value === 'one_mans_decline' &amp;&amp; @tmf_litho_observe_problem.submitCount &gt; 0">
 *Yes — one life, climbing to the summit and then dropping step by step to the grave.*
@@ -1267,13 +1271,13 @@ Why would the temperance movement create and share an image like this?
 </KeyGrader>
 
 <Markdown when="@tmf_litho_purpose.value === 'advertise_saloons' &amp;&amp; @tmf_litho_purpose_problem.submitCount &gt; 0">
-*Not quite — an advertisement wouldn't run all the way to step 9. Everything past the summit is a warning.*
+*An advertisement wouldn't run all the way to step 9. Everything past the summit is a warning — the image was made to persuade people not to drink.*
 </Markdown>
 <Markdown when="@tmf_litho_purpose.value === 'record_social_life' &amp;&amp; @tmf_litho_purpose_problem.submitCount &gt; 0">
-*Not quite — it isn't a record of anything that happened. The ruined home beneath the arch is there to make you feel something.*
+*It isn't a record of anything that happened. The ruined home beneath the arch is there to make you feel something — this is persuasion, not documentation.*
 </Markdown>
 <Markdown when="@tmf_litho_purpose.value === 'no_consequences' &amp;&amp; @tmf_litho_purpose_problem.submitCount &gt; 0">
-*Not quite — the whole arch is consequences: poverty, disease, crime, death.*
+*The whole arch is consequences: poverty, disease, crime, death. The image argues that a first glass leads there.*
 </Markdown>
 <Markdown when="@tmf_litho_purpose.value === 'warn_and_persuade' &amp;&amp; @tmf_litho_purpose_problem.submitCount &gt; 0">
 *Yes — this is persuasion. Take one friendly glass, the picture argues, and the other eight steps follow.*
@@ -1298,10 +1302,10 @@ Which comparison is **best**?
 </KeyGrader>
 
 <Markdown when="@tmf_synth_peereval.value === 'joe_not_different' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
-*Not quite — Joe has the likeness right — but a comparison owes us the difference too, and these two movements give very different reasons for the same behavior.*
+*Joe has the likeness right, but a comparison owes us the difference too: the two movements give very different reasons for the same behavior — society and family then, the self now.*
 </Markdown>
 <Markdown when="@tmf_synth_peereval.value === 'karis_price_of_alcohol' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
-*Not quite — price isn't a contrast either text draws — the textbook says whiskey was cheap. Compare what each movement was trying to protect.*
+*Price isn't a contrast either text draws — the textbook says whiskey was cheap. The real difference is what each movement was trying to protect: society and family then, the self now.*
 </Markdown>
 <Markdown when="@tmf_synth_peereval.value === 'danielle_moral_vs_health' &amp;&amp; @tmf_synth_peereval_problem.submitCount &gt; 0">
 *Yes — both discourage drinking; what changed is the reason. Society and family then, the self now. That's the comparison your final paragraph needs.*
