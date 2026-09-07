@@ -75,7 +75,7 @@ Danielle, Joe, Karis, Professor Booker, and Professor Hale are **not real
 people,** but you can learn from and interact with them.
 
 **About answering questions.** Most questions give you **one** submission: choose
-your answer, press **Check,** and the conversation moves on whether you got it
+your answer, press **Submit,** and the conversation moves on whether you got it
 right or not. Take your time before you press it — you won't be asked again.
 
 All right, now imagine that you are in your classroom, but class has not started
@@ -174,10 +174,9 @@ rows:
      3-way scale: correct and central / correct but less important /
      not correct. Answers keyed to the textbook excerpt.
 
-     One attempt, and no showanswer="always": that puts a Show Answer
-     button on screen BEFORE the one submission the key is meant to
-     follow. The default reveal-after-attempt is the policy for every
-     scored item here.
+     The assessment attributes (see the vocabulary items below): one
+     attempt; the key appears on its own with the result of that one
+     submission; the grid freezes.
      ============================================================ -->
 
 <Vertical id="temperance_notes">
@@ -187,9 +186,9 @@ rows:
 Joe made a list of what he thought were the important points from the *American
 Yawp* excerpt. For **each statement**, decide whether it is **correct and central
 to the text**, **correct but less important**, or **not correct**. Then press
-**Check**.
+**Submit**.
 </Markdown>
-<CapaProblem id="temperance_notes_problem" title="Joe's Notes on the Textbook" maxAttempts="1">
+<CapaProblem id="temperance_notes_problem" title="Joe's Notes on the Textbook" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TabularMCQGrader id="temperance_notes_grader">
 <TabularMCQ id="temperance_notes_grid">
 cols:
@@ -272,7 +271,7 @@ The verb is a **single word**. The subject and the object are **whole phrases**:
 highlight every word of the phrase, and nothing outside it.
 </Markdown>
 
-<CapaProblem id="temperance_gram_verb_problem" title="Highlight the verb" maxAttempts="1">
+<CapaProblem id="temperance_gram_verb_problem" title="Highlight the verb" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="temperance_gram_verb_grader">
 <TextSelectionInput id="temperance_gram_verb">
 Highlight the verb — a single word.
@@ -285,7 +284,7 @@ all: Right — "exacerbated" is the verb: it's what the intrusions did.
 </TextSelectionGrader>
 </CapaProblem> <!-- temperance_gram_verb_problem -->
 
-<CapaProblem id="temperance_gram_subject_problem" title="Highlight the subject" maxAttempts="1">
+<CapaProblem id="temperance_gram_subject_problem" title="Highlight the subject" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="temperance_gram_subject_grader">
 <TextSelectionInput id="temperance_gram_subject">
 Highlight the subject — the entire subject phrase, every word of it.
@@ -301,7 +300,7 @@ all: Right — the subject is the whole phrase "Such intrusions by the Protestan
 <!-- The trailing period is {optional}: a student sweeping to the end of the
      sentence catches it, and stopping a highlight one character short of a
      period is not a grammar mistake. -->
-<CapaProblem id="temperance_gram_object_problem" title="Highlight the object" maxAttempts="1">
+<CapaProblem id="temperance_gram_object_problem" title="Highlight the object" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="temperance_gram_object_grader">
 <TextSelectionInput id="temperance_gram_object">
 Highlight the direct object — the entire object phrase, every word of it.
@@ -319,7 +318,7 @@ all: Right — the object is the whole phrase "class, ethnic, and religious tens
      highlights used to be. The parts on the right are the constituents of the
      phrase the student has just finished analyzing as a whole; naming them is
      recognition, and recognition of three related labels is one question, not
-     three. Three separate one-attempt highlights would also mean three Check
+     three. Three separate one-attempt highlights would also mean three Submit
      buttons and three chances to be told nothing useful.
 
      Matching also carries partial credit, so a student who has the head noun
@@ -338,7 +337,7 @@ The subject of that sentence is a noun phrase all by itself. Here it is on its
 own — take it apart.
 </Markdown>
 
-<CapaProblem id="temperance_gram_np_problem" title="Inside the Noun Phrase" maxAttempts="1">
+<CapaProblem id="temperance_gram_np_problem" title="Inside the Noun Phrase" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <MatchingGrader id="temperance_gram_np_grader">
 <Markdown id="temperance_gram_np_prompt">
 Match each part of a noun phrase to the part that plays it in **Such intrusions
@@ -376,7 +375,7 @@ sentence, you hold each whole phrase together.
 </Vertical>
 
 <!-- p.28 — highlight the antecedent of "Such intrusions" -->
-<SimpleTextSelection id="temperance_gram_antecedent" mode="graded" title="Find the Antecedent">
+<SimpleTextSelection id="temperance_gram_antecedent" mode="graded" title="Find the Antecedent" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 "Such intrusions" points back to an earlier sentence. Find the sentence that describes those intrusions — its antecedent — and highlight the entire sentence, from its first word through its final period.
 ---
 In response to the perception that heavy drinking was associated with men who abused, abandoned, or neglected their family obligations, women formed a significant presence in societies dedicated to eradicating liquor. Temperance became a hallmark of middle-class respectability among both men and women and developed into a crusade with a visible class character. [Temperance, like many other reform efforts, was championed by the middle class and threatened to intrude on the private lives of lower-class workers, many of whom were Irish Catholics.] Such intrusions by the Protestant middle class exacerbated class, ethnic, and religious tensions. Still, while the temperance movement made less substantial inroads into lower-class workers' drinking culture, the movement was still a great success for reformers.
@@ -397,7 +396,7 @@ all: Yes — that earlier sentence describes the intrusion (the middle class thr
      so a student answers with the excerpt open beside them.
 
      Each is a CapaProblem wrapping a KeyGrader wrapping a ChoiceInput with
-     semantic option values, so it carries its own Check button, shows its
+     semantic option values, so it carries its own Submit button, shows its
      explanation after submission, and the chat can wait on .submitCount.
      One attempt each, like every other scored item.
      ============================================================ -->
@@ -424,7 +423,7 @@ Scroll through it as you answer the questions in the conversation.
 <!-- CHAT-EMBEDDED — the five comprehension questions -->
 
 <Vertical id="temperance_comp_1_screen">
-<CapaProblem id="temperance_comp_1_problem" title="Question 1" maxAttempts="1">
+<CapaProblem id="temperance_comp_1_problem" title="Question 1" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_comp_1_grader">
 <ChoiceInput id="temperance_comp_1">
 <Markdown>
@@ -445,7 +444,7 @@ changes of the post-independence era?
 </Vertical> <!-- temperance_comp_1_screen -->
 
 <Vertical id="temperance_comp_2_screen">
-<CapaProblem id="temperance_comp_2_problem" title="Question 2" maxAttempts="1">
+<CapaProblem id="temperance_comp_2_problem" title="Question 2" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_comp_2_grader">
 <ChoiceInput id="temperance_comp_2">
 <Markdown>
@@ -466,7 +465,7 @@ resources to reform campaigns?
 </Vertical> <!-- temperance_comp_2_screen -->
 
 <Vertical id="temperance_comp_3_screen">
-<CapaProblem id="temperance_comp_3_problem" title="Question 3" maxAttempts="1">
+<CapaProblem id="temperance_comp_3_problem" title="Question 3" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_comp_3_grader">
 <ChoiceInput id="temperance_comp_3">
 <Markdown>
@@ -487,7 +486,7 @@ increasingly visible issue in towns and cities?
 </Vertical> <!-- temperance_comp_3_screen -->
 
 <Vertical id="temperance_comp_4_screen">
-<CapaProblem id="temperance_comp_4_problem" title="Question 4" maxAttempts="1">
+<CapaProblem id="temperance_comp_4_problem" title="Question 4" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_comp_4_grader">
 <ChoiceInput id="temperance_comp_4">
 <Markdown>
@@ -508,7 +507,7 @@ stopping drinking alcohol?
 </Vertical> <!-- temperance_comp_4_screen -->
 
 <Vertical id="temperance_comp_5_screen">
-<CapaProblem id="temperance_comp_5_problem" title="Question 5" maxAttempts="1">
+<CapaProblem id="temperance_comp_5_problem" title="Question 5" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_comp_5_grader">
 <ChoiceInput id="temperance_comp_5">
 <Markdown>
@@ -604,9 +603,8 @@ The nine steps, in order:
 
 <!-- ============================================================
      Part 4 — Synthesis: sort each description as "then" (temperance)
-     vs "now" (sober-curious), drawing on all three texts. Graded:
-     one attempt, key revealed after submission, not before (see the
-     note-check grid).
+     vs "now" (sober-curious), drawing on all three texts. Graded with
+     the assessment attributes (see the vocabulary items).
      ============================================================ -->
 
 <Vertical id="temperance_synth_sort">
@@ -614,9 +612,9 @@ The nine steps, in order:
 ## Then and Now
 
 Using the textbook, the printed article, and the lithograph, sort each description under
-the movement it best fits. Then press **Check.**
+the movement it best fits. Then press **Submit.**
 </Markdown>
-<CapaProblem id="temperance_synth_sort_problem" title="Then vs. Now" maxAttempts="1">
+<CapaProblem id="temperance_synth_sort_problem" title="Then vs. Now" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TabularMCQGrader id="temperance_synth_sort_grader">
 <TabularMCQ id="temperance_synth_sort_grid">
 cols:
@@ -716,16 +714,24 @@ Here is the finished work — the comparison you built from all three texts.
      the choices renders inside the chat bubble with them. The ChoiceInput
      keeps its own id — every wait, and every readback, still names it.
 
-     Inside that Vertical the question is a one-attempt CapaProblem
-     (`<id>_problem`, maxAttempts="1") around a KeyGrader around the
-     ChoiceInput: this is an assessment, and each item is answered once. The
-     Check button is the CapaProblem's own footer. The ChoiceInput id and every
-     option value are unchanged — the chatpeg gates and the analytics read
-     them. maxAttempts is spelled out because "0" means unlimited, not none.
+     Inside that Vertical the question is a CapaProblem (`<id>_problem`)
+     around a KeyGrader around the ChoiceInput, carrying the four assessment
+     attributes every scored item in this form carries:
+
+         maxAttempts="1"          one submission; "0" would mean unlimited
+         showAnswer="attempted"   the key becomes available on that submission
+         answerReveal="auto"      and appears by itself — there is no Show
+                                  Answer button to find
+         lockInput="closed"       the input freezes once attempts are used,
+                                  so what is on screen is what was scored
+
+     The Submit button is the CapaProblem's own footer. The ChoiceInput id and
+     every option value are unchanged — the chatpeg gates and the analytics
+     read them.
 
      Every per-choice verdict below is gated on `<id>_problem.submitCount` as
      well as on the chosen value. Keyed on the value alone, a student with a
-     Check button in front of them could click each option in turn and read
+     Submit button in front of them could click each option in turn and read
      which one comes back "Yes" before ever submitting — the whole item,
      answered for them, under a rule that allows one attempt.
 
@@ -735,7 +741,7 @@ Here is the finished work — the comparison you built from all three texts.
      look again. -->
 
 <Vertical id="temperance_vocab_commerce_screen">
-<CapaProblem id="temperance_vocab_commerce_problem" title="Vocabulary: commerce" maxAttempts="1">
+<CapaProblem id="temperance_vocab_commerce_problem" title="Vocabulary: commerce" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_commerce_grader">
 <ChoiceInput id="temperance_vocab_commerce">
 <Markdown>
@@ -767,7 +773,7 @@ Look at the highlighted sentence and choose the best definition for **commerce**
 </Vertical> <!-- temperance_vocab_commerce_screen -->
 
 <Vertical id="temperance_vocab_antidote_screen">
-<CapaProblem id="temperance_vocab_antidote_problem" title="Vocabulary: antidote" maxAttempts="1">
+<CapaProblem id="temperance_vocab_antidote_problem" title="Vocabulary: antidote" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_antidote_grader">
 <ChoiceInput id="temperance_vocab_antidote">
 <Markdown>
@@ -802,7 +808,7 @@ Choose the best definition for **antidote**:
 </Vertical> <!-- temperance_vocab_antidote_screen -->
 
 <Vertical id="temperance_vocab_proliferated_screen">
-<CapaProblem id="temperance_vocab_proliferated_problem" title="Vocabulary: proliferated" maxAttempts="1">
+<CapaProblem id="temperance_vocab_proliferated_problem" title="Vocabulary: proliferated" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_proliferated_grader">
 <ChoiceInput id="temperance_vocab_proliferated">
 <Markdown>
@@ -836,7 +842,7 @@ Choose the best definition for **proliferated**:
 <!-- CHAT-EMBEDDED — vocabulary, chunk B / para 3 (PDF p.18) -->
 
 <Vertical id="temperance_vocab_galvanized_screen">
-<CapaProblem id="temperance_vocab_galvanized_problem" title="Vocabulary: galvanized" maxAttempts="1">
+<CapaProblem id="temperance_vocab_galvanized_problem" title="Vocabulary: galvanized" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_galvanized_grader">
 <ChoiceInput id="temperance_vocab_galvanized">
 <Markdown>
@@ -874,7 +880,7 @@ What is the best definition of **galvanized**?
 <!-- CHAT-EMBEDDED — vocabulary, chunk C / para 4 (PDF p.19-21) -->
 
 <Vertical id="temperance_vocab_eradicating_screen">
-<CapaProblem id="temperance_vocab_eradicating_problem" title="Vocabulary: eradicating" maxAttempts="1">
+<CapaProblem id="temperance_vocab_eradicating_problem" title="Vocabulary: eradicating" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_eradicating_grader">
 <ChoiceInput id="temperance_vocab_eradicating">
 <Markdown>
@@ -906,7 +912,7 @@ What words could take the place of **eradicating** — but keep the meaning the 
 </Vertical> <!-- temperance_vocab_eradicating_screen -->
 
 <Vertical id="temperance_vocab_exacerbated_screen">
-<CapaProblem id="temperance_vocab_exacerbated_problem" title="Vocabulary: exacerbated" maxAttempts="1">
+<CapaProblem id="temperance_vocab_exacerbated_problem" title="Vocabulary: exacerbated" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_exacerbated_grader">
 <ChoiceInput id="temperance_vocab_exacerbated">
 <Markdown>
@@ -938,7 +944,7 @@ What words could take the place of **exacerbated** — but keep the meaning the 
 </Vertical> <!-- temperance_vocab_exacerbated_screen -->
 
 <Vertical id="temperance_vocab_per_capita_screen">
-<CapaProblem id="temperance_vocab_per_capita_problem" title="Vocabulary: per capita" maxAttempts="1">
+<CapaProblem id="temperance_vocab_per_capita_problem" title="Vocabulary: per capita" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_per_capita_grader">
 <ChoiceInput id="temperance_vocab_per_capita">
 <Markdown>
@@ -975,7 +981,7 @@ What words could take the place of **per capita consumption** — but keep the m
      ============================================================ -->
 
 <Vertical id="temperance_term_pick_screen">
-<CapaProblem id="temperance_term_pick_problem" title="Benevolent Empire: the term" maxAttempts="1">
+<CapaProblem id="temperance_term_pick_problem" title="Benevolent Empire: the term" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_term_pick_grader">
 <ChoiceInput id="temperance_term_pick">
 <Markdown>
@@ -1005,7 +1011,7 @@ which word or phrase most directly helps us understand what it was?
 </Vertical> <!-- temperance_term_pick_screen -->
 
 <Vertical id="temperance_term_connect_screen">
-<CapaProblem id="temperance_term_connect_problem" title="Benevolent Empire: what connects to it" maxAttempts="1">
+<CapaProblem id="temperance_term_connect_problem" title="Benevolent Empire: what connects to it" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <CheckboxGrader id="temperance_term_connect_grader">
 <CheckboxInput id="temperance_term_connect">
 <Markdown>
@@ -1053,7 +1059,7 @@ phrases from the chapter describe or connect to it? **Select all that apply.**
      to do with reading. Option values name the sentence, not the speaker, so
      an attribution can move without touching values, gates, or analytics. -->
 <Vertical id="temperance_term_bestdef_screen">
-<CapaProblem id="temperance_term_bestdef_problem" title="Benevolent Empire: the best definition" maxAttempts="1">
+<CapaProblem id="temperance_term_bestdef_problem" title="Benevolent Empire: the best definition" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_term_bestdef_grader">
 <ChoiceInput id="temperance_term_bestdef">
 <Markdown>
@@ -1081,7 +1087,7 @@ Empire. Read them and choose the **best** one.
 <!-- CHAT-EMBEDDED — why did the intrusions exacerbate tensions? (PDF p.29) -->
 
 <Vertical id="temperance_gram_why_screen">
-<CapaProblem id="temperance_gram_why_problem" title="Why the intrusions exacerbated tensions" maxAttempts="1">
+<CapaProblem id="temperance_gram_why_problem" title="Why the intrusions exacerbated tensions" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_gram_why_grader">
 <ChoiceInput id="temperance_gram_why">
 <Markdown>
@@ -1116,7 +1122,7 @@ class, ethnic, and religious tensions?
      ============================================================ -->
 
 <Vertical id="temperance_vocab_teetotaling_screen">
-<CapaProblem id="temperance_vocab_teetotaling_problem" title="Vocabulary: teetotaling" maxAttempts="1">
+<CapaProblem id="temperance_vocab_teetotaling_problem" title="Vocabulary: teetotaling" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_teetotaling_grader">
 <ChoiceInput id="temperance_vocab_teetotaling">
 <Markdown>
@@ -1150,7 +1156,7 @@ First — what does **teetotaling** mean?
 </Vertical> <!-- temperance_vocab_teetotaling_screen -->
 
 <Vertical id="temperance_article_sentence_screen">
-<CapaProblem id="temperance_article_sentence_problem" title="Self-optimization: the best sentence" maxAttempts="1">
+<CapaProblem id="temperance_article_sentence_problem" title="Self-optimization: the best sentence" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_article_sentence_grader">
 <ChoiceInput id="temperance_article_sentence">
 <Markdown>
@@ -1181,7 +1187,7 @@ the article that gives it context. Who picked the **best** one?
 <!-- CHAT-EMBEDDED — summarize the first paragraph (PDF p.41) -->
 
 <Vertical id="temperance_article_summary_screen">
-<CapaProblem id="temperance_article_summary_problem" title="The best summary of the first paragraph" maxAttempts="1">
+<CapaProblem id="temperance_article_summary_problem" title="The best summary of the first paragraph" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_article_summary_grader">
 <ChoiceInput id="temperance_article_summary">
 <Markdown>
@@ -1213,7 +1219,7 @@ Nation)?
 <!-- CHAT-EMBEDDED — article: "authenticity" vocab + overall thesis -->
 
 <Vertical id="temperance_vocab_authenticity_screen">
-<CapaProblem id="temperance_vocab_authenticity_problem" title="Vocabulary: authenticity" maxAttempts="1">
+<CapaProblem id="temperance_vocab_authenticity_problem" title="Vocabulary: authenticity" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_vocab_authenticity_grader">
 <ChoiceInput id="temperance_vocab_authenticity">
 <Markdown>
@@ -1243,7 +1249,7 @@ or self-care." What does **authenticity** mean here?
 </Vertical> <!-- temperance_vocab_authenticity_screen -->
 
 <Vertical id="temperance_article_thesis_screen">
-<CapaProblem id="temperance_article_thesis_problem" title="The article's main point" maxAttempts="1">
+<CapaProblem id="temperance_article_thesis_problem" title="The article's main point" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_article_thesis_grader">
 <ChoiceInput id="temperance_article_thesis">
 <Markdown>
@@ -1274,7 +1280,7 @@ Step back from the details — what is the article's **main point** overall?
 <!-- CHAT-EMBEDDED — lithograph comprehension (Part 4) -->
 
 <Vertical id="temperance_litho_observe_screen">
-<CapaProblem id="temperance_litho_observe_problem" title="The lithograph: what it shows" maxAttempts="1">
+<CapaProblem id="temperance_litho_observe_problem" title="The lithograph: what it shows" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_litho_observe_grader">
 <ChoiceInput id="temperance_litho_observe">
 <Markdown>
@@ -1303,7 +1309,7 @@ What does the image show across its nine numbered steps?
 </Vertical> <!-- temperance_litho_observe_screen -->
 
 <Vertical id="temperance_litho_purpose_screen">
-<CapaProblem id="temperance_litho_purpose_problem" title="The lithograph: why it was made" maxAttempts="1">
+<CapaProblem id="temperance_litho_purpose_problem" title="The lithograph: why it was made" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_litho_purpose_grader">
 <ChoiceInput id="temperance_litho_purpose">
 <Markdown>
@@ -1334,7 +1340,7 @@ Why would the temperance movement create and share an image like this?
 <!-- CHAT-EMBEDDED — synthesis: evaluate peer comparisons (Part 4) -->
 
 <Vertical id="temperance_synth_compare_screen">
-<CapaProblem id="temperance_synth_compare_problem" title="Then and now: the best comparison" maxAttempts="1">
+<CapaProblem id="temperance_synth_compare_problem" title="Then and now: the best comparison" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="temperance_synth_compare_grader">
 <ChoiceInput id="temperance_synth_compare">
 <Markdown>
