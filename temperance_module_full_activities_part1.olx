@@ -173,6 +173,11 @@ rows:
      retargeted from the lecture to the American Yawp excerpt).
      3-way scale: correct and central / correct but less important /
      not correct. Answers keyed to the textbook excerpt.
+
+     One attempt, and no showanswer="always": that puts a Show Answer
+     button on screen BEFORE the one submission the key is meant to
+     follow. The default reveal-after-attempt is the policy for every
+     scored item here.
      ============================================================ -->
 
 <Vertical id="tmf_notecheck">
@@ -184,7 +189,7 @@ Yawp* excerpt. For **each statement**, decide whether it is **correct and centra
 to the text**, **correct but less important**, or **not correct**. Then press
 **Check**.
 </Markdown>
-<CapaProblem id="tmf_notecheck_problem" title="Joe's Notes on the Textbook" showanswer="always">
+<CapaProblem id="tmf_notecheck_problem" title="Joe's Notes on the Textbook" maxAttempts="1">
 <TabularMCQGrader id="tmf_notecheck_grader">
 <TabularMCQ id="tmf_notecheck_grid">
 cols:
@@ -393,6 +398,7 @@ all: Yes — that earlier sentence describes the intrusion (the middle class thr
 
      Each is a single-question MarkupProblem, so it carries its own Check
      button and per-item feedback and the chat can wait on .submitCount.
+     One attempt each, like every other scored item.
      ============================================================ -->
 
 <!-- The pane for the comprehension stretch: all four Yawp parts end to end in
@@ -416,7 +422,7 @@ Scroll through it as you answer the questions in the conversation.
 
 <!-- CHAT-EMBEDDED — the five comprehension questions -->
 
-<MarkupProblem id="tmf_comp_q1" title="Question 1"><![CDATA[
+<MarkupProblem id="tmf_comp_q1" title="Question 1" maxAttempts="1"><![CDATA[
 >>How did the Second Great Awakening address the rapid social and economic changes of the post-independence era?<<
 
 ( ) By advocating for the total prohibition of all commercial distilleries.
@@ -429,7 +435,7 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmf_comp_q2" title="Question 2"><![CDATA[
+<MarkupProblem id="tmf_comp_q2" title="Question 2" maxAttempts="1"><![CDATA[
 >>Why were middle-class evangelicals able to devote significant time and resources to reform campaigns?<<
 
 (x) The Industrial Revolution provided them with the necessary time and resources.
@@ -442,7 +448,7 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmf_comp_q3" title="Question 3"><![CDATA[
+<MarkupProblem id="tmf_comp_q3" title="Question 3" maxAttempts="1"><![CDATA[
 >>How did temperance reformers shift their approach as alcoholism became an increasingly visible issue in towns and cities?<<
 
 ( ) They shifted from demanding total prohibition to encouraging moderate consumption.
@@ -455,7 +461,7 @@ The passage calls the Second Great Awakening "a spiritual response to such chang
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmf_comp_q4" title="Question 4"><![CDATA[
+<MarkupProblem id="tmf_comp_q4" title="Question 4" maxAttempts="1"><![CDATA[
 >>What primary concern prompted many women to join societies dedicated to stopping drinking alcohol?<<
 
 ( ) They could no longer afford to pay the high taxes imposed on household dairy products like milk.
@@ -468,7 +474,7 @@ Women formed a presence in these societies "in response to the perception that h
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmf_comp_q5" title="Question 5"><![CDATA[
+<MarkupProblem id="tmf_comp_q5" title="Question 5" maxAttempts="1"><![CDATA[
 >>What evidence from the text demonstrates the ultimate success of the temperance movement by the 1840s?<<
 
 ( ) Alcohol consumption completely ceased across all social classes.
@@ -557,7 +563,9 @@ The nine steps, in order:
 
 <!-- ============================================================
      Part 4 — Synthesis: sort each description as "then" (temperance)
-     vs "now" (sober-curious), drawing on all three texts. Graded.
+     vs "now" (sober-curious), drawing on all three texts. Graded:
+     one attempt, key revealed after submission, not before (see the
+     note-check grid).
      ============================================================ -->
 
 <Vertical id="tmf_synth_sort">
@@ -567,7 +575,7 @@ The nine steps, in order:
 Using the textbook, the printed article, and the lithograph, sort each description under
 the movement it best fits. Then press **Check.**
 </Markdown>
-<CapaProblem id="tmf_synth_sort_problem" title="Then vs. Now" showanswer="always">
+<CapaProblem id="tmf_synth_sort_problem" title="Then vs. Now" maxAttempts="1">
 <TabularMCQGrader id="tmf_synth_sort_grader">
 <TabularMCQ id="tmf_synth_sort_grid">
 cols:
