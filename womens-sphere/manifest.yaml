@@ -32,4 +32,4 @@ content_notice: >
   "The Sphere of Woman," an engraving from *Godey's Lady's Book* vol. 40 (March 1850),
   is in the public domain.
 routes:
-  "/": womens_sphere/temperance_b_full_sba
+  "/": womens_sphere/womens_sphere_module

@@ -24,13 +24,13 @@ its first tab, "Discussion," is the session itself:
   * Left  pane : the scripted small-group conversation
                  (temperance_b_full_dialogue_part1.chatpeg). Peers Danielle,
                  Joe, and Karis and the reading instructor Professor Booker.
-  * Right pane : a UseHistory (tmb_main) the conversation drives via target
-                 embeds (and, for parking the pane empty, `tmb_main <- tmb_blank`).
+  * Right pane : a UseHistory (womens_sphere_pane) the conversation drives via target
+                 embeds (and, for parking the pane empty, `womens_sphere_pane <- womens_sphere_pane_blank`).
 Each READING screen below — the lecture, the four textbook parts, the
 engraving — also gets its own tab, via <Use ref="..."> of the same block, so a
 student can reopen it (with their own highlights) at any point.
 
-The textbook is CHUNKED across four Main Content readings (tmb_tb_a/a2/b/c),
+The textbook is CHUNKED across four Main Content readings (womens_sphere_read_1/a2/b/c),
 one per paragraph (para 4 folds in the short Southern-women paragraph), so peer
 dialogue can mediate each passage before the next appears and before the items
 that depend on it.
@@ -38,19 +38,19 @@ This FULL build carries the module through all five parts: textbook, image,
 article, a then/now synthesis, and Pulling It Together — the culminating
 four-or-five-sentence synthesis.
 
-Ids are prefixed `tmb_` and the namespace is `womens_sphere`, so this form's
-ids never collide with the parallel form's.
+Ids are prefixed `womens_sphere_`, the form's name; the parallel form uses
+`temperance_`.
      -->
 
-<Vertical id="temperance_b_full_activities_part1" title="Women's Sphere (Activities)" launchable="true">
+<Vertical id="womens_sphere_activities" title="Women's Sphere (Activities)" launchable="true">
 
 
 <!-- ============================================================
      Part 1 — Introduction
      ============================================================ -->
 
-<Vertical id="tmb_intro">
-<Markdown id="tmb_intro_md">
+<Vertical id="womens_sphere_intro">
+<Markdown id="womens_sphere_intro_md">
 # READ 1000
 
 ## Introduction
@@ -89,7 +89,7 @@ All right, now imagine that you are in your classroom, but class has not started
 yet. You are talking to Danielle, Joe, and Karis. Click **Continue** in the
 conversation on the left to begin.
 </Markdown>
-</Vertical> <!-- tmb_intro -->
+</Vertical> <!-- womens_sphere_intro -->
 
 
 <!-- ============================================================
@@ -97,8 +97,8 @@ conversation on the left to begin.
      Ungraded: "there is no right or wrong answer."
      ============================================================ -->
 
-<Vertical id="tmb_vks">
-<Markdown id="tmb_vks_prompt">
+<Vertical id="womens_sphere_vks">
+<Markdown id="womens_sphere_vks_prompt">
 ## Before We Read: How Familiar Are These Words?
 
 Take a look at some words that you will see in the texts. This is **not graded**
@@ -106,7 +106,7 @@ Take a look at some words that you will see in the texts. This is **not graded**
 instructor. For each word, choose the option that best describes how well you
 know it.
 </Markdown>
-<TabularMCQ id="tmb_vks_grid">
+<TabularMCQ id="womens_sphere_vks_grid">
 cols:
   - I have never seen this word.
   - "I have seen it, but I'm not sure what it means."
@@ -122,7 +122,7 @@ rows:
   - public sphere|w_publicsphere
   - tandem|w_tandem
 </TabularMCQ>
-</Vertical> <!-- tmb_vks -->
+</Vertical> <!-- womens_sphere_vks -->
 
 
 <!-- ============================================================
@@ -138,13 +138,13 @@ rows:
 
 <!-- Parked wherever the chat has moved past the pane's last activity —
      an intentionally quiet screen, same pattern as the writing journals. -->
-<Markdown id="tmb_blank">
+<Markdown id="womens_sphere_pane_blank">
 *(nothing here right now — the discussion continues on the left)*
 </Markdown>
 
-<Vertical id="tmb_lecture_read">
-<Annotate id="tmb_lecture_annotate" title="Professor Hale's Lecture">
-<Markdown id="tmb_lecture_md" src="readings/lecture_hale.md" />
+<Vertical id="womens_sphere_lecture">
+<Annotate id="womens_sphere_lecture_annotate" title="Professor Hale's Lecture">
+<Markdown id="womens_sphere_lecture_md" src="readings/lecture_hale.md" />
 </Annotate>
 </Vertical>
 
@@ -154,11 +154,11 @@ rows:
      The new industrial economy and the "public sphere." Highlightable.
      ============================================================ -->
 
-<Vertical id="tmb_tb_a">
-<Annotate id="tmb_tb_a_annotate" title="American Yawp — Women and the Sphere of Woman (part 1)">
-<Markdown id="tmb_tb_a_md" src="readings/american-yawp/womens_sphere_1.md" />
+<Vertical id="womens_sphere_read_1">
+<Annotate id="womens_sphere_read_1_annotate" title="American Yawp — Women and the Sphere of Woman (part 1)">
+<Markdown id="womens_sphere_read_1_md" src="readings/american-yawp/womens_sphere_1.md" />
 </Annotate>
-<Done id="tmb_tb_a_done" label="Mark as read" />
+<Done id="womens_sphere_read_1_done" label="Mark as read" />
 </Vertical>
 
 
@@ -167,11 +167,11 @@ rows:
      The "cult of domesticity" / "cult of true womanhood." Highlightable.
      ============================================================ -->
 
-<Vertical id="tmb_tb_a2">
-<Annotate id="tmb_tb_a2_annotate" title="American Yawp — Women and the Sphere of Woman (part 2)">
-<Markdown id="tmb_tb_a2_md" src="readings/american-yawp/womens_sphere_2.md" />
+<Vertical id="womens_sphere_read_2">
+<Annotate id="womens_sphere_read_2_annotate" title="American Yawp — Women and the Sphere of Woman (part 2)">
+<Markdown id="womens_sphere_read_2_md" src="readings/american-yawp/womens_sphere_2.md" />
 </Annotate>
-<Done id="tmb_tb_a2_done" label="Mark as read" />
+<Done id="womens_sphere_read_2_done" label="Mark as read" />
 </Vertical>
 
 
@@ -186,8 +186,8 @@ rows:
      scored item here.
      ============================================================ -->
 
-<Vertical id="tmb_notecheck">
-<Markdown id="tmb_notecheck_prompt">
+<Vertical id="womens_sphere_notes">
+<Markdown id="womens_sphere_notes_prompt">
 ## Checking Joe's Notes on the Textbook
 
 Joe made a list of what he thought were the important points from the *American
@@ -195,9 +195,9 @@ Yawp* excerpt. For **each statement**, decide whether it is **correct and centra
 to the text**, **correct but less important**, or **not correct**. Then press
 **Check**.
 </Markdown>
-<CapaProblem id="tmb_notecheck_problem" title="Joe's Notes on the Textbook" maxAttempts="1">
-<TabularMCQGrader id="tmb_notecheck_grader">
-<TabularMCQ id="tmb_notecheck_grid">
+<CapaProblem id="womens_sphere_notes_problem" title="Joe's Notes on the Textbook" maxAttempts="1">
+<TabularMCQGrader id="womens_sphere_notes_grader">
+<TabularMCQ id="womens_sphere_notes_grid">
 cols:
   - Correct and central to the text
   - Correct but less important
@@ -211,8 +211,8 @@ rows:
   - "The cult of domesticity was invented by factory owners to force women to take jobs in factories.|n_factory[Not correct]"
 </TabularMCQ>
 </TabularMCQGrader>
-</CapaProblem> <!-- tmb_notecheck_problem -->
-</Vertical> <!-- tmb_notecheck -->
+</CapaProblem> <!-- womens_sphere_notes_problem -->
+</Vertical> <!-- womens_sphere_notes -->
 
 
 <!-- ============================================================
@@ -220,11 +220,11 @@ rows:
      Women as guardians of virtue; pious, pure, submissive, domestic.
      ============================================================ -->
 
-<Vertical id="tmb_tb_b">
-<Annotate id="tmb_tb_b_annotate" title="American Yawp — Women and the Sphere of Woman (part 3)">
-<Markdown id="tmb_tb_b_md" src="readings/american-yawp/womens_sphere_3.md" />
+<Vertical id="womens_sphere_read_3">
+<Annotate id="womens_sphere_read_3_annotate" title="American Yawp — Women and the Sphere of Woman (part 3)">
+<Markdown id="womens_sphere_read_3_md" src="readings/american-yawp/womens_sphere_3.md" />
 </Annotate>
-<Done id="tmb_tb_b_done" label="Mark as read" />
+<Done id="womens_sphere_read_3_done" label="Mark as read" />
 </Vertical>
 
 
@@ -234,11 +234,11 @@ rows:
      (moralizing / euphemism). Used for the grammar tasks too.
      ============================================================ -->
 
-<Vertical id="tmb_tb_c">
-<Annotate id="tmb_tb_c_annotate" title="American Yawp — Women and the Sphere of Woman (part 4)">
-<Markdown id="tmb_tb_c_md" src="readings/american-yawp/womens_sphere_4.md" />
+<Vertical id="womens_sphere_read_4">
+<Annotate id="womens_sphere_read_4_annotate" title="American Yawp — Women and the Sphere of Woman (part 4)">
+<Markdown id="womens_sphere_read_4_md" src="readings/american-yawp/womens_sphere_4.md" />
 </Annotate>
-<Done id="tmb_tb_c_done" label="Mark as read" />
+<Done id="womens_sphere_read_4_done" label="Mark as read" />
 </Vertical>
 
 
@@ -275,8 +275,8 @@ rows:
      can find without having identified anything else; once you have it, "who
      did it" and "what got done to" are questions about the verb. Asking for the
      subject first asks students to find it out of nowhere. -->
-<Vertical id="tmb_grammar_svo">
-<Markdown id="tmb_grammar_svo_md">
+<Vertical id="womens_sphere_gram_svo">
+<Markdown id="womens_sphere_gram_svo_md">
 ## Verb, Subject, Object
 
 Three quick highlights on the key sentence — the verb first, then the subject,
@@ -286,9 +286,9 @@ The verb is a **single word**. The subject and the object are **whole phrases**:
 highlight every word of the phrase, and nothing outside it.
 </Markdown>
 
-<CapaProblem id="tmb_grammar_svo_verb_problem" title="Highlight the verb" maxAttempts="1">
-<TextSelectionGrader id="tmb_grammar_svo_verb_grader">
-<TextSelectionInput id="tmb_grammar_svo_verb">
+<CapaProblem id="womens_sphere_gram_verb_problem" title="Highlight the verb" maxAttempts="1">
+<TextSelectionGrader id="womens_sphere_gram_verb_grader">
+<TextSelectionInput id="womens_sphere_gram_verb">
 This sentence has two verbs joined by "and." Highlight the first one — a single word.
 ---
 Yet women [took] the very ideology that defined their place in the home and used it to fashion a public role for themselves.
@@ -297,11 +297,11 @@ all: Right — "took" is the first verb: what women did with that ideology befor
 : The verb is the action word — here "took," the first thing women did in the sentence.
 </TextSelectionInput>
 </TextSelectionGrader>
-</CapaProblem> <!-- tmb_grammar_svo_verb_problem -->
+</CapaProblem> <!-- womens_sphere_gram_verb_problem -->
 
-<CapaProblem id="tmb_grammar_svo_subject_problem" title="Highlight the subject" maxAttempts="1">
-<TextSelectionGrader id="tmb_grammar_svo_subject_grader">
-<TextSelectionInput id="tmb_grammar_svo_subject">
+<CapaProblem id="womens_sphere_gram_subject_problem" title="Highlight the subject" maxAttempts="1">
+<TextSelectionGrader id="womens_sphere_gram_subject_grader">
+<TextSelectionInput id="womens_sphere_gram_subject">
 Highlight the subject — the entire subject phrase, every word of it.
 ---
 Yet [women] took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
@@ -310,11 +310,11 @@ all: Right — the subject is "women." Here the whole subject phrase is that one
 : The subject is who or what does the action — "women," the ones who did the taking.
 </TextSelectionInput>
 </TextSelectionGrader>
-</CapaProblem> <!-- tmb_grammar_svo_subject_problem -->
+</CapaProblem> <!-- womens_sphere_gram_subject_problem -->
 
-<CapaProblem id="tmb_grammar_svo_object_problem" title="Highlight the object" maxAttempts="1">
-<TextSelectionGrader id="tmb_grammar_svo_object_grader">
-<TextSelectionInput id="tmb_grammar_svo_object">
+<CapaProblem id="womens_sphere_gram_object_problem" title="Highlight the object" maxAttempts="1">
+<TextSelectionGrader id="womens_sphere_gram_object_grader">
+<TextSelectionInput id="womens_sphere_gram_object">
 Highlight the direct object of that first verb — the entire object phrase, every word of it.
 ---
 Yet women took [the very ideology that defined their place in the home] and used it to fashion a public role for themselves.
@@ -323,8 +323,8 @@ all: Right — the object is the whole phrase "the very ideology that defined th
 : The object is what women took — the whole phrase "the very ideology that defined their place in the home," built around the noun "ideology."
 </TextSelectionInput>
 </TextSelectionGrader>
-</CapaProblem> <!-- tmb_grammar_svo_object_problem -->
-</Vertical> <!-- tmb_grammar_svo -->
+</CapaProblem> <!-- womens_sphere_gram_object_problem -->
+</Vertical> <!-- womens_sphere_gram_svo -->
 
 <!-- Inside the OBJECT noun phrase. ONE matching item, where three sequential
      highlights used to be. The parts on the right are the constituents of the
@@ -343,37 +343,37 @@ all: Right — the object is the whole phrase "the very ideology that defined th
      the pointing word(s) in front of the head noun. "the very" points at one
      particular ideology, so it does the same job "Such" does in the parallel
      form. -->
-<Vertical id="tmb_grammar_np">
-<Markdown id="tmb_grammar_np_md">
+<Vertical id="womens_sphere_gram_np">
+<Markdown id="womens_sphere_gram_np_md">
 ## Inside the Noun Phrase
 
 The object of that sentence is a noun phrase all by itself. Here it is on its
 own — take it apart.
 </Markdown>
 
-<CapaProblem id="tmb_grammar_np_problem" title="Inside the Noun Phrase" maxAttempts="1">
-<MatchingGrader id="tmb_grammar_np_grader">
-<Markdown id="tmb_grammar_np_prompt">
+<CapaProblem id="womens_sphere_gram_np_problem" title="Inside the Noun Phrase" maxAttempts="1">
+<MatchingGrader id="womens_sphere_gram_np_grader">
+<Markdown id="womens_sphere_gram_np_prompt">
 Match each part of a noun phrase to the part that plays it in **the very
 ideology that defined their place in the home**.
 </Markdown>
-<MatchingInput id="tmb_grammar_np_match">
-  <Markdown id="tmb_grammar_np_role_head"> **Head noun** — the one word the whole phrase is built around                     </Markdown>
-  <Markdown id="tmb_grammar_np_part_head"> ideology                                                                         </Markdown>
+<MatchingInput id="womens_sphere_gram_np_match">
+  <Markdown id="womens_sphere_gram_np_role_head"> **Head noun** — the one word the whole phrase is built around                     </Markdown>
+  <Markdown id="womens_sphere_gram_np_part_head"> ideology                                                                         </Markdown>
 
-  <Markdown id="tmb_grammar_np_role_det" > **Determiner** — the word before the head noun that helps identify or specify it </Markdown>
-  <Markdown id="tmb_grammar_np_part_det" > the                                                                              </Markdown>
+  <Markdown id="womens_sphere_gram_np_role_det" > **Determiner** — the word before the head noun that helps identify or specify it </Markdown>
+  <Markdown id="womens_sphere_gram_np_part_det" > the                                                                              </Markdown>
 
-  <Markdown id="tmb_grammar_np_role_post"> **Postmodifier** — the part after the head noun that tells you more about it     </Markdown>
-  <Markdown id="tmb_grammar_np_part_post"> that defined their place in the home                                             </Markdown>
+  <Markdown id="womens_sphere_gram_np_role_post"> **Postmodifier** — the part after the head noun that tells you more about it     </Markdown>
+  <Markdown id="womens_sphere_gram_np_part_post"> that defined their place in the home                                             </Markdown>
 </MatchingInput>
 </MatchingGrader>
-</CapaProblem> <!-- tmb_grammar_np_problem -->
-</Vertical> <!-- tmb_grammar_np -->
+</CapaProblem> <!-- womens_sphere_gram_np_problem -->
+</Vertical> <!-- womens_sphere_gram_np -->
 
 <!-- The structure, laid out (info screen) -->
-<Vertical id="tmb_grammar_structure">
-<Markdown id="tmb_grammar_structure_md">
+<Vertical id="womens_sphere_gram_structure">
+<Markdown id="womens_sphere_gram_structure_md">
 ## The Grammatical Structure
 
 Here is the sentence laid out:
@@ -386,14 +386,14 @@ Here is the sentence laid out:
 The object is a **noun phrase** — to understand the sentence, you hold the
 whole phrase together.
 </Markdown>
-<Done id="tmb_grammar_structure_done" label="I understand" />
+<Done id="womens_sphere_gram_structure_done" label="I understand" />
 </Vertical>
 
 <!-- Highlight the sentence that first NAMES the ideology "the very ideology"
      points back to. Only one sentence in the passage names it ("cult of
      domesticity" / "cult of true womanhood"), so the target is unambiguous
      even though the passage spans several paragraphs. -->
-<SimpleTextSelection id="tmb_grammar_antecedent" mode="graded" title="Find the Antecedent">
+<SimpleTextSelection id="womens_sphere_gram_antecedent" mode="graded" title="Find the Antecedent">
 "The very ideology that defined their place in the home" points back to an ideology the text has already named. Find the earlier sentence that first gives it that name — the one that calls it the "cult of domesticity" — and highlight the entire sentence, from its first word through its final period.
 ---
 [Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the "cult of domesticity," or the "cult of true womanhood."] These ideas developed in tandem with industrialization, the market revolution, and the Second Great Awakening. In reality, they applied primarily to upper-class and middle-upper-class women. In the era of revivalism and reform, Americans understood the family and home as the hearthstones of civic virtue and moral influence. Women were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic. Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
@@ -410,7 +410,7 @@ all: Yes — that earlier sentence is where the text names the ideology: the "cu
      on the same pattern as the vocabulary questions — deliberately not a pane
      screen, which would put the questions exactly where the text should be:
      a comprehension check with the passage nowhere in sight is a memory test.
-     The pane holds the text (tmb_comp_reading, below) for the whole stretch,
+     The pane holds the text (womens_sphere_comp_reading, below) for the whole stretch,
      so a student answers with the excerpt open beside them.
 
      Each is a single-question MarkupProblem, so it carries its own Check
@@ -422,24 +422,24 @@ all: Yes — that earlier sentence is where the text names the ideology: the "cu
      one scrollable view. <Use> of the same four Annotate blocks the reading
      walked through and the Textbook 1-4 tabs show — one block, one state — so
      a student's highlights are here waiting for them. The <Done> buttons are
-     deliberately not included: those live on the tmb_tb_* screens, and this
+     deliberately not included: those live on the womens_sphere_read_* screens, and this
      is a place to read from, not another thing to finish. -->
-<Vertical id="tmb_comp_reading">
-<Markdown id="tmb_comp_reading_intro">
+<Vertical id="womens_sphere_comp_reading">
+<Markdown id="womens_sphere_comp_reading_intro">
 ## The Excerpt — All Four Parts
 
 The whole *American Yawp* excerpt, end to end, with your highlights still on it.
 Scroll through it as you answer the questions in the conversation.
 </Markdown>
-<Use ref="tmb_tb_a_annotate" />
-<Use ref="tmb_tb_a2_annotate" />
-<Use ref="tmb_tb_b_annotate" />
-<Use ref="tmb_tb_c_annotate" />
+<Use ref="womens_sphere_read_1_annotate" />
+<Use ref="womens_sphere_read_2_annotate" />
+<Use ref="womens_sphere_read_3_annotate" />
+<Use ref="womens_sphere_read_4_annotate" />
 </Vertical>
 
 <!-- CHAT-EMBEDDED — the five comprehension questions -->
 
-<MarkupProblem id="tmb_comp_q1" title="Question 1" maxAttempts="1"><![CDATA[
+<MarkupProblem id="womens_sphere_comp_1" title="Question 1" maxAttempts="1"><![CDATA[
 >>What happened to family life as the industrial economy of the 1830s and 1840s emerged?<<
 
 ( ) Families grew wealthier, and most women stopped working outside the home.
@@ -452,7 +452,7 @@ Scroll through it as you answer the questions in the conversation.
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmb_comp_q2" title="Question 2" maxAttempts="1"><![CDATA[
+<MarkupProblem id="womens_sphere_comp_2" title="Question 2" maxAttempts="1"><![CDATA[
 >>What was the "cult of domesticity" (or "cult of true womanhood"), and to whom did it mainly apply?<<
 
 (x) The idea that femininity was tied to the home, which applied mainly to upper- and middle-class women.
@@ -465,7 +465,7 @@ Scroll through it as you answer the questions in the conversation.
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmb_comp_q3" title="Question 3" maxAttempts="1"><![CDATA[
+<MarkupProblem id="womens_sphere_comp_3" title="Question 3" maxAttempts="1"><![CDATA[
 >>According to the dominant understanding of gender, what were women expected to be?<<
 
 ( ) The main wage-earners who supported their families financially.
@@ -478,7 +478,7 @@ Scroll through it as you answer the questions in the conversation.
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmb_comp_q4" title="Question 4" maxAttempts="1"><![CDATA[
+<MarkupProblem id="womens_sphere_comp_4" title="Question 4" maxAttempts="1"><![CDATA[
 >>How did women turn the ideology of domesticity into something new?<<
 
 ( ) They rejected the ideology and demanded to be treated the same as men in public life.
@@ -491,7 +491,7 @@ Scroll through it as you answer the questions in the conversation.
 [/explanation]
 ]]></MarkupProblem>
 
-<MarkupProblem id="tmb_comp_q5" title="Question 5" maxAttempts="1"><![CDATA[
+<MarkupProblem id="womens_sphere_comp_5" title="Question 5" maxAttempts="1"><![CDATA[
 >>How did the experience of many Southern women differ from that of some Northern women?<<
 
 ( ) Southern women were the first to form antislavery societies in large numbers.
@@ -513,8 +513,8 @@ Scroll through it as you answer the questions in the conversation.
      article questions that follow are chat-embedded.
      ============================================================ -->
 
-<Vertical id="tmb_article_read">
-<Markdown id="tmb_article_md">
+<Vertical id="womens_sphere_article_read">
+<Markdown id="womens_sphere_article_md">
 ## The Magazine Article — On Paper
 
 Your instructor handed out a printed copy of the magazine article about the
@@ -538,8 +538,8 @@ together at the end.
 </Markdown>
 <!-- The reading happens off-screen, so the chat has nothing to watch except
        this: the student tells us when the paper article has been read. -->
-<Done id="tmb_article_read_done" label="I've read the handout" />
-</Vertical> <!-- tmb_article_read -->
+<Done id="womens_sphere_article_read_done" label="I've read the handout" />
+</Vertical> <!-- womens_sphere_article_read -->
 
 
 <!-- ============================================================
@@ -548,18 +548,18 @@ together at the end.
      the American Yawp chapter. Public domain.
      ============================================================ -->
 
-<Vertical id="tmb_img_read">
-<Markdown id="tmb_img_intro">
+<Vertical id="womens_sphere_image">
+<Markdown id="womens_sphere_image_intro">
 ## A Period Image: "The Sphere of Woman"
 
 Study this engraving from an 1850 women's magazine. Notice **where the woman
 is** (indoors, at home), **what she is doing** (caring for her children), and
 the **title** printed beneath the picture.
 </Markdown>
-<Image id="tmb_img_img" src="images/sphere_of_woman.jpg" width="640"
+<Image id="womens_sphere_image_figure" src="images/sphere_of_woman.jpg" width="640"
   alt="'The Sphere of Woman' (Godey's Lady's Book, 1850): inside a curtained parlor, a mother holds her baby while a girl and a boy read and play beside her, a dog resting at their feet; the title 'THE SPHERE OF WOMAN' is printed beneath the scene."
   authors="Godey's Lady's Book, 1850" license="Public domain" />
-<Markdown id="tmb_img_caption">
+<Markdown id="womens_sphere_image_caption">
 **"The Sphere of Woman"** — *Godey's Lady's Book,* vol. 40 (March 1850).
 
 A mother holds her baby while two children read and play beside her in a
@@ -567,7 +567,7 @@ comfortable parlor. *Godey's Lady's Book* was the most popular women's magazine
 of the era, and it printed this engraving as a picture of a woman's proper
 place: the home, at the center of family and children.
 </Markdown>
-</Vertical> <!-- tmb_img_read -->
+</Vertical> <!-- womens_sphere_image -->
 
 
 <!-- ============================================================
@@ -577,16 +577,16 @@ place: the home, at the center of family and children.
      note-check grid).
      ============================================================ -->
 
-<Vertical id="tmb_synth_sort">
-<Markdown id="tmb_synth_sort_prompt">
+<Vertical id="womens_sphere_synth_sort">
+<Markdown id="womens_sphere_synth_sort_prompt">
 ## Then and Now
 
 Using the textbook, the printed article, and the engraving, sort each description
 under the movement it best fits. Then press **Check.**
 </Markdown>
-<CapaProblem id="tmb_synth_sort_problem" title="Then vs. Now" maxAttempts="1">
-<TabularMCQGrader id="tmb_synth_sort_grader">
-<TabularMCQ id="tmb_synth_sort_grid">
+<CapaProblem id="womens_sphere_synth_sort_problem" title="Then vs. Now" maxAttempts="1">
+<TabularMCQGrader id="womens_sphere_synth_sort_grader">
+<TabularMCQ id="womens_sphere_synth_sort_grid">
 cols:
   - "The 1800s ideal of the 'true woman'"
   - "Today's 'tradwife' trend"
@@ -599,15 +599,15 @@ rows:
 </TabularMCQ>
 </TabularMCQGrader>
 </CapaProblem>
-</Vertical> <!-- tmb_synth_sort -->
+</Vertical> <!-- womens_sphere_synth_sort -->
 
 
 <!-- ============================================================
      Part 5 — Culminating writing task (Pulling It Together).
      ============================================================ -->
 
-<Vertical id="tmb_final_write_screen">
-<Markdown id="tmb_final_write_prompt">
+<Vertical id="womens_sphere_final">
+<Markdown id="womens_sphere_final_prompt">
 ## Pulling It Together
 
 This is the goal the whole module has been building toward.
@@ -619,7 +619,7 @@ them: in what ways are the two alike, and how do they differ?**
 Draw on all three texts — the *American Yawp* excerpt, the engraving, and the
 article your instructor handed out.
 </Markdown>
-<TextArea id="tmb_final_write" rows="8"
+<TextArea id="womens_sphere_final_write" rows="8"
   placeholder="Both hold up the woman at home as an ideal, but…" />
 
 <!-- Progress affordance, two tiers. There is no word minimum to hit: the
@@ -627,21 +627,21 @@ article your instructor handed out.
        is encouragement rather than a countdown. The second tier only ever
        claims what it actually checked (length); quality is handed back to the
        student as a read-it-back checklist. -->
-<Markdown when="wordcount(@tmb_final_write.value) &lt; 40">
+<Markdown when="wordcount(@womens_sphere_final_write.value) &lt; 40">
 *A solid comparison usually takes four or five sentences — keep going.*
 </Markdown>
-<Markdown when="wordcount(@tmb_final_write.value) &gt;= 40">
+<Markdown when="wordcount(@womens_sphere_final_write.value) &gt;= 40">
 *✓ You can continue. Before you do, read it back: does it name **one way the two are alike** and **one way they differ**? Does it draw on **all three texts** — the textbook, the engraving, and the article?*
 </Markdown>
-</Vertical> <!-- tmb_final_write_screen -->
+</Vertical> <!-- womens_sphere_final -->
 
 
 <!-- ============================================================
      Part 5 — Conclusion / wrap-up.
      ============================================================ -->
 
-<Vertical id="tmb_conclusion">
-<Markdown id="tmb_conclusion_md">
+<Vertical id="womens_sphere_conclusion">
+<Markdown id="womens_sphere_conclusion_md">
 ## You're Done
 
 Nice work — you've finished the module. Along the way you practiced the full
@@ -659,15 +659,15 @@ Here is the finished work — the comparison you built from all three texts.
 <!-- The writing screen is behind us in the pane by now, so the conclusion
        shows the comparison rather than pointing at a screen that has moved
        on. <Use>, not a copy: same block, same state, still editable. -->
-<Use ref="tmb_final_write" />
-</Vertical> <!-- tmb_conclusion -->
+<Use ref="womens_sphere_final_write" />
+</Vertical> <!-- womens_sphere_conclusion -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — what do you think "a woman's place is in the home" means?
      ============================================================ -->
 
-<TextArea id="tmb_topic_guess" rows="3"
+<TextArea id="womens_sphere_intro_guess" rows="3"
   placeholder="It has to do with…  /  I think it means…  /  It's about…" />
 
 
@@ -676,7 +676,7 @@ Here is the finished work — the comparison you built from all three texts.
      ============================================================ -->
 
 <!-- Each chat-embedded question is wrapped in a Vertical that TAKES OVER the
-     embed id (`::tmb_q_publicsphere_screen`), so the correctness feedback under
+     embed id (`::womens_sphere_vocab_publicsphere_screen`), so the correctness feedback under
      the choices renders inside the chat bubble with them. The ChoiceInput
      keeps its own id — every wait, and every readback, still names it.
 
@@ -698,10 +698,10 @@ Here is the finished work — the comparison you built from all three texts.
      that option misses and what the key is; nothing tells the student to
      look again. -->
 
-<Vertical id="tmb_q_publicsphere_screen">
-<CapaProblem id="tmb_q_publicsphere_problem" title="Vocabulary: public sphere" maxAttempts="1">
-<KeyGrader id="tmb_q_publicsphere_grader">
-<ChoiceInput id="tmb_q_publicsphere">
+<Vertical id="womens_sphere_vocab_publicsphere_screen">
+<CapaProblem id="womens_sphere_vocab_publicsphere_problem" title="Vocabulary: public sphere" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_publicsphere_grader">
+<ChoiceInput id="womens_sphere_vocab_publicsphere">
 <Markdown>
 Look at the highlighted sentence and choose the best definition for **public sphere**:
 
@@ -715,27 +715,27 @@ Look at the highlighted sentence and choose the best definition for **public sph
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_q_publicsphere.value === 'private_home' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_publicsphere.value === 'private_home' &amp;&amp; @womens_sphere_vocab_publicsphere_problem.submitCount &gt; 0">
 *That's the **domestic** sphere, the opposite of the public one. The public sphere is life outside the home — work, politics, community.*
 </Markdown>
-<Markdown when="@tmb_q_publicsphere.value === 'town_square' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_publicsphere.value === 'town_square' &amp;&amp; @womens_sphere_vocab_publicsphere_problem.submitCount &gt; 0">
 *"Sphere" here isn't a literal place you can stand in. It means a whole area of life — work, politics, community — outside the home.*
 </Markdown>
-<Markdown when="@tmb_q_publicsphere.value === 'shared_opinion' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_publicsphere.value === 'shared_opinion' &amp;&amp; @womens_sphere_vocab_publicsphere_problem.submitCount &gt; 0">
 *The public sphere is where people act and argue in common, not a single shared opinion: the shared world outside the home.*
 </Markdown>
-<Markdown when="@tmb_q_publicsphere.value === 'public_life' &amp;&amp; @tmb_q_publicsphere_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_publicsphere.value === 'public_life' &amp;&amp; @womens_sphere_vocab_publicsphere_problem.submitCount &gt; 0">
 *Yes — the public sphere is life outside the home: work, politics, and community. Its opposite is the "domestic sphere," which comes up next.*
 </Markdown>
-</CapaProblem> <!-- tmb_q_publicsphere_problem -->
-</Vertical> <!-- tmb_q_publicsphere_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_publicsphere_problem -->
+</Vertical> <!-- womens_sphere_vocab_publicsphere_screen -->
 
 <!-- CHAT-EMBEDDED — vocabulary, chunk A2 / para 2 -->
 
-<Vertical id="tmb_q_tandem_screen">
-<CapaProblem id="tmb_q_tandem_problem" title="Vocabulary: tandem" maxAttempts="1">
-<KeyGrader id="tmb_q_tandem_grader">
-<ChoiceInput id="tmb_q_tandem">
+<Vertical id="womens_sphere_vocab_tandem_screen">
+<CapaProblem id="womens_sphere_vocab_tandem_problem" title="Vocabulary: tandem" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_tandem_grader">
+<ChoiceInput id="womens_sphere_vocab_tandem">
 <Markdown>
 What words could take the place of **in tandem with** — but keep the meaning the same?
 
@@ -749,30 +749,30 @@ What words could take the place of **in tandem with** — but keep the meaning t
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_q_tandem.value === 'against' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_tandem.value === 'against' &amp;&amp; @womens_sphere_vocab_tandem_problem.submitCount &gt; 0">
 *Backwards. The ideas didn't fight those changes; they grew up right alongside them — "in tandem with" means together, at the same time.*
 </Markdown>
-<Markdown when="@tmb_q_tandem.value === 'before' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_tandem.value === 'before' &amp;&amp; @womens_sphere_vocab_tandem_problem.submitCount &gt; 0">
 *"In tandem" is about the same time, not one ahead of the other: two riders on a tandem bicycle move together.*
 </Markdown>
-<Markdown when="@tmb_q_tandem.value === 'instead' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_tandem.value === 'instead' &amp;&amp; @womens_sphere_vocab_tandem_problem.submitCount &gt; 0">
 *The ideas didn't replace industrialization or the revival; they developed together with them, at the same time.*
 </Markdown>
-<Markdown when="@tmb_q_tandem.value === 'alongside' &amp;&amp; @tmb_q_tandem_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_tandem.value === 'alongside' &amp;&amp; @womens_sphere_vocab_tandem_problem.submitCount &gt; 0">
 *Yes — "in tandem with" means together, at the same time. A tandem bicycle carries two riders moving as one.*
 </Markdown>
-</CapaProblem> <!-- tmb_q_tandem_problem -->
-</Vertical> <!-- tmb_q_tandem_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_tandem_problem -->
+</Vertical> <!-- womens_sphere_vocab_tandem_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — cult of domesticity, disciplinary term (chunk A2)
      ============================================================ -->
 
-<Vertical id="tmb_cd_term_screen">
-<CapaProblem id="tmb_cd_term_problem" title="Cult of domesticity: the term" maxAttempts="1">
-<KeyGrader id="tmb_cd_term_grader">
-<ChoiceInput id="tmb_cd_term">
+<Vertical id="womens_sphere_term_pick_screen">
+<CapaProblem id="womens_sphere_term_pick_problem" title="Cult of domesticity: the term" maxAttempts="1">
+<KeyGrader id="womens_sphere_term_pick_grader">
+<ChoiceInput id="womens_sphere_term_pick">
 <Markdown>
 **Cult of domesticity** is a discipline-specific term. Using clues in the
 passage, which phrase most directly helps us understand what it was?
@@ -784,25 +784,25 @@ passage, which phrase most directly helps us understand what it was?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_cd_term.value === 'market_revolution' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_pick.value === 'market_revolution' &amp;&amp; @womens_sphere_term_pick_problem.submitCount &gt; 0">
 *The market revolution is one of the changes the idea developed alongside, not what the idea WAS. The passage's own phrase for it is "the domestic sphere."*
 </Markdown>
-<Markdown when="@tmb_cd_term.value === 'public_sphere' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_pick.value === 'public_sphere' &amp;&amp; @womens_sphere_term_pick_problem.submitCount &gt; 0">
 *That's the opposite. The cult of domesticity tied women to the HOME — "the domestic sphere," in the passage's words — away from public life.*
 </Markdown>
-<Markdown when="@tmb_cd_term.value === 'second_awakening' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_pick.value === 'second_awakening' &amp;&amp; @womens_sphere_term_pick_problem.submitCount &gt; 0">
 *The Second Great Awakening helped shape the idea, but it isn't a definition of it. The passage's phrase for what it was is "the domestic sphere."*
 </Markdown>
-<Markdown when="@tmb_cd_term.value === 'domestic_sphere' &amp;&amp; @tmb_cd_term_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_pick.value === 'domestic_sphere' &amp;&amp; @womens_sphere_term_pick_problem.submitCount &gt; 0">
 *Yes — the passage hands you the phrase: femininity was "intimately tied to the domestic sphere." A woman's proper place was the home.*
 </Markdown>
-</CapaProblem> <!-- tmb_cd_term_problem -->
-</Vertical> <!-- tmb_cd_term_screen -->
+</CapaProblem> <!-- womens_sphere_term_pick_problem -->
+</Vertical> <!-- womens_sphere_term_pick_screen -->
 
-<Vertical id="tmb_cd_connect_screen">
-<CapaProblem id="tmb_cd_connect_problem" title="Cult of domesticity: what connects to it" maxAttempts="1">
-<CheckboxGrader id="tmb_cd_connect_grader">
-<CheckboxInput id="tmb_cd_connect">
+<Vertical id="womens_sphere_term_connect_screen">
+<CapaProblem id="womens_sphere_term_connect_problem" title="Cult of domesticity: what connects to it" maxAttempts="1">
+<CheckboxGrader id="womens_sphere_term_connect_grader">
+<CheckboxInput id="womens_sphere_term_connect">
 <Markdown>
 The cult of domesticity was the idea that a woman's proper place was the
 **home.** What other words or phrases from the chapter describe or connect to
@@ -825,33 +825,33 @@ it? **Select all that apply.**
    anything else is simply wrong. That is a strict rule for a six-option
    select-all, and it is declared here as the rule this form scores by, not
    as the only defensible one — partial credit is the obvious next question. -->
-<Markdown when="@tmb_cd_connect.value.includes('reform_societies') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_connect.value.includes('reform_societies') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
 *Reform societies are the PUBLIC role women fashioned once they left the home, not part of the domestic ideal.*
 </Markdown>
-<Markdown when="@tmb_cd_connect.value.includes('antislavery_movement') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_connect.value.includes('antislavery_movement') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
 *Joining the antislavery movement took women OUT into public life — the opposite of staying in the domestic sphere.*
 </Markdown>
-<Markdown when="@tmb_cd_connect.value.includes('working_class_labor') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_connect.value.includes('working_class_labor') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
 *Working-class women joined the public sphere through their labor, out of necessity. They're the exception to the ideal, not part of it.*
 </Markdown>
-<Markdown when="@tmb_cd_connect.value.length &gt; 0 &amp;&amp; @tmb_cd_connect.value.length &lt; 3 &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_connect.value.length &gt; 0 &amp;&amp; @womens_sphere_term_connect.value.length &lt; 3 &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
 *Fewer than the full set. Three phrases describe the "true woman" at home: the "cult of true womanhood," women as guardians of virtue, and the qualities she was to have — pious, pure, submissive, domestic.*
 </Markdown>
-<Markdown when="@tmb_cd_connect.value.length === 3 &amp;&amp; @tmb_cd_connect.value.includes('true_womanhood') &amp;&amp; @tmb_cd_connect.value.includes('guardians_of_virtue') &amp;&amp; @tmb_cd_connect.value.includes('pious_pure_submissive') &amp;&amp; @tmb_cd_connect_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_connect.value.length === 3 &amp;&amp; @womens_sphere_term_connect.value.includes('true_womanhood') &amp;&amp; @womens_sphere_term_connect.value.includes('guardians_of_virtue') &amp;&amp; @womens_sphere_term_connect.value.includes('pious_pure_submissive') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
 *That's the set: the "cult of true womanhood," women as guardians of virtue, and the qualities of the ideal woman — pious, pure, submissive, and domestic.*
 </Markdown>
-</CapaProblem> <!-- tmb_cd_connect_problem -->
-</Vertical> <!-- tmb_cd_connect_screen -->
+</CapaProblem> <!-- womens_sphere_term_connect_problem -->
+</Vertical> <!-- womens_sphere_term_connect_screen -->
 
 <!-- Three items in this form ask which peer's sentence is best (this one, the
      economic-precarity sentence, the closing comparison). Each peer is right in
      exactly one of them: a peer who is reliably right is a cue that has nothing
      to do with reading. Option values name the sentence, not the speaker, so
      an attribution can move without touching values, gates, or analytics. -->
-<Vertical id="tmb_cd_bestdef_screen">
-<CapaProblem id="tmb_cd_bestdef_problem" title="Cult of domesticity: the best definition" maxAttempts="1">
-<KeyGrader id="tmb_cd_bestdef_grader">
-<ChoiceInput id="tmb_cd_bestdef">
+<Vertical id="womens_sphere_term_bestdef_screen">
+<CapaProblem id="womens_sphere_term_bestdef_problem" title="Cult of domesticity: the best definition" maxAttempts="1">
+<KeyGrader id="womens_sphere_term_bestdef_grader">
+<ChoiceInput id="womens_sphere_term_bestdef">
 <Markdown>
 Each member of your group wrote a one-sentence description of the cult of
 domesticity. Read them and choose the **best** one.
@@ -862,27 +862,27 @@ domesticity. Read them and choose the **best** one.
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_cd_bestdef.value === 'reform_movement' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_bestdef.value === 'reform_movement' &amp;&amp; @womens_sphere_term_bestdef_problem.submitCount &gt; 0">
 *Joe has it backwards. That's the PUBLIC role women fashioned FROM the ideology; the cult of domesticity itself was about staying home — Danielle's sentence.*
 </Markdown>
-<Markdown when="@tmb_cd_bestdef.value === 'laws_all_women' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_bestdef.value === 'laws_all_women' &amp;&amp; @womens_sphere_term_bestdef_problem.submitCount &gt; 0">
 *Karis makes it a law for everyone. It was a cultural and religious ideal, not a law, and it applied mainly to upper- and middle-class women — Danielle's sentence has it.*
 </Markdown>
-<Markdown when="@tmb_cd_bestdef.value === 'home_ideal' &amp;&amp; @tmb_cd_bestdef_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_term_bestdef.value === 'home_ideal' &amp;&amp; @womens_sphere_term_bestdef_problem.submitCount &gt; 0">
 *Yes — Danielle's has all the pieces: the home as a woman's proper place, the qualities of the "true woman," and passing virtue on to her children.*
 </Markdown>
-</CapaProblem> <!-- tmb_cd_bestdef_problem -->
-</Vertical> <!-- tmb_cd_bestdef_screen -->
+</CapaProblem> <!-- womens_sphere_term_bestdef_problem -->
+</Vertical> <!-- womens_sphere_term_bestdef_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — vocabulary, chunk B / para 3
      ============================================================ -->
 
-<Vertical id="tmb_q_domestic_screen">
-<CapaProblem id="tmb_q_domestic_problem" title="Vocabulary: domestic" maxAttempts="1">
-<KeyGrader id="tmb_q_domestic_grader">
-<ChoiceInput id="tmb_q_domestic">
+<Vertical id="womens_sphere_vocab_domestic_screen">
+<CapaProblem id="womens_sphere_vocab_domestic_problem" title="Vocabulary: domestic" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_domestic_grader">
+<ChoiceInput id="womens_sphere_vocab_domestic">
 <Markdown>
 Choose the best definition for **domestic** as it's used here:
 
@@ -897,30 +897,30 @@ Choose the best definition for **domestic** as it's used here:
 
 <!-- Karis names the morphology link in the dialogue after this: "domestic"
    (adjective) shares a root with "domesticity" (noun) from part 2. -->
-<Markdown when="@tmb_q_domestic.value === 'made_in_country' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_domestic.value === 'made_in_country' &amp;&amp; @womens_sphere_vocab_domestic_problem.submitCount &gt; 0">
 *A real sense of "domestic" (as in "domestic products"), but not this one. Here it's about the home: devoted to home and family life.*
 </Markdown>
-<Markdown when="@tmb_q_domestic.value === 'tame_animal' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_domestic.value === 'tame_animal' &amp;&amp; @womens_sphere_vocab_domestic_problem.submitCount &gt; 0">
 *Also a real sense ("a domestic animal"), but the sentence is describing a woman, not a pet. Here it means devoted to the home and family.*
 </Markdown>
-<Markdown when="@tmb_q_domestic.value === 'strict_rules' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_domestic.value === 'strict_rules' &amp;&amp; @womens_sphere_vocab_domestic_problem.submitCount &gt; 0">
 *Nothing in "domestic" is about strictness. It's about the home — devoted to home and family life.*
 </Markdown>
-<Markdown when="@tmb_q_domestic.value === 'home_focused' &amp;&amp; @tmb_q_domestic_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_domestic.value === 'home_focused' &amp;&amp; @womens_sphere_vocab_domestic_problem.submitCount &gt; 0">
 *Right — devoted to the home and family. It's the same root you saw in "domesticity" back in part 2 — the noun for the whole idea.*
 </Markdown>
-</CapaProblem> <!-- tmb_q_domestic_problem -->
-</Vertical> <!-- tmb_q_domestic_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_domestic_problem -->
+</Vertical> <!-- womens_sphere_vocab_domestic_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — vocabulary, chunk C / paras 4-5
      ============================================================ -->
 
-<Vertical id="tmb_q_ideology_screen">
-<CapaProblem id="tmb_q_ideology_problem" title="Vocabulary: ideology" maxAttempts="1">
-<KeyGrader id="tmb_q_ideology_grader">
-<ChoiceInput id="tmb_q_ideology">
+<Vertical id="womens_sphere_vocab_ideology_screen">
+<CapaProblem id="womens_sphere_vocab_ideology_problem" title="Vocabulary: ideology" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_ideology_grader">
+<ChoiceInput id="womens_sphere_vocab_ideology">
 <Markdown>
 Choose the best definition for **ideology**:
 
@@ -934,25 +934,25 @@ Choose the best definition for **ideology**:
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_q_ideology.value === 'single_feeling' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_ideology.value === 'single_feeling' &amp;&amp; @womens_sphere_vocab_ideology_problem.submitCount &gt; 0">
 *An ideology is bigger than one feeling. It's a whole system of beliefs about how things should be — here, that a woman's place is the home.*
 </Markdown>
-<Markdown when="@tmb_q_ideology.value === 'government_law' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_ideology.value === 'government_law' &amp;&amp; @womens_sphere_vocab_ideology_problem.submitCount &gt; 0">
 *Laws are written and enforced; an ideology is a set of shared beliefs. The cult of domesticity was an ideology, not a law.*
 </Markdown>
-<Markdown when="@tmb_q_ideology.value === 'mind_study' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_ideology.value === 'mind_study' &amp;&amp; @womens_sphere_vocab_ideology_problem.submitCount &gt; 0">
 *That's "psychology." The "-ology" ending fools a lot of people; an ideology is a set of beliefs about how society should work.*
 </Markdown>
-<Markdown when="@tmb_q_ideology.value === 'belief_system' &amp;&amp; @tmb_q_ideology_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_ideology.value === 'belief_system' &amp;&amp; @womens_sphere_vocab_ideology_problem.submitCount &gt; 0">
 *Right — a shared set of beliefs about how society should work. Here it's the belief that a woman's place is the home.*
 </Markdown>
-</CapaProblem> <!-- tmb_q_ideology_problem -->
-</Vertical> <!-- tmb_q_ideology_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_ideology_problem -->
+</Vertical> <!-- womens_sphere_vocab_ideology_screen -->
 
-<Vertical id="tmb_q_enmasse_screen">
-<CapaProblem id="tmb_q_enmasse_problem" title="Vocabulary: en masse" maxAttempts="1">
-<KeyGrader id="tmb_q_enmasse_grader">
-<ChoiceInput id="tmb_q_enmasse">
+<Vertical id="womens_sphere_vocab_enmasse_screen">
+<CapaProblem id="womens_sphere_vocab_enmasse_problem" title="Vocabulary: en masse" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_enmasse_grader">
+<ChoiceInput id="womens_sphere_vocab_enmasse">
 <Markdown>
 What words could take the place of **en masse** — but keep the meaning the same?
 
@@ -966,25 +966,25 @@ What words could take the place of **en masse** — but keep the meaning the sam
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_q_enmasse.value === 'one_at_a_time' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_enmasse.value === 'one_at_a_time' &amp;&amp; @womens_sphere_vocab_enmasse_problem.submitCount &gt; 0">
 *The opposite. "En masse" means as a large group, all at once.*
 </Markdown>
-<Markdown when="@tmb_q_enmasse.value === 'in_secret' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_enmasse.value === 'in_secret' &amp;&amp; @womens_sphere_vocab_enmasse_problem.submitCount &gt; 0">
 *Nothing about "en masse" is hidden. It's about numbers — a whole crowd, all together, out in the open.*
 </Markdown>
-<Markdown when="@tmb_q_enmasse.value === 'by_force' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_enmasse.value === 'by_force' &amp;&amp; @womens_sphere_vocab_enmasse_problem.submitCount &gt; 0">
 *"En masse" is about how MANY, not whether they were forced. The women left in large numbers, of their own accord.*
 </Markdown>
-<Markdown when="@tmb_q_enmasse.value === 'all_together' &amp;&amp; @tmb_q_enmasse_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_enmasse.value === 'all_together' &amp;&amp; @womens_sphere_vocab_enmasse_problem.submitCount &gt; 0">
 *Yes — "en masse" is French for "in a mass" — in large numbers, all together. Watch for it again in the article.*
 </Markdown>
-</CapaProblem> <!-- tmb_q_enmasse_problem -->
-</Vertical> <!-- tmb_q_enmasse_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_enmasse_problem -->
+</Vertical> <!-- womens_sphere_vocab_enmasse_screen -->
 
-<Vertical id="tmb_q_moralizing_screen">
-<CapaProblem id="tmb_q_moralizing_problem" title="Vocabulary: moralizing" maxAttempts="1">
-<KeyGrader id="tmb_q_moralizing_grader">
-<ChoiceInput id="tmb_q_moralizing">
+<Vertical id="womens_sphere_vocab_moralizing_screen">
+<CapaProblem id="womens_sphere_vocab_moralizing_problem" title="Vocabulary: moralizing" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_moralizing_grader">
+<ChoiceInput id="womens_sphere_vocab_moralizing">
 <Markdown>
 Choose the best definition for **moralizing** as it's used here:
 
@@ -998,25 +998,25 @@ Choose the best definition for **moralizing** as it's used here:
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_q_moralizing.value === 'discouraging' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_moralizing.value === 'discouraging' &amp;&amp; @womens_sphere_vocab_moralizing_problem.submitCount &gt; 0">
 *That's "demoralizing," which is nearly the opposite. "Moralizing" is about morals — encouraging right living.*
 </Markdown>
-<Markdown when="@tmb_q_moralizing.value === 'guilt_tripping' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_moralizing.value === 'guilt_tripping' &amp;&amp; @womens_sphere_vocab_moralizing_problem.submitCount &gt; 0">
 *A moralizing influence encourages GOOD behavior; it isn't about guilt. The passage pairs it with "calming."*
 </Markdown>
-<Markdown when="@tmb_q_moralizing.value === 'cheering_up' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_moralizing.value === 'cheering_up' &amp;&amp; @womens_sphere_vocab_moralizing_problem.submitCount &gt; 0">
 *That's "boosting morale," a different word. "Moralizing" is about morals — encouraging good behavior — not team spirit.*
 </Markdown>
-<Markdown when="@tmb_q_moralizing.value === 'teaching_right' &amp;&amp; @tmb_q_moralizing_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_moralizing.value === 'teaching_right' &amp;&amp; @womens_sphere_vocab_moralizing_problem.submitCount &gt; 0">
 *Right — a moralizing influence encourages good behavior and right living. It fits the idea of women as the "guardians of virtue."*
 </Markdown>
-</CapaProblem> <!-- tmb_q_moralizing_problem -->
-</Vertical> <!-- tmb_q_moralizing_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_moralizing_problem -->
+</Vertical> <!-- womens_sphere_vocab_moralizing_screen -->
 
-<Vertical id="tmb_q_euphemism_screen">
-<CapaProblem id="tmb_q_euphemism_problem" title="Vocabulary: euphemism" maxAttempts="1">
-<KeyGrader id="tmb_q_euphemism_grader">
-<ChoiceInput id="tmb_q_euphemism">
+<Vertical id="womens_sphere_vocab_euphemism_screen">
+<CapaProblem id="womens_sphere_vocab_euphemism_problem" title="Vocabulary: euphemism" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_euphemism_grader">
+<ChoiceInput id="womens_sphere_vocab_euphemism">
 <Markdown>
 Choose the best definition for **euphemism**:
 
@@ -1030,30 +1030,30 @@ Choose the best definition for **euphemism**:
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_q_euphemism.value === 'opposite_meaning' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_euphemism.value === 'opposite_meaning' &amp;&amp; @womens_sphere_vocab_euphemism_problem.submitCount &gt; 0">
 *That's irony or sarcasm. A euphemism doesn't reverse the meaning; it softens it — a polite word in place of a blunter one.*
 </Markdown>
-<Markdown when="@tmb_q_euphemism.value === 'foreign_word' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_euphemism.value === 'foreign_word' &amp;&amp; @womens_sphere_vocab_euphemism_problem.submitCount &gt; 0">
 *A euphemism can be a perfectly ordinary English word. What makes it a euphemism is that it's a gentler stand-in for a blunter one.*
 </Markdown>
-<Markdown when="@tmb_q_euphemism.value === 'short_lesson' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_euphemism.value === 'short_lesson' &amp;&amp; @womens_sphere_vocab_euphemism_problem.submitCount &gt; 0">
 *That's a proverb or an aphorism. A euphemism is a polite substitute for a more direct word.*
 </Markdown>
-<Markdown when="@tmb_q_euphemism.value === 'polite_substitute' &amp;&amp; @tmb_q_euphemism_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_euphemism.value === 'polite_substitute' &amp;&amp; @womens_sphere_vocab_euphemism_problem.submitCount &gt; 0">
 *Right — a euphemism is a milder, more polite word standing in for a blunter one. Here, "female virtue" was a gentle way of saying "sexual purity."*
 </Markdown>
-</CapaProblem> <!-- tmb_q_euphemism_problem -->
-</Vertical> <!-- tmb_q_euphemism_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_euphemism_problem -->
+</Vertical> <!-- womens_sphere_vocab_euphemism_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — why did women turn the ideology into a public role?
      ============================================================ -->
 
-<Vertical id="tmb_why_publicrole_screen">
-<CapaProblem id="tmb_why_publicrole_problem" title="How women fashioned a public role" maxAttempts="1">
-<KeyGrader id="tmb_why_publicrole_grader">
-<ChoiceInput id="tmb_why_publicrole">
+<Vertical id="womens_sphere_gram_why_screen">
+<CapaProblem id="womens_sphere_gram_why_problem" title="How women fashioned a public role" maxAttempts="1">
+<KeyGrader id="womens_sphere_gram_why_grader">
+<ChoiceInput id="womens_sphere_gram_why">
 <Markdown>
 So how did women take "the very ideology that defined their place in the home"
 and turn it into a **public** role?
@@ -1065,30 +1065,30 @@ and turn it into a **public** role?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_why_publicrole.value === 'rejected_ideology' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_gram_why.value === 'rejected_ideology' &amp;&amp; @womens_sphere_gram_why_problem.submitCount &gt; 0">
 *Women "took the very ideology" and USED it. They didn't reject it; they turned the moral authority it gave them into a reason to act in public.*
 </Markdown>
-<Markdown when="@tmb_why_publicrole.value === 'factory_owners' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_gram_why.value === 'factory_owners' &amp;&amp; @womens_sphere_gram_why_problem.submitCount &gt; 0">
 *That was working-class women, who labored out of necessity. Middle-class women's public role grew out of the moral authority the ideology gave them, not factory work.*
 </Markdown>
-<Markdown when="@tmb_why_publicrole.value === 'government_role' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_gram_why.value === 'government_role' &amp;&amp; @womens_sphere_gram_why_problem.submitCount &gt; 0">
 *No law gave them this role. They claimed it themselves, out of the moral authority the ideology already granted them.*
 </Markdown>
-<Markdown when="@tmb_why_publicrole.value === 'moral_authority' &amp;&amp; @tmb_why_publicrole_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_gram_why.value === 'moral_authority' &amp;&amp; @womens_sphere_gram_why_problem.submitCount &gt; 0">
 *Yes — if a woman is the guardian of virtue and morality, then cleaning up society becomes her job too. That's how the home-bound ideal became a reason to act in public.*
 </Markdown>
-</CapaProblem> <!-- tmb_why_publicrole_problem -->
-</Vertical> <!-- tmb_why_publicrole_screen -->
+</CapaProblem> <!-- womens_sphere_gram_why_problem -->
+</Vertical> <!-- womens_sphere_gram_why_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — article vocabulary + comprehension
      ============================================================ -->
 
-<Vertical id="tmb_q_tradwife_screen">
-<CapaProblem id="tmb_q_tradwife_problem" title="Vocabulary: tradwife" maxAttempts="1">
-<KeyGrader id="tmb_q_tradwife_grader">
-<ChoiceInput id="tmb_q_tradwife">
+<Vertical id="womens_sphere_vocab_tradwife_screen">
+<CapaProblem id="womens_sphere_vocab_tradwife_problem" title="Vocabulary: tradwife" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_tradwife_grader">
+<ChoiceInput id="womens_sphere_vocab_tradwife">
 <Markdown>
 The article is about **tradwives.** First — what does **tradwife** mean?
 </Markdown>
@@ -1099,25 +1099,25 @@ The article is about **tradwives.** First — what does **tradwife** mean?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_q_tradwife.value === 'trades_stocks' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_tradwife.value === 'trades_stocks' &amp;&amp; @womens_sphere_vocab_tradwife_problem.submitCount &gt; 0">
 *A reasonable guess from "trad," but it's short for **traditional**, not "trade." A tradwife embraces a traditional wife-and-homemaker role.*
 </Markdown>
-<Markdown when="@tmb_q_tradwife.value === 'working_mother' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_tradwife.value === 'working_mother' &amp;&amp; @womens_sphere_vocab_tradwife_problem.submitCount &gt; 0">
 *Nearly the opposite. The tradwife image is about staying HOME as a traditional homemaker, not working outside it.*
 </Markdown>
-<Markdown when="@tmb_q_tradwife.value === 'marriage_activist' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_tradwife.value === 'marriage_activist' &amp;&amp; @womens_sphere_vocab_tradwife_problem.submitCount &gt; 0">
 *A tradwife is defined by the role she lives — traditional homemaker — not by campaigning for laws.*
 </Markdown>
-<Markdown when="@tmb_q_tradwife.value === 'traditional_homemaker' &amp;&amp; @tmb_q_tradwife_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_tradwife.value === 'traditional_homemaker' &amp;&amp; @womens_sphere_vocab_tradwife_problem.submitCount &gt; 0">
 *Right — "trad" is short for traditional. A tradwife embraces the traditional stay-at-home wife-and-mother role.*
 </Markdown>
-</CapaProblem> <!-- tmb_q_tradwife_problem -->
-</Vertical> <!-- tmb_q_tradwife_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_tradwife_problem -->
+</Vertical> <!-- womens_sphere_vocab_tradwife_screen -->
 
-<Vertical id="tmb_precarity">
-<CapaProblem id="tmb_precarity_pick_problem" title="Economic precarity: the best sentence" maxAttempts="1">
-<KeyGrader id="tmb_precarity_pick_grader">
-<ChoiceInput id="tmb_precarity_pick">
+<Vertical id="womens_sphere_article_sentence_screen">
+<CapaProblem id="womens_sphere_article_sentence_problem" title="Economic precarity: the best sentence" maxAttempts="1">
+<KeyGrader id="womens_sphere_article_sentence_grader">
+<ChoiceInput id="womens_sphere_article_sentence">
 <Markdown>
 The article's key idea is **economic precarity.** To pin down what it means, each
 of us found a sentence from the article that gives it context. Who picked the
@@ -1129,25 +1129,25 @@ of us found a sentence from the article that gives it context. Who picked the
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_precarity_pick.value === 'political' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_sentence.value === 'political' &amp;&amp; @womens_sphere_article_sentence_problem.submitCount &gt; 0">
 *Joe's sentence is about the political fight over tradwives. Economic **precarity** is about money and insecurity — Karis's sentence, the exhausted, low-income moms who can't afford child care.*
 </Markdown>
-<Markdown when="@tmb_precarity_pick.value === 'businesswomen' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_sentence.value === 'businesswomen' &amp;&amp; @womens_sphere_article_sentence_problem.submitCount &gt; 0">
 *Danielle found the well-off influencers, who are the opposite of precarious. Precarity is insecurity, not "making huge sums" — Karis's sentence has it.*
 </Markdown>
-<Markdown when="@tmb_precarity_pick.value === 'low_income' &amp;&amp; @tmb_precarity_pick_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_sentence.value === 'low_income' &amp;&amp; @womens_sphere_article_sentence_problem.submitCount &gt; 0">
 *Yes — "exhausted, low-income moms who can't afford child care" shows exactly what economic precarity is: financial insecurity that leaves people few choices.*
 </Markdown>
-</CapaProblem> <!-- tmb_precarity_pick_problem -->
+</CapaProblem> <!-- womens_sphere_article_sentence_problem -->
 
 <Markdown>**Explain why you chose that sentence.**</Markdown>
-<TextArea id="tmb_precarity_explain" rows="3" placeholder="I chose that sentence because…" />
-</Vertical> <!-- tmb_precarity -->
+<TextArea id="womens_sphere_article_sentence_explain" rows="3" placeholder="I chose that sentence because…" />
+</Vertical> <!-- womens_sphere_article_sentence_screen -->
 
-<Vertical id="tmb_summary_pick_screen">
-<CapaProblem id="tmb_summary_pick_problem" title="The best summary of the first paragraph" maxAttempts="1">
-<KeyGrader id="tmb_summary_pick_grader">
-<ChoiceInput id="tmb_summary_pick">
+<Vertical id="womens_sphere_article_summary_screen">
+<CapaProblem id="womens_sphere_article_summary_problem" title="The best summary of the first paragraph" maxAttempts="1">
+<KeyGrader id="womens_sphere_article_summary_grader">
+<ChoiceInput id="womens_sphere_article_summary">
 <Markdown>
 Which is the **best summary** of the article's first paragraph (about how
 "tradwives" appeared)?
@@ -1159,25 +1159,25 @@ Which is the **best summary** of the article's first paragraph (about how
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_summary_pick.value === 'image_only' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_summary.value === 'image_only' &amp;&amp; @womens_sphere_article_summary_problem.submitCount &gt; 0">
 *True, but only the picture. A summary has to carry the point: that the trend became a culture-war flashpoint over what women want.*
 </Markdown>
-<Markdown when="@tmb_summary_pick.value === 'overstated' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_summary.value === 'overstated' &amp;&amp; @womens_sphere_article_summary_problem.submitCount &gt; 0">
 *That overstates it — the paragraph says the trend became a flashpoint, not the biggest issue in politics. A summary shouldn't exaggerate what it reports.*
 </Markdown>
-<Markdown when="@tmb_summary_pick.value === 'opinion' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_summary.value === 'opinion' &amp;&amp; @womens_sphere_article_summary_problem.submitCount &gt; 0">
 *That's an opinion about tradwives, not a summary of the paragraph. Summaries report; they don't rate.*
 </Markdown>
-<Markdown when="@tmb_summary_pick.value === 'what_and_why' &amp;&amp; @tmb_summary_pick_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_summary.value === 'what_and_why' &amp;&amp; @womens_sphere_article_summary_problem.submitCount &gt; 0">
 *Yes — what appeared (glamorous tradwife images), where (social media), and the point: both sides turned it into a fight over what women want.*
 </Markdown>
-</CapaProblem> <!-- tmb_summary_pick_problem -->
-</Vertical> <!-- tmb_summary_pick_screen -->
+</CapaProblem> <!-- womens_sphere_article_summary_problem -->
+</Vertical> <!-- womens_sphere_article_summary_screen -->
 
-<Vertical id="tmb_q_egalitarian_screen">
-<CapaProblem id="tmb_q_egalitarian_problem" title="Vocabulary: egalitarian" maxAttempts="1">
-<KeyGrader id="tmb_q_egalitarian_grader">
-<ChoiceInput id="tmb_q_egalitarian">
+<Vertical id="womens_sphere_vocab_egalitarian_screen">
+<CapaProblem id="womens_sphere_vocab_egalitarian_problem" title="Vocabulary: egalitarian" maxAttempts="1">
+<KeyGrader id="womens_sphere_vocab_egalitarian_grader">
+<ChoiceInput id="womens_sphere_vocab_egalitarian">
 <Markdown>
 The article says many couples want "an **egalitarian** division of labor." What
 does **egalitarian** mean?
@@ -1189,25 +1189,25 @@ does **egalitarian** mean?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_q_egalitarian.value === 'by_earnings' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_egalitarian.value === 'by_earnings' &amp;&amp; @womens_sphere_vocab_egalitarian_problem.submitCount &gt; 0">
 *That's what actually happens in the article — the role falls to whoever earns less — but it's the opposite of egalitarian, which means equal.*
 </Markdown>
-<Markdown when="@tmb_q_egalitarian.value === 'traditional' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_egalitarian.value === 'traditional' &amp;&amp; @womens_sphere_vocab_egalitarian_problem.submitCount &gt; 0">
 *That's the traditional arrangement. "Egalitarian" points the other way: toward equality between the partners.*
 </Markdown>
-<Markdown when="@tmb_q_egalitarian.value === 'both_must_work' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_egalitarian.value === 'both_must_work' &amp;&amp; @womens_sphere_vocab_egalitarian_problem.submitCount &gt; 0">
 *Egalitarian is about sharing the work equally, not about forcing both partners into outside jobs.*
 </Markdown>
-<Markdown when="@tmb_q_egalitarian.value === 'based_on_equality' &amp;&amp; @tmb_q_egalitarian_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_vocab_egalitarian.value === 'based_on_equality' &amp;&amp; @womens_sphere_vocab_egalitarian_problem.submitCount &gt; 0">
 *Right — "egalitarian" comes from "equal." An egalitarian division of labor shares the work evenly between partners.*
 </Markdown>
-</CapaProblem> <!-- tmb_q_egalitarian_problem -->
-</Vertical> <!-- tmb_q_egalitarian_screen -->
+</CapaProblem> <!-- womens_sphere_vocab_egalitarian_problem -->
+</Vertical> <!-- womens_sphere_vocab_egalitarian_screen -->
 
-<Vertical id="tmb_article_thesis_screen">
-<CapaProblem id="tmb_article_thesis_problem" title="The article's main point" maxAttempts="1">
-<KeyGrader id="tmb_article_thesis_grader">
-<ChoiceInput id="tmb_article_thesis">
+<Vertical id="womens_sphere_article_thesis_screen">
+<CapaProblem id="womens_sphere_article_thesis_problem" title="The article's main point" maxAttempts="1">
+<KeyGrader id="womens_sphere_article_thesis_grader">
+<ChoiceInput id="womens_sphere_article_thesis">
 <Markdown>
 Step back from the details — what is the article's **main point** overall?
 </Markdown>
@@ -1218,30 +1218,30 @@ Step back from the details — what is the article's **main point** overall?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_article_thesis.value === 'mostly_wealthy' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_thesis.value === 'mostly_wealthy' &amp;&amp; @womens_sphere_article_thesis_problem.submitCount &gt; 0">
 *The wealthy influencers are one detail. The article's point is about the MANY who are low-income: the glossy image hides economic precarity.*
 </Markdown>
-<Markdown when="@tmb_article_thesis.value === 'women_shouldnt_stay' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_thesis.value === 'women_shouldnt_stay' &amp;&amp; @womens_sphere_article_thesis_problem.submitCount &gt; 0">
 *The article never says women shouldn't stay home. It says many aren't choosing it freely — they're pushed by money, which the glossy image hides.*
 </Markdown>
-<Markdown when="@tmb_article_thesis.value === 'free_childcare' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_thesis.value === 'free_childcare' &amp;&amp; @womens_sphere_article_thesis_problem.submitCount &gt; 0">
 *Expensive child care is part of the problem the article describes, but "make child care free" isn't the point it's arguing. The point is what the glossy image hides.*
 </Markdown>
-<Markdown when="@tmb_article_thesis.value === 'glossy_hides_precarity' &amp;&amp; @tmb_article_thesis_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_article_thesis.value === 'glossy_hides_precarity' &amp;&amp; @womens_sphere_article_thesis_problem.submitCount &gt; 0">
 *Yes — the shiny image and the harder reality. Behind the glossy videos, most stay-at-home moms are there because of economic precarity, not a dream of domesticity.*
 </Markdown>
-</CapaProblem> <!-- tmb_article_thesis_problem -->
-</Vertical> <!-- tmb_article_thesis_screen -->
+</CapaProblem> <!-- womens_sphere_article_thesis_problem -->
+</Vertical> <!-- womens_sphere_article_thesis_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — image comprehension (Part 4)
      ============================================================ -->
 
-<Vertical id="tmb_img_observe_screen">
-<CapaProblem id="tmb_img_observe_problem" title="The engraving: what it shows" maxAttempts="1">
-<KeyGrader id="tmb_img_observe_grader">
-<ChoiceInput id="tmb_img_observe">
+<Vertical id="womens_sphere_image_observe_screen">
+<CapaProblem id="womens_sphere_image_observe_problem" title="The engraving: what it shows" maxAttempts="1">
+<KeyGrader id="womens_sphere_image_observe_grader">
+<ChoiceInput id="womens_sphere_image_observe">
 <Markdown>
 What does the engraving show?
 </Markdown>
@@ -1252,25 +1252,25 @@ What does the engraving show?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_img_observe.value === 'reform_meeting' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_image_observe.value === 'reform_meeting' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
 *There's no meeting here. The scene is a home: a mother with her baby and two children in a parlor.*
 </Markdown>
-<Markdown when="@tmb_img_observe.value === 'factory_work' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_image_observe.value === 'factory_work' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
 *No factory, no men. Everything in the picture points to the home and the family — a mother with her children.*
 </Markdown>
-<Markdown when="@tmb_img_observe.value === 'classroom' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_image_observe.value === 'classroom' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
 *It isn't a classroom. It's a mother at home with her own children — the title even calls it "the sphere of woman."*
 </Markdown>
-<Markdown when="@tmb_img_observe.value === 'mother_at_home' &amp;&amp; @tmb_img_observe_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_image_observe.value === 'mother_at_home' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
 *Yes — a peaceful domestic scene: a mother at home with her children. The caption names it "the sphere of woman."*
 </Markdown>
-</CapaProblem> <!-- tmb_img_observe_problem -->
-</Vertical> <!-- tmb_img_observe_screen -->
+</CapaProblem> <!-- womens_sphere_image_observe_problem -->
+</Vertical> <!-- womens_sphere_image_observe_screen -->
 
-<Vertical id="tmb_img_purpose_screen">
-<CapaProblem id="tmb_img_purpose_problem" title="The engraving: why it was made" maxAttempts="1">
-<KeyGrader id="tmb_img_purpose_grader">
-<ChoiceInput id="tmb_img_purpose">
+<Vertical id="womens_sphere_image_purpose_screen">
+<CapaProblem id="womens_sphere_image_purpose_problem" title="The engraving: why it was made" maxAttempts="1">
+<KeyGrader id="womens_sphere_image_purpose_grader">
+<ChoiceInput id="womens_sphere_image_purpose">
 <Markdown>
 Why would a popular women's magazine publish an image like this, titled "The
 Sphere of Woman"?
@@ -1282,30 +1282,30 @@ Sphere of Woman"?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_img_purpose.value === 'record_real_family' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_image_purpose.value === 'record_real_family' &amp;&amp; @womens_sphere_image_purpose_problem.submitCount &gt; 0">
 *It isn't a snapshot of a real family. It's an ideal — a picture of how a "true woman's" life was supposed to look, published to promote it.*
 </Markdown>
-<Markdown when="@tmb_img_purpose.value === 'advertise_toys' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_image_purpose.value === 'advertise_toys' &amp;&amp; @womens_sphere_image_purpose_problem.submitCount &gt; 0">
 *The objects aren't the point. The scene is selling an idea: that a woman belongs at home with her children.*
 </Markdown>
-<Markdown when="@tmb_img_purpose.value === 'encourage_public' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_image_purpose.value === 'encourage_public' &amp;&amp; @womens_sphere_image_purpose_problem.submitCount &gt; 0">
 *The opposite. The whole image keeps the woman inside the home, at the center of the family — that's the ideal it promotes.*
 </Markdown>
-<Markdown when="@tmb_img_purpose.value === 'promote_ideal' &amp;&amp; @tmb_img_purpose_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_image_purpose.value === 'promote_ideal' &amp;&amp; @womens_sphere_image_purpose_problem.submitCount &gt; 0">
 *Yes — this is persuasion. The title says it plainly: the home is "the sphere of woman," her proper and natural place.*
 </Markdown>
-</CapaProblem> <!-- tmb_img_purpose_problem -->
-</Vertical> <!-- tmb_img_purpose_screen -->
+</CapaProblem> <!-- womens_sphere_image_purpose_problem -->
+</Vertical> <!-- womens_sphere_image_purpose_screen -->
 
 
 <!-- ============================================================
      CHAT-EMBEDDED — synthesis: evaluate peer comparisons (Part 4)
      ============================================================ -->
 
-<Vertical id="tmb_synth_peereval_screen">
-<CapaProblem id="tmb_synth_peereval_problem" title="Then and now: the best comparison" maxAttempts="1">
-<KeyGrader id="tmb_synth_peereval_grader">
-<ChoiceInput id="tmb_synth_peereval">
+<Vertical id="womens_sphere_synth_compare_screen">
+<CapaProblem id="womens_sphere_synth_compare_problem" title="Then and now: the best comparison" maxAttempts="1">
+<KeyGrader id="womens_sphere_synth_compare_grader">
+<ChoiceInput id="womens_sphere_synth_compare">
 <Markdown>
 Your group each summed up the biggest difference between the two — the 1800s
 ideal and today's tradwife trend. Which comparison is **best**?
@@ -1316,16 +1316,16 @@ ideal and today's tradwife trend. Which comparison is **best**?
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@tmb_synth_peereval.value === 'same' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_synth_compare.value === 'same' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
 *Karis has the likeness right, but a comparison owes us the difference too: a moral and religious duty then, a social-media image that often hides economic precarity now.*
 </Markdown>
-<Markdown when="@tmb_synth_peereval.value === 'family_size' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_synth_compare.value === 'family_size' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
 *Family size isn't a contrast either text draws. The real difference is what the ideal MEANT: a moral duty then, an image often masking hardship now.*
 </Markdown>
-<Markdown when="@tmb_synth_peereval.value === 'duty_vs_image' &amp;&amp; @tmb_synth_peereval_problem.submitCount &gt; 0">
+<Markdown when="@womens_sphere_synth_compare.value === 'duty_vs_image' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
 *Yes — both idealize the woman at home; what changed is the reason. A moral and religious duty then; a social-media image, often hiding economic precarity, now. That's the comparison your final paragraph needs.*
 </Markdown>
-</CapaProblem> <!-- tmb_synth_peereval_problem -->
-</Vertical> <!-- tmb_synth_peereval_screen -->
+</CapaProblem> <!-- womens_sphere_synth_compare_problem -->
+</Vertical> <!-- womens_sphere_synth_compare_screen -->
 
-</Vertical> <!-- temperance_b_full_activities_part1 -->
+</Vertical> <!-- womens_sphere_activities -->

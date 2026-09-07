@@ -6,23 +6,23 @@ description: A simulated small-group discussion in READ 1000. With peers Daniell
 Part 1: Introduction — Meet Your Peers [id=part1]
 -------------------------------------------------
 
-// The Introduction (tmb_intro) is already showing in the Discussion tab
+// The Introduction (womens_sphere_intro) is already showing in the Discussion tab
 // (the UseHistory `initial`). Dialogue is kept lean.
 
 // HOW THE ACTIVITY PANE IS DRIVEN.
 //
 // Every screen the conversation opens in the pane is written as a TARGET EMBED:
 //
-//     ::tmb_vks [display=target:tmb_main label="How familiar are these words?"]
+//     ::womens_sphere_vks [display=target:womens_sphere_pane label="How familiar are these words?"]
 //
-// which does two things at once. It repoints the tmb_main UseHistory at that
+// which does two things at once. It repoints the womens_sphere_pane UseHistory at that
 // screen (once, the first time the line is revealed — CompactPopout persists a
 // `repointed` flag, so a reload doesn't yank the pane backwards), and it leaves
 // a small labelled button sitting in the transcript at exactly the point in the
 // conversation where the activity happened. Clicking that button repoints the
 // pane there again.
 //
-// That transcript marker is the reason for the form. A bare `tmb_main <- x` set
+// That transcript marker is the reason for the form. A bare `womens_sphere_pane <- x` set
 // command is invisible: the pane changes and the record of WHY is only in the
 // surrounding dialogue. With a marker, a student scrolling back through a long
 // session can see where each activity sat in the discussion and reopen it.
@@ -32,7 +32,7 @@ Part 1: Introduction — Meet Your Peers [id=part1]
 // talk — the vocabulary MCQs, the five comprehension questions — render in the
 // chat so that the pane is free to hold the text they are about.
 //
-// The one arrow left is `tmb_main <- tmb_blank`: parking the pane on a blank
+// The one arrow left is `womens_sphere_pane <- womens_sphere_pane_blank`: parking the pane on a blank
 // screen isn't an activity, so there is nothing worth marking or going back to.
 
 Joe: Hey, Karis. Hey, Danielle.
@@ -43,9 +43,9 @@ Joe: Sure. You mean like those "tradwife" videos? But… what does that have to 
 
 Karis: Good question. First — what do YOU think the phrase "a woman's place is in the home" has to do with?
 
-::tmb_topic_guess
+::womens_sphere_intro_guess
 
---- wait @tmb_topic_guess.value ---
+--- wait @womens_sphere_intro_guess.value ---
 
 Karis: In the 1800s there was a whole ideal built around that — historians call it the "cult of domesticity," or the "cult of true womanhood." The idea that a good woman's whole world was the home. We'll read about it, and compare it to today's "tradwife" thing.
 
@@ -58,11 +58,11 @@ Danielle: Good to know. OK — here's Professor Booker.
 Part 2: Explore the Topic Background [id=part2]
 -----------------------------------------------
 
-::tmb_vks [display=target:tmb_main label="How familiar are these words?"]
+::womens_sphere_vks [display=target:womens_sphere_pane label="How familiar are these words?"]
 
 Professor Booker: Before we read, take a look at some words you'll meet in the texts. I'm not grading this — I just want to know how familiar each one is. Fill out the table on the right. [face=calm]
 
---- wait Object.keys(@tmb_vks_grid.value).length >= 8 ---
+--- wait Object.keys(@womens_sphere_vks_grid.value).length >= 8 ---
 
 // The lecture is no longer parked in the pane or gated — it is an optional
 // reference on its own tab. The grid stays up while the group is still talking
@@ -74,7 +74,7 @@ Professor Booker: We'll get to vocabulary exercises later — the words come bac
 
 Danielle: Professor Hale's note is under its tab if you want the background — we'll hit the essentials as we go.
 
-tmb_main <- tmb_blank
+womens_sphere_pane <- womens_sphere_pane_blank
 
 Professor Booker: One tool before we start, because you'll use it on every reading here. Select any stretch of text with your mouse and an **Annotate** button pops up.
 
@@ -88,13 +88,13 @@ Part 3: Main Readings [id=part3]
 // The textbook is read one paragraph at a time; each part appears only after
 // the peers have talked through the one before it (chunking + mediating dialog).
 
-::tmb_tb_a [display=target:tmb_main label="The excerpt — part 1"]
+::womens_sphere_read_1 [display=target:womens_sphere_pane label="The excerpt — part 1"]
 
 Professor Booker: Now the reading that matters most for the comparison we're building: the textbook chapter. Read the first part and highlight as you go. It's on the right --->
 
 Professor Booker: Click **Mark as read** under it when you're through, and we'll talk it over.
 
---- wait @tmb_tb_a_done.value ---
+--- wait @womens_sphere_read_1_done.value ---
 
 Joe: I'm a little lost — it says the new industrial economy "gave rise to a number of as yet unimagined problems," and that family roles changed. What kind of problems?
 
@@ -118,71 +118,71 @@ Danielle: First one — what does "public sphere" mean here?
 // instrument: Karis's reading of the engraving comes after the observation
 // item, not before it, and lead-ins say WHERE to look, not what to find.
 
-::tmb_q_publicsphere_screen
+::womens_sphere_vocab_publicsphere_screen
 
---- wait @tmb_q_publicsphere_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_publicsphere_problem.submitCount > 0 ---
 
 Joe: Got it — the public sphere is life OUTSIDE the home. So the "domestic sphere" would be the home itself.
 
-::tmb_tb_a2 [display=target:tmb_main label="The excerpt — part 2"]
+::womens_sphere_read_2 [display=target:womens_sphere_pane label="The excerpt — part 2"]
 
 Professor Booker: Here's the next part of the chapter, on the right --->
 
 Danielle: **Mark as read** when you're done — Karis has been waiting for this one.
 
---- wait @tmb_tb_a2_done.value ---
+--- wait @womens_sphere_read_2_done.value ---
 
 Karis: This is the part I've read about — the idea that a woman's whole world was supposed to be the home.
 
 Danielle: There's a vocab phrase in here first — "in tandem with."
 
-::tmb_q_tandem_screen
+::womens_sphere_vocab_tandem_screen
 
---- wait @tmb_q_tandem_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_tandem_problem.submitCount > 0 ---
 
 Professor Booker: Now a term that's special to history. The passage gives this ideal a name. Using the passage, which phrase most directly tells us what it was?
 
-::tmb_cd_term_screen
+::womens_sphere_term_pick_screen
 
---- wait @tmb_cd_term_problem.submitCount > 0 ---
+--- wait @womens_sphere_term_pick_problem.submitCount > 0 ---
 
 Professor Booker: The phrase that captures it is "the domestic sphere." What else in the chapter connects to it? Select all that apply.
 
-::tmb_cd_connect_screen
+::womens_sphere_term_connect_screen
 
---- wait @tmb_cd_connect_problem.submitCount > 0 ---
+--- wait @womens_sphere_term_connect_problem.submitCount > 0 ---
 
 Professor Booker: Now put it together. Each of you wrote a one-sentence definition — read them and pick the best.
 
-::tmb_cd_bestdef_screen
+::womens_sphere_term_bestdef_screen
 
---- wait @tmb_cd_bestdef_problem.submitCount > 0 ---
+--- wait @womens_sphere_term_bestdef_problem.submitCount > 0 ---
 
-::tmb_tb_b [display=target:tmb_main label="The excerpt — part 3"]
+::womens_sphere_read_3 [display=target:womens_sphere_pane label="The excerpt — part 3"]
 
 Professor Booker: On to the next part of the excerpt, over on the right --->
 
 Karis: mark it read when you're through. I want to get to what women were supposed to BE.
 
---- wait @tmb_tb_b_done.value ---
+--- wait @womens_sphere_read_3_done.value ---
 
 Danielle: So the home is the "hearthstone" of virtue, and women are the "guardians of virtue" — expected to be pious, pure, submissive, and domestic.
 
 Karis: There's that word again — "domestic." We saw "domesticity" a minute ago. Same root?
 
-::tmb_q_domestic_screen
+::womens_sphere_vocab_domestic_screen
 
---- wait @tmb_q_domestic_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_domestic_problem.submitCount > 0 ---
 
 Joe: Nice — "domestic" is the adjective, "domesticity" is the noun for the whole idea. The "-ity" ending turns the quality into a thing.
 
-::tmb_notecheck [display=target:tmb_main label="Checking Joe's notes"]
+::womens_sphere_notes [display=target:womens_sphere_pane label="Checking Joe's notes"]
 
 Joe: I also jotted some notes on the chapter so far. Can you check them? And even if something's right, is it important enough to use when we pull the texts together at the end?
 
 Joe: Here's my list. Sort each statement on the right, then press Check.
 
---- wait @tmb_notecheck_problem.submitCount > 0 ---
+--- wait @womens_sphere_notes_problem.submitCount > 0 ---
 
 Karis: One of those is off, Joe. The textbook never says factory owners invented this ideal to push women into factories — it was a cultural and religious ideal, and working-class women worked out of necessity.
 
@@ -190,203 +190,203 @@ Joe: Ah — good catch. Thanks.
 
 Danielle: The class point and the Southern-women point are true and useful, but they're details. The ideal itself, women turning it into a public role, and the Awakening are the ideas that belong in our final summary.
 
-::tmb_tb_c [display=target:tmb_main label="The excerpt — part 4"]
+::womens_sphere_read_4 [display=target:womens_sphere_pane label="The excerpt — part 4"]
 
 Professor Booker: Here's the last part of the excerpt. Let's build the last of our vocabulary from it — some by definition, some by finding words that could take a term's place.
 
 Professor Booker: **Mark as read** when you're through.
 
---- wait @tmb_tb_c_done.value ---
+--- wait @womens_sphere_read_4_done.value ---
 
 Karis: I'll start — the big one is "ideology."
 
-::tmb_q_ideology_screen
+::womens_sphere_vocab_ideology_screen
 
---- wait @tmb_q_ideology_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_ideology_problem.submitCount > 0 ---
 
 Joe: Next — "en masse." Women left their homes "en masse."
 
-::tmb_q_enmasse_screen
+::womens_sphere_vocab_enmasse_screen
 
---- wait @tmb_q_enmasse_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_enmasse_problem.submitCount > 0 ---
 
 Danielle: Two more from the Southern-women part. First, "moralizing."
 
-::tmb_q_moralizing_screen
+::womens_sphere_vocab_moralizing_screen
 
---- wait @tmb_q_moralizing_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_moralizing_problem.submitCount > 0 ---
 
 Professor Booker: And the last one — "euphemism."
 
-::tmb_q_euphemism_screen
+::womens_sphere_vocab_euphemism_screen
 
---- wait @tmb_q_euphemism_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_euphemism_problem.submitCount > 0 ---
 
-::tmb_grammar_svo [display=target:tmb_main label="Verb, subject, object"]
+::womens_sphere_gram_svo [display=target:womens_sphere_pane label="Verb, subject, object"]
 
 Joe: Can we look again at this sentence — "Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves"?
 
 Professor Booker: A good sentence to analyze. On the right, highlight the first verb — one word — then the subject and the object, each of those a whole phrase, every word of it.
 
---- wait @tmb_grammar_svo_verb_problem.submitCount > 0 && @tmb_grammar_svo_subject_problem.submitCount > 0 && @tmb_grammar_svo_object_problem.submitCount > 0 ---
+--- wait @womens_sphere_gram_verb_problem.submitCount > 0 && @womens_sphere_gram_subject_problem.submitCount > 0 && @womens_sphere_gram_object_problem.submitCount > 0 ---
 
-::tmb_grammar_np [display=target:tmb_main label="Inside the noun phrase"]
+::womens_sphere_gram_np [display=target:womens_sphere_pane label="Inside the noun phrase"]
 
 Professor Booker: Notice the object is a noun phrase. On the right it's on its own, without the rest of the sentence — match each part of it to the job that part does: head noun, determiner, postmodifier.
 
---- wait @tmb_grammar_np_problem.submitCount > 0 ---
+--- wait @womens_sphere_gram_np_problem.submitCount > 0 ---
 
-::tmb_grammar_structure [display=target:tmb_main label="The grammatical structure"]
+::womens_sphere_gram_structure [display=target:womens_sphere_pane label="The grammatical structure"]
 
 Professor Booker: Here's the whole structure laid out on the right. Take it in, then click **I understand** at the bottom.
 
---- wait @tmb_grammar_structure_done.value ---
+--- wait @womens_sphere_gram_structure_done.value ---
 
 Danielle: Wait — which ideology is it even talking about?
 
-::tmb_grammar_antecedent [display=target:tmb_main label="Find the antecedent"]
+::womens_sphere_gram_antecedent [display=target:womens_sphere_pane label="Find the antecedent"]
 
 Professor Booker: Good question. We need the antecedent. On the right, find the earlier sentence that NAMES the ideology and highlight the whole thing, start to finish.
 
---- wait @tmb_grammar_antecedent_problem.submitCount > 0 ---
+--- wait @womens_sphere_gram_antecedent_problem.submitCount > 0 ---
 
 Professor Booker: So, using that, how did women take that home-bound ideology and turn it into a "public" role?
 
-::tmb_why_publicrole_screen
+::womens_sphere_gram_why_screen
 
---- wait @tmb_why_publicrole_problem.submitCount > 0 ---
+--- wait @womens_sphere_gram_why_problem.submitCount > 0 ---
 
 // The comprehension questions are embedded HERE, in the conversation, so the
-// activity pane is free to hold the text they are about (tmb_comp_reading — all
+// activity pane is free to hold the text they are about (womens_sphere_comp_reading — all
 // four Yawp parts end to end). Answering with the passage closed was a memory
 // test; answering with it open on the right is reading.
 
-::tmb_comp_reading [display=target:tmb_main label="The excerpt — all four parts"]
+::womens_sphere_comp_reading [display=target:womens_sphere_pane label="The excerpt — all four parts"]
 
 Professor Booker: Let's check your understanding of the excerpt. The whole thing is on the right now, all four parts end to end, with your highlights on it — scroll it while you answer. [face=calm]
 
 Danielle: First one's about what industrialization did to family life. That's the top of part 1.
 
-::tmb_comp_q1
+::womens_sphere_comp_1
 
---- wait @tmb_comp_q1.submitCount > 0 ---
+--- wait @womens_sphere_comp_1.submitCount > 0 ---
 
 Joe: Next, part 2 — the cult of domesticity, and who it actually applied to.
 
-::tmb_comp_q2
+::womens_sphere_comp_2
 
---- wait @tmb_comp_q2.submitCount > 0 ---
+--- wait @womens_sphere_comp_2.submitCount > 0 ---
 
 Karis: Part 3 now — what women were expected to BE.
 
-::tmb_comp_q3
+::womens_sphere_comp_3
 
---- wait @tmb_comp_q3.submitCount > 0 ---
+--- wait @womens_sphere_comp_3.submitCount > 0 ---
 
 Karis: And part 4 — the turn. This is the part I wanted to get to.
 
-::tmb_comp_q4
+::womens_sphere_comp_4
 
---- wait @tmb_comp_q4.submitCount > 0 ---
+--- wait @womens_sphere_comp_4.submitCount > 0 ---
 
 Professor Booker: Last one. Scroll to the end of part 4 — how were Southern women's instructions different from some Northern women's?
 
-::tmb_comp_q5
+::womens_sphere_comp_5
 
---- wait @tmb_comp_q5.submitCount > 0 ---
+--- wait @womens_sphere_comp_5.submitCount > 0 ---
 
 Danielle: Same ideal, but a different path depending on where you lived. That contrast is worth remembering.
 
-::tmb_img_read [display=target:tmb_main label="A period image"]
+::womens_sphere_image [display=target:womens_sphere_pane label="A period image"]
 
 Professor Booker: Nice work on the chapter. Before we bring in a modern article, let's look at an image from the era itself — it connects directly to what we just read. It's on the right --->
 
 Professor Booker: Look closely at the scene and the title, then answer.
 
-::tmb_img_observe_screen
+::womens_sphere_image_observe_screen
 
---- wait @tmb_img_observe_problem.submitCount > 0 ---
+--- wait @womens_sphere_image_observe_problem.submitCount > 0 ---
 
 Karis: Oh — it's a mother at home with her kids, and the title literally says "The Sphere of Woman."
 
 Joe: So why would a magazine print a picture like this?
 
-::tmb_img_purpose_screen
+::womens_sphere_image_purpose_screen
 
---- wait @tmb_img_purpose_problem.submitCount > 0 ---
+--- wait @womens_sphere_image_purpose_problem.submitCount > 0 ---
 
-::tmb_article_read [display=target:tmb_main label="The magazine article"]
+::womens_sphere_article_read [display=target:womens_sphere_pane label="The magazine article"]
 
 Professor Booker: Images like this were made to persuade — to sell an ideal. Now for the third text — a recent magazine article that connects that 1800s ideal to today. I handed out a paper copy; take it out and read it, marking it up as you go. The instructions are on the right --->
 
 Professor Booker: When you've been through it, press "I've read the handout" on the right and we'll talk about it.
 
---- wait @tmb_article_read_done.value ---
+--- wait @womens_sphere_article_read_done.value ---
 
 Karis: Wow. That was not the article I expected.
 
 Danielle: Right. Dr. Booker wanted us to think about "economic precarity." But first, this word:
 
-::tmb_q_tradwife_screen
+::womens_sphere_vocab_tradwife_screen
 
---- wait @tmb_q_tradwife_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_tradwife_problem.submitCount > 0 ---
 
 Joe: So, tradwife — a traditional stay-at-home wife. Where does "economic precarity" come in? Let's each find a sentence that gives it context, then pick the best.
 
-::tmb_precarity
+::womens_sphere_article_sentence_screen
 
---- wait @tmb_precarity_pick_problem.submitCount > 0 && @tmb_precarity_explain.value ---
+--- wait @womens_sphere_article_sentence_problem.submitCount > 0 && @womens_sphere_article_sentence_explain.value ---
 
 Karis: The line that really pins down economic precarity is the one about exhausted, low-income moms who can't afford child care. Put it with the article's "precarity-to-tradwife pipeline," and you can see it's about money and insecurity, not a dream of domesticity.
 
 Professor Booker: Now, to see how it all fits, let's summarize. Which is the best summary of the article's first paragraph?
 
-::tmb_summary_pick_screen
+::womens_sphere_article_summary_screen
 
---- wait @tmb_summary_pick_problem.submitCount > 0 ---
+--- wait @womens_sphere_article_summary_problem.submitCount > 0 ---
 
 Professor Booker: One more term the article flags — "egalitarian."
 
-::tmb_q_egalitarian_screen
+::womens_sphere_vocab_egalitarian_screen
 
---- wait @tmb_q_egalitarian_problem.submitCount > 0 ---
+--- wait @womens_sphere_vocab_egalitarian_problem.submitCount > 0 ---
 
 Professor Booker: Now step back from the details. What is the article's main point overall?
 
-::tmb_article_thesis_screen
+::womens_sphere_article_thesis_screen
 
---- wait @tmb_article_thesis_problem.submitCount > 0 ---
+--- wait @womens_sphere_article_thesis_problem.submitCount > 0 ---
 
 Danielle: OK — that's all three texts. Time to put them side by side.
 
 Part 4: Building Understanding and Synthesizing [id=part4]
 ----------------------------------------------------------
 
-::tmb_synth_sort [display=target:tmb_main label="Then and now"]
+::womens_sphere_synth_sort [display=target:womens_sphere_pane label="Then and now"]
 
 Professor Booker: Let's pull all three texts together. On the right, sort each description under the one it fits, then press Check.
 
---- wait @tmb_synth_sort_problem.submitCount > 0 ---
+--- wait @womens_sphere_synth_sort_problem.submitCount > 0 ---
 
 Danielle: Each of us also tried to sum up the big difference in one sentence. Whose comparison is best?
 
-::tmb_synth_peereval_screen
+::womens_sphere_synth_compare_screen
 
---- wait @tmb_synth_peereval_problem.submitCount > 0 ---
+--- wait @womens_sphere_synth_compare_problem.submitCount > 0 ---
 
 Part 5: Conclusion [id=part5]
 -----------------------------
 
-::tmb_final_write_screen [display=target:tmb_main label="Pulling it together"]
+::womens_sphere_final [display=target:womens_sphere_pane label="Pulling it together"]
 
 Professor Booker: You're ready for the goal we set at the start — pulling it all together. On the right, write four or five sentences comparing the 1800s ideal of the "true woman" with today's "tradwife" trend. Draw on the textbook, the printed article, and the engraving.
 
 // Soft gate: any real start opens it. A hard word count turns a writing task
 // into a number to hit, and students write to the number.
 
---- wait wordcount(@tmb_final_write.value) >= 1 ---
+--- wait wordcount(@womens_sphere_final_write.value) >= 1 ---
 
-::tmb_conclusion [display=target:tmb_main label="You're done"]
+::womens_sphere_conclusion [display=target:womens_sphere_pane label="You're done"]
 
 Professor Booker: That's the comparison we've been building toward all along. [face=calm]
 
