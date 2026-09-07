@@ -1,25 +1,27 @@
-# MTSU Temperance Module (READ 1000)
+# MTSU Transitional Reading (READ 1000)
 
-A scenario-based reading module for READ 1000 at Middle Tennessee State
-University: students join a simulated small-group discussion comparing the
-temperance movement of the 1800s with today's "sober-curious" movement,
-practicing close reading, vocabulary in context, grammar analysis, image
-analysis, and synthesis across three texts.
+Two parallel reading modules for READ 1000 at Middle Tennessee State
+University, built as a pre/post assessment: every student completes both,
+in counterbalanced order. In each, the student joins a simulated small-group
+discussion (Professor Booker and three peers) and works across three texts,
+practicing vocabulary in context, close reading, grammar analysis, image
+analysis, and synthesis, toward a four-or-five-sentence comparison.
 
-## Content
+## Layout
 
-- **Discussion** — the guided small-group conversation (Professor Booker and
-  three peers), with vocabulary, comprehension, grammar, and synthesis
-  activities embedded along the way
-- **Readings** — excerpts from *The American Yawp*, Chapter 10 ("Religion and
-  Reform"), each under its own tab, with highlighting/annotation
-- **Professor Hale's Lecture** — optional background on the movement
-- **The Drunkard's Progress** — N. Currier's 1846 lithograph, analyzed as
-  persuasion
-- A modern magazine article is discussed in the module but distributed on
-  paper in class; it is deliberately not included here.
+- `temperance/` — the temperance movement of the 1800s compared with today's
+  "sober-curious" movement. Readings from *The American Yawp*, Chapter 10
+  ("Religion and Reform"); N. Currier's 1846 lithograph *The Drunkard's
+  Progress*. Namespace `temperance`.
+- `womens-sphere/` — the 1800s ideal of womanhood (the "cult of domesticity")
+  compared with today's "tradwife" trend. Readings from *The American Yawp*,
+  Chapter 11 ("The Cotton Revolution"); *The Sphere of Woman*, an 1850
+  engraving from *Godey's Lady's Book*. Namespace `womens_sphere`.
 
-The module is a single OLX sequence in the `temperance` namespace, built with
+Each form is one OLX sequence in its own directory with its own
+`manifest.yaml`, cast, readings, and images; the directory name is the asset
+URL prefix. Both forms discuss a modern magazine article that is distributed
+on paper in class and deliberately not included here. Built with
 [lo-blocks](https://github.com/olxhub/lo-blocks).
 
 ---
@@ -28,5 +30,5 @@ The author catalog reads this README for the repository description (git
 conventions first; `lo.yaml` covers only beyond-git fields like discipline).
 Licensing and attribution live in `LICENSE.TXT`, `NOTICE.TXT`, and
 `CONTRIBUTORS.TXT`. Course content is AGPLv3; the *American Yawp* excerpts
-under `readings/american-yawp/` are CC BY-SA 4.0 (see the LICENSE.TXT there);
-the lithograph is public domain.
+under each form's `readings/american-yawp/` are CC BY-SA 4.0 (see the
+LICENSE.TXT there); the lithograph and the engraving are public domain.

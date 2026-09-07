@@ -1,0 +1,226 @@
+<!--
+---
+description: "READ 1000 — Women's Sphere (FULL SBA / SBA B): the SBA B build of the READ 1000 module, the exact structural twin of sba/temperance_A with new texts and items. Across five parts, a study group (peers Danielle, Joe, Karis; reading instructor Professor Booker) works through three texts — an American Yawp Ch. 11 textbook excerpt on women and the 'cult of domesticity', the 1850 engraving 'The Sphere of Woman', and a magazine article on today's 'tradwife' trend the instructor hands out on paper — building toward PULLING IT TOGETHER, a four-or-five-sentence synthesis, by rating vocabulary, close-reading and highlighting, checking a peer's notes, answering comprehension questions, and analyzing the image, then finally writing four or five sentences comparing the 1800s ideal of womanhood with today's 'tradwife' trend. Tabbed design: a Discussion tab holding the scripted conversation beside the activity pane — the conversation opens each activity into the pane with a target embed, which also leaves a labelled, clickable marker in the transcript at the point the activity happened — then one tab per reading (Professor Hale's lecture, the four American Yawp parts, the engraving). Companion to sba/temperance_A."
+category: writing
+index: 58
+lang: en-Latn-US
+---
+-->
+
+<!--
+  READ 1000 — Women's Sphere — FULL SBA / SBA B (Part 1)
+
+  The SBA B build. It is the exact structural twin of the SBA A build
+  (sba/temperance_A): same tabbed interface, same UseHistory-driven pane, same
+  attention cues, same five-part arc. What changes is the content —
+
+    * Part 3 (Main Readings) — the textbook (American Yawp Ch. 11, "The Cotton
+      Revolution": women, the family, and the "cult of domesticity"), read in
+      four chunks with vocabulary, a note-check, close reading, and
+      comprehension; then the engraving ("The Sphere of Woman," Godey's Lady's
+      Book, 1850); then the magazine article ("The Unglamorous Truth About the
+      Average Tradwife"), which the instructor hands out ON PAPER (it is not
+      carried online). The engraving comes BEFORE the article, since it is
+      immediately relevant to the American Yawp text.
+    * Part 4 — a cross-text synthesis (sort "then vs. now"; evaluate peer comparisons).
+    * Part 5 — PULLING IT TOGETHER, the culminating synthesis (four or five
+      sentences comparing the 1800s ideal of womanhood with today's "tradwife"
+      trend), and a wrap-up.
+
+  Course-team departures from the storyboard (carried over from SBA A):
+    * "Joe's notes" (the note-checking matrix) tests the TEXTBOOK.
+    * Professor Booker is the READING instructor.
+
+  Layout. The tab strip is the top level, and it is organized around ONE TAB PER
+  THING TO GO BACK TO:
+
+    Discussion             the session itself — the scripted conversation on the
+                           left, the activity pane (a UseHistory the conversation
+                           drives) on the right
+    Prof. Hale's Lecture   \
+    Textbook 1..4          |  the readings, each on its own tab, so a student can
+    The Sphere of Woman    /  reopen any one of them at any point
+
+  Every reading tab is a <Use ref="..."> of the very same block the conversation
+  parks in the activity pane, NOT a second copy: one block, one state, two doors.
+
+  The magazine article has no tab — it is a paper handout (see tmb_article_read).
+
+  Activity screens live in temperance_b_full_activities_part1.olx. Ids are
+  prefixed `tmb_` and the namespace is `womens_sphere`, so this build coexists
+  with the SBA A (`tmf_`) and faithful (`tmod_`) builds.
+
+  How the pane is driven. The conversation opens each activity screen with a
+  TARGET EMBED in the chatpeg —
+
+      ::tmb_vks [display=target:tmb_main label="How familiar are these words?"]
+
+  — rather than a bare `tmb_main <- tmb_vks` set command. The screen still lands
+  HERE, in the tmb_main pane; what the embed adds is a small labelled button left
+  behind in the transcript at the point in the discussion where that activity
+  happened. Clicking it repoints the pane at that screen again. The repoint
+  fires once per screen (CompactPopout persists a `repointed` flag).
+
+  Only `tmb_main <- tmb_blank` is still a set command — parking the pane empty is
+  not an activity, so there is nothing to mark or to return to.
+-->
+
+<Tabs id="temperance_b_full_sba" title="Women's Sphere — Full SBA (READ 1000)" launchable="true">
+
+  <!-- ===== Tab 1 (index 0): the session — conversation + activity pane ===== -->
+  <Vertical id="tmb_tab_main" title="Discussion">
+
+    <!-- Attention cues. Students don't notice the right pane changing and don't
+         know where to look, so every screen the chat opens gets a pulse (Flash)
+         as it lands, and the screens with something to fill in also get the
+         caret (FocusAction). Reading screens get the pulse alone.
+
+         These live HERE, outside the SplitPanel, and NOT inside the screens. A
+         Trigger mounted inside a UseHistory screen is unmounted the moment the
+         pane moves on, so it never observes its own expression go false and
+         never re-fires. Mounted out here it stays alive for the whole session,
+         so mode="each" means each visit. -->
+
+    <!-- HACK carried over from SBA A: the DefinitionKey(...) normalization in
+         these watch expressions papers over the arrow-era assumption that pane
+         values are bare screen names; target embeds write qualified refs. Not
+         long-term stable; see SBA A notes. -->
+    <Trigger id="tmb_intro_cue"      watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_intro')"      mode="each">
+      <Flash id="tmb_intro_flash"      target="tmb_intro" />
+    </Trigger>
+
+    <Trigger id="tmb_vks_cue"        watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_vks')"        mode="each">
+      <Flash id="tmb_vks_flash"        target="tmb_vks_grid" />
+      <FocusAction id="tmb_vks_focus"  target="tmb_vks_grid" />
+    </Trigger>
+
+    <!-- The readings. Each is an Annotate (or, for the engraving, an image);
+         the pulse goes on the passage itself, which is the thing to work on. -->
+
+    <!-- Prof. Hale's lecture has no cue: it is an optional reference on its own
+         tab now, never parked in the pane, so there is nothing to point at. -->
+
+    <Trigger id="tmb_tb_a_cue"       watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_tb_a')"       mode="each">
+      <Flash id="tmb_tb_a_flash"       target="tmb_tb_a_annotate" />
+    </Trigger>
+
+    <Trigger id="tmb_tb_a2_cue"      watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_tb_a2')"      mode="each">
+      <Flash id="tmb_tb_a2_flash"      target="tmb_tb_a2_annotate" />
+    </Trigger>
+
+    <Trigger id="tmb_tb_b_cue"       watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_tb_b')"       mode="each">
+      <Flash id="tmb_tb_b_flash"       target="tmb_tb_b_annotate" />
+    </Trigger>
+
+    <Trigger id="tmb_tb_c_cue"       watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_tb_c')"       mode="each">
+      <Flash id="tmb_tb_c_flash"       target="tmb_tb_c_annotate" />
+    </Trigger>
+
+    <!-- The article is read on PAPER, so the only thing on screen to point at is
+         the instruction block. The caret is deliberately NOT parked on its Done. -->
+    <Trigger id="tmb_article_cue"    watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_article_read')" mode="each">
+      <Flash id="tmb_article_flash"    target="tmb_article_read" />
+    </Trigger>
+
+    <Trigger id="tmb_img_cue"        watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_img_read')" mode="each">
+      <Flash id="tmb_img_flash"        target="tmb_img_img" />
+    </Trigger>
+
+    <!-- The tasks. -->
+
+    <Trigger id="tmb_notecheck_cue"  watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_notecheck')"  mode="each">
+      <Flash id="tmb_notecheck_flash"  target="tmb_notecheck_grid" />
+      <FocusAction id="tmb_notecheck_focus" target="tmb_notecheck_grid" />
+    </Trigger>
+
+    <Trigger id="tmb_grammar_svo_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_grammar_svo')" mode="each">
+      <Flash id="tmb_grammar_svo_flash" target="tmb_grammar_svo_verb" />
+    </Trigger>
+
+    <!-- The SimpleTextSelection tasks are worked by dragging over the text,
+         so there is no single control to park a caret on — pulse only. -->
+    <Trigger id="tmb_grammar_np_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_grammar_np')" mode="each">
+      <Flash id="tmb_grammar_np_flash" target="tmb_grammar_np_head" />
+    </Trigger>
+
+    <Trigger id="tmb_grammar_structure_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_grammar_structure')" mode="each">
+      <Flash id="tmb_grammar_structure_flash" target="tmb_grammar_structure" />
+    </Trigger>
+
+    <Trigger id="tmb_grammar_antecedent_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_grammar_antecedent')" mode="each">
+      <Flash id="tmb_grammar_antecedent_flash" target="tmb_grammar_antecedent" />
+    </Trigger>
+
+    <!-- The comprehension questions are chat-embedded; the pane holds the
+         full excerpt to read from, so this is a reading cue — pulse, no caret. -->
+    <Trigger id="tmb_comp_reading_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_comp_reading')" mode="each">
+      <Flash id="tmb_comp_reading_flash" target="tmb_comp_reading" />
+    </Trigger>
+
+    <Trigger id="tmb_synth_sort_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_synth_sort')" mode="each">
+      <Flash id="tmb_synth_sort_flash" target="tmb_synth_sort_grid" />
+      <FocusAction id="tmb_synth_sort_focus" target="tmb_synth_sort_grid" />
+    </Trigger>
+
+    <Trigger id="tmb_final_write_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_final_write_screen')" mode="each">
+      <Flash id="tmb_final_write_flash" target="tmb_final_write" />
+      <FocusAction id="tmb_final_write_focus" target="tmb_final_write" />
+    </Trigger>
+
+    <Trigger id="tmb_conclusion_cue" watch="DefinitionKey(@tmb_main.value) === DefinitionKey('tmb_conclusion')" mode="each">
+      <Flash id="tmb_conclusion_flash" target="tmb_conclusion_md" />
+    </Trigger>
+
+    <SplitPanel id="tmb_split" sizes="40, 60">
+
+      <StartPane>
+        <!-- height is a FIXED 460px, not the "flex-1" default — same reason as
+             SBA A: this transcript runs long, and with flex-1 the chat grows
+             taller with every message and pushes the pane off-screen. The
+             attribute has to sit on <Chat>, NOT on <StartPane> (SplitPanel drops
+             attributes on the pane tag). -->
+        <Chat id="tmb_chat"
+              src="temperance_b_full_dialogue_part1.chatpeg"
+              cast="characters.cast"
+              height="460px" />
+      </StartPane>
+
+      <EndPane>
+        <UseHistory id="tmb_main" initial="tmb_intro" />
+      </EndPane>
+
+    </SplitPanel>
+  </Vertical>
+
+  <!-- ===== Tab 2 (index 1): the background lecture ===== -->
+  <Vertical id="tmb_tab_lecture" title="Prof. Hale's Lecture">
+    <Use ref="tmb_lecture_read" />
+  </Vertical>
+
+  <!-- ===== Tabs 3-6 (indices 2-5): the American Yawp excerpt, one tab per
+                 part, in reading order. These are the same four Annotate
+                 blocks the conversation walks through. ===== -->
+
+  <Vertical id="tmb_tab_textbook_1" title="Textbook 1: New Roles">
+    <Use ref="tmb_tb_a" />
+  </Vertical>
+
+  <Vertical id="tmb_tab_textbook_2" title="Textbook 2: Cult of Domesticity">
+    <Use ref="tmb_tb_a2" />
+  </Vertical>
+
+  <Vertical id="tmb_tab_textbook_3" title="Textbook 3: The True Woman">
+    <Use ref="tmb_tb_b" />
+  </Vertical>
+
+  <Vertical id="tmb_tab_textbook_4" title="Textbook 4: A Public Role">
+    <Use ref="tmb_tb_c" />
+  </Vertical>
+
+  <!-- ===== Tab 7 (index 6): the third text — the 1850 engraving ===== -->
+  <Vertical id="tmb_tab_img" title="The Sphere of Woman">
+    <Use ref="tmb_img_read" />
+  </Vertical>
+
+
+</Tabs>

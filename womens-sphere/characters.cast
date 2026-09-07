@@ -1,0 +1,71 @@
+# Women's Sphere Module (READ 1000) — Cast
+#
+# The SBA B cast mirrors the SBA A build one-for-one:
+#   * Three simulated peers  — Danielle, Joe, Karis
+#   * Simulated Reading instructor — Professor Booker
+#   * Simulated History instructor          — Professor Hale (author of the
+#     background lecture; referenced, not a chat speaker)
+#   * "You" — the student / test-taker, a member of the study group.
+#
+# Danielle, Joe, Karis, Professor Booker, and Professor Hale are not real
+# people, but the learner can interact with and learn from them.
+#
+# NOTE: speaker keys contain no periods (chatpeg parser limitation). Display
+# names are set with `name:` where needed.
+
+Professor Booker:
+  name: Professor Booker
+  seed: booker_reading_faculty
+  openPeeps:
+    face: calm
+    head: bun
+    accessories: glasses
+  profile:
+    role: Reading Instructor, READ 1000
+    bio: The simulated reading instructor. She sets the group's tasks — the vocabulary self-check, the readings, and the vocabulary and comprehension exercises — and then lets the group work through them together.
+
+Professor Hale:
+  name: Professor Hale
+  seed: hale_history_faculty
+  openPeeps:
+    face: calm
+    head: grayShort
+  profile:
+    role: History Instructor (linked U.S. History course)
+    bio: The simulated history instructor who wrote the background lecture on the changing role of women in the 1800s. Her lecture is one of the module's texts.
+
+Karis:
+  seed: karis_student_blue
+  openPeeps:
+    face: explaining
+    head: longCurly
+  profile:
+    role: Study-group peer
+    bio: Brought up the topic of women's roles for today's class. Her mother stayed home to raise her while her aunt went back to work, and the two of them have debated that choice for years, so Karis has read a little about where these ideas come from — though she is careful to say she is not an expert.
+
+Danielle:
+  seed: danielle_student_purple
+  openPeeps:
+    face: smile
+    head: bun2
+  profile:
+    role: Study-group peer
+    bio: Thoughtful and willing to weigh in and challenge ideas. Keeps the group on task and makes good judgments about what matters, though she does not always have the full picture.
+
+Joe:
+  seed: joe_student_orange
+  openPeeps:
+    face: smile
+    head: short2
+  profile:
+    role: Study-group peer
+    bio: Curious and honest about what he does not know. Offers reasoning and background, but his notes and reasoning are sometimes flawed — and he is open to being corrected.
+
+You:
+  seed: learner_you
+  openPeeps:
+    face: smile
+    head: short1
+  profile:
+    role: You (the test-taker)
+    bio: A member of the study group who often speaks for the group.

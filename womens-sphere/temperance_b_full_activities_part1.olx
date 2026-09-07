@@ -1,0 +1,1191 @@
+<!--
+---
+description: "Activity bank for the READ 1000 Women's Sphere module (SBA B). Holds the Main Content screens the study-group conversation pulls into the right-hand panel — the vocabulary self-check, Professor Hale's brief background lecture, the American Yawp textbook excerpt (revealed in chunks), the note-checking table, the close-reading / grammar tasks, the reading-comprehension check, the 'Sphere of Woman' engraving, and the cue to read the magazine article the instructor hands out on paper — plus the vocabulary, cult-of-domesticity, and article questions that appear inline in the chat. This is the SBA B counterpart to sba/temperance_A: same structure and interface, new texts and items. Launchable so it can be previewed and edited on its own."
+category: writing
+index: 57
+lang: en-Latn-US
+---
+-->
+
+<!--
+READ 1000 — Women's Sphere / SBA B  (Activity bank)
+
+The SBA B build of the READ 1000 module. It keeps the exact structure and
+interface of the SBA A build (sba/temperance_A), swapping in a new textbook
+chapter (American Yawp Ch. 11, "The Cotton Revolution" — women, the family,
+and the "cult of domesticity"), a new period image ("The Sphere of Woman,"
+Godey's Lady's Book, 1850), a new magazine article ("The Unglamorous Truth
+About the Average Tradwife," The Atlantic, 2026), and a fresh set of
+assessment items. One deliberate departure carried over from SBA A:
+  * "Joe's notes" (the note-checking matrix) tests the TEXTBOOK excerpt.
+
+Layout (see temperance_b_full_sba_part1.olx). The tab strip is the top level;
+its first tab, "Discussion," is the session itself:
+  * Left  pane : the scripted small-group conversation
+                 (temperance_b_full_dialogue_part1.chatpeg). Peers Danielle,
+                 Joe, and Karis and the reading instructor Professor Booker.
+  * Right pane : a UseHistory (tmb_main) the conversation drives via target
+                 embeds (and, for parking the pane empty, `tmb_main <- tmb_blank`).
+Each READING screen below — the lecture, the four textbook parts, the
+engraving — also gets its own tab, via <Use ref="..."> of the same block, so a
+student can reopen it (with their own highlights) at any point.
+
+The textbook is CHUNKED across four Main Content readings (tmb_tb_a/a2/b/c),
+one per paragraph (para 4 folds in the short Southern-women paragraph), so peer
+dialogue can mediate each passage before the next appears and before the items
+that depend on it.
+This FULL build carries the module through all five parts: textbook, image,
+article, a then/now synthesis, and Pulling It Together — the culminating
+four-or-five-sentence synthesis.
+
+Ids are prefixed `tmb_` (temperance module B) and the namespace is
+`womens_sphere`, so this build coexists with the SBA A build's `tmf_` / the
+faithful build's `tmod_` ids.
+     -->
+
+<Vertical id="temperance_b_full_activities_part1" title="Women's Sphere (Activities)" launchable="true">
+
+
+<!-- ============================================================
+     Part 1 — Introduction
+     ============================================================ -->
+
+<Vertical id="tmb_intro">
+<Markdown id="tmb_intro_md">
+# READ 1000
+
+## Introduction
+
+In this module, you will participate in a simulated small group discussion — the classmates and professors in it are not real people — in
+READ 1000. Your goal is to use the skills you are learning in the course
+(identifying key vocabulary; using academic language; synthesizing key ideas;
+and thinking like a historian) to complete **Pulling It Together: four or five sentences comparing the
+1800s ideal of womanhood — the "cult of domesticity" — with today's "tradwife" trend.** You'll
+build it from the texts you read — the kind of comparison a U.S. History student makes.
+
+You'll work with several texts for this project:
+
+- a short **background lecture** on the changing role of women in the 1800s
+- an **excerpt** from the *American Yawp* textbook (your main reading)
+- a **magazine article** — your instructor hands this one out **on paper**, and
+  you'll read and mark it there
+- an **engraving** (a kind of image) about the topic from the 19th century
+
+You'll work with three simulated peers: **Danielle, Joe, and Karis.** Your
+simulated Reading instructor is **Professor Booker.** Your simulated History
+instructor is **Professor Hale.**
+
+It will take about one hour to complete this module. It's required as part of
+READ 1000, and you have until the date your instructor sets to complete it.
+
+This module is a little bit different from participating in our READ 1000 class.
+Danielle, Joe, Karis, Professor Booker, and Professor Hale are **not real
+people,** but you can learn from and interact with them.
+
+**About answering questions.** You can change any answer as many times as you
+like, and on some questions the conversation waits until you land on the right
+one. When we look over your work, though, it's mostly your **first** answer we
+pay attention to — so think it through before you click, and then fix it freely.
+
+All right, now imagine that you are in your classroom, but class has not started
+yet. You are talking to Danielle, Joe, and Karis. Click **Continue** in the
+conversation on the left to begin.
+</Markdown>
+</Vertical> <!-- tmb_intro -->
+
+
+<!-- ============================================================
+     Part 2 — Vocabulary self-check / VKS table
+     Ungraded: "there is no right or wrong answer."
+     ============================================================ -->
+
+<Vertical id="tmb_vks">
+<Markdown id="tmb_vks_prompt">
+## Before We Read: How Familiar Are These Words?
+
+Take a look at some words that you will see in the texts. This is **not graded**
+— there is no right or wrong answer. It's useful information for your
+instructor. For each word, choose the option that best describes how well you
+know it.
+</Markdown>
+<TabularMCQ id="tmb_vks_grid">
+cols:
+  - I have never seen this word.
+  - "I have seen it, but I'm not sure what it means."
+  - I think I know what it means in context.
+  - I know this word and could use it in a sentence.
+rows:
+  - domestic|w_domestic
+  - domesticity|w_domesticity
+  - en masse|w_enmasse
+  - euphemism|w_euphemism
+  - ideology|w_ideology
+  - moralizing|w_moralizing
+  - public sphere|w_publicsphere
+  - tandem|w_tandem
+</TabularMCQ>
+</Vertical> <!-- tmb_vks -->
+
+
+<!-- ============================================================
+     Part 2 — Professor Hale's brief background lecture
+     OPTIONAL REFERENCE. The lecture is no longer parked in the activity
+     pane and no longer gated: it costs minutes the 60-minute module does
+     not have, and the peers surface its content in dialogue anyway. It
+     keeps its tab, so a student who wants the background can read it at
+     any time. Still an Annotate, not plain Markdown: the lecture text
+     itself tells students to highlight as they read. No <Done> — nothing
+     waits on it.
+     ============================================================ -->
+
+<!-- Parked wherever the chat has moved past the pane's last activity —
+     an intentionally quiet screen, same pattern as the writing journals. -->
+<Markdown id="tmb_blank">
+*(nothing here right now — the discussion continues on the left)*
+</Markdown>
+
+<Vertical id="tmb_lecture_read">
+<Annotate id="tmb_lecture_annotate" title="Professor Hale's Lecture">
+<Markdown id="tmb_lecture_md" src="readings/lecture_hale.md" />
+</Annotate>
+</Vertical>
+
+
+<!-- ============================================================
+     Part 3 — Textbook, CHUNK A: paragraph 1
+     The new industrial economy and the "public sphere." Highlightable.
+     ============================================================ -->
+
+<Vertical id="tmb_tb_a">
+<Annotate id="tmb_tb_a_annotate" title="American Yawp — Women and the Sphere of Woman (part 1)">
+<Markdown id="tmb_tb_a_md" src="readings/american-yawp/womens_sphere_1.md" />
+</Annotate>
+<Done id="tmb_tb_a_done" label="Mark as read" />
+</Vertical>
+
+
+<!-- ============================================================
+     Part 3 — Textbook, CHUNK A2: paragraph 2
+     The "cult of domesticity" / "cult of true womanhood." Highlightable.
+     ============================================================ -->
+
+<Vertical id="tmb_tb_a2">
+<Annotate id="tmb_tb_a2_annotate" title="American Yawp — Women and the Sphere of Woman (part 2)">
+<Markdown id="tmb_tb_a2_md" src="readings/american-yawp/womens_sphere_2.md" />
+</Annotate>
+<Done id="tmb_tb_a2_done" label="Mark as read" />
+</Vertical>
+
+
+<!-- ============================================================
+     Part 3 — Check Joe's notes ON THE TEXTBOOK.
+     3-way scale: correct and central / correct but less important /
+     not correct. Answers keyed to the textbook excerpt.
+     ============================================================ -->
+
+<Vertical id="tmb_notecheck">
+<Markdown id="tmb_notecheck_prompt">
+## Checking Joe's Notes on the Textbook
+
+Joe made a list of what he thought were the important points from the *American
+Yawp* excerpt. For **each statement**, decide whether it is **correct and central
+to the text**, **correct but less important**, or **not correct**. Then press
+**Check**.
+</Markdown>
+<CapaProblem id="tmb_notecheck_problem" title="Joe's Notes on the Textbook" showanswer="always">
+<TabularMCQGrader id="tmb_notecheck_grader">
+<TabularMCQ id="tmb_notecheck_grid">
+cols:
+  - Correct and central to the text
+  - Correct but less important
+  - Not correct
+rows:
+  - "The 'cult of domesticity' held that a woman's proper place was the home, as guardian of virtue and morality.|n_ideal[Correct and central to the text]"
+  - "Women took the very ideology that kept them at home and used it to fashion a new public role for themselves.|n_public[Correct and central to the text]"
+  - "The Second Great Awakening and new education for girls helped middle-class women leave home to join reform societies.|n_awakening[Correct and central to the text]"
+  - "These ideas about womanhood applied mainly to upper- and middle-class women, not working-class women.|n_class[Correct but less important]"
+  - "Southern women were more often told to be a calming, moralizing influence at home than to organize reform societies.|n_south[Correct but less important]"
+  - "The cult of domesticity was invented by factory owners to force women to take jobs in factories.|n_factory[Not correct]"
+</TabularMCQ>
+</TabularMCQGrader>
+</CapaProblem> <!-- tmb_notecheck_problem -->
+</Vertical> <!-- tmb_notecheck -->
+
+
+<!-- ============================================================
+     Part 3 — Textbook, CHUNK B: para 3
+     Women as guardians of virtue; pious, pure, submissive, domestic.
+     ============================================================ -->
+
+<Vertical id="tmb_tb_b">
+<Annotate id="tmb_tb_b_annotate" title="American Yawp — Women and the Sphere of Woman (part 3)">
+<Markdown id="tmb_tb_b_md" src="readings/american-yawp/womens_sphere_3.md" />
+</Annotate>
+<Done id="tmb_tb_b_done" label="Mark as read" />
+</Vertical>
+
+
+<!-- ============================================================
+     Part 3 — Textbook, CHUNK C: paras 4-5
+     Women fashion a public role (ideology / en masse); Southern women
+     (moralizing / euphemism). Used for the grammar tasks too.
+     ============================================================ -->
+
+<Vertical id="tmb_tb_c">
+<Annotate id="tmb_tb_c_annotate" title="American Yawp — Women and the Sphere of Woman (part 4)">
+<Markdown id="tmb_tb_c_md" src="readings/american-yawp/womens_sphere_4.md" />
+</Annotate>
+<Done id="tmb_tb_c_done" label="Mark as read" />
+</Vertical>
+
+
+<!-- ============================================================
+     Part 3 — Academic language / close reading
+     Graded text-highlighting on the key sentence, via
+     SimpleTextSelection (mode=graded → Check button; the
+     generated problem is <id>_problem, gated on submitCount).
+     ============================================================ -->
+
+<!-- Three highlight questions on the key sentence. Because "women" is a bare
+     one-word subject and the rich noun phrase is the OBJECT, the NP break-down
+     (next screen) is done on the object. As in SBA A: the essential word MUST
+     be selected; the rest of its phrase MAY be ({optional}), so a student who
+     highlights the whole phrase is just as right as one who picks the single
+     head word.
+
+     Order is VERB -> SUBJECT -> OBJECT, not S-V-O. The verb is the one part
+     you can find without having identified anything else. -->
+<Vertical id="tmb_grammar_svo">
+<Markdown id="tmb_grammar_svo_md">
+## Verb, Subject, Object
+
+Three quick highlights on the key sentence — the verb first, then the subject,
+then the object.
+
+A part may be a **single word or a whole phrase**. For each one you **must**
+include the essential word; beyond that, highlight as much or as little of the
+rest of its phrase as you see fit.
+</Markdown>
+
+<SimpleTextSelection id="tmb_grammar_svo_verb" mode="graded" title="Highlight the verb">
+Highlight the main verb — the first thing women did with that ideology.
+---
+Yet women [took] the very ideology that defined their place in the home and used it to fashion a public role for themselves.
+---
+all: Right — "took" is the main verb: the action at the heart of the sentence — what women DID with that ideology.
+: The main verb is the action word. Of everything happening here, which single word is what women first did with the ideology?
+</SimpleTextSelection>
+
+<SimpleTextSelection id="tmb_grammar_svo_subject" mode="graded" title="Highlight the subject">
+Highlight the subject of the sentence.
+---
+Yet {the} [women] took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
+---
+all: Right — "women" is the subject: they are the ones who did the taking.
+: The subject is who or what does the action. Who took the ideology?
+</SimpleTextSelection>
+
+<SimpleTextSelection id="tmb_grammar_svo_object" mode="graded" title="Highlight the object">
+Highlight the direct object — what women took.
+---
+Yet women took {the very} [ideology] {that defined their place in the home} and used it to fashion a public role for themselves.
+---
+all: Right — "ideology" is what got taken, and the full phrase "the very ideology that defined their place in the home" works too.
+: What did the women take? Find that noun.
+</SimpleTextSelection>
+</Vertical> <!-- tmb_grammar_svo -->
+
+<!-- Inside the OBJECT noun phrase. Three sequential highlights, matching the
+     SVO screen's one-question-at-a-time pattern. The text shown is ONLY the
+     noun phrase, not the whole sentence: the rest is nothing but a place to
+     make mistakes here.
+
+     "Determiner," not "premodifier" — it is the category the course uses for
+     the pointing word(s) in front of the head noun. "the very" points at one
+     particular ideology, so it does the same job "Such" did in SBA A. -->
+<Vertical id="tmb_grammar_np">
+<Markdown id="tmb_grammar_np_md">
+## Inside the Noun Phrase
+
+The object of that sentence is a noun phrase all by itself. Here it is on its
+own — take it apart in three steps.
+</Markdown>
+
+<SimpleTextSelection id="tmb_grammar_np_head" mode="graded" title="Highlight the head noun">
+Highlight the head noun — the one word the whole phrase is built around.
+---
+the very [ideology] that defined their place in the home
+---
+all: Right — "ideology" is the head noun. Everything else in the phrase is there to tell you which ideology.
+: It is a single word, and it is the thing the phrase is naming. Which one word could stand in for the whole phrase?
+</SimpleTextSelection>
+
+<SimpleTextSelection id="tmb_grammar_np_det" mode="graded" title="Highlight the determiner">
+Highlight the determiner — the word (or words) in front of the head noun that point at which one.
+---
+[the] {very} ideology that defined their place in the home
+---
+all: Right — "the" (with "very") is the determiner. It points back at one particular ideology — the one the text has already described.
+: It comes before the head noun, and words like "the," "these," "his," and "such" do this job.
+</SimpleTextSelection>
+
+<SimpleTextSelection id="tmb_grammar_np_post" mode="graded" title="Highlight the postmodifier">
+Highlight the postmodifier — the part after the head noun that tells you more about it.
+---
+the very ideology [that defined their place in the home]
+---
+all: Right — "that defined their place in the home" is the postmodifier. It tells you which ideology — the one that kept women in the home.
+: It follows the head noun, and here it is a whole phrase rather than a single word.
+</SimpleTextSelection>
+</Vertical> <!-- tmb_grammar_np -->
+
+<!-- The structure, laid out (info screen) -->
+<Vertical id="tmb_grammar_structure">
+<Markdown id="tmb_grammar_structure_md">
+## The Grammatical Structure
+
+Here is the sentence laid out:
+
+> **women** — subject
+> **took** — verb
+> **[ the very ideology that defined their place in the home ]** — direct object (a noun phrase)
+
+The object is a **noun phrase** — to understand the sentence, you hold the
+whole phrase together as the one thing the women took.
+</Markdown>
+<Done id="tmb_grammar_structure_done" label="I understand" />
+</Vertical>
+
+<!-- Highlight the sentence that first NAMES the ideology "the very ideology"
+     points back to. Only one sentence in the passage names it ("cult of
+     domesticity" / "cult of true womanhood"), so the target is unambiguous
+     even though the passage spans several paragraphs. -->
+<SimpleTextSelection id="tmb_grammar_antecedent" mode="graded" title="Find the Antecedent">
+"The very ideology that defined their place in the home" points back to an ideology the text has already named. Find the earlier sentence that first gives it that name — the one that calls it the "cult of domesticity" — and highlight the entire sentence, from its first word through its final period.
+---
+[Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the "cult of domesticity," or the "cult of true womanhood."] These ideas developed in tandem with industrialization, the market revolution, and the Second Great Awakening. In reality, they applied primarily to upper-class and middle-upper-class women. In the era of revivalism and reform, Americans understood the family and home as the hearthstones of civic virtue and moral influence. Women were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic. Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
+---
+all: Yes — that earlier sentence is where the text names the ideology: the "cult of domesticity," or "cult of true womanhood." That is the ideology "the very ideology" points back to.
+: You are looking for the one sentence that NAMES the ideology — the one with the words "cult of domesticity" in it. Highlight the whole sentence.
+</SimpleTextSelection>
+
+
+<!-- ============================================================
+     Part 3 — Reading comprehension check
+
+     The five questions are CHAT-EMBEDDED, one at a time with a peer lead-in,
+     on the same pattern as the vocabulary questions — deliberately not a pane
+     screen, which would put the questions exactly where the text should be:
+     a comprehension check with the passage nowhere in sight is a memory test.
+     The pane holds the text (tmb_comp_reading, below) for the whole stretch,
+     so a student answers with the excerpt open beside them.
+
+     Each is a single-question MarkupProblem, so it carries its own Check
+     button and per-item feedback and the chat can wait on .submitCount.
+     ============================================================ -->
+
+<!-- The pane for the comprehension stretch: all four Yawp parts end to end in
+     one scrollable view. <Use> of the same four Annotate blocks the reading
+     walked through and the Textbook 1-4 tabs show — one block, one state — so
+     a student's highlights are here waiting for them. The <Done> buttons are
+     deliberately not included: those live on the tmb_tb_* screens, and this
+     is a place to read from, not another thing to finish. -->
+<Vertical id="tmb_comp_reading">
+<Markdown id="tmb_comp_reading_intro">
+## The Excerpt — All Four Parts
+
+The whole *American Yawp* excerpt, end to end, with your highlights still on it.
+Scroll through it as you answer the questions in the conversation.
+</Markdown>
+<Use ref="tmb_tb_a_annotate" />
+<Use ref="tmb_tb_a2_annotate" />
+<Use ref="tmb_tb_b_annotate" />
+<Use ref="tmb_tb_c_annotate" />
+</Vertical>
+
+<!-- CHAT-EMBEDDED — the five comprehension questions -->
+
+<MarkupProblem id="tmb_comp_q1" title="Question 1"><![CDATA[
+>>What happened to family life as the industrial economy of the 1830s and 1840s emerged?<<
+
+( ) Families grew wealthier, and most women stopped working entirely.
+( ) Family life stayed exactly the same as it had been before independence.
+(x) Family life changed, and men, women, and children took on new roles in both the home and the factory.
+( ) Families moved together into factories, where they all worked side by side.
+
+[explanation]
+"Family life changed, defined by shifting meanings in individual value, collective labor, and the relationship between work, class, and politics. Men, women, and children took on new roles in the home as well as in the factory."
+[/explanation]
+]]></MarkupProblem>
+
+<MarkupProblem id="tmb_comp_q2" title="Question 2"><![CDATA[
+>>What was the "cult of domesticity" (or "cult of true womanhood"), and to whom did it mainly apply?<<
+
+(x) The idea that femininity was tied to the domestic sphere — one that applied mainly to upper- and middle-class women.
+( ) A law that required all American women to stay in the home.
+( ) A reform society that women formed to fight for the right to vote.
+( ) The belief that working-class women were the truest example of womanhood.
+
+[explanation]
+"Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the 'cult of domesticity,' or the 'cult of true womanhood.'… In reality, they applied primarily to upper-class and middle-upper-class women."
+[/explanation]
+]]></MarkupProblem>
+
+<MarkupProblem id="tmb_comp_q3" title="Question 3"><![CDATA[
+>>According to the dominant understanding of gender, what were women expected to be?<<
+
+( ) The main wage-earners who supported their families financially.
+(x) Guardians of virtue and the spiritual heads of the home — pious, pure, submissive, and domestic.
+( ) Leaders of the church who preached to large congregations.
+( ) Skilled factory workers who trained younger employees.
+
+[explanation]
+"Women, the dominant understanding of gender claimed, were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic."
+[/explanation]
+]]></MarkupProblem>
+
+<MarkupProblem id="tmb_comp_q4" title="Question 4"><![CDATA[
+>>How did women turn the ideology of domesticity into something new?<<
+
+( ) They rejected the ideology and demanded to be treated exactly like men.
+( ) They used it to convince other women to stay out of public life entirely.
+(x) They took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
+( ) They abandoned their homes and moved into the factories to earn wages.
+
+[explanation]
+"Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves. As a result, women became more visible and active in the public sphere than ever before."
+[/explanation]
+]]></MarkupProblem>
+
+<MarkupProblem id="tmb_comp_q5" title="Question 5"><![CDATA[
+>>How did the experience of many Southern women differ from that of some Northern women?<<
+
+( ) Southern women were the first to form antislavery societies in large numbers.
+( ) Southern women were required by law to work outside the home.
+(x) Southern women were more often told to be a calming, moralizing influence at home rather than to organize reform societies.
+( ) Southern women rejected the ideal of domesticity entirely.
+
+[explanation]
+"While some Northern women began to organize reform societies, Southern women were more often instructed to offer a calming, moralizing influence on husbands and children and manage their households."
+[/explanation]
+]]></MarkupProblem>
+
+
+<!-- ============================================================
+     Part 3 — The magazine article
+     The article is a copyrighted magazine piece, so it is NOT carried
+     online: the instructor hands it out ON PAPER and students read and
+     annotate the paper copy. This screen is the cue to pick it up; the
+     article questions that follow are chat-embedded.
+     ============================================================ -->
+
+<Vertical id="tmb_article_read">
+<Markdown id="tmb_article_md">
+## The Magazine Article — On Paper
+
+Your instructor handed out a printed copy of the magazine article about the
+"tradwife" trend. **Read it on paper now.**
+
+Read it the same way you read the textbook on screen — with a pen or a
+highlighter in hand:
+
+- **Mark the three words** the article's discussion asks you to watch for:
+  *tradwife*, *economic precarity*, and *egalitarian.*
+- **Underline** anything that says what the "tradwife" trend really looks like
+  for most stay-at-home mothers, and why.
+- **Star** anything that reminds you of the *American Yawp* excerpt or the
+  engraving — you'll need those connections shortly.
+
+Keep the handout beside you. The questions in the conversation on the left are
+all about it, and you'll draw on it again when you pull the three texts
+together at the end.
+
+*If you don't have a copy, ask your instructor before going on.*
+</Markdown>
+<!-- The reading happens off-screen, so the chat has nothing to watch except
+       this: the student tells us when the paper article has been read. -->
+<Done id="tmb_article_read_done" label="I've read the handout" />
+</Vertical> <!-- tmb_article_read -->
+
+
+<!-- ============================================================
+     Part 4 — The engraving (third text): N. unknown, "The Sphere of
+     Woman," Godey's Lady's Book vol. 40 (March 1850) — Figure 11.3 in
+     the American Yawp chapter. Public domain.
+     ============================================================ -->
+
+<Vertical id="tmb_img_read">
+<Markdown id="tmb_img_intro">
+## A Period Image: "The Sphere of Woman"
+
+Study this engraving from an 1850 women's magazine. Notice **where the woman
+is** (indoors, at home), **what she is doing** (caring for her children), and
+the **title** printed beneath the picture.
+</Markdown>
+<Image id="tmb_img_img" src="images/sphere_of_woman.jpg" width="640"
+  alt="'The Sphere of Woman' (Godey's Lady's Book, 1850): inside a curtained parlor, a mother holds her baby while a girl and a boy read and play beside her, a dog resting at their feet; the title 'THE SPHERE OF WOMAN' is printed beneath the scene."
+  authors="Godey's Lady's Book, 1850" license="Public domain" />
+<Markdown id="tmb_img_caption">
+**"The Sphere of Woman"** — *Godey's Lady's Book,* vol. 40 (March 1850).
+
+A mother holds her baby while two children read and play beside her in a
+comfortable parlor. *Godey's Lady's Book* was the most popular women's magazine
+of the era, and it printed this engraving as a picture of a woman's proper
+place: the home, at the center of family and children.
+</Markdown>
+</Vertical> <!-- tmb_img_read -->
+
+
+<!-- ============================================================
+     Part 4 — Synthesis: sort each description as "then" (the 1800s
+     ideal) vs "now" (the tradwife trend), drawing on all three texts. Graded.
+     ============================================================ -->
+
+<Vertical id="tmb_synth_sort">
+<Markdown id="tmb_synth_sort_prompt">
+## Then and Now
+
+Using the textbook, the printed article, and the engraving, sort each description
+under the movement it best fits. Then press **Check.**
+</Markdown>
+<CapaProblem id="tmb_synth_sort_problem" title="Then vs. Now" showanswer="always">
+<TabularMCQGrader id="tmb_synth_sort_grader">
+<TabularMCQ id="tmb_synth_sort_grid">
+cols:
+  - "The 1800s ideal of the 'true woman'"
+  - "Today's 'tradwife' trend"
+rows:
+  - "Held up the pious, pure, submissive woman at home as a moral and religious duty|s_ideal[The 1800s ideal of the 'true woman']"
+  - "Justified by the belief that women were the natural guardians of virtue and the home|s_guardian[The 1800s ideal of the 'true woman']"
+  - "Applied mainly to upper- and middle-class women, while working-class women worked out of necessity|s_class[The 1800s ideal of the 'true woman']"
+  - "Spread through social-media images of glamorous, calm stay-at-home mothers|s_social[Today's 'tradwife' trend]"
+  - "Often driven less by free choice than by economic precarity — costly child care and unequal pay|s_precarity[Today's 'tradwife' trend]"
+</TabularMCQ>
+</TabularMCQGrader>
+</CapaProblem>
+</Vertical> <!-- tmb_synth_sort -->
+
+
+<!-- ============================================================
+     Part 5 — Culminating writing task (Pulling It Together).
+     ============================================================ -->
+
+<Vertical id="tmb_final_write_screen">
+<Markdown id="tmb_final_write_prompt">
+## Pulling It Together
+
+This is the goal the whole module has been building toward.
+
+**In four or five sentences, explain the 1800s ideal of the "true woman" (the
+"cult of domesticity") and today's "tradwife" trend. Then compare and contrast
+them: in what ways are the two alike, and how do they differ?**
+
+Draw on all three texts — the *American Yawp* excerpt, the engraving, and the
+article your instructor handed out.
+</Markdown>
+<TextArea id="tmb_final_write" rows="8"
+  placeholder="Both hold up the woman at home as an ideal, but…" />
+
+<!-- Progress affordance, two tiers. There is no word minimum to hit: the
+       conversation moves on as soon as the student has really begun, so tier 1
+       is encouragement rather than a countdown. The second tier only ever
+       claims what it actually checked (length); quality is handed back to the
+       student as a read-it-back checklist. -->
+<Markdown when="wordcount(@tmb_final_write.value) &lt; 40">
+*A solid comparison usually takes four or five sentences — keep going.*
+</Markdown>
+<Markdown when="wordcount(@tmb_final_write.value) &gt;= 40">
+*✓ You can continue. Before you do, read it back: does it name **one way the two are alike** and **one way they differ**? Does it draw on **all three texts** — the textbook, the engraving, and the article?*
+</Markdown>
+</Vertical> <!-- tmb_final_write_screen -->
+
+
+<!-- ============================================================
+     Part 5 — Conclusion / wrap-up.
+     ============================================================ -->
+
+<Vertical id="tmb_conclusion">
+<Markdown id="tmb_conclusion_md">
+## You're Done
+
+Nice work — you've finished the module. Along the way you practiced the full
+range of READ 1000 reading skills on **three real texts:**
+
+- **using context for vocabulary** (domesticity, ideology, en masse, euphemism, and more)
+- **close, academic-language reading** (the subject–verb–object of a hard sentence, and its antecedent)
+- **reading comprehension** across the textbook and the article
+- **organizing notes** under headings
+- **analyzing an image** as persuasion, and finally
+- **synthesizing** all three texts into four or five sentences comparing the 1800s ideal of womanhood with today's "tradwife" trend.
+
+Here is the finished work — the comparison you built from all three texts.
+</Markdown>
+<!-- The writing screen is behind us in the pane by now, so the conclusion
+       shows the comparison rather than pointing at a screen that has moved
+       on. <Use>, not a copy: same block, same state, still editable. -->
+<Use ref="tmb_final_write" />
+</Vertical> <!-- tmb_conclusion -->
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — what do you think "a woman's place is in the home" means?
+     ============================================================ -->
+
+<TextArea id="tmb_topic_guess" rows="3"
+  placeholder="It has to do with…  /  I think it means…  /  It's about…" />
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — vocabulary, chunk A / para 1
+     ============================================================ -->
+
+<!-- Each chat-embedded question is wrapped in a Vertical that TAKES OVER the
+     embed id (`::tmb_q_publicsphere_screen`), so the correctness feedback under
+     the choices renders inside the chat bubble with them. The ChoiceInput
+     keeps its own id — every wait, and every readback, still names it. -->
+
+<Vertical id="tmb_q_publicsphere_screen">
+<ChoiceInput id="tmb_q_publicsphere">
+<Markdown>
+Look at the highlighted sentence and choose the best definition for **public sphere**:
+
+> "In the **public sphere**, women increasingly challenged the moral direction
+> of this new American society."
+</Markdown>
+         <Key value="public_life"     > The shared world of work, politics, and community life outside the home. </Key>
+  <Distractor value="private_home"    > The private world of the household and family.                          </Distractor>
+  <Distractor value="town_square"     > A large public square or park in the center of a town.                  </Distractor>
+  <Distractor value="shared_opinion"  > A group of people who all share the same opinion.                       </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_q_publicsphere.value === 'private_home'">
+*Not quite — that's the **domestic** sphere, the opposite of the public one. The public sphere is life OUTSIDE the home.*
+</Markdown>
+<Markdown when="@tmb_q_publicsphere.value === 'town_square'">
+*Not quite — "sphere" here isn't a literal place you can stand in. It means a whole area of life — work, politics, community.*
+</Markdown>
+<Markdown when="@tmb_q_publicsphere.value === 'shared_opinion'">
+*Not quite — the public sphere is where people act and argue in common, not a single shared opinion.*
+</Markdown>
+<Markdown when="@tmb_q_publicsphere.value === 'public_life'">
+*Yes — the public sphere is life outside the home: work, politics, and community. Its opposite is the "domestic sphere," which comes up next.*
+</Markdown>
+</Vertical> <!-- tmb_q_publicsphere_screen -->
+
+<!-- CHAT-EMBEDDED — vocabulary, chunk A2 / para 2 -->
+
+<Vertical id="tmb_q_tandem_screen">
+<ChoiceInput id="tmb_q_tandem">
+<Markdown>
+What words could take the place of **in tandem with** — but keep the meaning the same?
+
+> "These ideas developed **in tandem with** industrialization, the market
+> revolution, and the Second Great Awakening."
+</Markdown>
+         <Key value="alongside"      > together with; at the same time as </Key>
+  <Distractor value="against"        > in opposition to; against          </Distractor>
+  <Distractor value="before"         > long before; ahead of              </Distractor>
+  <Distractor value="instead"        > instead of; in place of            </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_q_tandem.value === 'against'">
+*Not quite — backwards. The ideas didn't fight those changes; they grew up right alongside them.*
+</Markdown>
+<Markdown when="@tmb_q_tandem.value === 'before'">
+*Not quite — "in tandem" is about the same time, not one ahead of the other. Think of two riders on a tandem bicycle, moving together.*
+</Markdown>
+<Markdown when="@tmb_q_tandem.value === 'instead'">
+*Not quite — the ideas didn't replace industrialization or the revival; they developed together with them.*
+</Markdown>
+<Markdown when="@tmb_q_tandem.value === 'alongside'">
+*Yes — "in tandem with" means together, at the same time. A tandem bicycle carries two riders moving as one.*
+</Markdown>
+</Vertical> <!-- tmb_q_tandem_screen -->
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — cult of domesticity, disciplinary term (chunk A2)
+     ============================================================ -->
+
+<Vertical id="tmb_cd_term_screen">
+<ChoiceInput id="tmb_cd_term">
+<Markdown>
+**Cult of domesticity** is a discipline-specific term. Using clues in the
+passage, which phrase most directly helps us understand what it was?
+</Markdown>
+  <Distractor value="market_revolution"  > the market revolution        </Distractor>
+         <Key value="domestic_sphere"    > the domestic sphere          </Key>
+  <Distractor value="public_sphere"      > the public sphere            </Distractor>
+  <Distractor value="second_awakening"   > the Second Great Awakening   </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_cd_term.value === 'market_revolution'">
+*Not quite — the market revolution is one of the changes the idea developed alongside, not what the idea WAS.*
+</Markdown>
+<Markdown when="@tmb_cd_term.value === 'public_sphere'">
+*Not quite — that's the opposite. The cult of domesticity tied women to the HOME, away from the public sphere.*
+</Markdown>
+<Markdown when="@tmb_cd_term.value === 'second_awakening'">
+*Not quite — the Second Great Awakening helped shape the idea, but it isn't a definition of it.*
+</Markdown>
+<Markdown when="@tmb_cd_term.value === 'domestic_sphere'">
+*Yes — the passage hands you the phrase: femininity was "intimately tied to the domestic sphere." A woman's proper place was the home.*
+</Markdown>
+</Vertical> <!-- tmb_cd_term_screen -->
+
+<Vertical id="tmb_cd_connect_screen">
+<CheckboxInput id="tmb_cd_connect">
+<Markdown>
+The cult of domesticity was the idea that a woman's proper place was the
+**home.** What other words or phrases from the chapter describe or connect to
+it? **Select all that apply.**
+</Markdown>
+         <Key value="true_womanhood"       > "cult of true womanhood"           </Key>
+         <Key value="guardians_of_virtue"   > guardians of virtue                </Key>
+  <Distractor value="reform_societies"      > reform societies                   </Distractor>
+         <Key value="pious_pure_submissive" > pious, pure, submissive, domestic  </Key>
+  <Distractor value="antislavery_movement"  > the antislavery movement           </Distractor>
+  <Distractor value="working_class_labor"   > working-class women's labor        </Distractor>
+</CheckboxInput>
+
+<!-- Multi-select, so the feedback has to cover three cases: a wrong pick, a
+   right-but-incomplete set, and the whole set. The gate below (in the
+   chatpeg) asks for all three Keys and nothing else. -->
+<Markdown when="@tmb_cd_connect.value.includes('reform_societies')">
+*Not that one — reform societies are the PUBLIC role women fashioned once they left the home, not part of the domestic ideal.*
+</Markdown>
+<Markdown when="@tmb_cd_connect.value.includes('antislavery_movement')">
+*Not that one — joining the antislavery movement took women OUT into public life. It's the opposite of staying in the domestic sphere.*
+</Markdown>
+<Markdown when="@tmb_cd_connect.value.includes('working_class_labor')">
+*Not that one — working-class women joined the public sphere through their labor, out of necessity. They're the exception to the ideal, not part of it.*
+</Markdown>
+<Markdown when="@tmb_cd_connect.value.length &gt; 0 &amp;&amp; @tmb_cd_connect.value.length &lt; 3">
+*Keep looking — more than one phrase here belongs to the domestic ideal. Ask of each: does it describe the "true woman" AT HOME, or something women did OUT in public?*
+</Markdown>
+<Markdown when="@tmb_cd_connect.value.length === 3 &amp;&amp; @tmb_cd_connect.value.includes('true_womanhood') &amp;&amp; @tmb_cd_connect.value.includes('guardians_of_virtue') &amp;&amp; @tmb_cd_connect.value.includes('pious_pure_submissive')">
+*That's the set: the "cult of true womanhood," women as guardians of virtue, and the qualities of the ideal woman — pious, pure, submissive, and domestic.*
+</Markdown>
+</Vertical> <!-- tmb_cd_connect_screen -->
+
+<Vertical id="tmb_cd_bestdef_screen">
+<ChoiceInput id="tmb_cd_bestdef">
+<Markdown>
+Each member of your group wrote a one-sentence description of the cult of
+domesticity. Read them and choose the **best** one.
+</Markdown>
+  <Distractor value="danielle_reform_movement"   > **Danielle:** The name for the movement that sent middle-class women out of their homes to join antislavery and reform societies.        </Distractor>
+         <Key value="joe_home_ideal"             > **Joe:** The belief that a true woman's proper place was the home, where she was to be pious, pure, submissive, and domestic, and to raise her children in virtue. </Key>
+  <Distractor value="karis_laws_all_women"       > **Karis:** A set of laws that required all women, rich and poor, to stay home and manage their households.                                     </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_cd_bestdef.value === 'danielle_reform_movement'">
+*Not quite — Danielle has it backwards. That's the PUBLIC role women fashioned FROM the ideology; the cult of domesticity itself was about staying home.*
+</Markdown>
+<Markdown when="@tmb_cd_bestdef.value === 'karis_laws_all_women'">
+*Not quite — Karis makes it a law for everyone. It was a cultural and religious ideal, not a law, and it applied mainly to upper- and middle-class women.*
+</Markdown>
+<Markdown when="@tmb_cd_bestdef.value === 'joe_home_ideal'">
+*Yes — Joe's has all the pieces: the home as a woman's proper place, the qualities of the "true woman," and passing virtue on to her children.*
+</Markdown>
+</Vertical> <!-- tmb_cd_bestdef_screen -->
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — vocabulary, chunk B / para 3
+     ============================================================ -->
+
+<Vertical id="tmb_q_domestic_screen">
+<ChoiceInput id="tmb_q_domestic">
+<Markdown>
+Choose the best definition for **domestic** as it's used here:
+
+> "They were to be pious, pure, submissive, and **domestic**."
+</Markdown>
+         <Key value="home_focused"    > Devoted to the home and family life.               </Key>
+  <Distractor value="made_in_country" > Made or produced inside one's own country.        </Distractor>
+  <Distractor value="tame_animal"     > Tame or trained, like a household animal.         </Distractor>
+  <Distractor value="strict_rules"    > Strict and demanding about rules.                 </Distractor>
+</ChoiceInput>
+
+<!-- Karis names the morphology link in the dialogue after this: "domestic"
+   (adjective) shares a root with "domesticity" (noun) from part 2. -->
+<Markdown when="@tmb_q_domestic.value === 'made_in_country'">
+*Not quite — that's a real sense of "domestic" (as in "domestic products"), but not this one. Here it's about the home, not the country.*
+</Markdown>
+<Markdown when="@tmb_q_domestic.value === 'tame_animal'">
+*Not quite — also a real sense ("a domestic animal"), but the sentence is describing a woman, not a pet. Read it as being devoted to the home.*
+</Markdown>
+<Markdown when="@tmb_q_domestic.value === 'strict_rules'">
+*Not quite — nothing in "domestic" is about strictness. It's about the home.*
+</Markdown>
+<Markdown when="@tmb_q_domestic.value === 'home_focused'">
+*Right — devoted to the home and family. It's the same root you saw in "domesticity" back in part 2 — the noun for the whole idea.*
+</Markdown>
+</Vertical> <!-- tmb_q_domestic_screen -->
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — vocabulary, chunk C / paras 4-5
+     ============================================================ -->
+
+<Vertical id="tmb_q_ideology_screen">
+<ChoiceInput id="tmb_q_ideology">
+<Markdown>
+Choose the best definition for **ideology**:
+
+> "Yet women took the very **ideology** that defined their place in the home and
+> used it to fashion a public role for themselves."
+</Markdown>
+         <Key value="belief_system"   > A set of beliefs and ideas, especially about how society should work. </Key>
+  <Distractor value="single_feeling"  > A single strong feeling or emotion.                                  </Distractor>
+  <Distractor value="government_law"   > A law passed by the government.                                      </Distractor>
+  <Distractor value="mind_study"      > The scientific study of how the mind works.                          </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_q_ideology.value === 'single_feeling'">
+*Not quite — an ideology is bigger than one feeling. It's a whole system of beliefs about how things should be.*
+</Markdown>
+<Markdown when="@tmb_q_ideology.value === 'government_law'">
+*Not quite — laws are written and enforced; an ideology is a set of shared beliefs. The cult of domesticity was an ideology, not a law.*
+</Markdown>
+<Markdown when="@tmb_q_ideology.value === 'mind_study'">
+*Not quite — that's "psychology." The "-ology" ending fools a lot of people here.*
+</Markdown>
+<Markdown when="@tmb_q_ideology.value === 'belief_system'">
+*Right — a shared set of beliefs about how society should work. Here it's the belief that a woman's place is the home.*
+</Markdown>
+</Vertical> <!-- tmb_q_ideology_screen -->
+
+<Vertical id="tmb_q_enmasse_screen">
+<ChoiceInput id="tmb_q_enmasse">
+<Markdown>
+What words could take the place of **en masse** — but keep the meaning the same?
+
+> "…enabled white middle-class women, especially in the North, to leave their
+> homes **en masse**…"
+</Markdown>
+         <Key value="all_together"    > in large numbers, all together </Key>
+  <Distractor value="one_at_a_time"   > one at a time, slowly          </Distractor>
+  <Distractor value="in_secret"       > in secret, without being seen  </Distractor>
+  <Distractor value="by_force"        > by force, against their will   </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_q_enmasse.value === 'one_at_a_time'">
+*Not quite — the opposite. "En masse" means as a large group, all at once.*
+</Markdown>
+<Markdown when="@tmb_q_enmasse.value === 'in_secret'">
+*Not quite — nothing about "en masse" is hidden. It's about numbers — a whole crowd, out in the open.*
+</Markdown>
+<Markdown when="@tmb_q_enmasse.value === 'by_force'">
+*Not quite — "en masse" is about how MANY, not whether they were forced. The women left in large numbers, of their own accord.*
+</Markdown>
+<Markdown when="@tmb_q_enmasse.value === 'all_together'">
+*Yes — "en masse" is French for "in a mass" — in large numbers, all together. Watch for it again in the article.*
+</Markdown>
+</Vertical> <!-- tmb_q_enmasse_screen -->
+
+<Vertical id="tmb_q_moralizing_screen">
+<ChoiceInput id="tmb_q_moralizing">
+<Markdown>
+Choose the best definition for **moralizing** as it's used here:
+
+> "Southern women were more often instructed to offer a calming, **moralizing**
+> influence on husbands and children…"
+</Markdown>
+         <Key value="teaching_right"  > Encouraging good behavior and right living.       </Key>
+  <Distractor value="discouraging"    > Lowering someone's confidence; discouraging them. </Distractor>
+  <Distractor value="guilt_tripping"  > Making people feel guilty on purpose.             </Distractor>
+  <Distractor value="cheering_up"     > Boosting a team's spirit before a game.           </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_q_moralizing.value === 'discouraging'">
+*Not quite — you may be thinking of "demoralizing," which is nearly the opposite. "Moralizing" is about morals — right and wrong.*
+</Markdown>
+<Markdown when="@tmb_q_moralizing.value === 'guilt_tripping'">
+*Not quite — a moralizing influence encourages GOOD behavior; it isn't only about guilt. The passage pairs it with "calming."*
+</Markdown>
+<Markdown when="@tmb_q_moralizing.value === 'cheering_up'">
+*Not quite — that's "boosting morale," a different word. "Moralizing" is about morals, not team spirit.*
+</Markdown>
+<Markdown when="@tmb_q_moralizing.value === 'teaching_right'">
+*Right — a moralizing influence encourages good behavior and right living. It fits the idea of women as the "guardians of virtue."*
+</Markdown>
+</Vertical> <!-- tmb_q_moralizing_screen -->
+
+<Vertical id="tmb_q_euphemism_screen">
+<ChoiceInput id="tmb_q_euphemism">
+<Markdown>
+Choose the best definition for **euphemism**:
+
+> "Female virtue, particularly in the South, came to be understood largely as a
+> **euphemism** for sexual purity."
+</Markdown>
+         <Key value="polite_substitute" > A mild or polite word used in place of a harsher or more direct one. </Key>
+  <Distractor value="opposite_meaning"   > A word that means the exact opposite of what it says.                </Distractor>
+  <Distractor value="foreign_word"       > A word borrowed from another language.                               </Distractor>
+  <Distractor value="short_lesson"       > A short saying that teaches a lesson.                                </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_q_euphemism.value === 'opposite_meaning'">
+*Not quite — that's irony or sarcasm. A euphemism doesn't reverse the meaning; it softens it.*
+</Markdown>
+<Markdown when="@tmb_q_euphemism.value === 'foreign_word'">
+*Not quite — a euphemism can be a perfectly ordinary English word. What makes it a euphemism is that it's a gentler stand-in for a blunter one.*
+</Markdown>
+<Markdown when="@tmb_q_euphemism.value === 'short_lesson'">
+*Not quite — that's a proverb or an aphorism. A euphemism is a polite substitute for a more direct word.*
+</Markdown>
+<Markdown when="@tmb_q_euphemism.value === 'polite_substitute'">
+*Right — a euphemism is a milder, more polite word standing in for a blunter one. Here, "female virtue" was a gentle way of saying "sexual purity."*
+</Markdown>
+</Vertical> <!-- tmb_q_euphemism_screen -->
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — why did women turn the ideology into a public role?
+     ============================================================ -->
+
+<Vertical id="tmb_why_publicrole_screen">
+<ChoiceInput id="tmb_why_publicrole">
+<Markdown>
+So how did women take "the very ideology that defined their place in the home"
+and turn it into a **public** role?
+</Markdown>
+  <Distractor value="rejected_ideology"    > They rejected the ideology completely and demanded the same jobs and wages as men.                  </Distractor>
+  <Distractor value="factory_owners"       > Factory owners required middle-class women to leave home and work in public.                       </Distractor>
+         <Key value="moral_authority"      > The ideology cast women as the guardians of virtue, so they used that moral authority as a reason to act in public. </Key>
+  <Distractor value="government_role"      > The government passed laws giving women a formal role in public life.                              </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_why_publicrole.value === 'rejected_ideology'">
+*Not quite — read it again: women "took the very ideology" and USED it. They didn't reject it; they turned it to a new purpose.*
+</Markdown>
+<Markdown when="@tmb_why_publicrole.value === 'factory_owners'">
+*Not quite — that was working-class women, who labored out of necessity. Middle-class women's public role grew out of moral authority and new education, not factory work.*
+</Markdown>
+<Markdown when="@tmb_why_publicrole.value === 'government_role'">
+*Not quite — no law gave them this role. They claimed it themselves, out of the moral authority the ideology already granted them.*
+</Markdown>
+<Markdown when="@tmb_why_publicrole.value === 'moral_authority'">
+*Yes — if a woman is the guardian of virtue and morality, then cleaning up society becomes her job too. That's how the home-bound ideal became a reason to act in public.*
+</Markdown>
+</Vertical> <!-- tmb_why_publicrole_screen -->
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — article vocabulary + comprehension
+     ============================================================ -->
+
+<Vertical id="tmb_q_tradwife_screen">
+<ChoiceInput id="tmb_q_tradwife">
+<Markdown>
+The article is about **tradwives.** First — what does **tradwife** mean?
+</Markdown>
+         <Key value="traditional_homemaker" > A woman who embraces a traditional homemaker role — staying home to cook, keep house, and raise children. </Key>
+  <Distractor value="trades_stocks"         > A woman who trades or invests money for a living.                                                       </Distractor>
+  <Distractor value="working_mother"        > A mother who works full-time outside the home while raising children.                                  </Distractor>
+  <Distractor value="marriage_activist"     > A woman who campaigns for traditional marriage laws.                                                    </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_q_tradwife.value === 'trades_stocks'">
+*Not quite — a reasonable guess from "trad," but it's short for **traditional**, not "trade." A tradwife embraces a traditional wife-and-homemaker role.*
+</Markdown>
+<Markdown when="@tmb_q_tradwife.value === 'working_mother'">
+*Not quite — nearly the opposite. The tradwife image is about staying HOME, not working outside it.*
+</Markdown>
+<Markdown when="@tmb_q_tradwife.value === 'marriage_activist'">
+*Not quite — a tradwife is defined by the role she lives (homemaker), not by campaigning for laws.*
+</Markdown>
+<Markdown when="@tmb_q_tradwife.value === 'traditional_homemaker'">
+*Right — "trad" is short for traditional. A tradwife embraces the traditional stay-at-home wife-and-mother role.*
+</Markdown>
+</Vertical> <!-- tmb_q_tradwife_screen -->
+
+<Vertical id="tmb_precarity">
+<ChoiceInput id="tmb_precarity_pick">
+<Markdown>
+The article's key idea is **economic precarity.** To pin down what it means, each
+of us found a sentence from the article that gives it context. Who picked the
+**best** one?
+</Markdown>
+  <Distractor value="danielle_political"      > **Danielle:** "Conservative commentators embraced them as evidence that women want to stay home."                                        </Distractor>
+  <Distractor value="karis_businesswomen"     > **Karis:** "The women who post about their impeccable meals and beloved husbands might be better understood as businesswomen; some are making huge sums." </Distractor>
+         <Key value="joe_low_income"          > **Joe:** "Many are just exhausted, low-income moms who can't afford child care."                                                      </Key>
+</ChoiceInput>
+
+<Markdown when="@tmb_precarity_pick.value === 'danielle_political'">
+*Not quite — Danielle's sentence is about the political fight over tradwives. Economic **precarity** needs a sentence about money and insecurity.*
+</Markdown>
+<Markdown when="@tmb_precarity_pick.value === 'karis_businesswomen'">
+*Not quite — Karis found the well-off influencers, who are the opposite of precarious. Precarity is about insecurity, not "making huge sums."*
+</Markdown>
+<Markdown when="@tmb_precarity_pick.value === 'joe_low_income'">
+*Yes — "exhausted, low-income moms who can't afford child care" shows exactly what economic precarity is: financial insecurity that leaves people few choices.*
+</Markdown>
+
+<Markdown>**Explain why you chose that sentence.**</Markdown>
+<TextArea id="tmb_precarity_explain" rows="3" placeholder="I chose that sentence because…" />
+</Vertical> <!-- tmb_precarity -->
+
+<Vertical id="tmb_summary_pick_screen">
+<ChoiceInput id="tmb_summary_pick">
+<Markdown>
+Which is the **best summary** of the article's first paragraph (about how
+"tradwives" appeared)?
+</Markdown>
+         <Key value="what_and_why"        > A few years ago, images of glamorous stay-at-home "tradwives" spread across social media, and the trend became a flashpoint — praised on the right as proof women want to stay home and attacked on the left as a regressive agenda. </Key>
+  <Distractor value="image_only"          > Tradwives are women with glossy hair who post videos of themselves cooking meat and holding calm babies.                                                                                                                    </Distractor>
+  <Distractor value="overstated"          > All of a sudden, tradwives took over everyone's phones and became the single most important issue in American politics.                                                                                                    </Distractor>
+  <Distractor value="opinion"             > Tradwives are one of the most fascinating internet trends of the last few years, and it's easy to see why so many people admire them.                                                                                   </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_summary_pick.value === 'image_only'">
+*Not quite — true, but only the picture. A summary has to carry the point: that the trend became a culture-war flashpoint.*
+</Markdown>
+<Markdown when="@tmb_summary_pick.value === 'overstated'">
+*Not quite — "the single most important issue in American politics" overstates it. A summary shouldn't exaggerate what the paragraph says.*
+</Markdown>
+<Markdown when="@tmb_summary_pick.value === 'opinion'">
+*Not quite — that's an opinion about tradwives, not a summary of the paragraph. Summaries report; they don't rate.*
+</Markdown>
+<Markdown when="@tmb_summary_pick.value === 'what_and_why'">
+*Yes — what appeared (glamorous tradwife images), where (social media), and the point: both sides turned it into a fight over what women want.*
+</Markdown>
+</Vertical> <!-- tmb_summary_pick_screen -->
+
+<Vertical id="tmb_q_egalitarian_screen">
+<ChoiceInput id="tmb_q_egalitarian">
+<Markdown>
+The article says many couples want "an **egalitarian** division of labor." What
+does **egalitarian** mean?
+</Markdown>
+         <Key value="based_on_equality" > Based on equality — both partners sharing the work equally. </Key>
+  <Distractor value="by_earnings"       > Decided by whoever earns the most money.                    </Distractor>
+  <Distractor value="traditional"       > Following traditional roles, with the wife at home.         </Distractor>
+  <Distractor value="both_must_work"    > Requiring both partners to work outside the home.           </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_q_egalitarian.value === 'by_earnings'">
+*Not quite — that's what actually happens in the article (the role falls to whoever earns less), but it's the opposite of egalitarian, which means equal.*
+</Markdown>
+<Markdown when="@tmb_q_egalitarian.value === 'traditional'">
+*Not quite — that's the traditional arrangement. "Egalitarian" points the other way: toward equality between the partners.*
+</Markdown>
+<Markdown when="@tmb_q_egalitarian.value === 'both_must_work'">
+*Not quite — egalitarian is about sharing the work equally, not about forcing both partners into outside jobs.*
+</Markdown>
+<Markdown when="@tmb_q_egalitarian.value === 'based_on_equality'">
+*Right — "egalitarian" comes from "equal." An egalitarian division of labor shares the work evenly between partners.*
+</Markdown>
+</Vertical> <!-- tmb_q_egalitarian_screen -->
+
+<Vertical id="tmb_article_thesis_screen">
+<ChoiceInput id="tmb_article_thesis">
+<Markdown>
+Step back from the details — what is the article's **main point** overall?
+</Markdown>
+  <Distractor value="mostly_wealthy"           > Most tradwives are wealthy businesswomen who make huge sums of money posting online.                                                     </Distractor>
+         <Key value="glossy_hides_precarity"   > The glossy "tradwife" image hides a harder truth: many stay-at-home mothers aren't living a dream of domesticity but are pushed into it by economic precarity. </Key>
+  <Distractor value="women_shouldnt_stay"      > Women today should never stay home to raise their children.                                                                            </Distractor>
+  <Distractor value="free_childcare"           > The government's main job should be to make child care free for every family.                                                          </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_article_thesis.value === 'mostly_wealthy'">
+*Not quite — the wealthy influencers are one detail. The article's point is about the MANY who are low-income, not the few making "huge sums."*
+</Markdown>
+<Markdown when="@tmb_article_thesis.value === 'women_shouldnt_stay'">
+*Not quite — the article never says women shouldn't stay home. It says many aren't choosing it freely — they're pushed by money.*
+</Markdown>
+<Markdown when="@tmb_article_thesis.value === 'free_childcare'">
+*Not quite — expensive child care is part of the problem the article describes, but "make child care free" isn't the point it's arguing.*
+</Markdown>
+<Markdown when="@tmb_article_thesis.value === 'glossy_hides_precarity'">
+*Yes — the shiny image and the harder reality. Behind the glossy videos, most stay-at-home moms are there because of economic precarity, not a dream of domesticity.*
+</Markdown>
+</Vertical> <!-- tmb_article_thesis_screen -->
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — image comprehension (Part 4)
+     ============================================================ -->
+
+<Vertical id="tmb_img_observe_screen">
+<ChoiceInput id="tmb_img_observe">
+<Markdown>
+What does the engraving show?
+</Markdown>
+  <Distractor value="reform_meeting"    > A group of women meeting to organize a reform society.                       </Distractor>
+  <Distractor value="factory_work"      > A woman working alongside men in a factory.                                  </Distractor>
+         <Key value="mother_at_home"    > A mother at home caring for her baby while two children read and play nearby. </Key>
+  <Distractor value="classroom"         > A teacher leading a classroom full of young students.                        </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_img_observe.value === 'reform_meeting'">
+*Not quite — there's no meeting here. The scene is a home: a mother and her children in a parlor.*
+</Markdown>
+<Markdown when="@tmb_img_observe.value === 'factory_work'">
+*Not quite — no factory, no men. Everything in the picture points to the home and the family.*
+</Markdown>
+<Markdown when="@tmb_img_observe.value === 'classroom'">
+*Not quite — it isn't a classroom. It's a mother at home with her own children — the title even calls it "the sphere of woman."*
+</Markdown>
+<Markdown when="@tmb_img_observe.value === 'mother_at_home'">
+*Yes — a peaceful domestic scene: a mother at home with her children. The caption names it "the sphere of woman."*
+</Markdown>
+</Vertical> <!-- tmb_img_observe_screen -->
+
+<Vertical id="tmb_img_purpose_screen">
+<ChoiceInput id="tmb_img_purpose">
+<Markdown>
+Why would a popular women's magazine publish an image like this, titled "The
+Sphere of Woman"?
+</Markdown>
+  <Distractor value="record_real_family" > To record what one specific real family looked like in 1850.                        </Distractor>
+  <Distractor value="advertise_toys"      > To advertise the toys and furniture shown in the scene.                             </Distractor>
+         <Key value="promote_ideal"       > To hold up the home as woman's proper place — to promote the ideal of domesticity. </Key>
+  <Distractor value="encourage_public"    > To encourage women to leave the home for public life.                               </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_img_purpose.value === 'record_real_family'">
+*Not quite — it isn't a snapshot of a real family. It's an ideal — a picture of how a "true woman's" life was supposed to look.*
+</Markdown>
+<Markdown when="@tmb_img_purpose.value === 'advertise_toys'">
+*Not quite — the objects aren't the point. The scene is selling an idea: that a woman belongs at home with her children.*
+</Markdown>
+<Markdown when="@tmb_img_purpose.value === 'encourage_public'">
+*Not quite — the opposite. The whole image keeps the woman inside the home, at the center of the family.*
+</Markdown>
+<Markdown when="@tmb_img_purpose.value === 'promote_ideal'">
+*Yes — this is persuasion. The title says it plainly: the home is "the sphere of woman," her proper and natural place.*
+</Markdown>
+</Vertical> <!-- tmb_img_purpose_screen -->
+
+
+<!-- ============================================================
+     CHAT-EMBEDDED — synthesis: evaluate peer comparisons (Part 4)
+     ============================================================ -->
+
+<Vertical id="tmb_synth_peereval_screen">
+<ChoiceInput id="tmb_synth_peereval">
+<Markdown>
+Your group each summed up the biggest difference between the two — the 1800s
+ideal and today's tradwife trend. Which comparison is **best**?
+</Markdown>
+  <Distractor value="joe_same"             > **Joe:** They're really the same thing — both are just about women choosing to stay home and take care of their families.                                    </Distractor>
+         <Key value="danielle_duty_vs_image"> **Danielle:** Both hold up the stay-at-home wife and mother as an ideal — but in the 1800s it was a moral and religious duty, while today it's a social-media image that often hides economic precarity. </Key>
+  <Distractor value="karis_family_size"    > **Karis:** The biggest difference is that women in the 1800s had many more children than tradwives do today.                                              </Distractor>
+</ChoiceInput>
+
+<Markdown when="@tmb_synth_peereval.value === 'joe_same'">
+*Not quite — Joe has the likeness right, but a comparison owes us the difference too, and the two give very different reasons for the same picture.*
+</Markdown>
+<Markdown when="@tmb_synth_peereval.value === 'karis_family_size'">
+*Not quite — family size isn't a contrast either text draws. Compare what the ideal MEANT: a moral duty then, an image (often masking hardship) now.*
+</Markdown>
+<Markdown when="@tmb_synth_peereval.value === 'danielle_duty_vs_image'">
+*Yes — both idealize the woman at home; what changed is the reason. A moral and religious duty then; a social-media image, often hiding economic precarity, now. That's the comparison your final paragraph needs.*
+</Markdown>
+</Vertical> <!-- tmb_synth_peereval_screen -->
+
+</Vertical> <!-- temperance_b_full_activities_part1 -->
