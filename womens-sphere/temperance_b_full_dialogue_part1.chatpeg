@@ -47,7 +47,7 @@ Karis: Good question. First — what do YOU think the phrase "a woman's place is
 
 --- wait @tmb_topic_guess.value ---
 
-Karis: In the 1800s there was a whole ideal built around that — historians call it the "cult of domesticity," or the "cult of true womanhood." The idea that a good woman was pious, pure, and devoted to the home. We'll read about it, and compare it to today's "tradwife" thing.
+Karis: In the 1800s there was a whole ideal built around that — historians call it the "cult of domesticity," or the "cult of true womanhood." The idea that a good woman's whole world was the home. We'll read about it, and compare it to today's "tradwife" thing.
 
 Joe: Huh. Interesting topic for a reading class.
 
@@ -112,6 +112,11 @@ Danielle: First one — what does "public sphere" mean here?
 // and the conversation stops there forever. The gates that already read
 // `.submitCount` (the grammar highlights, the comprehension questions) are
 // the pattern; the rest now match it.
+//
+// Peers discuss an answer only AFTER its item is submitted. A beat that
+// states or strongly cues an answer before the item is contamination in an
+// instrument: Karis's reading of the engraving comes after the observation
+// item, not before it, and lead-ins say WHERE to look, not what to find.
 
 ::tmb_q_publicsphere_screen
 
@@ -127,7 +132,7 @@ Danielle: **Mark as read** when you're done — Karis has been waiting for this 
 
 --- wait @tmb_tb_a2_done.value ---
 
-Karis: This is the part I've read about. Femininity was "intimately tied to the domestic sphere" — the idea that a woman's whole world was supposed to be the home.
+Karis: This is the part I've read about — the idea that a woman's whole world was supposed to be the home.
 
 Danielle: There's a vocab phrase in here first — "in tandem with."
 
@@ -278,7 +283,7 @@ Karis: Part 3 now — what women were expected to BE.
 
 --- wait @tmb_comp_q3.submitCount > 0 ---
 
-Karis: And part 4 — the surprising turn, where women used the ideology for something new.
+Karis: And part 4 — the turn. This is the part I wanted to get to.
 
 ::tmb_comp_q4
 
@@ -296,13 +301,13 @@ Danielle: Same ideal, but a different path depending on where you lived. That co
 
 Professor Booker: Nice work on the chapter. Before we bring in a modern article, let's look at an image from the era itself — it connects directly to what we just read. It's on the right --->
 
-Karis: Oh — it's a mother at home with her kids, and the title literally says "The Sphere of Woman."
-
 Professor Booker: Look closely at the scene and the title, then answer.
 
 ::tmb_img_observe_screen
 
 --- wait @tmb_img_observe_problem.submitCount > 0 ---
+
+Karis: Oh — it's a mother at home with her kids, and the title literally says "The Sphere of Woman."
 
 Joe: So why would a magazine print a picture like this?
 
@@ -318,7 +323,7 @@ Professor Booker: When you've been through it, press "I've read the handout" on 
 
 --- wait @tmb_article_read_done.value ---
 
-Karis: Wow — so a lot of these "tradwives" aren't living the dream at all.
+Karis: Wow. That was not the article I expected.
 
 Danielle: Right. Dr. Booker wanted us to think about "economic precarity." But first, this word:
 
@@ -352,7 +357,7 @@ Professor Booker: Now step back from the details. What is the article's main poi
 
 --- wait @tmb_article_thesis_problem.submitCount > 0 ---
 
-Danielle: So underneath, the old ideal and today's trend are actually pretty different.
+Danielle: OK — that's all three texts. Time to put them side by side.
 
 Part 4: Building Understanding and Synthesizing [id=part4]
 ----------------------------------------------------------
