@@ -479,7 +479,7 @@ whom did it mainly apply?
   <Distractor id="womens_sphere_comp_2_law_stay_home"                value="law_stay_home"               > A law that required married women in the North to stay in the home.                                   </Distractor>
   <Distractor id="womens_sphere_comp_2_reform_society_vote"          value="reform_society_vote"         > A reform society that middle-class women formed to campaign for the right to vote.                    </Distractor>
   <Distractor id="womens_sphere_comp_2_working_class_truest"         value="working_class_truest"        > The belief that working-class women, who earned wages, were the truest example of womanhood.          </Distractor>
-         <Key id="womens_sphere_comp_2_domestic_sphere_upper_middle" value="domestic_sphere_upper_middle"> The idea that femininity was tied to the home, which applied mainly to upper- and middle-class women. </Key>
+         <Key id="womens_sphere_comp_2_domestic_sphere_upper_middle" value="domestic_sphere_upper_middle"> The idea that femininity was tied to the home, mainly for upper- and middle-class women.             </Key>
 </ChoiceInput>
 </KeyGrader>
 
@@ -910,9 +910,9 @@ it? **Select all that apply.**
 Each member of your group wrote a one-sentence description of the cult of
 domesticity. Read them and choose the **best** one.
 </Markdown>
-         <Key id="womens_sphere_term_bestdef_home_ideal"      value="home_ideal"     > **Danielle:** The belief that a true woman belonged at home — pious, pure, submissive, domestic — raising her children in virtue. </Key>
-  <Distractor id="womens_sphere_term_bestdef_reform_movement" value="reform_movement"> **Joe:** The name for the movement that sent middle-class women out of their homes to join antislavery and reform societies.      </Distractor>
-  <Distractor id="womens_sphere_term_bestdef_laws_all_women"  value="laws_all_women" > **Karis:** A set of laws passed in the 1830s requiring women, rich and poor, to stay home and manage their households.            </Distractor>
+         <Key id="womens_sphere_term_bestdef_home_ideal"      value="home_ideal"     > **Danielle:** The belief that a true woman belonged at home — pious, pure, and domestic — raising her children in virtue.    </Key>
+  <Distractor id="womens_sphere_term_bestdef_reform_movement" value="reform_movement"> **Joe:** The name for the movement that sent middle-class women out of their homes to join antislavery and reform societies. </Distractor>
+  <Distractor id="womens_sphere_term_bestdef_laws_all_women"  value="laws_all_women" > **Karis:** A set of laws passed in the 1830s requiring women, rich and poor, to stay home and manage their households.       </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
@@ -1263,7 +1263,7 @@ does **egalitarian** mean?
 Step back from the details — what is the article's **main point** overall?
 </Markdown>
   <Distractor id="womens_sphere_article_thesis_mostly_wealthy"         value="mostly_wealthy"        > Most tradwives are wealthy influencers who make huge sums of money posting videos of their homes, meals, and children online.     </Distractor>
-         <Key id="womens_sphere_article_thesis_glossy_hides_precarity" value="glossy_hides_precarity"> Behind the glossy "tradwife" image, many stay-at-home mothers are pushed there by economic precarity, not a dream of domesticity. </Key>
+         <Key id="womens_sphere_article_thesis_glossy_hides_precarity" value="glossy_hides_precarity"> Behind the glossy "tradwife" image, many stay-at-home mothers are pushed there by economic precarity, not by choice.            </Key>
   <Distractor id="womens_sphere_article_thesis_women_shouldnt_stay"    value="women_shouldnt_stay"   > Women today are better off working than staying home to raise their children, whatever they may prefer.                           </Distractor>
   <Distractor id="womens_sphere_article_thesis_free_childcare"         value="free_childcare"        > The government should make child care affordable so that more mothers can return to paid work.                                    </Distractor>
 </ChoiceInput>
