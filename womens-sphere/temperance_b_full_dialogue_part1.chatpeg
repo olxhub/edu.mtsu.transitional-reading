@@ -267,33 +267,33 @@ Professor Booker: Let's check your understanding of the excerpt. The whole thing
 
 Danielle: First one's about what industrialization did to family life. That's the top of part 1.
 
-::womens_sphere_comp_1
+::womens_sphere_comp_1_screen
 
---- wait @womens_sphere_comp_1.submitCount > 0 ---
+--- wait @womens_sphere_comp_1_problem.submitCount > 0 ---
 
 Joe: Next, part 2 — the cult of domesticity, and who it actually applied to.
 
-::womens_sphere_comp_2
+::womens_sphere_comp_2_screen
 
---- wait @womens_sphere_comp_2.submitCount > 0 ---
+--- wait @womens_sphere_comp_2_problem.submitCount > 0 ---
 
 Karis: Part 3 now — what women were expected to BE.
 
-::womens_sphere_comp_3
+::womens_sphere_comp_3_screen
 
---- wait @womens_sphere_comp_3.submitCount > 0 ---
+--- wait @womens_sphere_comp_3_problem.submitCount > 0 ---
 
 Karis: And part 4 — the turn. This is the part I wanted to get to.
 
-::womens_sphere_comp_4
+::womens_sphere_comp_4_screen
 
---- wait @womens_sphere_comp_4.submitCount > 0 ---
+--- wait @womens_sphere_comp_4_problem.submitCount > 0 ---
 
 Professor Booker: Last one. Scroll to the end of part 4 — how were Southern women's instructions different from some Northern women's?
 
-::womens_sphere_comp_5
+::womens_sphere_comp_5_screen
 
---- wait @womens_sphere_comp_5.submitCount > 0 ---
+--- wait @womens_sphere_comp_5_problem.submitCount > 0 ---
 
 Danielle: Same ideal, but a different path depending on where you lived. That contrast is worth remembering.
 

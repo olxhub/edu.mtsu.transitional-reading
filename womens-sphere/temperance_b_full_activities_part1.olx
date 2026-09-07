@@ -413,8 +413,9 @@ all: Yes — that earlier sentence is where the text names the ideology: the "cu
      The pane holds the text (womens_sphere_comp_reading, below) for the whole stretch,
      so a student answers with the excerpt open beside them.
 
-     Each is a single-question MarkupProblem, so it carries its own Check
-     button and per-item feedback and the chat can wait on .submitCount.
+     Each is a CapaProblem wrapping a KeyGrader wrapping a ChoiceInput with
+     semantic option values, so it carries its own Check button, shows its
+     explanation after submission, and the chat can wait on .submitCount.
      One attempt each, like every other scored item.
      ============================================================ -->
 
@@ -439,70 +440,109 @@ Scroll through it as you answer the questions in the conversation.
 
 <!-- CHAT-EMBEDDED — the five comprehension questions -->
 
-<MarkupProblem id="womens_sphere_comp_1" title="Question 1" maxAttempts="1"><![CDATA[
->>What happened to family life as the industrial economy of the 1830s and 1840s emerged?<<
+<Vertical id="womens_sphere_comp_1_screen">
+<CapaProblem id="womens_sphere_comp_1_problem" title="Question 1" maxAttempts="1">
+<KeyGrader id="womens_sphere_comp_1_grader">
+<ChoiceInput id="womens_sphere_comp_1">
+<Markdown>
+What happened to family life as the industrial economy of the 1830s and 1840s
+emerged?
+</Markdown>
+         <Key id="womens_sphere_comp_1_roles_changed"           value="roles_changed"          > Family life changed, and men, women, and children took on new roles.      </Key>
+  <Distractor id="womens_sphere_comp_1_wealthier_women_stopped" value="wealthier_women_stopped"> Families grew wealthier, and most women stopped working outside the home. </Distractor>
+  <Distractor id="womens_sphere_comp_1_stayed_the_same"         value="stayed_the_same"        > Family life stayed much as it had been in the years before independence.  </Distractor>
+  <Distractor id="womens_sphere_comp_1_families_into_factories" value="families_into_factories"> Whole families moved into the factories and worked side by side there.    </Distractor>
+</ChoiceInput>
+</KeyGrader>
 
-( ) Families grew wealthier, and most women stopped working outside the home.
-( ) Family life stayed much as it had been in the years before independence.
-(x) Family life changed, and men, women, and children took on new roles.
-( ) Whole families moved into the factories and worked side by side there.
+<Markdown when="@womens_sphere_comp_1_problem.submitCount &gt; 0">
+*"Family life changed, defined by shifting meanings in individual value, collective labor, and the relationship between work, class, and politics. Men, women, and children took on new roles in the home as well as in the factory."*
+</Markdown>
+</CapaProblem> <!-- womens_sphere_comp_1_problem -->
+</Vertical> <!-- womens_sphere_comp_1_screen -->
 
-[explanation]
-"Family life changed, defined by shifting meanings in individual value, collective labor, and the relationship between work, class, and politics. Men, women, and children took on new roles in the home as well as in the factory."
-[/explanation]
-]]></MarkupProblem>
+<Vertical id="womens_sphere_comp_2_screen">
+<CapaProblem id="womens_sphere_comp_2_problem" title="Question 2" maxAttempts="1">
+<KeyGrader id="womens_sphere_comp_2_grader">
+<ChoiceInput id="womens_sphere_comp_2">
+<Markdown>
+What was the "cult of domesticity" (or "cult of true womanhood"), and to
+whom did it mainly apply?
+</Markdown>
+  <Distractor id="womens_sphere_comp_2_law_stay_home"                value="law_stay_home"               > A law that required married women in the North to stay in the home.                                   </Distractor>
+  <Distractor id="womens_sphere_comp_2_reform_society_vote"          value="reform_society_vote"         > A reform society that middle-class women formed to campaign for the right to vote.                    </Distractor>
+  <Distractor id="womens_sphere_comp_2_working_class_truest"         value="working_class_truest"        > The belief that working-class women, who earned wages, were the truest example of womanhood.          </Distractor>
+         <Key id="womens_sphere_comp_2_domestic_sphere_upper_middle" value="domestic_sphere_upper_middle"> The idea that femininity was tied to the home, which applied mainly to upper- and middle-class women. </Key>
+</ChoiceInput>
+</KeyGrader>
 
-<MarkupProblem id="womens_sphere_comp_2" title="Question 2" maxAttempts="1"><![CDATA[
->>What was the "cult of domesticity" (or "cult of true womanhood"), and to whom did it mainly apply?<<
+<Markdown when="@womens_sphere_comp_2_problem.submitCount &gt; 0">
+*"Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the 'cult of domesticity,' or the 'cult of true womanhood.'… In reality, they applied primarily to upper-class and middle-upper-class women."*
+</Markdown>
+</CapaProblem> <!-- womens_sphere_comp_2_problem -->
+</Vertical> <!-- womens_sphere_comp_2_screen -->
 
-(x) The idea that femininity was tied to the home, which applied mainly to upper- and middle-class women.
-( ) A law that required married women in the North to stay in the home.
-( ) A reform society that middle-class women formed to campaign for the right to vote.
-( ) The belief that working-class women, who earned wages, were the truest example of womanhood.
+<Vertical id="womens_sphere_comp_3_screen">
+<CapaProblem id="womens_sphere_comp_3_problem" title="Question 3" maxAttempts="1">
+<KeyGrader id="womens_sphere_comp_3_grader">
+<ChoiceInput id="womens_sphere_comp_3">
+<Markdown>
+According to the dominant understanding of gender, what were women expected
+to be?
+</Markdown>
+         <Key id="womens_sphere_comp_3_guardians_of_virtue" value="guardians_of_virtue"> Guardians of virtue and spiritual heads of the home.            </Key>
+  <Distractor id="womens_sphere_comp_3_main_wage_earners"   value="main_wage_earners"  > The main wage-earners who supported their families financially. </Distractor>
+  <Distractor id="womens_sphere_comp_3_church_leaders"      value="church_leaders"     > Leaders of the church who preached to large congregations.      </Distractor>
+  <Distractor id="womens_sphere_comp_3_factory_trainers"    value="factory_trainers"   > Skilled factory workers who trained younger employees.          </Distractor>
+</ChoiceInput>
+</KeyGrader>
 
-[explanation]
-"Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the 'cult of domesticity,' or the 'cult of true womanhood.'… In reality, they applied primarily to upper-class and middle-upper-class women."
-[/explanation]
-]]></MarkupProblem>
+<Markdown when="@womens_sphere_comp_3_problem.submitCount &gt; 0">
+*"Women, the dominant understanding of gender claimed, were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic."*
+</Markdown>
+</CapaProblem> <!-- womens_sphere_comp_3_problem -->
+</Vertical> <!-- womens_sphere_comp_3_screen -->
 
-<MarkupProblem id="womens_sphere_comp_3" title="Question 3" maxAttempts="1"><![CDATA[
->>According to the dominant understanding of gender, what were women expected to be?<<
+<Vertical id="womens_sphere_comp_4_screen">
+<CapaProblem id="womens_sphere_comp_4_problem" title="Question 4" maxAttempts="1">
+<KeyGrader id="womens_sphere_comp_4_grader">
+<ChoiceInput id="womens_sphere_comp_4">
+<Markdown>
+How did women turn the ideology of domesticity into something new?
+</Markdown>
+  <Distractor id="womens_sphere_comp_4_rejected_demanded_equal" value="rejected_demanded_equal"> They rejected the ideology and demanded to be treated the same as men in public life. </Distractor>
+  <Distractor id="womens_sphere_comp_4_kept_women_out"          value="kept_women_out"         > They used it to persuade other women to stay out of public life and reform work.      </Distractor>
+  <Distractor id="womens_sphere_comp_4_abandoned_for_factories" value="abandoned_for_factories"> They abandoned their homes and moved into the factories to earn wages.                </Distractor>
+         <Key id="womens_sphere_comp_4_ideology_to_public_role" value="ideology_to_public_role"> They used the ideology that kept them at home to build a public role for themselves.  </Key>
+</ChoiceInput>
+</KeyGrader>
 
-( ) The main wage-earners who supported their families financially.
-(x) Guardians of virtue and spiritual heads of the home.
-( ) Leaders of the church who preached to large congregations.
-( ) Skilled factory workers who trained younger employees.
+<Markdown when="@womens_sphere_comp_4_problem.submitCount &gt; 0">
+*"Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves. As a result, women became more visible and active in the public sphere than ever before."*
+</Markdown>
+</CapaProblem> <!-- womens_sphere_comp_4_problem -->
+</Vertical> <!-- womens_sphere_comp_4_screen -->
 
-[explanation]
-"Women, the dominant understanding of gender claimed, were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic."
-[/explanation]
-]]></MarkupProblem>
+<Vertical id="womens_sphere_comp_5_screen">
+<CapaProblem id="womens_sphere_comp_5_problem" title="Question 5" maxAttempts="1">
+<KeyGrader id="womens_sphere_comp_5_grader">
+<ChoiceInput id="womens_sphere_comp_5">
+<Markdown>
+How did the experience of many Southern women differ from that of some
+Northern women?
+</Markdown>
+         <Key id="womens_sphere_comp_5_calming_influence_at_home" value="calming_influence_at_home"> Southern women were more often told to be a calming influence at home than to organize.    </Key>
+  <Distractor id="womens_sphere_comp_5_first_antislavery"         value="first_antislavery"        > Southern women were the first to form antislavery societies in large numbers.              </Distractor>
+  <Distractor id="womens_sphere_comp_5_required_to_work"          value="required_to_work"         > Southern women were required by their states to take paid work outside the home.           </Distractor>
+  <Distractor id="womens_sphere_comp_5_rejected_domesticity"      value="rejected_domesticity"     > Southern women rejected the ideal of domesticity and organized their own reform societies. </Distractor>
+</ChoiceInput>
+</KeyGrader>
 
-<MarkupProblem id="womens_sphere_comp_4" title="Question 4" maxAttempts="1"><![CDATA[
->>How did women turn the ideology of domesticity into something new?<<
-
-( ) They rejected the ideology and demanded to be treated the same as men in public life.
-( ) They used it to persuade other women to stay out of public life and reform work.
-(x) They used the ideology that kept them at home to build a public role for themselves.
-( ) They abandoned their homes and moved into the factories to earn wages.
-
-[explanation]
-"Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves. As a result, women became more visible and active in the public sphere than ever before."
-[/explanation]
-]]></MarkupProblem>
-
-<MarkupProblem id="womens_sphere_comp_5" title="Question 5" maxAttempts="1"><![CDATA[
->>How did the experience of many Southern women differ from that of some Northern women?<<
-
-( ) Southern women were the first to form antislavery societies in large numbers.
-( ) Southern women were required by their states to take paid work outside the home.
-(x) Southern women were more often told to be a calming influence at home than to organize.
-( ) Southern women rejected the ideal of domesticity and organized their own reform societies.
-
-[explanation]
-"While some Northern women began to organize reform societies, Southern women were more often instructed to offer a calming, moralizing influence on husbands and children and manage their households."
-[/explanation]
-]]></MarkupProblem>
+<Markdown when="@womens_sphere_comp_5_problem.submitCount &gt; 0">
+*"While some Northern women began to organize reform societies, Southern women were more often instructed to offer a calming, moralizing influence on husbands and children and manage their households."*
+</Markdown>
+</CapaProblem> <!-- womens_sphere_comp_5_problem -->
+</Vertical> <!-- womens_sphere_comp_5_screen -->
 
 
 <!-- ============================================================
