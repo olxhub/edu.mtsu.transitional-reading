@@ -575,17 +575,17 @@ together at the end.
      Materials 3.24.docx": N. Currier's 1846 "The Drunkard's Progress."
      ============================================================ -->
 
-<Vertical id="temperance_litho">
-<Markdown id="temperance_litho_intro">
+<Vertical id="temperance_image">
+<Markdown id="temperance_image_intro">
 ## A Temperance-Era Image
 
 Study this 19th-century lithograph. Notice the **arch** shape, the **nine
 numbered steps**, and the scene **beneath the arch.**
 </Markdown>
-<Image id="temperance_litho_img" src="images/drunkards_progress.jpg" width="820"
+<Image id="temperance_image_figure" src="images/drunkards_progress.jpg" width="820"
   alt="'The Drunkard's Progress' (N. Currier, 1846): nine captioned figures form an arch rising on the left and falling on the right, tracing a man from a first friendly drink to death; beneath the arch a woman and child leave a ruined home."
   authors="N. Currier, 1846" license="Public domain" />
-<Markdown id="temperance_litho_caption">
+<Markdown id="temperance_image_caption">
 **"The Drunkard's Progress, from the first glass to the grave"** — N. Currier, 1846.
 
 The nine steps, in order:
@@ -602,7 +602,7 @@ The nine steps, in order:
 
 *Beneath the arch, a woman and child leave a ruined home.*
 </Markdown>
-</Vertical> <!-- temperance_litho -->
+</Vertical> <!-- temperance_image -->
 
 
 <!-- ============================================================
@@ -1280,63 +1280,63 @@ Step back from the details — what is the article's **main point** overall?
 
 <!-- CHAT-EMBEDDED — lithograph comprehension (Part 4) -->
 
-<Vertical id="temperance_litho_observe_screen">
-<CapaProblem id="temperance_litho_observe_problem" title="The lithograph: what it shows" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
-<KeyGrader id="temperance_litho_observe_grader">
-<ChoiceInput id="temperance_litho_observe">
+<Vertical id="temperance_image_observe_screen">
+<CapaProblem id="temperance_image_observe_problem" title="The lithograph: what it shows" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
+<KeyGrader id="temperance_image_observe_grader">
+<ChoiceInput id="temperance_image_observe">
 <Markdown>
 What does the image show across its nine numbered steps?
 </Markdown>
-  <Distractor id="temperance_litho_observe_top_is_moderate"    value="top_is_moderate"   > That the best stage of becoming a drinker, at the top, is moderate drinking.             </Distractor>
-  <Distractor id="temperance_litho_observe_nine_different_men" value="nine_different_men"> Nine different men, each working in a different profession that was common in the 1800s. </Distractor>
-  <Distractor id="temperance_litho_observe_good_and_bad_sides" value="good_and_bad_sides"> The good and bad sides of drinking alcohol for working-class people in the 1800s.        </Distractor>
-         <Key id="temperance_litho_observe_one_mans_decline"   value="one_mans_decline"  > One man's life of drinking, from the first glass to poverty, crime, and death.           </Key>
+  <Distractor id="temperance_image_observe_top_is_moderate"    value="top_is_moderate"   > That the best stage of becoming a drinker, at the top, is moderate drinking.             </Distractor>
+  <Distractor id="temperance_image_observe_nine_different_men" value="nine_different_men"> Nine different men, each working in a different profession that was common in the 1800s. </Distractor>
+  <Distractor id="temperance_image_observe_good_and_bad_sides" value="good_and_bad_sides"> The good and bad sides of drinking alcohol for working-class people in the 1800s.        </Distractor>
+         <Key id="temperance_image_observe_one_mans_decline"   value="one_mans_decline"  > One man's life of drinking, from the first glass to poverty, crime, and death.           </Key>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@temperance_litho_observe.value === 'top_is_moderate' &amp;&amp; @temperance_litho_observe_problem.submitCount &gt; 0">
+<Markdown when="@temperance_image_observe.value === 'top_is_moderate' &amp;&amp; @temperance_image_observe_problem.submitCount &gt; 0">
 *Step 5's caption says otherwise: "the summit attained" is "a confirmed drunkard" — and it's where the fall starts. The arch is one man's decline.*
 </Markdown>
-<Markdown when="@temperance_litho_observe.value === 'nine_different_men' &amp;&amp; @temperance_litho_observe_problem.submitCount &gt; 0">
+<Markdown when="@temperance_image_observe.value === 'nine_different_men' &amp;&amp; @temperance_image_observe_problem.submitCount &gt; 0">
 *It's one man, nine times — the same life at nine moments. That's why it's called a "progress."*
 </Markdown>
-<Markdown when="@temperance_litho_observe.value === 'good_and_bad_sides' &amp;&amp; @temperance_litho_observe_problem.submitCount &gt; 0">
+<Markdown when="@temperance_image_observe.value === 'good_and_bad_sides' &amp;&amp; @temperance_image_observe_problem.submitCount &gt; 0">
 *The image is one-sided on purpose. It only rises in order to fall; nothing on the arch is offered as a good ending.*
 </Markdown>
-<Markdown when="@temperance_litho_observe.value === 'one_mans_decline' &amp;&amp; @temperance_litho_observe_problem.submitCount &gt; 0">
+<Markdown when="@temperance_image_observe.value === 'one_mans_decline' &amp;&amp; @temperance_image_observe_problem.submitCount &gt; 0">
 *Yes — one life, climbing to the summit and then dropping step by step to the grave.*
 </Markdown>
-</CapaProblem> <!-- temperance_litho_observe_problem -->
-</Vertical> <!-- temperance_litho_observe_screen -->
+</CapaProblem> <!-- temperance_image_observe_problem -->
+</Vertical> <!-- temperance_image_observe_screen -->
 
-<Vertical id="temperance_litho_purpose_screen">
-<CapaProblem id="temperance_litho_purpose_problem" title="The lithograph: why it was made" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
-<KeyGrader id="temperance_litho_purpose_grader">
-<ChoiceInput id="temperance_litho_purpose">
+<Vertical id="temperance_image_purpose_screen">
+<CapaProblem id="temperance_image_purpose_problem" title="The lithograph: why it was made" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
+<KeyGrader id="temperance_image_purpose_grader">
+<ChoiceInput id="temperance_image_purpose">
 <Markdown>
 Why would the temperance movement create and share an image like this?
 </Markdown>
-  <Distractor id="temperance_litho_purpose_advertise_saloons"  value="advertise_saloons" > To advertise the saloons pictured in it and encourage people to get together with their friends. </Distractor>
-  <Distractor id="temperance_litho_purpose_record_social_life" value="record_social_life"> To record the kinds of social activities that a typical wealthy family participated in in 1846.  </Distractor>
-         <Key id="temperance_litho_purpose_warn_and_persuade"  value="warn_and_persuade" > To warn that even one drink can lead step by step to ruin, and so persuade people not to drink.  </Key>
-  <Distractor id="temperance_litho_purpose_no_consequences"    value="no_consequences"   > To show that drinking has no lasting consequences for a man who keeps to a moderate amount.      </Distractor>
+  <Distractor id="temperance_image_purpose_advertise_saloons"  value="advertise_saloons" > To advertise the saloons pictured in it and encourage people to get together with their friends. </Distractor>
+  <Distractor id="temperance_image_purpose_record_social_life" value="record_social_life"> To record the kinds of social activities that a typical wealthy family participated in in 1846.  </Distractor>
+         <Key id="temperance_image_purpose_warn_and_persuade"  value="warn_and_persuade" > To warn that even one drink can lead step by step to ruin, and so persuade people not to drink.  </Key>
+  <Distractor id="temperance_image_purpose_no_consequences"    value="no_consequences"   > To show that drinking has no lasting consequences for a man who keeps to a moderate amount.      </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@temperance_litho_purpose.value === 'advertise_saloons' &amp;&amp; @temperance_litho_purpose_problem.submitCount &gt; 0">
+<Markdown when="@temperance_image_purpose.value === 'advertise_saloons' &amp;&amp; @temperance_image_purpose_problem.submitCount &gt; 0">
 *An advertisement wouldn't run all the way to step 9. Everything past the summit is a warning — the image was made to persuade people not to drink.*
 </Markdown>
-<Markdown when="@temperance_litho_purpose.value === 'record_social_life' &amp;&amp; @temperance_litho_purpose_problem.submitCount &gt; 0">
+<Markdown when="@temperance_image_purpose.value === 'record_social_life' &amp;&amp; @temperance_image_purpose_problem.submitCount &gt; 0">
 *It isn't a record of anything that happened. The ruined home beneath the arch is there to make you feel something — this is persuasion, not documentation.*
 </Markdown>
-<Markdown when="@temperance_litho_purpose.value === 'no_consequences' &amp;&amp; @temperance_litho_purpose_problem.submitCount &gt; 0">
+<Markdown when="@temperance_image_purpose.value === 'no_consequences' &amp;&amp; @temperance_image_purpose_problem.submitCount &gt; 0">
 *The whole arch is consequences: poverty, disease, crime, death. The image argues that a first glass leads there.*
 </Markdown>
-<Markdown when="@temperance_litho_purpose.value === 'warn_and_persuade' &amp;&amp; @temperance_litho_purpose_problem.submitCount &gt; 0">
+<Markdown when="@temperance_image_purpose.value === 'warn_and_persuade' &amp;&amp; @temperance_image_purpose_problem.submitCount &gt; 0">
 *Yes — this is persuasion. Take one friendly glass, the picture argues, and the other eight steps follow.*
 </Markdown>
-</CapaProblem> <!-- temperance_litho_purpose_problem -->
-</Vertical> <!-- temperance_litho_purpose_screen -->
+</CapaProblem> <!-- temperance_image_purpose_problem -->
+</Vertical> <!-- temperance_image_purpose_screen -->
 
 <!-- CHAT-EMBEDDED — synthesis: evaluate peer comparisons (Part 4) -->
 

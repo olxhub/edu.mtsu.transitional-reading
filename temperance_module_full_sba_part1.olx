@@ -140,8 +140,8 @@ lang: en-Latn-US
       <Flash id="temperance_article_flash"    target="temperance_article_read" />
     </Trigger>
 
-    <Trigger id="temperance_litho_cue"      watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_litho')" mode="each">
-      <Flash id="temperance_litho_flash"      target="temperance_litho_img" />
+    <Trigger id="temperance_image_cue"      watch="DefinitionKey(@temperance_pane.value) === DefinitionKey('temperance_image')" mode="each">
+      <Flash id="temperance_image_flash"      target="temperance_image_figure" />
     </Trigger>
 
     <!-- The tasks. -->
@@ -240,8 +240,8 @@ lang: en-Latn-US
   </Vertical>
 
   <!-- ===== Tab 7 (index 6): the third text — the 1846 lithograph ===== -->
-  <Vertical id="temperance_tab_litho" title="The Drunkard's Progress">
-    <Use ref="temperance_litho" />
+  <Vertical id="temperance_tab_image" title="The Drunkard's Progress">
+    <Use ref="temperance_image" />
   </Vertical>
 
 

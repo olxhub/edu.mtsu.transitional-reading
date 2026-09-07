@@ -325,23 +325,23 @@ Professor Booker: Last one. Scroll to the end of part 4 and find the evidence th
 
 Danielle: Half of what they drank twenty years earlier. That's the number I'd put in the comparison at the end.
 
-::temperance_litho [display=target:temperance_pane label="A temperance-era image"]
+::temperance_image [display=target:temperance_pane label="A temperance-era image"]
 
 Professor Booker: Nice work on the chapter. Before we bring in a modern article, let's look at an image from the temperance era itself — it connects directly to what we just read. It's on the right --->
 
 Professor Booker: Look closely at the nine steps, then answer.
 
-::temperance_litho_observe_screen
+::temperance_image_observe_screen
 
---- wait @temperance_litho_observe_problem.submitCount > 0 ---
+--- wait @temperance_image_observe_problem.submitCount > 0 ---
 
 Karis: Whoa — it's like a staircase of a man's whole life, going up and then crashing down.
 
 Joe: Grim. Why would the temperance folks make something like this?
 
-::temperance_litho_purpose_screen
+::temperance_image_purpose_screen
 
---- wait @temperance_litho_purpose_problem.submitCount > 0 ---
+--- wait @temperance_image_purpose_problem.submitCount > 0 ---
 
 ::temperance_article_read [display=target:temperance_pane label="The magazine article"]
 
