@@ -1204,21 +1204,21 @@ of us found a sentence from the article that gives it context. Who picked the
 Which is the **best summary** of the article's first paragraph (about how
 "tradwives" appeared)?
 </Markdown>
-  <Distractor id="womens_sphere_article_summary_image_only"   value="image_only"  > Tradwives are women with glossy hair who post videos of themselves cooking meat from scratch and soothing calm babies in spotless farmhouse kitchens. </Distractor>
-         <Key id="womens_sphere_article_summary_what_and_why" value="what_and_why"> A few years ago, images of glamorous "tradwives" spread on social media and became a political flashpoint: praise on the right, attacks on the left.  </Key>
-  <Distractor id="womens_sphere_article_summary_overstated"   value="overstated"  > Almost overnight, tradwives were everywhere online and became one of the biggest fights in American politics.                                         </Distractor>
-  <Distractor id="womens_sphere_article_summary_opinion"      value="opinion"     > Tradwives are one of the most fascinating internet trends of the last few years, and it's easy to see why so many people admire them.                 </Distractor>
+  <Distractor id="womens_sphere_article_summary_image_only"   value="image_only"  > A few years ago, videos of stay-at-home "tradwives" cooking and caring for their children spread across social media.                               </Distractor>
+         <Key id="womens_sphere_article_summary_what_and_why" value="what_and_why"> A few years ago, glamorous "tradwife" images spread on social media and became a political flashpoint: praise on the right, attacks on the left.    </Key>
+  <Distractor id="womens_sphere_article_summary_overstated"   value="overstated"  > A few years ago, tradwife videos spread across social media, and soon most American women were leaving their jobs to stay home with their children. </Distractor>
+  <Distractor id="womens_sphere_article_summary_opinion"      value="opinion"     > Tradwife videos spread on social media a few years ago, and the women who make them are admirable for choosing family over career.                  </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
 <Markdown when="@womens_sphere_article_summary.value === 'image_only' &amp;&amp; @womens_sphere_article_summary_problem.submitCount &gt; 0">
-*True, but only the picture. A summary has to carry the point: that the trend became a culture-war flashpoint over what women want.*
+*Accurate, but only the picture. A summary has to carry the point: that the trend became a political flashpoint over what women want.*
 </Markdown>
 <Markdown when="@womens_sphere_article_summary.value === 'overstated' &amp;&amp; @womens_sphere_article_summary_problem.submitCount &gt; 0">
-*That overstates it — the paragraph says the trend became a flashpoint, not the biggest issue in politics. A summary shouldn't exaggerate what it reports.*
+*The paragraph says the images spread and became a fight; it never says most women left their jobs. A summary shouldn't add claims the paragraph doesn't make.*
 </Markdown>
 <Markdown when="@womens_sphere_article_summary.value === 'opinion' &amp;&amp; @womens_sphere_article_summary_problem.submitCount &gt; 0">
-*That's an opinion about tradwives, not a summary of the paragraph. Summaries report; they don't rate.*
+*"Admirable" is a judgment the paragraph doesn't make. Summaries report; they don't rate.*
 </Markdown>
 <Markdown when="@womens_sphere_article_summary.value === 'what_and_why' &amp;&amp; @womens_sphere_article_summary_problem.submitCount &gt; 0">
 *Yes — what appeared (glamorous tradwife images), where (social media), and the point: both sides turned it into a fight over what women want.*
