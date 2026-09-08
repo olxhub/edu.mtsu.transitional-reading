@@ -779,7 +779,7 @@ Look at the highlighted sentence and choose the best definition for **public sph
 *The public sphere is where people act and argue in common, not a single shared opinion: the shared world outside the home.*
 </Markdown>
 <Markdown when="@womens_sphere_vocab_publicsphere.value === 'public_life' &amp;&amp; @womens_sphere_vocab_publicsphere_problem.submitCount &gt; 0">
-*Yes — the public sphere is life outside the home: work, politics, and community. Its opposite is the "domestic sphere," which comes up next.*
+*Yes — the public sphere is life outside the home: work, politics, and community. Its opposite is the domestic sphere — the home.*
 </Markdown>
 </CapaProblem> <!-- womens_sphere_vocab_publicsphere_problem -->
 </Vertical> <!-- womens_sphere_vocab_publicsphere_screen -->

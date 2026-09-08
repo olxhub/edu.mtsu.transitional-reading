@@ -47,7 +47,7 @@ Karis: Good question. First, though — when you hear "a woman's place is in the
 
 --- wait @womens_sphere_intro_guess.value ---
 
-Karis: In the 1800s there was a whole ideal built around that — historians call it the "cult of domesticity," or the "cult of true womanhood." The idea that a good woman's whole world was the home. We'll read about it, and compare it to today's "tradwife" thing.
+Karis: In the 1800s there was a whole ideal built around that — historians call it the "cult of domesticity," or the "cult of true womanhood." We'll read what it meant, and compare it to today's "tradwife" thing.
 
 Joe: Huh. Interesting topic for a reading class.
 
@@ -102,7 +102,7 @@ Joe: I'm a little lost — it says the new industrial economy "gave rise to a nu
 
 Karis: Think back to Professor Hale's lecture — instead of farming or working from home, many men left to work in factories or on railroads. That changed what men, women, and children did all day.
 
-Danielle: And look at the last line — in the "public sphere," women "increasingly challenged the moral direction" of society. That phrase is going to matter.
+Danielle: And look at the last line — in the "public sphere," women "increasingly challenged the moral direction" of society.
 
 Professor Booker: Let's build some vocabulary from this part. Look at the highlighted sentence on the right.
 
@@ -124,7 +124,7 @@ Danielle: First one — what does "public sphere" mean here?
 
 --- wait @womens_sphere_vocab_publicsphere_problem.submitCount > 0 ---
 
-Joe: Got it — the public sphere is life OUTSIDE the home. So the "domestic sphere" would be the home itself.
+Joe: Got it — the public sphere is life OUTSIDE the home.
 
 ::womens_sphere_read_2 [display=target:womens_sphere_pane label="The excerpt — part 2"]
 
@@ -134,7 +134,7 @@ Danielle: **Mark as read** when you're done — Karis has been waiting for this 
 
 --- wait @womens_sphere_read_2_done.value ---
 
-Karis: This is the part I've read about — the idea that a woman's whole world was supposed to be the home.
+Karis: This is the part I've read the most about.
 
 Danielle: There's a vocab phrase in here first — "in tandem with."
 
@@ -337,7 +337,7 @@ Joe: So, tradwife — a traditional stay-at-home wife. Where does "economic prec
 
 --- wait @womens_sphere_article_sentence_problem.submitCount > 0 ---
 
-Karis: The line that really pins down economic precarity is the one about exhausted, low-income moms who can't afford child care. Put it with the article's "precarity-to-tradwife pipeline," and you can see it's about money and insecurity, not a dream of domesticity.
+Karis: The line that really pins down economic precarity is the one about exhausted, low-income moms who can't afford child care.
 
 Professor Booker: Now, to see how it all fits, let's summarize. Which is the best summary of the article's first paragraph?
 
