@@ -624,6 +624,8 @@ place: the home, at the center of family and children.
      with the assessment attributes (see the vocabulary items).
      ============================================================ -->
 
+<!-- Rows alternate between the two columns. A run of all-then followed by
+     all-now is a pattern a student can fill in without reading the rows. -->
 <Vertical id="womens_sphere_synth_sort">
 <Markdown id="womens_sphere_synth_sort_prompt">
 ## Then and Now
@@ -639,10 +641,10 @@ cols:
   - "Today's 'tradwife' trend"
 rows:
   - "Held up the pious, pure, submissive woman at home as a moral and religious duty|s_ideal[The 1800s ideal of the 'true woman']"
-  - "Justified by the belief that women were the natural guardians of virtue and the home|s_guardian[The 1800s ideal of the 'true woman']"
-  - "Applied mainly to upper- and middle-class women, while working-class women worked out of necessity|s_class[The 1800s ideal of the 'true woman']"
-  - "Spread through social-media images of glamorous, calm stay-at-home mothers|s_social[Today's 'tradwife' trend]"
-  - "Often driven less by free choice than by economic precarity — costly child care and unequal pay|s_precarity[Today's 'tradwife' trend]"
+  - "Often driven less by free choice than by economic necessity|s_necessity[Today's 'tradwife' trend]"
+  - "Applied mainly to upper- and middle-class women, not women who had to work out of necessity|s_class[The 1800s ideal of the 'true woman']"
+  - "Promoted by entrepreneurial women presenting glamorous images of home life|s_glamour[Today's 'tradwife' trend]"
+  - "Helped some women to join societies and promote social causes|s_societies[The 1800s ideal of the 'true woman']"
 </TabularMCQ>
 </TabularMCQGrader>
 </CapaProblem>
@@ -1264,14 +1266,14 @@ does **egalitarian** mean?
 Step back from the details — what is the article's **main point** overall?
 </Markdown>
   <Distractor id="womens_sphere_article_thesis_mostly_wealthy"         value="mostly_wealthy"        > Most tradwives are wealthy influencers who make huge sums of money posting videos of their homes, meals, and children online.     </Distractor>
-         <Key id="womens_sphere_article_thesis_glossy_hides_precarity" value="glossy_hides_precarity"> Behind the glossy "tradwife" image, many stay-at-home mothers are pushed there by economic precarity, not by choice.            </Key>
+         <Key id="womens_sphere_article_thesis_glossy_hides_precarity" value="glossy_hides_precarity"> Behind the glossy "tradwife" image, many stay-at-home mothers are there because they can't afford child care, not by choice. </Key>
   <Distractor id="womens_sphere_article_thesis_women_shouldnt_stay"    value="women_shouldnt_stay"   > Women today are better off working than staying home to raise their children, whatever they may prefer.                           </Distractor>
   <Distractor id="womens_sphere_article_thesis_free_childcare"         value="free_childcare"        > The government should make child care affordable so that more mothers can return to paid work.                                    </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
 <Markdown when="@womens_sphere_article_thesis.value === 'mostly_wealthy' &amp;&amp; @womens_sphere_article_thesis_problem.submitCount &gt; 0">
-*The wealthy influencers are one detail. The article's point is about the MANY who are low-income: the glossy image hides economic precarity.*
+*The wealthy influencers are one detail. The article's point is about the MANY who are low-income: the glossy image hides money trouble.*
 </Markdown>
 <Markdown when="@womens_sphere_article_thesis.value === 'women_shouldnt_stay' &amp;&amp; @womens_sphere_article_thesis_problem.submitCount &gt; 0">
 *The article never says women shouldn't stay home. It says many aren't choosing it freely — they're pushed by money, which the glossy image hides.*
@@ -1280,7 +1282,7 @@ Step back from the details — what is the article's **main point** overall?
 *Expensive child care is part of the problem the article describes, but "make child care free" isn't the point it's arguing. The point is what the glossy image hides.*
 </Markdown>
 <Markdown when="@womens_sphere_article_thesis.value === 'glossy_hides_precarity' &amp;&amp; @womens_sphere_article_thesis_problem.submitCount &gt; 0">
-*Yes — the shiny image and the harder reality. Behind the glossy videos, most stay-at-home moms are there because of economic precarity, not a dream of domesticity.*
+*Yes — the shiny image and the harder reality. Behind the glossy videos, most stay-at-home moms are there because they can't afford not to be, not out of a dream of domesticity.*
 </Markdown>
 </CapaProblem> <!-- womens_sphere_article_thesis_problem -->
 </Vertical> <!-- womens_sphere_article_thesis_screen -->
@@ -1362,20 +1364,20 @@ Sphere of Woman"?
 Your group each summed up the biggest difference between the two — the 1800s
 ideal and today's tradwife trend. Which comparison is **best**?
 </Markdown>
-  <Distractor id="womens_sphere_synth_compare_same"          value="same"         > **Karis:** They're really the same thing — both are about women choosing to stay home and care for their families instead of working, whether in the 1800s or now. </Distractor>
-         <Key id="womens_sphere_synth_compare_duty_vs_image" value="duty_vs_image"> **Joe:** Both idealize the wife at home, but then it was a moral and religious duty; today it's a social-media image that often hides economic precarity.          </Key>
-  <Distractor id="womens_sphere_synth_compare_family_size"   value="family_size"  > **Danielle:** The biggest difference is that women in the 1800s had far more children than today's tradwives do, so the home was more work.                        </Distractor>
+  <Distractor id="womens_sphere_synth_compare_same"              value="same"             > **Karis:** They're really the same thing — in both cases women choose to stay home and take care of their families, and both call that the right way to live.                                          </Distractor>
+         <Key id="womens_sphere_synth_compare_who_can_afford"    value="who_can_afford"   > **Joe:** Both hold up the wife at home as an ideal, but in the 1800s it was for women who could afford to stay home; today many stay home because they can't afford not to.                            </Key>
+  <Distractor id="womens_sphere_synth_compare_children_religion" value="children_religion"> **Danielle:** The biggest differences are that women in the 1800s had many more children and were much more religious than tradwives today, so their homes were busier and their days more structured. </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
 <Markdown when="@womens_sphere_synth_compare.value === 'same' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
-*Karis has the likeness right, but a comparison owes us the difference too: a moral and religious duty then, a social-media image that often hides economic precarity now.*
+*Karis has the likeness right, but a comparison owes us the difference too: who could afford to stay home then, and who can't afford not to now.*
 </Markdown>
-<Markdown when="@womens_sphere_synth_compare.value === 'family_size' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
-*Family size isn't a contrast either text draws. The real difference is what the ideal MEANT: a moral duty then, an image often masking hardship now.*
+<Markdown when="@womens_sphere_synth_compare.value === 'children_religion' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
+*Family size and religion aren't the contrast the texts draw. The difference is money: the ideal was for women who could afford to stay home; today many stay home because they can't afford not to.*
 </Markdown>
-<Markdown when="@womens_sphere_synth_compare.value === 'duty_vs_image' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
-*Yes — both idealize the woman at home; what changed is the reason. A moral and religious duty then; a social-media image, often hiding economic precarity, now. That's the comparison your final paragraph needs.*
+<Markdown when="@womens_sphere_synth_compare.value === 'who_can_afford' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
+*Yes — both idealize the wife at home; what changed is who ends up there and why. Then, women who could afford it; now, many who can't afford child care. That's the comparison your final paragraph needs.*
 </Markdown>
 </CapaProblem> <!-- womens_sphere_synth_compare_problem -->
 </Vertical> <!-- womens_sphere_synth_compare_screen -->
