@@ -142,7 +142,23 @@ Danielle: There's a vocab phrase in here first — "in tandem with."
 
 --- wait @womens_sphere_vocab_tandem_problem.submitCount > 0 ---
 
-Professor Booker: Now a term that's special to history. The passage gives this ideal a name. Using the passage, which phrase most directly tells us what it was?
+::womens_sphere_read_3 [display=target:womens_sphere_pane label="The excerpt — part 3"]
+
+Professor Booker: On to the next part of the excerpt, over on the right --->
+
+Karis: Mark it read when you're through. I want to get to what women were supposed to BE.
+
+--- wait @womens_sphere_read_3_done.value ---
+
+Karis: There's that word again — "domestic." We saw "domesticity" a minute ago. Same root?
+
+::womens_sphere_vocab_domestic_screen
+
+--- wait @womens_sphere_vocab_domestic_problem.submitCount > 0 ---
+
+Joe: Nice — "domestic" is the adjective, "domesticity" is the noun for the whole idea. The "-ity" ending turns the quality into a thing.
+
+Professor Booker: Now a term that's special to history. Part 2 of the excerpt gave this ideal a name. Using the passage, which phrase most directly tells us what it was?
 
 ::womens_sphere_term_pick_screen
 
@@ -159,22 +175,6 @@ Professor Booker: Now put it together. Each of you wrote a one-sentence definiti
 ::womens_sphere_term_bestdef_screen
 
 --- wait @womens_sphere_term_bestdef_problem.submitCount > 0 ---
-
-::womens_sphere_read_3 [display=target:womens_sphere_pane label="The excerpt — part 3"]
-
-Professor Booker: On to the next part of the excerpt, over on the right --->
-
-Karis: Mark it read when you're through. I want to get to what women were supposed to BE.
-
---- wait @womens_sphere_read_3_done.value ---
-
-Karis: There's that word again — "domestic." We saw "domesticity" a minute ago. Same root?
-
-::womens_sphere_vocab_domestic_screen
-
---- wait @womens_sphere_vocab_domestic_problem.submitCount > 0 ---
-
-Joe: Nice — "domestic" is the adjective, "domesticity" is the noun for the whole idea. The "-ity" ending turns the quality into a thing.
 
 ::womens_sphere_notes [display=target:womens_sphere_pane label="Checking Joe's notes"]
 

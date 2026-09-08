@@ -864,9 +864,9 @@ itself? **Select all that apply.**
 </Markdown>
          <Key id="womens_sphere_term_connect_true_womanhood"        value="true_womanhood"       > "cult of true womanhood"          </Key>
          <Key id="womens_sphere_term_connect_guardians_of_virtue"   value="guardians_of_virtue"  > guardians of virtue               </Key>
-  <Distractor id="womens_sphere_term_connect_reform_societies"      value="reform_societies"     > reform societies                  </Distractor>
+  <Distractor id="womens_sphere_term_connect_market_revolution"     value="market_revolution"    > the market revolution             </Distractor>
          <Key id="womens_sphere_term_connect_pious_pure_submissive" value="pious_pure_submissive"> pious, pure, submissive, domestic </Key>
-  <Distractor id="womens_sphere_term_connect_antislavery_movement"  value="antislavery_movement" > the antislavery movement          </Distractor>
+  <Distractor id="womens_sphere_term_connect_public_sphere"         value="public_sphere"        > the public sphere                 </Distractor>
   <Distractor id="womens_sphere_term_connect_working_class_labor"   value="working_class_labor"  > working-class women's labor       </Distractor>
 </CheckboxInput>
 </CheckboxGrader>
@@ -879,11 +879,11 @@ itself? **Select all that apply.**
    anything else is simply wrong. That is a strict rule for a six-option
    select-all, and it is declared here as the rule this form scores by, not
    as the only defensible one — partial credit is the obvious next question. -->
-<Markdown when="@womens_sphere_term_connect.value.includes('reform_societies') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
-*Reform societies are the PUBLIC role women fashioned once they left the home, not part of the domestic ideal.*
+<Markdown when="@womens_sphere_term_connect.value.includes('market_revolution') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
+*The market revolution is one of the changes the ideal developed alongside — part of its cause, not part of the ideal.*
 </Markdown>
-<Markdown when="@womens_sphere_term_connect.value.includes('antislavery_movement') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
-*Joining the antislavery movement took women OUT into public life — the opposite of staying in the domestic sphere.*
+<Markdown when="@womens_sphere_term_connect.value.includes('public_sphere') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
+*The public sphere is the world outside the home, the opposite of where the ideal placed women — not a description of it.*
 </Markdown>
 <Markdown when="@womens_sphere_term_connect.value.includes('working_class_labor') &amp;&amp; @womens_sphere_term_connect_problem.submitCount &gt; 0">
 *Working-class women joined the public sphere through their labor, out of necessity. They're the exception to the ideal, not part of it.*
@@ -910,14 +910,14 @@ itself? **Select all that apply.**
 Each member of your group wrote a one-sentence description of the cult of
 domesticity. Read them and choose the **best** one.
 </Markdown>
-         <Key id="womens_sphere_term_bestdef_home_ideal"      value="home_ideal"     > **Danielle:** The belief that a true woman belonged at home — pious, pure, and domestic — raising her children in virtue.    </Key>
-  <Distractor id="womens_sphere_term_bestdef_reform_movement" value="reform_movement"> **Joe:** The name for the movement that sent middle-class women out of their homes to join antislavery and reform societies. </Distractor>
-  <Distractor id="womens_sphere_term_bestdef_laws_all_women"  value="laws_all_women" > **Karis:** A set of laws passed in the 1830s requiring women, rich and poor, to stay home and manage their households.       </Distractor>
+         <Key id="womens_sphere_term_bestdef_home_ideal"       value="home_ideal"      > **Danielle:** The belief that a true woman belonged at home — pious, pure, and domestic — raising her children in virtue.    </Key>
+  <Distractor id="womens_sphere_term_bestdef_economic_changes" value="economic_changes"> **Joe:** The name for the economic changes — industrialization and the market revolution — that pulled work out of the home. </Distractor>
+  <Distractor id="womens_sphere_term_bestdef_laws_all_women"   value="laws_all_women"  > **Karis:** A set of laws passed in the 1830s requiring women, rich and poor, to stay home and manage their households.       </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@womens_sphere_term_bestdef.value === 'reform_movement' &amp;&amp; @womens_sphere_term_bestdef_problem.submitCount &gt; 0">
-*Joe has it backwards. That's the PUBLIC role women fashioned FROM the ideology; the cult of domesticity itself was about staying home — Danielle's sentence.*
+<Markdown when="@womens_sphere_term_bestdef.value === 'economic_changes' &amp;&amp; @womens_sphere_term_bestdef_problem.submitCount &gt; 0">
+*Joe names the changes the ideal grew up alongside, not the ideal itself. The cult of domesticity was a belief about where a woman belonged — Danielle's sentence.*
 </Markdown>
 <Markdown when="@womens_sphere_term_bestdef.value === 'laws_all_women' &amp;&amp; @womens_sphere_term_bestdef_problem.submitCount &gt; 0">
 *Karis makes it a law for everyone. It was a cultural and religious ideal, not a law, and it applied mainly to upper- and middle-class women — Danielle's sentence has it.*
