@@ -29,42 +29,39 @@ lang: en-Latn-US
 <Use ref="temperance_module"       when="@temperance_irb_consent.value" />
 
 <!-- The form is defined here unrendered and shown through the <Use> above,
-     so its state has one home. Bracketed text is the IRB protocol's; it is
-     replaced verbatim from the approved protocol before students arrive. -->
+     so its state has one home. The text follows the consent form approved
+     for the same protocol at the University of Memphis, with this course's
+     materials and instructor, with the section headings dropped; the
+     contact address is his. -->
 <Hidden id="temperance_consent_defs">
 <Vertical id="temperance_irb_consent_form" title="Research Consent">
 <Markdown id="temperance_irb_consent_text">
-# Middle Tennessee State University
-
 ## Informed Consent
 
-**Title:** [Study title from the IRB protocol]
+**Title:** Scenario-Based Assessment in the age of generative AI: Making space in the education market for alternative assessment paradigms
 
-**Principal Investigator:** [Name, department, MTSU]
+**Principal Investigator:** Dr. John Sabatini
 
-**Contact:** [PI email and phone]
+**Sponsor:** Institute for Intelligent Systems (IIS)
 
-## What this is
+You are being asked to take part in a research study. If you decide to
+take part, you will agree to share some of your course work with the
+researchers: your responses in this reading module, including your answers,
+highlights, and writing. These materials will be obtained after grades are
+submitted and will be accessed only by the researchers.
 
-You are being asked to take part in a research study about how students
-read and reason with college texts. The study uses the READ 1000 reading
-module you are about to complete. Whether or not you take part, the module
-is the same, and it counts for READ 1000 in the same way.
+No work beyond that which you would normally do as part of this course
+will be required. The research will require no more time than you would
+normally spend on the course. The decision to participate, or not to take
+part, will have no effect on your grade or standing in this class. Your
+instructor will not know whether you consented until after they submit the
+grades for the course.
 
-## What we would use
+You do not have to be in this study, and you may choose to leave the study
+at any time by telling your instructor; your responses will then be left
+out of the research.
 
-If you agree, your responses in this module — your answers, highlights, and
-writing — may be included in the research after the semester ends. They are
-stored under a study username, not your name. Your instructor and TAs will
-not know whether you agreed until after grades are submitted.
-
-## Voluntary
-
-Taking part is voluntary. Saying no has no effect on your grade or your
-standing in READ 1000. If you later change your mind, tell your instructor,
-and your responses will be left out.
-
-## Your choice
+Questions: Professor Timothy Nelson, timothy.nelson@mtsu.edu.
 
 Please choose one. Either answer takes you into the module.
 </Markdown>
