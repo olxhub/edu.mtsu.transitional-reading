@@ -1002,9 +1002,9 @@ which word or phrase most directly helps us understand what it was?
 <CheckboxInput id="temperance_term_connect">
 <Markdown>
 The Benevolent Empire was, indeed, a **powerful network.** Which of these words or
-phrases from the chapter describe the network itself? **Select all that apply.**
+phrases from what you have read so far describe the network itself? **Select all that apply.**
 </Markdown>
-         <Key id="temperance_term_connect_societies_movements"   value="societies_movements"  > societies / movements     </Key>
+         <Key id="temperance_term_connect_societies_movements"   value="societies_movements"  > societies                 </Key>
          <Key id="temperance_term_connect_middle_class"          value="middle_class"         > middle-class              </Key>
   <Distractor id="temperance_term_connect_american_independence" value="american_independence"> American independence     </Distractor>
   <Distractor id="temperance_term_connect_industrial_revolution" value="industrial_revolution"> the Industrial Revolution </Distractor>

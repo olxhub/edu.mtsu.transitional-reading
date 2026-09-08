@@ -858,8 +858,8 @@ passage, which phrase most directly helps us understand what it was?
 <CheckboxInput id="womens_sphere_term_connect">
 <Markdown>
 The cult of domesticity was the idea that a woman's proper place was the
-**home.** Which of these words or phrases from the chapter describe the ideal
-itself? **Select all that apply.**
+**home.** Which of these words or phrases from what you have read so far describe
+the ideal itself? **Select all that apply.**
 </Markdown>
          <Key id="womens_sphere_term_connect_true_womanhood"        value="true_womanhood"       > "cult of true womanhood"          </Key>
          <Key id="womens_sphere_term_connect_guardians_of_virtue"   value="guardians_of_virtue"  > guardians of virtue               </Key>
