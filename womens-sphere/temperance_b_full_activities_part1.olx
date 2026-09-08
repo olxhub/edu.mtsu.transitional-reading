@@ -854,13 +854,13 @@ passage, which phrase most directly helps us understand what it was?
 </Vertical> <!-- womens_sphere_term_pick_screen -->
 
 <Vertical id="womens_sphere_term_connect_screen">
-<CapaProblem id="womens_sphere_term_connect_problem" title="Cult of domesticity: what connects to it" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
+<CapaProblem id="womens_sphere_term_connect_problem" title="Cult of domesticity: what describes it" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <CheckboxGrader id="womens_sphere_term_connect_grader">
 <CheckboxInput id="womens_sphere_term_connect">
 <Markdown>
 The cult of domesticity was the idea that a woman's proper place was the
-**home.** What other words or phrases from the chapter describe or connect to
-it? **Select all that apply.**
+**home.** Which of these words or phrases from the chapter describe the ideal
+itself? **Select all that apply.**
 </Markdown>
          <Key id="womens_sphere_term_connect_true_womanhood"        value="true_womanhood"       > "cult of true womanhood"          </Key>
          <Key id="womens_sphere_term_connect_guardians_of_virtue"   value="guardians_of_virtue"  > guardians of virtue               </Key>
