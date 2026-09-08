@@ -402,7 +402,7 @@ whole phrase together.
      closing quote follows the period, so a bare `\.` would leave that quote at
      the start of the next chunk and the answer would cross a chunk boundary. -->
 <SimpleTextSelection id="womens_sphere_gram_antecedent" mode="graded" title="Find the Antecedent" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed" separatorRegexp='\."?'>
-"The very ideology that defined their place in the home" points back to an ideology the text has already named. Click the sentence that first names it.
+"The very ideology that defined their place in the home" points back to an ideology the text has already named. Select the one sentence that first names it.
 ---
 [Femininity in the nation was intimately tied to the domestic sphere in what historians have described as the "cult of domesticity," or the "cult of true womanhood."] These ideas developed in tandem with industrialization, the market revolution, and the Second Great Awakening. In reality, they applied primarily to upper-class and middle-upper-class women. In the era of revivalism and reform, Americans understood the family and home as the hearthstones of civic virtue and moral influence. Women were expected to be the guardians of virtue and the spiritual heads of the home. They were to be pious, pure, submissive, and domestic. Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
 ---
