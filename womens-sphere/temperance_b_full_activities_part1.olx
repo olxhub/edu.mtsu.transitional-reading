@@ -1291,30 +1291,30 @@ Step back from the details — what is the article's **main point** overall?
      ============================================================ -->
 
 <Vertical id="womens_sphere_image_observe_screen">
-<CapaProblem id="womens_sphere_image_observe_problem" title="The engraving: what it shows" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
+<CapaProblem id="womens_sphere_image_observe_problem" title="The engraving: which reality it depicts" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <KeyGrader id="womens_sphere_image_observe_grader">
 <ChoiceInput id="womens_sphere_image_observe">
 <Markdown>
-What does the engraving show?
+Based on what you have read so far, which reality does this engraving from 1850 best depict?
 </Markdown>
-  <Distractor id="womens_sphere_image_observe_reform_meeting" value="reform_meeting"> A group of women meeting to organize a reform society.              </Distractor>
-  <Distractor id="womens_sphere_image_observe_factory_work"   value="factory_work"  > A woman working alongside men at the machines in a textile factory. </Distractor>
-         <Key id="womens_sphere_image_observe_mother_at_home" value="mother_at_home"> A mother at home with her baby and two children.                    </Key>
-  <Distractor id="womens_sphere_image_observe_classroom"      value="classroom"     > A teacher leading a classroom full of young students.               </Distractor>
+  <Distractor id="womens_sphere_image_observe_working_class_life"    value="working_class_life"   > The life of a working-class woman               </Distractor>
+  <Distractor id="womens_sphere_image_observe_northern_freedoms"     value="northern_freedoms"    > The new freedoms enjoyed by some Northern women </Distractor>
+         <Key id="womens_sphere_image_observe_domesticity_ideal"     value="domesticity_ideal"    > The ideal of the "cult of domesticity"          </Key>
+  <Distractor id="womens_sphere_image_observe_southern_expectations" value="southern_expectations"> The expectations unique to women in the South   </Distractor>
 </ChoiceInput>
 </KeyGrader>
 
-<Markdown when="@womens_sphere_image_observe.value === 'reform_meeting' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
-*There's no meeting here. The scene is a home: a mother with her baby and two children in a parlor.*
+<Markdown when="@womens_sphere_image_observe.value === 'working_class_life' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
+*Working-class women joined the public sphere through their labor; a parlor, with a mother at leisure among her children, is not their reality. The engraving shows the ideal — the "cult of domesticity."*
 </Markdown>
-<Markdown when="@womens_sphere_image_observe.value === 'factory_work' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
-*No factory, no men. Everything in the picture points to the home and the family — a mother with her children.*
+<Markdown when="@womens_sphere_image_observe.value === 'northern_freedoms' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
+*The new freedoms were women leaving the home for societies and reform work. This woman is inside the home, at its center — the ideal itself, not the exception to it.*
 </Markdown>
-<Markdown when="@womens_sphere_image_observe.value === 'classroom' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
-*It isn't a classroom. It's a mother at home with her own children — the title even calls it "the sphere of woman."*
+<Markdown when="@womens_sphere_image_observe.value === 'southern_expectations' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
+*Southern women were held to the same ideal, more strictly; nothing in the scene is unique to the South. The engraving depicts the ideal itself — the "cult of domesticity."*
 </Markdown>
-<Markdown when="@womens_sphere_image_observe.value === 'mother_at_home' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
-*Yes — a peaceful domestic scene: a mother at home with her children. The caption names it "the sphere of woman."*
+<Markdown when="@womens_sphere_image_observe.value === 'domesticity_ideal' &amp;&amp; @womens_sphere_image_observe_problem.submitCount &gt; 0">
+*Yes — a calm mother at home with her children: the "sphere of woman" as the ideal imagined it. The title says so.*
 </Markdown>
 </CapaProblem> <!-- womens_sphere_image_observe_problem -->
 </Vertical> <!-- womens_sphere_image_observe_screen -->
