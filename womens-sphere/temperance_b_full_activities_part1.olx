@@ -362,7 +362,7 @@ ideology that defined their place in the home**.
   <Markdown id="womens_sphere_gram_np_part_head"> ideology                                                                         </Markdown>
 
   <Markdown id="womens_sphere_gram_np_role_det" > **Determiner** — the word before the head noun that helps identify or specify it </Markdown>
-  <Markdown id="womens_sphere_gram_np_part_det" > the                                                                              </Markdown>
+  <Markdown id="womens_sphere_gram_np_part_det" > the very                                                                              </Markdown>
 
   <Markdown id="womens_sphere_gram_np_role_post"> **Postmodifier** — the part after the head noun that tells you more about it     </Markdown>
   <Markdown id="womens_sphere_gram_np_part_post"> that defined their place in the home                                             </Markdown>
@@ -640,7 +640,7 @@ cols:
   - "Today's 'tradwife' trend"
 rows:
   - "Held up the pious, pure, submissive woman at home as a moral and religious duty|s_ideal[The 1800s ideal of the 'true woman']"
-  - "Often driven less by free choice than by economic necessity|s_necessity[Today's 'tradwife' trend]"
+  - "Driven, the article argues, by the cost of child care more than by choice|s_necessity[Today's 'tradwife' trend]"
   - "Applied mainly to upper- and middle-class women, not women who had to work out of necessity|s_class[The 1800s ideal of the 'true woman']"
   - "Promoted by entrepreneurial women presenting glamorous images of home life|s_glamour[Today's 'tradwife' trend]"
   - "Helped some women to join societies and promote social causes|s_societies[The 1800s ideal of the 'true woman']"
@@ -1278,7 +1278,7 @@ Step back from the details — what is the article's **main point** overall?
 *Expensive child care is part of the problem the article describes, but "make child care free" isn't the point it's arguing. The point is what the glossy image hides.*
 </Markdown>
 <Markdown when="@womens_sphere_article_thesis.value === 'glossy_hides_precarity' &amp;&amp; @womens_sphere_article_thesis_problem.submitCount &gt; 0">
-*Yes — the shiny image and the harder reality. Behind the glossy videos, most stay-at-home moms are there because they can't afford not to be, not out of a dream of domesticity.*
+*Yes — the shiny image and the harder reality the article describes: behind the glossy videos, many stay-at-home moms are there because they can't afford not to be, not out of a dream of domesticity.*
 </Markdown>
 </CapaProblem> <!-- womens_sphere_article_thesis_problem -->
 </Vertical> <!-- womens_sphere_article_thesis_screen -->
@@ -1293,7 +1293,7 @@ Step back from the details — what is the article's **main point** overall?
 <KeyGrader id="womens_sphere_image_observe_grader">
 <ChoiceInput id="womens_sphere_image_observe">
 <Markdown>
-Based on what you have read so far, which reality does this engraving from 1850 best depict?
+Based on what you have read so far, which of these does this engraving from 1850 best depict?
 </Markdown>
   <Distractor id="womens_sphere_image_observe_working_class_life"    value="working_class_life"   > The life of a working-class woman               </Distractor>
   <Distractor id="womens_sphere_image_observe_northern_freedoms"     value="northern_freedoms"    > The new freedoms enjoyed by some Northern women </Distractor>
@@ -1361,7 +1361,7 @@ Your group each summed up the biggest difference between the two — the 1800s
 ideal and today's tradwife trend. Which comparison is **best**?
 </Markdown>
   <Distractor id="womens_sphere_synth_compare_same"              value="same"             > **Karis:** They're really the same thing — in both cases women choose to stay home and take care of their families, and both call that the right way to live.                                          </Distractor>
-         <Key id="womens_sphere_synth_compare_who_can_afford"    value="who_can_afford"   > **Joe:** Both hold up the wife at home as an ideal, but in the 1800s it was for women who could afford to stay home; today many stay home because they can't afford not to.                            </Key>
+         <Key id="womens_sphere_synth_compare_who_can_afford"    value="who_can_afford"   > **Joe:** Both hold up the wife at home as an ideal, but in the 1800s it was for women who could afford to stay home; today, the article argues, many stay home because they can't afford not to.       </Key>
   <Distractor id="womens_sphere_synth_compare_children_religion" value="children_religion"> **Danielle:** The biggest differences are that women in the 1800s had many more children and were much more religious than tradwives today, so their homes were busier and their days more structured. </Distractor>
 </ChoiceInput>
 </KeyGrader>
@@ -1373,7 +1373,7 @@ ideal and today's tradwife trend. Which comparison is **best**?
 *Family size and religion aren't the contrast the texts draw. The difference is money: the ideal was for women who could afford to stay home; today many stay home because they can't afford not to.*
 </Markdown>
 <Markdown when="@womens_sphere_synth_compare.value === 'who_can_afford' &amp;&amp; @womens_sphere_synth_compare_problem.submitCount &gt; 0">
-*Yes — both idealize the wife at home; what changed is who ends up there and why. Then, women who could afford it; now, many who can't afford child care. That's the comparison your final paragraph needs.*
+*Yes — both idealize the wife at home; what changed is who ends up there and why. Then, women who could afford it; now, the article argues, many who can't afford child care. That's the comparison your final paragraph needs.*
 </Markdown>
 </CapaProblem> <!-- womens_sphere_synth_compare_problem -->
 </Vertical> <!-- womens_sphere_synth_compare_screen -->
