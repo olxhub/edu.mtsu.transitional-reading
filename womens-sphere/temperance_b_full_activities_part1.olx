@@ -192,7 +192,7 @@ rows:
 
 Joe made a list of what he thought were the important points from the *American
 Yawp* excerpt. For **each statement**, decide whether it is **correct and central
-to the text**, **correct but less important**, or **not correct**. Then press
+to the text**, **correct but a supporting detail**, or **not correct**. Then press
 **Submit**.
 </Markdown>
 <CapaProblem id="womens_sphere_notes_problem" title="Joe's Notes on the Textbook" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
@@ -200,14 +200,14 @@ to the text**, **correct but less important**, or **not correct**. Then press
 <TabularMCQ id="womens_sphere_notes_grid">
 cols:
   - Correct and central to the text
-  - Correct but less important
+  - Correct but a supporting detail
   - Not correct
 rows:
   - "The 'cult of domesticity' held that a woman's proper place was the home, as guardian of virtue and morality.|n_ideal[Correct and central to the text]"
   - "Even as the ideal tied women to the home, women increasingly challenged the moral direction of society in the public sphere.|n_public[Correct and central to the text]"
   - "The ideal developed in tandem with industrialization, the market revolution, and the Second Great Awakening.|n_tandem[Correct and central to the text]"
-  - "These ideas about womanhood applied mainly to upper- and middle-class women, not working-class women.|n_class[Correct but less important]"
-  - "Women were expected to pass the virtues of piety and purity on to their children.|n_children[Correct but less important]"
+  - "These ideas about womanhood applied mainly to upper- and middle-class women, not working-class women.|n_class[Correct but a supporting detail]"
+  - "Women were expected to pass the virtues of piety and purity on to their children.|n_children[Correct but a supporting detail]"
   - "The cult of domesticity was invented by factory owners to force women to take jobs in factories.|n_factory[Not correct]"
 </TabularMCQ>
 </TabularMCQGrader>

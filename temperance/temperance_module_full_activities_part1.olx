@@ -184,7 +184,7 @@ rows:
 
 Joe made a list of what he thought were the important points from the *American
 Yawp* excerpt. For **each statement**, decide whether it is **correct and central
-to the text**, **correct but less important**, or **not correct**. Then press
+to the text**, **correct but a supporting detail**, or **not correct**. Then press
 **Submit**.
 </Markdown>
 <CapaProblem id="temperance_notes_problem" title="Joe's Notes on the Textbook" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
@@ -192,15 +192,15 @@ to the text**, **correct but less important**, or **not correct**. Then press
 <TabularMCQ id="temperance_notes_grid">
 cols:
   - Correct and central to the text
-  - Correct but less important
+  - Correct but a supporting detail
   - Not correct
 rows:
   - "The Second Great Awakening revitalized Christian faith and inspired both personal and social reform.|n_awakening[Correct and central to the text]"
-  - "Lyman Beecher championed the temperance movement.|n_beecher[Correct but less important]"
+  - "Lyman Beecher championed the temperance movement.|n_beecher[Correct but a supporting detail]"
   - "Middle-class women played a leading role in reform activity.|n_women[Correct and central to the text]"
   - "The Industrial Revolution was a response to increasing social problems and urban growth.|n_indrev[Not correct]"
   - "The Benevolent Empire was a powerful network that melded religion and reform.|n_network[Correct and central to the text]"
-  - "Social reform societies grew significantly between 1815 and 1861.|n_societies[Correct but less important]"
+  - "Social reform societies grew significantly between 1815 and 1861.|n_societies[Correct but a supporting detail]"
 </TabularMCQ>
 </TabularMCQGrader>
 </CapaProblem> <!-- temperance_notes_problem -->
