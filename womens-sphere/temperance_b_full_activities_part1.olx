@@ -665,7 +665,7 @@ This is the goal the whole module has been building toward.
 them: in what ways are the two alike, and how do they differ?**
 </Markdown>
 <TextArea id="womens_sphere_final_write" rows="8"
-  placeholder="Both hold up the woman at home as an ideal, but…" />
+  placeholder="Write your comparison here." />
 
 <!-- Progress affordance, two tiers. There is no word minimum to hit: the
        conversation moves on as soon as the student has really begun, so tier 1
