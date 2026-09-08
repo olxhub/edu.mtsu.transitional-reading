@@ -302,7 +302,7 @@ all: Right — "took" is the first verb: what women did with that ideology befor
 <CapaProblem id="womens_sphere_gram_subject_problem" title="Highlight the subject" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="womens_sphere_gram_subject_grader">
 <TextSelectionInput id="womens_sphere_gram_subject">
-Highlight the subject — the entire subject phrase, every word of it.
+Highlight the subject of that verb — the entire subject phrase, every word of it.
 ---
 Yet [women] took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
 ---

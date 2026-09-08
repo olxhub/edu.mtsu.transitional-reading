@@ -286,7 +286,7 @@ all: Right — "exacerbated" is the verb: it's what the intrusions did.
 <CapaProblem id="temperance_gram_subject_problem" title="Highlight the subject" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="temperance_gram_subject_grader">
 <TextSelectionInput id="temperance_gram_subject">
-Highlight the subject — the entire subject phrase, every word of it.
+Highlight the subject of that verb — the entire subject phrase, every word of it.
 ---
 [Such intrusions by the Protestant middle class] exacerbated class, ethnic, and religious tensions.
 ---
@@ -302,7 +302,7 @@ all: Right — the subject is the whole phrase "Such intrusions by the Protestan
 <CapaProblem id="temperance_gram_object_problem" title="Highlight the object" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="temperance_gram_object_grader">
 <TextSelectionInput id="temperance_gram_object">
-Highlight the direct object — the entire object phrase, every word of it.
+Highlight the direct object of that verb — the entire object phrase, every word of it.
 ---
 Such intrusions by the Protestant middle class exacerbated [class, ethnic, and religious tensions]{.}
 ---
