@@ -1,0 +1,77 @@
+<!--
+---
+description: "Research-study version of the Women's Sphere module: the module, preceded by the informed-consent form. Students may take part in the study or not; the module is identical either way. For the module without the study, launch womens_sphere_module."
+category: writing
+index: -1
+lang: en-Latn-US
+---
+-->
+
+<!--
+  RESEARCH CONSENT GATE
+
+  The research deployment's route "/" lands here, not on the module. Two
+  states: unanswered, the consent form; answered either way, the module.
+  The gate tests ANSWERED, never the value: declining changes nothing about
+  what the student does.
+
+  There is no in-platform place to change the answer afterwards. This is a
+  one-hour activity; a student who changes their mind tells the instructor,
+  and the response is excluded downstream.
+
+  The module itself stays launchable, so the same content serves outside a
+  study with no wrapper at all. Which consent-form version a student saw is
+  recoverable from the release the event log ties back to.
+-->
+
+<Vertical id="womens_sphere_study" title="READ 1000 — Women's Sphere (Research Study)" launchable="true">
+<Use ref="womens_sphere_irb_consent_form" when="!@womens_sphere_irb_consent.value" />
+<Use ref="womens_sphere_module"       when="@womens_sphere_irb_consent.value" />
+
+<!-- The form is defined here unrendered and shown through the <Use> above,
+     so its state has one home. Bracketed text is the IRB protocol's; it is
+     replaced verbatim from the approved protocol before students arrive. -->
+<Hidden id="womens_sphere_consent_defs">
+<Vertical id="womens_sphere_irb_consent_form" title="Research Consent">
+<Markdown id="womens_sphere_irb_consent_text">
+# Middle Tennessee State University
+
+## Informed Consent
+
+**Title:** [Study title from the IRB protocol]
+
+**Principal Investigator:** [Name, department, MTSU]
+
+**Contact:** [PI email and phone]
+
+## What this is
+
+You are being asked to take part in a research study about how students
+read and reason with college texts. The study uses the READ 1000 reading
+module you are about to complete. Whether or not you take part, the module
+is the same, and it counts for READ 1000 in the same way.
+
+## What we would use
+
+If you agree, your responses in this module — your answers, highlights, and
+writing — may be included in the research after the semester ends. They are
+stored under a study username, not your name. Your instructor and TAs will
+not know whether you agreed until after grades are submitted.
+
+## Voluntary
+
+Taking part is voluntary. Saying no has no effect on your grade or your
+standing in READ 1000. If you later change your mind, tell your instructor,
+and your responses will be left out.
+
+## Your choice
+
+Please choose one. Either answer takes you into the module.
+</Markdown>
+<ChoiceInput id="womens_sphere_irb_consent">
+  <Key id="womens_sphere_irb_consent_consented" value="consented"> I agree to take part in the study.       </Key>
+  <Key id="womens_sphere_irb_consent_declined"  value="declined" > I do not want to take part in the study. </Key>
+</ChoiceInput>
+</Vertical> <!-- womens_sphere_irb_consent_form -->
+</Hidden>
+</Vertical> <!-- womens_sphere_study -->

@@ -27,4 +27,7 @@ content_notice: >
   N. Currier's lithograph "The Drunkard's Progress, from the first glass to the
   grave" (1846) is in the public domain.
 routes:
-  "/": temperance/temperance_module
+  # "/" lands on the consent gate (temperance_study.olx); the module renders inside it
+  # once the consent question is answered, either way. A deployment outside a
+  # study points "/" at temperance/temperance_module instead.
+  "/": temperance/temperance_study

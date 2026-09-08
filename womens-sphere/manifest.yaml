@@ -32,4 +32,7 @@ content_notice: >
   "The Sphere of Woman," an engraving from *Godey's Lady's Book* vol. 40 (March 1850),
   is in the public domain.
 routes:
-  "/": womens_sphere/womens_sphere_module
+  # "/" lands on the consent gate (womens_sphere_study.olx); the module renders inside it
+  # once the consent question is answered, either way. A deployment outside a
+  # study points "/" at womens_sphere/womens_sphere_module instead.
+  "/": womens_sphere/womens_sphere_study
