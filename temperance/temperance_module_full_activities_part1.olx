@@ -625,7 +625,7 @@ cols:
   - "Today's sober-curious movement"
 rows:
   - "Focused on the individual's own health and self-optimization|s_health[Today's sober-curious movement]"
-  - "Grew out of religious revival and the campaign for women's rights|s_revival[19th-century temperance movement]"
+  - "Grew out of religious revival and middle-class reform societies|s_revival[19th-century temperance movement]"
   - "Framed as authenticity, self-care, and a personal 'freedom to choose'|s_auth[Today's sober-curious movement]"
   - "Used images like 'The Drunkard's Progress' to warn of moral ruin|s_litho[19th-century temperance movement]"
   - "Framed as protecting the home, the family, and the nation|s_protect[19th-century temperance movement]"
@@ -1018,12 +1018,12 @@ which word or phrase most directly helps us understand what it was?
 The Benevolent Empire was, indeed, a **powerful network.** Which of these words or
 phrases from the chapter describe the network itself? **Select all that apply.**
 </Markdown>
-         <Key id="temperance_term_connect_societies_movements"     value="societies_movements"    > societies / movements   </Key>
-         <Key id="temperance_term_connect_middle_class"            value="middle_class"           > middle-class            </Key>
-  <Distractor id="temperance_term_connect_american_independence"   value="american_independence"  > American independence   </Distractor>
-  <Distractor id="temperance_term_connect_commercial_distilleries" value="commercial_distilleries"> commercial distilleries </Distractor>
-         <Key id="temperance_term_connect_religion_and_reform"     value="religion_and_reform"    > religion and reform     </Key>
-  <Distractor id="temperance_term_connect_irish_catholics"         value="irish_catholics"        > Irish Catholics         </Distractor>
+         <Key id="temperance_term_connect_societies_movements"   value="societies_movements"  > societies / movements     </Key>
+         <Key id="temperance_term_connect_middle_class"          value="middle_class"         > middle-class              </Key>
+  <Distractor id="temperance_term_connect_american_independence" value="american_independence"> American independence     </Distractor>
+  <Distractor id="temperance_term_connect_industrial_revolution" value="industrial_revolution"> the Industrial Revolution </Distractor>
+         <Key id="temperance_term_connect_religion_and_reform"   value="religion_and_reform"  > religion and reform       </Key>
+  <Distractor id="temperance_term_connect_urban_growth"          value="urban_growth"         > urban growth              </Distractor>
 </CheckboxInput>
 </CheckboxGrader>
 
@@ -1038,11 +1038,11 @@ phrases from the chapter describe the network itself? **Select all that apply.**
 <Markdown when="@temperance_term_connect.value.includes('american_independence') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
 *American independence is the era the chapter opens in — the backdrop, not a piece of the network.*
 </Markdown>
-<Markdown when="@temperance_term_connect.value.includes('commercial_distilleries') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
-*Distilleries are what the reformers were up against — the target of the network, not part of it.*
+<Markdown when="@temperance_term_connect.value.includes('industrial_revolution') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
+*The Industrial Revolution is the cause of the problems the reformers answered — the backdrop of the network, not part of it.*
 </Markdown>
-<Markdown when="@temperance_term_connect.value.includes('irish_catholics') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
-*Irish Catholic workers are the people the middle-class reformers intruded on: the other side of the tension, not part of the network.*
+<Markdown when="@temperance_term_connect.value.includes('urban_growth') &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
+*Urban growth is one of the problems the reformers set out to fix, not a description of the reformers themselves.*
 </Markdown>
 <Markdown when="@temperance_term_connect.value.length &gt; 0 &amp;&amp; @temperance_term_connect.value.length &lt; 3 &amp;&amp; @temperance_term_connect_problem.submitCount &gt; 0">
 *Fewer than the full set. Three phrases describe the network: who was in it (middle-class), how it was organized (societies / movements), and what it joined together (religion and reform).*
