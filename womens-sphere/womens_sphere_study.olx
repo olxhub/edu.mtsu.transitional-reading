@@ -31,8 +31,7 @@ lang: en-Latn-US
 <!-- The form is defined here unrendered and shown through the <Use> above,
      so its state has one home. The text follows the consent form approved
      for the same protocol at the University of Memphis, with this course's
-     materials and instructor, with the section headings dropped; the
-     contact address is his. -->
+     materials and instructor. -->
 <Hidden id="womens_sphere_consent_defs">
 <Vertical id="womens_sphere_irb_consent_form" title="Research Consent">
 <Markdown id="womens_sphere_irb_consent_text">

@@ -119,11 +119,10 @@ rows:
 
 <!-- ============================================================
      Part 2 — Professor Hale's brief background lecture (PDF p.9)
-     OPTIONAL REFERENCE. The lecture is no longer parked in the activity
-     pane and no longer gated: it costs minutes the 60-minute module does
-     not have, and the peers surface its content in dialogue anyway. It
-     keeps its tab, so a student who wants the background can read it at
-     any time. Still an Annotate, not plain Markdown: the lecture text
+     OPTIONAL REFERENCE. The lecture has its own tab and is neither parked
+     in the activity pane nor gated: it costs minutes the 60-minute module
+     does not have, and the peers surface its content in dialogue anyway. A
+     student who wants the background can read it at any time. Still an Annotate, not plain Markdown: the lecture text
      itself tells students to "use the highlighting tools to take notes."
      No <Done> — nothing waits on it.
      ============================================================ -->
@@ -638,15 +637,14 @@ what ways are the two movements alike, and how do they differ?**
 <TextArea id="temperance_final_write" rows="8"
   placeholder="Write your comparison here." />
 
-<!-- Progress affordance, two tiers. There is no longer a word minimum to
-       hit: the conversation moves on as soon as the student has really begun,
-       so tier 1 is encouragement rather than a countdown. The live word count
-       is gone with it — a number under a textarea reads as a target to reach
-       and stop at, which is exactly the behaviour a hard minimum produced.
-       The second tier only ever claims what it actually checked (length);
-       quality is handed back to the student as a read-it-back checklist. A
-       former third tier said "✓ That's a full comparison" at 80 words, which
-       was dishonest — length isn't a comparison. -->
+<!-- Progress affordance, two tiers. There is no word minimum: the
+       conversation moves on as soon as the student has really begun, so
+       tier 1 is encouragement rather than a countdown. There is no live word
+       count either — a number under a textarea reads as a target to reach
+       and stop at. The second tier only ever claims what it actually checked
+       (length); quality is handed back to the student as a read-it-back
+       checklist, because length is not a comparison and nothing here should
+       call the writing complete. -->
 <Markdown when="wordcount(@temperance_final_write.value) &lt; 40">
 *A solid comparison usually takes four or five sentences — keep going.*
 </Markdown>

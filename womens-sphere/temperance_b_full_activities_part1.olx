@@ -126,11 +126,10 @@ rows:
 
 <!-- ============================================================
      Part 2 — Professor Hale's brief background lecture
-     OPTIONAL REFERENCE. The lecture is no longer parked in the activity
-     pane and no longer gated: it costs minutes the 60-minute module does
-     not have, and the peers surface its content in dialogue anyway. It
-     keeps its tab, so a student who wants the background can read it at
-     any time. Still an Annotate, not plain Markdown: the lecture text
+     OPTIONAL REFERENCE. The lecture has its own tab and is neither parked
+     in the activity pane nor gated: it costs minutes the 60-minute module
+     does not have, and the peers surface its content in dialogue anyway. A
+     student who wants the background can read it at any time. Still an Annotate, not plain Markdown: the lecture text
      itself tells students to highlight as they read. No <Done> — nothing
      waits on it.
      ============================================================ -->
@@ -186,8 +185,6 @@ rows:
      appears; part 4 comes after it.
      ============================================================ -->
 
-<!-- Rows alternate categories. Central, central, central, detail, detail,
-     wrong is a pattern a student can fill in without reading the rows. -->
 <Vertical id="womens_sphere_notes">
 <Markdown id="womens_sphere_notes_prompt">
 ## Checking Joe's Notes on the Textbook
@@ -620,8 +617,6 @@ of the era.
      with the assessment attributes (see the vocabulary items).
      ============================================================ -->
 
-<!-- Rows alternate between the two columns. A run of all-then followed by
-     all-now is a pattern a student can fill in without reading the rows. -->
 <Vertical id="womens_sphere_synth_sort">
 <Markdown id="womens_sphere_synth_sort_prompt">
 ## Then and Now
