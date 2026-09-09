@@ -186,6 +186,8 @@ rows:
      appears; part 4 comes after it.
      ============================================================ -->
 
+<!-- Rows alternate categories. Central, central, central, detail, detail,
+     wrong is a pattern a student can fill in without reading the rows. -->
 <Vertical id="womens_sphere_notes">
 <Markdown id="womens_sphere_notes_prompt">
 ## Checking Joe's Notes on the Textbook
@@ -204,11 +206,11 @@ cols:
   - Not correct
 rows:
   - "The 'cult of domesticity' held that a woman's proper place was the home, as guardian of virtue and morality.|n_ideal[Correct and central to the text]"
-  - "Even as the ideal tied women to the home, women increasingly challenged the moral direction of society in the public sphere.|n_public[Correct and central to the text]"
-  - "The ideal developed in tandem with industrialization, the market revolution, and the Second Great Awakening.|n_tandem[Correct and central to the text]"
   - "These ideas about womanhood applied mainly to upper- and middle-class women, not working-class women.|n_class[Correct but a supporting detail]"
-  - "Women were expected to pass the virtues of piety and purity on to their children.|n_children[Correct but a supporting detail]"
+  - "Even as the ideal tied women to the home, women increasingly challenged the moral direction of society in the public sphere.|n_public[Correct and central to the text]"
   - "The cult of domesticity was invented by factory owners to force women to take jobs in factories.|n_factory[Not correct]"
+  - "The ideal developed in tandem with industrialization, the market revolution, and the Second Great Awakening.|n_tandem[Correct and central to the text]"
+  - "Women were expected to pass the virtues of piety and purity on to their children.|n_children[Correct but a supporting detail]"
 </TabularMCQ>
 </TabularMCQGrader>
 </CapaProblem> <!-- womens_sphere_notes_problem -->
