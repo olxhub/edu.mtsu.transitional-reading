@@ -44,7 +44,7 @@ lang: en-Latn-US
 
   The magazine article has no tab — it is a paper handout (see temperance_article_read).
 
-  Activity screens live in temperance_module_full_activities_part1.olx. Ids are
+  Activity screens live in temperance_activities.olx. Ids are
   prefixed `temperance_`, the form's name; the parallel form uses
   `womens_sphere_`.
 
@@ -202,7 +202,7 @@ lang: en-Latn-US
              <StartPane>: SplitPanel's parser keeps only the pane tag's children,
              so attributes on the pane tag are silently dropped. -->
         <Chat id="temperance_chat"
-              src="temperance_module_full_dialogue_part1.chatpeg"
+              src="temperance_dialogue.chatpeg"
               cast="characters.cast"
               height="460px" />
       </StartPane>

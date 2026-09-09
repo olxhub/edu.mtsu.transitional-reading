@@ -46,7 +46,7 @@ lang: en-Latn-US
 
   The magazine article has no tab — it is a paper handout (see womens_sphere_article_read).
 
-  Activity screens live in temperance_b_full_activities_part1.olx. Ids are
+  Activity screens live in womens_sphere_activities.olx. Ids are
   prefixed `womens_sphere_`, the form's name; the parallel form uses
   `temperance_`.
 
@@ -184,7 +184,7 @@ lang: en-Latn-US
              internally instead. The attribute has to sit on <Chat>, NOT on
              <StartPane> (SplitPanel drops attributes on the pane tag). -->
         <Chat id="womens_sphere_chat"
-              src="temperance_b_full_dialogue_part1.chatpeg"
+              src="womens_sphere_dialogue.chatpeg"
               cast="characters.cast"
               height="460px" />
       </StartPane>

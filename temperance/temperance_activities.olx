@@ -15,10 +15,10 @@ with one deliberate departure from that document:
   * "Joe's notes" (the note-checking matrix) tests the TEXTBOOK excerpt, not
     the lecture.
 
-Layout (see temperance_module_full_sba_part1.olx). The tab strip is the top
+Layout (see temperance_module.olx). The tab strip is the top
 level; its first tab, "Main Content," is the session itself:
   * Left  pane : the scripted small-group conversation
-                 (temperance_module_full_dialogue_part1.chatpeg). Peers Danielle,
+                 (temperance_dialogue.chatpeg). Peers Danielle,
                  Joe, and Karis and the reading instructor Professor Booker.
   * Right pane : a UseHistory (temperance_pane) the conversation drives with
                  target embeds — `::screen [display=target:temperance_pane ...]`,

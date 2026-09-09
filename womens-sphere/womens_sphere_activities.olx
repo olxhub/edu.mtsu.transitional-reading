@@ -19,10 +19,10 @@ The Atlantic, 2026) — and its own set of assessment items. One deliberate
 departure, in both forms:
   * "Joe's notes" (the note-checking matrix) tests the TEXTBOOK excerpt.
 
-Layout (see temperance_b_full_sba_part1.olx). The tab strip is the top level;
+Layout (see womens_sphere_module.olx). The tab strip is the top level;
 its first tab, "Discussion," is the session itself:
   * Left  pane : the scripted small-group conversation
-                 (temperance_b_full_dialogue_part1.chatpeg). Peers Danielle,
+                 (womens_sphere_dialogue.chatpeg). Peers Danielle,
                  Joe, and Karis and the reading instructor Professor Booker.
   * Right pane : a UseHistory (womens_sphere_pane) the conversation drives via target
                  embeds (and, for parking the pane empty, `womens_sphere_pane <- womens_sphere_pane_blank`).
