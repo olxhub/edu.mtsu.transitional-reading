@@ -257,26 +257,22 @@ rows:
      the antecedent item below) and is the right form for a single item.
      ============================================================ -->
 
-<!-- Three highlight questions on the key sentence. The verb is a single word;
-     the subject and the object are graded as WHOLE PHRASES — every word of the
-     phrase and nothing outside it.
+<!-- Three highlight questions on the key sentence. The verb is a single
+     word; the subject and the object are graded as WHOLE PHRASES — every word
+     of the phrase and nothing outside it.
 
-     Grading the phrase as a phrase is the lesson. The next screen asks students
-     to hold a noun phrase together as one unit; accepting the head word by
-     itself here would teach the opposite on the screen before.
+     Grading the phrase as a phrase is the lesson. The next screen asks the
+     student to hold a noun phrase together as one unit; accepting the head
+     word by itself here would teach the opposite on the screen before.
 
-     The phrase that next screen takes apart is the OBJECT, not the subject:
-     the subject here is the bare word "women," and the rich noun phrase is what
-     the women took.
+     Order is VERB → SUBJECT → OBJECT, not S-V-O. The verb is the one part
+     you can find without having identified anything else; once you have it,
+     "who did it" and "what got done to" are questions about the verb.
 
-     The verb prompt names the two-verb structure, so what is scored is
-     identifying a verb rather than guessing which of two coordinated verbs the
-     author meant.
-
-     Order is VERB → SUBJECT → OBJECT, not S-V-O. The verb is the one part you
-     can find without having identified anything else; once you have it, "who
-     did it" and "what got done to" are questions about the verb. Asking for the
-     subject first asks students to find it out of nowhere. -->
+     The sentence is from part 2. The object, not the subject, is the phrase
+     the next screen takes apart, because the object's phrase has the richer
+     structure. The trailing "through their labor…" is how they joined and is
+     outside all three highlights. -->
 <Vertical id="womens_sphere_gram_svo">
 <Markdown id="womens_sphere_gram_svo_md">
 ## Verb, Subject, Object
@@ -291,12 +287,12 @@ highlight every word of the phrase, and nothing outside it.
 <CapaProblem id="womens_sphere_gram_verb_problem" title="Highlight the verb" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="womens_sphere_gram_verb_grader">
 <TextSelectionInput id="womens_sphere_gram_verb">
-This sentence has two verbs joined by "and." Highlight the first one — a single word.
+Highlight the verb — a single word.
 ---
-Yet women [took] the very ideology that defined their place in the home and used it to fashion a public role for themselves.
+Working-class women [joined] the public sphere through their labor, which was necessary for their families' survival.
 ---
-all: Right — "took" is the first verb: what women did with that ideology before they used it.
-: The verb is the action word — here "took," the first thing women did in the sentence.
+all: Right — "joined" is the verb: it's what working-class women did.
+: The verb is the action word — here "joined," what working-class women did.
 </TextSelectionInput>
 </TextSelectionGrader>
 </CapaProblem> <!-- womens_sphere_gram_verb_problem -->
@@ -306,10 +302,10 @@ all: Right — "took" is the first verb: what women did with that ideology befor
 <TextSelectionInput id="womens_sphere_gram_subject">
 Highlight the subject of that verb — the entire subject phrase, every word of it.
 ---
-Yet [women] took the very ideology that defined their place in the home and used it to fashion a public role for themselves.
+[Working-class women] joined the public sphere through their labor, which was necessary for their families' survival.
 ---
-all: Right — the subject is "women." Here the whole subject phrase is that one word: they are the ones who did the taking.
-: The subject is who or what does the action — "women," the ones who did the taking.
+all: Right — the subject is the whole phrase "Working-class women." Its head noun is "women"; "working-class" tells you which women.
+: The subject is who or what does the action — the whole phrase "Working-class women," built around the noun "women."
 </TextSelectionInput>
 </TextSelectionGrader>
 </CapaProblem> <!-- womens_sphere_gram_subject_problem -->
@@ -317,12 +313,12 @@ all: Right — the subject is "women." Here the whole subject phrase is that one
 <CapaProblem id="womens_sphere_gram_object_problem" title="Highlight the object" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <TextSelectionGrader id="womens_sphere_gram_object_grader">
 <TextSelectionInput id="womens_sphere_gram_object">
-Highlight the direct object of that first verb — the entire object phrase, every word of it.
+Highlight the direct object of that verb — the entire object phrase, every word of it.
 ---
-Yet women took [the very ideology that defined their place in the home] and used it to fashion a public role for themselves.
+Working-class women joined [the public sphere] through their labor, which was necessary for their families' survival.
 ---
-all: Right — the object is the whole phrase "the very ideology that defined their place in the home." Its head noun is "ideology"; the rest of the phrase tells you which ideology.
-: The object is what women took — the whole phrase "the very ideology that defined their place in the home," built around the noun "ideology."
+all: Right — the object is the whole phrase "the public sphere." Its head noun is "sphere"; the words in front of it say which sphere.
+: The object is what working-class women joined — the whole phrase "the public sphere," built around the noun "sphere."
 </TextSelectionInput>
 </TextSelectionGrader>
 </CapaProblem> <!-- womens_sphere_gram_object_problem -->
@@ -336,15 +332,14 @@ all: Right — the object is the whole phrase "the very ideology that defined th
      buttons and three chances to be told nothing useful.
 
      Matching also carries partial credit, so a student who has the head noun
-     and the postmodifier but not the determiner is scored as such.
+     and the premodifier but not the determiner is scored as such.
 
      The phrase is shown WITHOUT the rest of the sentence: the rest of the
      sentence is nothing but a place to make mistakes here.
 
-     "Determiner," not "premodifier" — it is the category the course uses for
-     the pointing word(s) in front of the head noun. "the very" points at one
-     particular ideology, so it does the same job "Such" does in the parallel
-     form. -->
+     The roles follow the phrase. "the public sphere" has a determiner and a
+     premodifier and no postmodifier; the parallel form's phrase has a
+     determiner and a postmodifier and no premodifier. -->
 <Vertical id="womens_sphere_gram_np">
 <Markdown id="womens_sphere_gram_np_md">
 ## Inside the Noun Phrase
@@ -356,18 +351,18 @@ own — take it apart.
 <CapaProblem id="womens_sphere_gram_np_problem" title="Inside the Noun Phrase" maxAttempts="1" showAnswer="attempted" answerReveal="auto" lockInput="closed">
 <MatchingGrader id="womens_sphere_gram_np_grader">
 <Markdown id="womens_sphere_gram_np_prompt">
-Match each part of a noun phrase to the part that plays it in **the very
-ideology that defined their place in the home**.
+Match each part of a noun phrase to the part that plays it in **the public
+sphere**.
 </Markdown>
 <MatchingInput id="womens_sphere_gram_np_match">
   <Markdown id="womens_sphere_gram_np_role_head"> **Head noun** — the one word the whole phrase is built around                     </Markdown>
-  <Markdown id="womens_sphere_gram_np_part_head"> ideology                                                                         </Markdown>
+  <Markdown id="womens_sphere_gram_np_part_head"> sphere                                                                           </Markdown>
 
   <Markdown id="womens_sphere_gram_np_role_det" > **Determiner** — the word before the head noun that helps identify or specify it </Markdown>
-  <Markdown id="womens_sphere_gram_np_part_det" > the very                                                                              </Markdown>
+  <Markdown id="womens_sphere_gram_np_part_det" > the                                                                              </Markdown>
 
-  <Markdown id="womens_sphere_gram_np_role_post"> **Postmodifier** — the part after the head noun that tells you more about it     </Markdown>
-  <Markdown id="womens_sphere_gram_np_part_post"> that defined their place in the home                                             </Markdown>
+  <Markdown id="womens_sphere_gram_np_role_pre" > **Premodifier** — a describing word between the determiner and the head noun     </Markdown>
+  <Markdown id="womens_sphere_gram_np_part_pre" > public                                                                           </Markdown>
 </MatchingInput>
 </MatchingGrader>
 </CapaProblem> <!-- womens_sphere_gram_np_problem -->
@@ -380,13 +375,13 @@ ideology that defined their place in the home**.
 
 Here is the sentence laid out:
 
-> **[ women ]** — subject (a noun)
-> **took** — verb
-> **[ the very ideology that defined their place in the home ]** — direct object (a noun phrase)
-> *and used it to fashion a public role for themselves* — a second verb phrase, joined to the first by "and"
+> **[ Working-class women ]** — subject (a noun phrase)
+> **joined** — verb
+> **[ the public sphere ]** — direct object (a noun phrase)
+> *through their labor, which was necessary for their families' survival* — how they joined; not part of the object
 
-The object is a **noun phrase** — to understand the sentence, you hold the
-whole phrase together.
+Both the subject and the object are **noun phrases** — to understand the
+sentence, you hold each whole phrase together.
 </Markdown>
 <Done id="womens_sphere_gram_structure_done" label="I understand" />
 </Vertical>

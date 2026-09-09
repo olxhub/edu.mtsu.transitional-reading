@@ -224,15 +224,15 @@ Professor Booker: And the last one — "euphemism."
 
 ::womens_sphere_gram_svo [display=target:womens_sphere_pane label="Verb, subject, object"]
 
-Joe: Can we look again at this sentence — "Yet women took the very ideology that defined their place in the home and used it to fashion a public role for themselves"?
+Joe: Can we look at this sentence from part 2 — "Working-class women joined the public sphere through their labor, which was necessary for their families' survival"?
 
-Professor Booker: A good sentence to analyze. On the right, highlight the first verb — one word — then the subject and the object, each of those a whole phrase, every word of it.
+Professor Booker: A good sentence to analyze. On the right, highlight the verb first — one word — then the subject and the object, each of those a whole phrase, every word of it.
 
 --- wait @womens_sphere_gram_verb_problem.submitCount > 0 && @womens_sphere_gram_subject_problem.submitCount > 0 && @womens_sphere_gram_object_problem.submitCount > 0 ---
 
 ::womens_sphere_gram_np [display=target:womens_sphere_pane label="Inside the noun phrase"]
 
-Professor Booker: Notice the object is a noun phrase. On the right it's on its own, without the rest of the sentence — match each part of it to the job that part does: head noun, determiner, postmodifier.
+Professor Booker: Notice the object is a noun phrase. On the right it's on its own, without the rest of the sentence — match each part of it to the job that part does: head noun, determiner, premodifier.
 
 --- wait @womens_sphere_gram_np_problem.submitCount > 0 ---
 
@@ -242,7 +242,7 @@ Professor Booker: Here's the whole structure laid out on the right. Take it in, 
 
 --- wait @womens_sphere_gram_structure_done.value ---
 
-Danielle: Wait — which ideology is it even talking about?
+Danielle: Something else, back in part 4 — women "took the very ideology that defined their place in the home." Which ideology is it even talking about?
 
 ::womens_sphere_gram_antecedent [display=target:womens_sphere_pane label="Find the antecedent"]
 
